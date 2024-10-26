@@ -13,7 +13,7 @@ class ArrayPublisher(Node):
         self.timer = self.create_timer(0.5, self.publish_human_data)
 
         self.cls_data_publisher = self.create_publisher(Int32MultiArray, 'human_clsses', 10)
-        self.cls_timer = self.create_timer(5, self.publish_human_classes) 
+        self.cls_timer = self.create_timer(8, self.publish_human_classes) 
         # update the human classes every 5 seconds
 
     def publish_human_data(self):
