@@ -2,6 +2,7 @@ package.xml
 setup.cfg
 setup.py
 preffered_velocity_prediction/__init__.py
+preffered_velocity_prediction/preffered_velocity.py
 preffered_velocity_prediction/pub_human_data.py
 preffered_velocity_prediction.egg-info/PKG-INFO
 preffered_velocity_prediction.egg-info/SOURCES.txt

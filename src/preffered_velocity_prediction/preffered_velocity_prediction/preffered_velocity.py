@@ -34,6 +34,7 @@ class HumanPrefferedVelocity(Node):
             self.get_logger().info('No data received')
 
     def compute_preffered_velocity(self):
+        self.get_logger().info('Computing preffered velocity')
 
 def main(args=None):
     rclpy.init(args=args)

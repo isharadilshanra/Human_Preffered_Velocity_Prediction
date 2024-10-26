@@ -21,6 +21,7 @@ setup(
     entry_points={
         'console_scripts': [
             'pub_human_data = preffered_velocity_prediction.pub_human_data:main',
+            'preffered_velocity = preffered_velocity_prediction.preffered_velocity:main',
         ],
     },
 )
