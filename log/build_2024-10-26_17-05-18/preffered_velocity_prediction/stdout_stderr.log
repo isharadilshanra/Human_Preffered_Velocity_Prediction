@@ -1,0 +1,17 @@
+running develop
+/usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+  warnings.warn(
+running egg_info
+writing preffered_velocity_prediction.egg-info/PKG-INFO
+writing dependency_links to preffered_velocity_prediction.egg-info/dependency_links.txt
+writing entry points to preffered_velocity_prediction.egg-info/entry_points.txt
+writing requirements to preffered_velocity_prediction.egg-info/requires.txt
+writing top-level names to preffered_velocity_prediction.egg-info/top_level.txt
+reading manifest file 'preffered_velocity_prediction.egg-info/SOURCES.txt'
+writing manifest file 'preffered_velocity_prediction.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/preffered_velocity_prediction/lib/python3.10/site-packages/preffered-velocity-prediction.egg-link (link to .)
+Installing pub_human_data script to /home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/preffered_velocity_prediction/lib/preffered_velocity_prediction
+
+Installed /home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/preffered_velocity_prediction
+running symlink_data
