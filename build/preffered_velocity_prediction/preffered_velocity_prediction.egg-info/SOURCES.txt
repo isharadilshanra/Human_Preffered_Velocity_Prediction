@@ -1,0 +1,12 @@
+package.xml
+setup.cfg
+setup.py
+preffered_velocity_prediction/__init__.py
+preffered_velocity_prediction.egg-info/PKG-INFO
+preffered_velocity_prediction.egg-info/SOURCES.txt
+preffered_velocity_prediction.egg-info/dependency_links.txt
+preffered_velocity_prediction.egg-info/entry_points.txt
+preffered_velocity_prediction.egg-info/requires.txt
+preffered_velocity_prediction.egg-info/top_level.txt
+preffered_velocity_prediction.egg-info/zip-safe
+resource/preffered_velocity_prediction

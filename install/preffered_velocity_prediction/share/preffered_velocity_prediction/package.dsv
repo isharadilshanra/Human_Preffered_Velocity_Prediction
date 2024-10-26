@@ -1,0 +1,9 @@
+source;share/preffered_velocity_prediction/hook/pythonpath.ps1
+source;share/preffered_velocity_prediction/hook/pythonpath.dsv
+source;share/preffered_velocity_prediction/hook/pythonpath.sh
+source;share/preffered_velocity_prediction/hook/ament_prefix_path.ps1
+source;share/preffered_velocity_prediction/hook/ament_prefix_path.dsv
+source;share/preffered_velocity_prediction/hook/ament_prefix_path.sh
+source;../../build/preffered_velocity_prediction/share/preffered_velocity_prediction/hook/pythonpath_develop.ps1
+source;../../build/preffered_velocity_prediction/share/preffered_velocity_prediction/hook/pythonpath_develop.dsv
+source;../../build/preffered_velocity_prediction/share/preffered_velocity_prediction/hook/pythonpath_develop.sh

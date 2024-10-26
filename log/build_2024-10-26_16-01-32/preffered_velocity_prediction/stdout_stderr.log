@@ -1,0 +1,23 @@
+running develop
+/usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+  warnings.warn(
+running egg_info
+creating preffered_velocity_prediction.egg-info
+writing preffered_velocity_prediction.egg-info/PKG-INFO
+writing dependency_links to preffered_velocity_prediction.egg-info/dependency_links.txt
+writing entry points to preffered_velocity_prediction.egg-info/entry_points.txt
+writing requirements to preffered_velocity_prediction.egg-info/requires.txt
+writing top-level names to preffered_velocity_prediction.egg-info/top_level.txt
+writing manifest file 'preffered_velocity_prediction.egg-info/SOURCES.txt'
+reading manifest file 'preffered_velocity_prediction.egg-info/SOURCES.txt'
+writing manifest file 'preffered_velocity_prediction.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/preffered_velocity_prediction/lib/python3.10/site-packages/preffered-velocity-prediction.egg-link (link to .)
+
+Installed /home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/preffered_velocity_prediction
+running symlink_data
+creating /home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/preffered_velocity_prediction/share/ament_index
+creating /home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/preffered_velocity_prediction/share/ament_index/resource_index
+creating /home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/preffered_velocity_prediction/share/ament_index/resource_index/packages
+symbolically linking /home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/preffered_velocity_prediction/resource/preffered_velocity_prediction -> /home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/preffered_velocity_prediction/share/ament_index/resource_index/packages
+symbolically linking /home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/preffered_velocity_prediction/package.xml -> /home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/preffered_velocity_prediction/share/preffered_velocity_prediction
