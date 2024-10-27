@@ -18,7 +18,7 @@ class ArrayPublisher(Node):
 
     def publish_human_data(self):
         num_of_people = 8 # number of people (fixed for now)
-        buffer_data = np.random.uniform(0,1.4,(10,num_of_people)).astype(float)
+        buffer_data = np.random.uniform(0,1.4,(3,num_of_people)).astype(float)
 
         # array for human data
         human_data = buffer_data.flatten().tolist()

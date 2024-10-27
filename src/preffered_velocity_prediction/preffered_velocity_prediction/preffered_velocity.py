@@ -30,26 +30,34 @@ class HumanPrefferedVelocity(Node):
         kf.Q = np.array([[0.1, 0.0], [0.0, 0.1]])  # Process noise
         return kf
 
-    def update_filter_parameters(self, kf,class_id):
+    def update_filter_parameters(self, kf, class_id, std_dev, variance):
         # update the parameters of the kalman filter
-        # based on the class id of the human
 
-        if class_id == 0:  # Children
-            kf.R = 2.0 # Increase the measurement noise
-            kf.Q *= 1.5 # Increase the process noise
+        # initilize base values for measurement noise R and process noise Q based on class id
+        if class_id == 0:  # Children (typically more erratic)
+            base_R = 2.0  # Base measurement noise
+            base_Q = 1.5  # Base process noise factor
         elif class_id == 1:  # Normal adults
-            kf.R = 1.0
-            kf.Q *= 1.0
-        elif class_id == 2:  # Seniors
-            kf.R = 0.8
-            kf.Q *= 0.8
+            base_R = 1.0
+            base_Q = 1.0
+        elif class_id == 2:  # Seniors (usually smoother)
+            base_R = 0.8
+            base_Q = 0.8
         elif class_id == 3:  # People with disabilities
-            kf.R = 0.5
-            kf.Q *= 0.5
+            base_R = 0.5
+            base_Q = 0.5
         else:
             # Default values
-            kf.R = 1.0
-            kf.Q *= 1.0
+            base_R = 1.0
+            base_Q = 1.0
+
+        # Adjust measurement noise R based on the variance (higher variance, higher noise)
+        kf.R = base_R * (1 + variance / (1 + variance))  # Scale R using variance
+        
+        # Adjust process noise Q based on standard deviation (higher std_dev, more flexibility)
+        kf.Q = np.array([[base_Q * (1 + std_dev), 0], [0, base_Q * (1 + std_dev)]])
+
+ 
 
     def update_kalman_filters(self, num_people):
         if num_people > len(self.filters):
@@ -64,7 +72,7 @@ class HumanPrefferedVelocity(Node):
         
     def process_lidar_data(self, msg):
         
-        self.velocity_data = np.array(msg.data).reshape(-1, len(msg.data) // 10) # 10 assumes 10 lidar readings per human
+        self.velocity_data = np.array(msg.data).reshape(-1, len(msg.data) // 3) # assumes 3 rows of statics per human
         # -1 assumes that the number of humans is unknown
         num_people = self.velocity_data.shape[1]
         self.get_logger().info('Received data from lidar_readings with {} people'.format(num_people))
@@ -90,22 +98,21 @@ class HumanPrefferedVelocity(Node):
             self.get_logger().info('No data received')
 
     def compute_preffered_velocity(self):
-        # # Ensure that cls_data has the same number of entries as the number of agents
-        # if len(self.cls_data) != self.num_of_people:
-        #     self.get_logger().info('Mismatch between number of agents in velocity data and class data.')
-        #     return
-        
+
         self.get_logger().info('Computing preffered velocity')
 
-        mean_velocity = np.mean(self.velocity_data, axis=0)
-        ##mean_velocity = mean_velocity.reshape(-1, 1)
+        # Extract mean, std deviation, and variance data from the incoming array
+        mean_velocity = self.velocity_data[0, :]
+        std_devs = self.velocity_data[1, :]
+        variances = self.velocity_data[2, :]
+
         preferred_velocity = [] # list of preferred velocities for each human
 
         # loop through each human
         for i in range (self.num_of_people):
             mean_velocity_i = mean_velocity[i]
 
-            # handle the case where class data is not available
+            # handle the case where class data is not available 
             if (len(self.cls_data) -1) < i:
                 class_id = 1 # default to normal adults
             else:
@@ -114,19 +121,19 @@ class HumanPrefferedVelocity(Node):
             kf = self.filters[i]
 
             # update filter parameters base on class id
-            self.update_filter_parameters(kf, class_id)
+            self.update_filter_parameters(kf, class_id, std_devs[i], variances[i])
 
             # predict the next state and update
             kf.predict()
-            kf.update(np.array([mean_velocity_i]))
+            kf.update(np.array([[mean_velocity_i]]))
 
             # get the preferred velocity
             preferred_velocity_i = kf.x[0, 0]
             preferred_velocity.append(preferred_velocity_i)
 
-        self.get_logger().info(f'Agent {i} - class: {class_id}, '
-                               f'Observed velocity: {mean_velocity_i:.2f}, '
-                               f'Preferred velocity: {preferred_velocity_i:.2f}')
+            self.get_logger().info(f'Agent {i} - class: {class_id}, '
+                                f'Observed velocity: {mean_velocity_i:.2f}, '
+                                f'Preferred velocity: {preferred_velocity_i:.2f}')
         
         # create a publisher & publish the preferred velocity
 
