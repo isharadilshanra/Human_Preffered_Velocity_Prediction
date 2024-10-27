@@ -90,10 +90,10 @@ class HumanPrefferedVelocity(Node):
             self.get_logger().info('No data received')
 
     def compute_preffered_velocity(self):
-        # Ensure that cls_data has the same number of entries as the number of agents
-        if len(self.cls_data) != self.num_of_people:
-            self.get_logger().info('Mismatch between number of agents in velocity data and class data.')
-            return
+        # # Ensure that cls_data has the same number of entries as the number of agents
+        # if len(self.cls_data) != self.num_of_people:
+        #     self.get_logger().info('Mismatch between number of agents in velocity data and class data.')
+        #     return
         
         self.get_logger().info('Computing preffered velocity')
 
@@ -104,7 +104,13 @@ class HumanPrefferedVelocity(Node):
         # loop through each human
         for i in range (self.num_of_people):
             mean_velocity_i = mean_velocity[i]
-            class_id = self.cls_data[i]
+
+            # handle the case where class data is not available
+            if (len(self.cls_data) -1) < i:
+                class_id = 1 # default to normal adults
+            else:
+                class_id = self.cls_data[i]
+
             kf = self.filters[i]
 
             # update filter parameters base on class id
