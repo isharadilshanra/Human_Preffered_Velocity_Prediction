@@ -25,15 +25,13 @@ class HumanPrefferedVelocity(Node):
         kf.x = np.array([[0.], [0.]])  # Start with zero speed and acceleration
         kf.F = np.array([[1., 1.], [0., 1.]])  # Constant velocity model
         kf.H = np.array([[1., 0.]])  # Measure speed only
-        kf.P *= 1000.  # Initial uncertainty
-        kf.R = 1.0  # Initial measurement noise
-        kf.Q = np.array([[0.1, 0.0], [0.0, 0.1]])  # Process noise
+        kf.P *= 1000.  # Initial high uncertainty of Initial Covariance Matrix
+        kf.R = 1.0  # Initial measurement noise (will be updated later)
+        kf.Q = np.array([[0.1, 0.0], [0.0, 0.1]])  # Process noise (will be updated later)
         return kf
 
     def update_filter_parameters(self, kf, class_id, std_dev, variance):
-        # update the parameters of the kalman filter
-
-        # initilize base values for measurement noise R and process noise Q based on class id
+        # update the parameters of the kalman filter based on the class id
         if class_id == 0:  # Children (typically more erratic)
             base_R = 2.0  # Base measurement noise
             base_Q = 1.5  # Base process noise factor
@@ -78,7 +76,7 @@ class HumanPrefferedVelocity(Node):
         self.get_logger().info('Received data from lidar_readings with {} people'.format(num_people))
 
         if num_people != self.num_of_people:
-            # handles different number of people
+            # handles different number of people (people entering or leaving the scene)
             self.update_kalman_filters(num_people)
 
         # check for valid data
