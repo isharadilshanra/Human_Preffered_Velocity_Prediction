@@ -1,0 +1,20 @@
+[0.768s] Invoking command in '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/preffered_velocity_prediction': PYTHONPATH=/home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/preffered_velocity_prediction/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/preffered_velocity_prediction/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/preffered_velocity_prediction/build --no-deps symlink_data
+[0.970s] running develop
+[0.970s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[0.970s]   warnings.warn(
+[1.098s] running egg_info
+[1.099s] writing preffered_velocity_prediction.egg-info/PKG-INFO
+[1.099s] writing dependency_links to preffered_velocity_prediction.egg-info/dependency_links.txt
+[1.099s] writing entry points to preffered_velocity_prediction.egg-info/entry_points.txt
+[1.099s] writing requirements to preffered_velocity_prediction.egg-info/requires.txt
+[1.099s] writing top-level names to preffered_velocity_prediction.egg-info/top_level.txt
+[1.100s] reading manifest file 'preffered_velocity_prediction.egg-info/SOURCES.txt'
+[1.101s] writing manifest file 'preffered_velocity_prediction.egg-info/SOURCES.txt'
+[1.102s] running build_ext
+[1.102s] Creating /home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/preffered_velocity_prediction/lib/python3.10/site-packages/preffered-velocity-prediction.egg-link (link to .)
+[1.103s] Installing preffered_velocity script to /home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/preffered_velocity_prediction/lib/preffered_velocity_prediction
+[1.103s] Installing pub_human_data script to /home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/preffered_velocity_prediction/lib/preffered_velocity_prediction
+[1.103s] 
+[1.103s] Installed /home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/preffered_velocity_prediction
+[1.104s] running symlink_data
+[1.143s] Invoked command in '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/preffered_velocity_prediction' returned '0': PYTHONPATH=/home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/preffered_velocity_prediction/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/preffered_velocity_prediction/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/preffered_velocity_prediction/build --no-deps symlink_data
