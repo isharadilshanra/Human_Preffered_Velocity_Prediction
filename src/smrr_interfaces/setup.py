@@ -20,6 +20,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+            'smrr_interfaces_node = smrr_interfaces.smrr_interfaces_node:main'
         ],
     },
 )

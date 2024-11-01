@@ -111,7 +111,6 @@ function colcon_package_source_powershell_script {
 $env:COLCON_CURRENT_PREFIX=(Get-Item $PSCommandPath).Directory.Parent.Parent.FullName
 
 colcon_package_source_powershell_script "$env:COLCON_CURRENT_PREFIX\share/smrr_interfaces/hook/pythonpath.ps1"
-colcon_package_source_powershell_script "$env:COLCON_CURRENT_PREFIX\share/smrr_interfaces/hook/ament_prefix_path.ps1"
 colcon_package_source_powershell_script "$env:COLCON_CURRENT_PREFIX\../../build/smrr_interfaces/share/smrr_interfaces/hook/pythonpath_develop.ps1"
 
 Remove-Item Env:\COLCON_CURRENT_PREFIX
