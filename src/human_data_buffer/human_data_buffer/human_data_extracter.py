@@ -45,19 +45,26 @@ def callback_velocity_input(self, msg):
         pre_x = self.prev_x.get(i, x_position)
         pre_y = self.prev_y.get(i, y_position)
 
-        # if agent left
-        if pre_x == 0 or pre_y == 0:
-            vx = -1
-            vy = -1
-            cl_id = -1
-            # remove agent from previous positions
-            self.prev_x.pop(i, None)
-            self.prev_y.pop(i, None)
+        try:
+            # if agent left
+            if pre_x == 0 or pre_y == 0:
+                vx = -1
+                vy = -1
+                cl_id = -1
+                # remove agent from previous positions
+                self.prev_x.pop(i, None)
+                self.prev_y.pop(i, None)
 
-        else:
-            vx = (x_position - pre_x) / self.update_rate
-            vy = (y_position - pre_y) / self.update_rate
-            cl_id = class_id
+            else:
+                vx = (x_position - pre_x) / self.update_rate
+                vy = (y_position - pre_y) / self.update_rate
+                cl_id = class_id
+        except:
+            vx = 0
+            vy = 0
+            cl_id = 0
+            self.get_logger().info('Error calculating velocity in callback_velocity_input')
+
 
         # update previous positions
         self.prev_x[i] = x_position
@@ -71,7 +78,38 @@ def callback_velocity_input(self, msg):
     self.publish_velocity(x_vel, y_vel, class_list)
 
 def publish_velocity(self, x_vel,y_vel, class_list):
-    pass
+    # publish x velocity
+    msg = Float32MultiArray()
+    msg.data = x_vel
+    self.pub_x_velocity.publish(msg)
+
+    # publish y velocity
+    msg = Float32MultiArray()
+    msg.data = y_vel
+    self.pub_y_velocity.publish(msg)
+
+    # publish class data
+    msg = Int32MultiArray()
+    msg.data = class_list
+    self.pub_class.publish(msg)
+
+    # loging the published data
+    self.get_logger().info('Published x velocity: {x_vel}')
+    self.get_logger().info('Published y velocity: {y_vel}')
+    self.get_logger().info('Published class data: {class_list}')
+
+def main(args=None):
+    rclpy.init(args=args)
+
+    velocity_extractor = VelocityExtractor()
+
+    rclpy.spin(velocity_extractor)
+
+    velocity_extractor.destroy_node()
+    rclpy.shutdown()
+
+if __name__ == '__main__':
+    main()
         
 
         

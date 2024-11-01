@@ -4,3 +4,5 @@ smrr_interfaces.egg-info/PKG-INFO
 smrr_interfaces.egg-info/SOURCES.txt
 smrr_interfaces.egg-info/dependency_links.txt
 smrr_interfaces.egg-info/top_level.txt
+smrr_interfaces/msg/__init__.py
+smrr_interfaces/msg/_entities.py
