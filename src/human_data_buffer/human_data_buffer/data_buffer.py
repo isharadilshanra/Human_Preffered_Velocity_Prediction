@@ -5,6 +5,7 @@ from rclpy.node import Node
 from std_msgs.msg import Float32MultiArray, Int32MultiArray
 from collections import defaultdict, deque
 
+
 class AgentBuffer:
     def __init__(self):
         # Dictionary to hold each agent's velocity and class data

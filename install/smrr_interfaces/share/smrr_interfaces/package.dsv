@@ -1,6 +1,14 @@
+source;share/smrr_interfaces/hook/cmake_prefix_path.ps1
+source;share/smrr_interfaces/hook/cmake_prefix_path.dsv
+source;share/smrr_interfaces/hook/cmake_prefix_path.sh
+source;share/smrr_interfaces/hook/ld_library_path_lib.ps1
+source;share/smrr_interfaces/hook/ld_library_path_lib.dsv
+source;share/smrr_interfaces/hook/ld_library_path_lib.sh
 source;share/smrr_interfaces/hook/pythonpath.ps1
 source;share/smrr_interfaces/hook/pythonpath.dsv
 source;share/smrr_interfaces/hook/pythonpath.sh
-source;../../build/smrr_interfaces/share/smrr_interfaces/hook/pythonpath_develop.ps1
-source;../../build/smrr_interfaces/share/smrr_interfaces/hook/pythonpath_develop.dsv
-source;../../build/smrr_interfaces/share/smrr_interfaces/hook/pythonpath_develop.sh
+source;share/smrr_interfaces/local_setup.bash
+source;share/smrr_interfaces/local_setup.dsv
+source;share/smrr_interfaces/local_setup.ps1
+source;share/smrr_interfaces/local_setup.sh
+source;share/smrr_interfaces/local_setup.zsh
