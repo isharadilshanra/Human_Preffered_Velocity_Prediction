@@ -4,7 +4,7 @@ import rclpy
 from rclpy.node import Node
 from std_msgs.msg import Float32MultiArray, Int32MultiArray
 from collections import defaultdict, deque
-
+from smrr_interfaces.msg import Entities
 
 class AgentBuffer:
     def __init__(self):
