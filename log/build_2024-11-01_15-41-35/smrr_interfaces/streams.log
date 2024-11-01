@@ -1,0 +1,25 @@
+[2.080s] Invoking command in '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/smrr_interfaces': PYTHONPATH=/home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/smrr_interfaces/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_interfaces/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/smrr_interfaces/build --no-deps symlink_data
+[2.293s] running develop
+[2.310s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[2.311s]   warnings.warn(
+[2.504s] running egg_info
+[2.505s] creating smrr_interfaces.egg-info
+[2.505s] writing smrr_interfaces.egg-info/PKG-INFO
+[2.505s] writing dependency_links to smrr_interfaces.egg-info/dependency_links.txt
+[2.505s] writing entry points to smrr_interfaces.egg-info/entry_points.txt
+[2.505s] writing requirements to smrr_interfaces.egg-info/requires.txt
+[2.506s] writing top-level names to smrr_interfaces.egg-info/top_level.txt
+[2.506s] writing manifest file 'smrr_interfaces.egg-info/SOURCES.txt'
+[2.506s] reading manifest file 'smrr_interfaces.egg-info/SOURCES.txt'
+[2.506s] writing manifest file 'smrr_interfaces.egg-info/SOURCES.txt'
+[2.507s] running build_ext
+[2.507s] Creating /home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_interfaces/lib/python3.10/site-packages/smrr-interfaces.egg-link (link to .)
+[2.508s] 
+[2.508s] Installed /home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/smrr_interfaces
+[2.508s] running symlink_data
+[2.509s] creating /home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_interfaces/share/ament_index
+[2.509s] creating /home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_interfaces/share/ament_index/resource_index
+[2.509s] creating /home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_interfaces/share/ament_index/resource_index/packages
+[2.509s] symbolically linking /home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/smrr_interfaces/resource/smrr_interfaces -> /home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_interfaces/share/ament_index/resource_index/packages
+[2.509s] symbolically linking /home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/smrr_interfaces/package.xml -> /home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_interfaces/share/smrr_interfaces
+[2.618s] Invoked command in '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/smrr_interfaces' returned '0': PYTHONPATH=/home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/smrr_interfaces/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_interfaces/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/smrr_interfaces/build --no-deps symlink_data

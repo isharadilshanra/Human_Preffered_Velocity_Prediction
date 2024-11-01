@@ -1,0 +1,23 @@
+running develop
+/usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+  warnings.warn(
+running egg_info
+creating smrr_interfaces.egg-info
+writing smrr_interfaces.egg-info/PKG-INFO
+writing dependency_links to smrr_interfaces.egg-info/dependency_links.txt
+writing entry points to smrr_interfaces.egg-info/entry_points.txt
+writing requirements to smrr_interfaces.egg-info/requires.txt
+writing top-level names to smrr_interfaces.egg-info/top_level.txt
+writing manifest file 'smrr_interfaces.egg-info/SOURCES.txt'
+reading manifest file 'smrr_interfaces.egg-info/SOURCES.txt'
+writing manifest file 'smrr_interfaces.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_interfaces/lib/python3.10/site-packages/smrr-interfaces.egg-link (link to .)
+
+Installed /home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/smrr_interfaces
+running symlink_data
+creating /home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_interfaces/share/ament_index
+creating /home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_interfaces/share/ament_index/resource_index
+creating /home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_interfaces/share/ament_index/resource_index/packages
+symbolically linking /home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/smrr_interfaces/resource/smrr_interfaces -> /home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_interfaces/share/ament_index/resource_index/packages
+symbolically linking /home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/smrr_interfaces/package.xml -> /home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_interfaces/share/smrr_interfaces
