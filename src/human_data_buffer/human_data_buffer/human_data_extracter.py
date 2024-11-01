@@ -23,22 +23,55 @@ class VelocityExtractor(Node):
         self.pub_y_velocity = self.create_publisher(Float32MultiArray, 'y_velocity', 10)
         self.pub_class = self.create_publisher(Int32MultiArray, 'human_classes', 10)
 
-        # storage fro previous data
+        # storage for previous data
         self.prev_x = {}
         self.prev_y = {}
 
         # update rate
         self.update_rate = 0.5 # 2 Hz
 
-    def callback_velocity_input(self, msg):
-        x_posintion  = msg.x #list of x positions
-        y_position = msg.y #list of y positions
-        class_id = msg.classes
-        agent_count = msg.count
+def callback_velocity_input(self, msg):
+    x_positions  = msg.x #list of x positions
+    y_positions = msg.y #list of y positions
+    class_ids = msg.classes
+    agent_count = msg.count
 
-        # calculate velocity and update previous positions
-        x_vel = []
-        y_vel = []
-        class_list = []
+    # calculate velocity and update previous positions
+    x_vel = []
+    y_vel = []
+    class_list = []
+
+    for i, (x_position, y_position, class_id) in enumerate(zip(((x_positions), (y_positions), (class_ids)))):
+        pre_x = self.prev_x.get(i, x_position)
+        pre_y = self.prev_y.get(i, y_position)
+
+        # if agent left
+        if pre_x == 0 or pre_y == 0:
+            vx = -1
+            vy = -1
+            cl_id = -1
+            # remove agent from previous positions
+            self.prev_x.pop(i, None)
+            self.prev_y.pop(i, None)
+
+        else:
+            vx = (x_position - pre_x) / self.update_rate
+            vy = (y_position - pre_y) / self.update_rate
+            cl_id = class_id
+
+        # update previous positions
+        self.prev_x[i] = x_position
+        self.prev_y[i] = y_position
+
+        x_vel.append(vx)
+        y_vel.append(vy)
+        class_list.append(cl_id)
+
+    # publish the velocity data
+    self.publish_velocity(x_vel, y_vel, class_list)
+
+def publish_velocity(self, x_vel,y_vel, class_list):
+    pass
+        
 
         
