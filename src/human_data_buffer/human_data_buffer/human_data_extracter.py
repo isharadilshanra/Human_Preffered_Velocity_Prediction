@@ -3,7 +3,7 @@
 import rclpy
 from rclpy.node import Node
 from std_msgs.msg import Float32MultiArray, Int32MultiArray
-from smrr_interfaces.msg import Entities
+from smrr_interfaces.msg import Entities, VelocityClassData
 import numpy as np
 
 class VelocityExtractor(Node):
@@ -19,9 +19,12 @@ class VelocityExtractor(Node):
             )
         
         # publisher for velocity data
-        self.pub_x_velocity = self.create_publisher(Float32MultiArray, 'x_velocity', 10)
-        self.pub_y_velocity = self.create_publisher(Float32MultiArray, 'y_velocity', 10)
-        self.pub_class = self.create_publisher(Int32MultiArray, 'human_classes', 10)
+        # self.pub_x_velocity = self.create_publisher(Float32MultiArray, 'x_velocity', 10)
+        # self.pub_y_velocity = self.create_publisher(Float32MultiArray, 'y_velocity', 10)
+        # self.pub_class = self.create_publisher(Int32MultiArray, 'human_classes', 10)
+        
+        # custom interface
+        self.pub_velocity_class = self.create_publisher(VelocityClassData, 'velocity_class_data', 10)
 
         # storage for previous data
         self.prev_x = {}
@@ -79,19 +82,27 @@ def callback_velocity_input(self, msg):
 
 def publish_velocity(self, x_vel,y_vel, class_list):
     # publish x velocity
-    msg = Float32MultiArray()
-    msg.data = x_vel
-    self.pub_x_velocity.publish(msg)
+    # msg = Float32MultiArray()
+    # msg.data = x_vel
+    # self.pub_x_velocity.publish(msg)
 
-    # publish y velocity
-    msg = Float32MultiArray()
-    msg.data = y_vel
-    self.pub_y_velocity.publish(msg)
+    # # publish y velocity
+    # msg = Float32MultiArray()
+    # msg.data = y_vel
+    # self.pub_y_velocity.publish(msg)
 
-    # publish class data
-    msg = Int32MultiArray()
-    msg.data = class_list
-    self.pub_class.publish(msg)
+    # # publish class data
+    # msg = Int32MultiArray()
+    # msg.data = class_list
+    # self.pub_class.publish(msg)
+
+    # custom interface
+    msg = VelocityClassData()
+    msg.x_velocities = x_vel
+    msg.y_velocities = y_vel
+    msg.class_ids = class_list
+    self.pub_velocity_class.publish(msg)
+
 
     # loging the published data
     self.get_logger().info('Published x velocity: {x_vel}')

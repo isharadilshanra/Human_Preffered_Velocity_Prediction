@@ -31,6 +31,7 @@ endif()
 
 rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/Entities.msg"
+  "msg/VelocityClassData.msg"
   DEPENDENCIES std_msgs geometry_msgs
  )
 ament_package()
