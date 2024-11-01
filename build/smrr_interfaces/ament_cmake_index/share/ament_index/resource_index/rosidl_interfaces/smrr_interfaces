@@ -1,2 +1,4 @@
 msg/Entities.idl
 msg/Entities.msg
+msg/VelocityClassData.idl
+msg/VelocityClassData.msg

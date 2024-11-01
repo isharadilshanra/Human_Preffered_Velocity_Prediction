@@ -33,81 +33,81 @@ class VelocityExtractor(Node):
         # update rate
         self.update_rate = 0.5 # 2 Hz
 
-def callback_velocity_input(self, msg):
-    x_positions  = msg.x #list of x positions
-    y_positions = msg.y #list of y positions
-    class_ids = msg.classes
-    agent_count = msg.count
+    def callback_velocity_input(self, msg):
+        x_positions  = msg.x #list of x positions
+        y_positions = msg.y #list of y positions
+        class_ids = msg.classes
+        agent_count = msg.count
 
-    # calculate velocity and update previous positions
-    x_vel = []
-    y_vel = []
-    class_list = []
+        # calculate velocity and update previous positions
+        x_vel = []
+        y_vel = []
+        class_list = []
 
-    for i, (x_position, y_position, class_id) in enumerate(zip(((x_positions), (y_positions), (class_ids)))):
-        pre_x = self.prev_x.get(i, x_position)
-        pre_y = self.prev_y.get(i, y_position)
+        for i, (x_position, y_position, class_id) in enumerate(zip(x_positions, y_positions, class_ids)):
+            pre_x = self.prev_x.get(i, x_position)
+            pre_y = self.prev_y.get(i, y_position)
 
-        try:
-            # if agent left
-            if pre_x == 0 or pre_y == 0:
-                vx = -1
-                vy = -1
-                cl_id = -1
-                # remove agent from previous positions
-                self.prev_x.pop(i, None)
-                self.prev_y.pop(i, None)
+            try:
+                # if agent left
+                if pre_x == 0 or pre_y == 0:
+                    vx = -1
+                    vy = -1
+                    cl_id = "-1"
+                    # remove agent from previous positions
+                    self.prev_x.pop(i, None)
+                    self.prev_y.pop(i, None)
 
-            else:
-                vx = (x_position - pre_x) / self.update_rate
-                vy = (y_position - pre_y) / self.update_rate
-                cl_id = class_id
-        except:
-            vx = 0
-            vy = 0
-            cl_id = 0
-            self.get_logger().info('Error calculating velocity in callback_velocity_input')
-
-
-        # update previous positions
-        self.prev_x[i] = x_position
-        self.prev_y[i] = y_position
-
-        x_vel.append(vx)
-        y_vel.append(vy)
-        class_list.append(cl_id)
-
-    # publish the velocity data
-    self.publish_velocity(x_vel, y_vel, class_list)
-
-def publish_velocity(self, x_vel,y_vel, class_list):
-    # publish x velocity
-    # msg = Float32MultiArray()
-    # msg.data = x_vel
-    # self.pub_x_velocity.publish(msg)
-
-    # # publish y velocity
-    # msg = Float32MultiArray()
-    # msg.data = y_vel
-    # self.pub_y_velocity.publish(msg)
-
-    # # publish class data
-    # msg = Int32MultiArray()
-    # msg.data = class_list
-    # self.pub_class.publish(msg)
-
-    # custom interface
-    msg = VelocityClassData()
-    msg.x_velocities = x_vel
-    msg.y_velocities = y_vel
-    msg.class_ids = class_list
-    self.pub_velocity_class.publish(msg)
+                else:
+                    vx = (x_position - pre_x) / self.update_rate
+                    vy = (y_position - pre_y) / self.update_rate
+                    cl_id = class_id
+            except:
+                vx = 0
+                vy = 0
+                cl_id = 0
+                self.get_logger().info('Error calculating velocity in callback_velocity_input')
 
 
-    # loging the published data
-    self.get_logger().info('Published x velocity: {x_vel}')
-    self.get_logger().info('Published y velocity: {y_vel}')
-    self.get_logger().info('Published class data: {class_list}')
+            # update previous positions
+            self.prev_x[i] = x_position
+            self.prev_y[i] = y_position
+
+            x_vel.append(vx)
+            y_vel.append(vy)
+            class_list.append(cl_id)
+
+        # publish the velocity data
+        self.publish_velocity(x_vel, y_vel, class_list)
+
+    def publish_velocity(self, x_vel,y_vel, class_list):
+        # publish x velocity
+        # msg = Float32MultiArray()
+        # msg.data = x_vel
+        # self.pub_x_velocity.publish(msg)
+
+        # # publish y velocity
+        # msg = Float32MultiArray()
+        # msg.data = y_vel
+        # self.pub_y_velocity.publish(msg)
+
+        # # publish class data
+        # msg = Int32MultiArray()
+        # msg.data = class_list
+        # self.pub_class.publish(msg)
+
+        # custom interface
+        msg = VelocityClassData()
+        msg.x_velocities = x_vel
+        msg.y_velocities = y_vel
+        msg.class_ids = class_list
+        self.pub_velocity_class.publish(msg)
+
+
+        # loging the published data
+        self.get_logger().info(f'Published x velocity: {x_vel}')
+        self.get_logger().info(f'Published y velocity: {y_vel}')
+        self.get_logger().info(f'Published class data: {class_list}')
 
 def main(args=None):
     rclpy.init(args=args)

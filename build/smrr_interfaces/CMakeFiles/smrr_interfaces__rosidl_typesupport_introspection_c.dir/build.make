@@ -78,6 +78,7 @@ rosidl_typesupport_introspection_c/smrr_interfaces/msg/detail/entities__rosidl_t
 rosidl_typesupport_introspection_c/smrr_interfaces/msg/detail/entities__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/rosidl_typesupport_introspection_c/resource/srv__rosidl_typesupport_introspection_c.h.em
 rosidl_typesupport_introspection_c/smrr_interfaces/msg/detail/entities__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/rosidl_typesupport_introspection_c/resource/srv__type_support.c.em
 rosidl_typesupport_introspection_c/smrr_interfaces/msg/detail/entities__rosidl_typesupport_introspection_c.h: rosidl_adapter/smrr_interfaces/msg/Entities.idl
+rosidl_typesupport_introspection_c/smrr_interfaces/msg/detail/entities__rosidl_typesupport_introspection_c.h: rosidl_adapter/smrr_interfaces/msg/VelocityClassData.idl
 rosidl_typesupport_introspection_c/smrr_interfaces/msg/detail/entities__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/std_msgs/msg/Bool.idl
 rosidl_typesupport_introspection_c/smrr_interfaces/msg/detail/entities__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/std_msgs/msg/Byte.idl
 rosidl_typesupport_introspection_c/smrr_interfaces/msg/detail/entities__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/std_msgs/msg/ByteMultiArray.idl
@@ -143,8 +144,14 @@ rosidl_typesupport_introspection_c/smrr_interfaces/msg/detail/entities__rosidl_t
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/smrr_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C introspection for ROS interfaces"
 	/usr/bin/python3 /opt/ros/humble/lib/rosidl_typesupport_introspection_c/rosidl_typesupport_introspection_c --generator-arguments-file /home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/smrr_interfaces/rosidl_typesupport_introspection_c__arguments.json
 
+rosidl_typesupport_introspection_c/smrr_interfaces/msg/detail/velocity_class_data__rosidl_typesupport_introspection_c.h: rosidl_typesupport_introspection_c/smrr_interfaces/msg/detail/entities__rosidl_typesupport_introspection_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/smrr_interfaces/msg/detail/velocity_class_data__rosidl_typesupport_introspection_c.h
+
 rosidl_typesupport_introspection_c/smrr_interfaces/msg/detail/entities__type_support.c: rosidl_typesupport_introspection_c/smrr_interfaces/msg/detail/entities__rosidl_typesupport_introspection_c.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/smrr_interfaces/msg/detail/entities__type_support.c
+
+rosidl_typesupport_introspection_c/smrr_interfaces/msg/detail/velocity_class_data__type_support.c: rosidl_typesupport_introspection_c/smrr_interfaces/msg/detail/entities__rosidl_typesupport_introspection_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/smrr_interfaces/msg/detail/velocity_class_data__type_support.c
 
 CMakeFiles/smrr_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/smrr_interfaces/msg/detail/entities__type_support.c.o: CMakeFiles/smrr_interfaces__rosidl_typesupport_introspection_c.dir/flags.make
 CMakeFiles/smrr_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/smrr_interfaces/msg/detail/entities__type_support.c.o: rosidl_typesupport_introspection_c/smrr_interfaces/msg/detail/entities__type_support.c
@@ -160,14 +167,30 @@ CMakeFiles/smrr_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesu
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/smrr_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/smrr_interfaces/msg/detail/entities__type_support.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/smrr_interfaces/rosidl_typesupport_introspection_c/smrr_interfaces/msg/detail/entities__type_support.c -o CMakeFiles/smrr_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/smrr_interfaces/msg/detail/entities__type_support.c.s
 
+CMakeFiles/smrr_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/smrr_interfaces/msg/detail/velocity_class_data__type_support.c.o: CMakeFiles/smrr_interfaces__rosidl_typesupport_introspection_c.dir/flags.make
+CMakeFiles/smrr_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/smrr_interfaces/msg/detail/velocity_class_data__type_support.c.o: rosidl_typesupport_introspection_c/smrr_interfaces/msg/detail/velocity_class_data__type_support.c
+CMakeFiles/smrr_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/smrr_interfaces/msg/detail/velocity_class_data__type_support.c.o: CMakeFiles/smrr_interfaces__rosidl_typesupport_introspection_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/smrr_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/smrr_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/smrr_interfaces/msg/detail/velocity_class_data__type_support.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/smrr_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/smrr_interfaces/msg/detail/velocity_class_data__type_support.c.o -MF CMakeFiles/smrr_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/smrr_interfaces/msg/detail/velocity_class_data__type_support.c.o.d -o CMakeFiles/smrr_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/smrr_interfaces/msg/detail/velocity_class_data__type_support.c.o -c /home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/smrr_interfaces/rosidl_typesupport_introspection_c/smrr_interfaces/msg/detail/velocity_class_data__type_support.c
+
+CMakeFiles/smrr_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/smrr_interfaces/msg/detail/velocity_class_data__type_support.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/smrr_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/smrr_interfaces/msg/detail/velocity_class_data__type_support.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/smrr_interfaces/rosidl_typesupport_introspection_c/smrr_interfaces/msg/detail/velocity_class_data__type_support.c > CMakeFiles/smrr_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/smrr_interfaces/msg/detail/velocity_class_data__type_support.c.i
+
+CMakeFiles/smrr_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/smrr_interfaces/msg/detail/velocity_class_data__type_support.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/smrr_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/smrr_interfaces/msg/detail/velocity_class_data__type_support.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/smrr_interfaces/rosidl_typesupport_introspection_c/smrr_interfaces/msg/detail/velocity_class_data__type_support.c -o CMakeFiles/smrr_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/smrr_interfaces/msg/detail/velocity_class_data__type_support.c.s
+
 # Object files for target smrr_interfaces__rosidl_typesupport_introspection_c
 smrr_interfaces__rosidl_typesupport_introspection_c_OBJECTS = \
-"CMakeFiles/smrr_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/smrr_interfaces/msg/detail/entities__type_support.c.o"
+"CMakeFiles/smrr_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/smrr_interfaces/msg/detail/entities__type_support.c.o" \
+"CMakeFiles/smrr_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/smrr_interfaces/msg/detail/velocity_class_data__type_support.c.o"
 
 # External object files for target smrr_interfaces__rosidl_typesupport_introspection_c
 smrr_interfaces__rosidl_typesupport_introspection_c_EXTERNAL_OBJECTS =
 
 libsmrr_interfaces__rosidl_typesupport_introspection_c.so: CMakeFiles/smrr_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/smrr_interfaces/msg/detail/entities__type_support.c.o
+libsmrr_interfaces__rosidl_typesupport_introspection_c.so: CMakeFiles/smrr_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/smrr_interfaces/msg/detail/velocity_class_data__type_support.c.o
 libsmrr_interfaces__rosidl_typesupport_introspection_c.so: CMakeFiles/smrr_interfaces__rosidl_typesupport_introspection_c.dir/build.make
 libsmrr_interfaces__rosidl_typesupport_introspection_c.so: libsmrr_interfaces__rosidl_generator_c.so
 libsmrr_interfaces__rosidl_typesupport_introspection_c.so: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_introspection_c.so
@@ -180,7 +203,7 @@ libsmrr_interfaces__rosidl_typesupport_introspection_c.so: /opt/ros/humble/lib/l
 libsmrr_interfaces__rosidl_typesupport_introspection_c.so: /opt/ros/humble/lib/librosidl_runtime_c.so
 libsmrr_interfaces__rosidl_typesupport_introspection_c.so: /opt/ros/humble/lib/librcutils.so
 libsmrr_interfaces__rosidl_typesupport_introspection_c.so: CMakeFiles/smrr_interfaces__rosidl_typesupport_introspection_c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/smrr_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C shared library libsmrr_interfaces__rosidl_typesupport_introspection_c.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/smrr_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C shared library libsmrr_interfaces__rosidl_typesupport_introspection_c.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/smrr_interfaces__rosidl_typesupport_introspection_c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -193,6 +216,8 @@ CMakeFiles/smrr_interfaces__rosidl_typesupport_introspection_c.dir/clean:
 
 CMakeFiles/smrr_interfaces__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/smrr_interfaces/msg/detail/entities__rosidl_typesupport_introspection_c.h
 CMakeFiles/smrr_interfaces__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/smrr_interfaces/msg/detail/entities__type_support.c
+CMakeFiles/smrr_interfaces__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/smrr_interfaces/msg/detail/velocity_class_data__rosidl_typesupport_introspection_c.h
+CMakeFiles/smrr_interfaces__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/smrr_interfaces/msg/detail/velocity_class_data__type_support.c
 	cd /home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/smrr_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ishara/fyp/Human_Preffered_Velocity_Prediction/src/smrr_interfaces /home/ishara/fyp/Human_Preffered_Velocity_Prediction/src/smrr_interfaces /home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/smrr_interfaces /home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/smrr_interfaces /home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/smrr_interfaces/CMakeFiles/smrr_interfaces__rosidl_typesupport_introspection_c.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/smrr_interfaces__rosidl_typesupport_introspection_c.dir/depend
 

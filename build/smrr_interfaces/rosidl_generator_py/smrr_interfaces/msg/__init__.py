@@ -1,1 +1,2 @@
 from smrr_interfaces.msg._entities import Entities  # noqa: F401
+from smrr_interfaces.msg._velocity_class_data import VelocityClassData  # noqa: F401

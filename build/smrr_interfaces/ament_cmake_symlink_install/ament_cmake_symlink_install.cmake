@@ -361,8 +361,14 @@ include("/home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/smrr_interfa
 # install(FILES "/home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/smrr_interfaces/rosidl_adapter/smrr_interfaces/msg/Entities.idl" "DESTINATION" "share/smrr_interfaces/msg")
 ament_cmake_symlink_install_files("/home/ishara/fyp/Human_Preffered_Velocity_Prediction/src/smrr_interfaces" FILES "/home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/smrr_interfaces/rosidl_adapter/smrr_interfaces/msg/Entities.idl" "DESTINATION" "share/smrr_interfaces/msg")
 
+# install(FILES "/home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/smrr_interfaces/rosidl_adapter/smrr_interfaces/msg/VelocityClassData.idl" "DESTINATION" "share/smrr_interfaces/msg")
+ament_cmake_symlink_install_files("/home/ishara/fyp/Human_Preffered_Velocity_Prediction/src/smrr_interfaces" FILES "/home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/smrr_interfaces/rosidl_adapter/smrr_interfaces/msg/VelocityClassData.idl" "DESTINATION" "share/smrr_interfaces/msg")
+
 # install(FILES "/home/ishara/fyp/Human_Preffered_Velocity_Prediction/src/smrr_interfaces/msg/Entities.msg" "DESTINATION" "share/smrr_interfaces/msg")
 ament_cmake_symlink_install_files("/home/ishara/fyp/Human_Preffered_Velocity_Prediction/src/smrr_interfaces" FILES "/home/ishara/fyp/Human_Preffered_Velocity_Prediction/src/smrr_interfaces/msg/Entities.msg" "DESTINATION" "share/smrr_interfaces/msg")
+
+# install(FILES "/home/ishara/fyp/Human_Preffered_Velocity_Prediction/src/smrr_interfaces/msg/VelocityClassData.msg" "DESTINATION" "share/smrr_interfaces/msg")
+ament_cmake_symlink_install_files("/home/ishara/fyp/Human_Preffered_Velocity_Prediction/src/smrr_interfaces" FILES "/home/ishara/fyp/Human_Preffered_Velocity_Prediction/src/smrr_interfaces/msg/VelocityClassData.msg" "DESTINATION" "share/smrr_interfaces/msg")
 
 # install(FILES "/home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/smrr_interfaces/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/smrr_interfaces" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 ament_cmake_symlink_install_files("/home/ishara/fyp/Human_Preffered_Velocity_Prediction/src/smrr_interfaces" FILES "/home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/smrr_interfaces/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/smrr_interfaces" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
