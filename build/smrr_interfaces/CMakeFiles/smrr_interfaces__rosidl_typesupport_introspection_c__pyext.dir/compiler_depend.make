@@ -247,7 +247,10 @@ CMakeFiles/smrr_interfaces__rosidl_typesupport_introspection_c__pyext.dir/rosidl
   rosidl_generator_c/smrr_interfaces/msg/detail/entities__struct.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
-  rosidl_generator_c/smrr_interfaces/msg/detail/entities__functions.h
+  rosidl_generator_c/smrr_interfaces/msg/detail/entities__functions.h \
+  rosidl_generator_c/smrr_interfaces/msg/detail/velocity_class_data__type_support.h \
+  rosidl_generator_c/smrr_interfaces/msg/detail/velocity_class_data__struct.h \
+  rosidl_generator_c/smrr_interfaces/msg/detail/velocity_class_data__functions.h
 
 
 /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h:
@@ -301,6 +304,8 @@ rosidl_generator_c/smrr_interfaces/msg/detail/entities__type_support.h:
 /usr/include/python3.10/pythonrun.h:
 
 /usr/include/python3.10/abstract.h:
+
+rosidl_generator_c/smrr_interfaces/msg/detail/velocity_class_data__functions.h:
 
 /usr/include/python3.10/cpython/pylifecycle.h:
 
@@ -442,6 +447,8 @@ rosidl_generator_c/smrr_interfaces/msg/detail/entities__struct.h:
 
 /usr/include/python3.10/pyconfig.h:
 
+rosidl_generator_c/smrr_interfaces/msg/detail/velocity_class_data__struct.h:
+
 /usr/include/linux/errno.h:
 
 /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h:
@@ -531,6 +538,8 @@ rosidl_generator_c/smrr_interfaces/msg/detail/entities__struct.h:
 /usr/include/python3.10/genobject.h:
 
 /usr/include/x86_64-linux-gnu/bits/long-double.h:
+
+rosidl_generator_c/smrr_interfaces/msg/detail/velocity_class_data__type_support.h:
 
 /usr/include/python3.10/typeslots.h:
 
