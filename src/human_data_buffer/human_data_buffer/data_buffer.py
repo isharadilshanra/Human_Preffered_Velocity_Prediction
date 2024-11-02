@@ -2,7 +2,6 @@
 
 import rclpy
 from rclpy.node import Node
-from collections import defaultdict, deque
 from smrr_interfaces.msg import VelocityClassData
 
 class DataBufferNode(Node):
@@ -17,46 +16,70 @@ class DataBufferNode(Node):
             10
         )
 
-        # Buffer dictionary where each agent has a fixed-size buffer for x, y velocities and class data
-        # Structure: {agent_id: {"x": deque, "y": deque, "class_id": deque}}
-        self.agent_buffers = defaultdict(lambda: {
-            "x": deque(maxlen=10),
-            "y": deque(maxlen=10),
-            "class_id": deque(maxlen=10)
-        })
+        # Matrix to store each human's data in rows
+        # Structure of each row: [human_id, x_velocities (list), y_velocities (list), class_details (list)]
+        self.agent_matrix = []
+        self.next_available_id = 0  # Tracks the next unique ID to assign to a new agent
 
     def callback_velocity_data(self, msg):
-        x_velocities = msg.x_velocities  # List of x velocities
-        y_velocities = msg.y_velocities  # List of y velocities
-        class_ids = msg.class_ids        # List of class IDs
+        x_velocities = msg.x_velocities  # List of x velocities from the message
+        y_velocities = msg.y_velocities  # List of y velocities from the message
+        class_ids = msg.class_ids        # List of class IDs from the message
 
-        # Process each agent's data from the message
         for i, (x_vel, y_vel, class_id) in enumerate(zip(x_velocities, y_velocities, class_ids)):
-            # If x and y velocities are -1, the agent has left; remove them from the buffer
+            # Check if the agent has left (indicated by -1 velocities)
             if x_vel == -1.0 and y_vel == -1.0:
-                if i in self.agent_buffers:
-                    del self.agent_buffers[i]
-                    self.get_logger().info(f'Removed agent {i} from buffer')
+                # If the agent has left, remove their row and shift rows up
+                self.remove_agent(i)
                 continue
 
-            # Add the new data to the buffer for each agent
-            self.agent_buffers[i]["x"].append(x_vel)
-            self.agent_buffers[i]["y"].append(y_vel)
-            self.agent_buffers[i]["class_id"].append(class_id)
+            # Update data for existing agent or add new agent
+            if i < len(self.agent_matrix):
+                # Existing agent - update their data
+                self.agent_matrix[i][1].append(x_vel)  # Append x velocity
+                self.agent_matrix[i][2].append(y_vel)  # Append y velocity
+                self.agent_matrix[i][3].append(class_id)  # Append class id
+            else:
+                # New agent - add a new row for this agent
+                self.add_new_agent(x_vel, y_vel, class_id)
 
             # Log buffer status for debugging
-            self.get_logger().info(f'Updated buffer for agent {i}: '
-                                   f'X Velocities: {list(self.agent_buffers[i]["x"])}, '
-                                   f'Y Velocities: {list(self.agent_buffers[i]["y"])}, '
-                                   f'Class IDs: {list(self.agent_buffers[i]["class_id"])}')
+            self.log_buffer_status()
+
+    def add_new_agent(self, x_vel, y_vel, class_id):
+        # Initialize lists with a max of 10 entries each for velocities and class details
+        new_row = [
+            self.next_available_id,      # Assign the next available ID
+            [x_vel],                     # x velocity list
+            [y_vel],                     # y velocity list
+            [class_id]                   # class detail list
+        ]
+        self.agent_matrix.append(new_row)
+        self.next_available_id += 1  # Increment ID for the next new agent
+
+    def remove_agent(self, index):
+        # Remove the agent's row by index
+        if index < len(self.agent_matrix):
+            removed_id = self.agent_matrix[index][0]
+            del self.agent_matrix[index]  # Delete the row
+            self.get_logger().info(f'Removed agent with ID {removed_id} from buffer')
+
+    def log_buffer_status(self):
+        # Log the current status of the buffer for debugging
+        for row in self.agent_matrix:
+            self.get_logger().info(f'Agent ID: {row[0]}, X Velocities: {row[1]}, '
+                                   f'Y Velocities: {row[2]}, Class Details: {row[3]}')
 
     def get_buffer_for_agent(self, agent_id):
-        # Retrieve buffer data for a specific agent
-        return self.agent_buffers.get(agent_id, None)
+        # Retrieve buffer data for a specific agent by ID
+        for row in self.agent_matrix:
+            if row[0] == agent_id:
+                return row
+        return None
 
     def get_all_buffers(self):
         # Retrieve buffer data for all agents
-        return self.agent_buffers
+        return self.agent_matrix
 
 
 def main(args=None):
