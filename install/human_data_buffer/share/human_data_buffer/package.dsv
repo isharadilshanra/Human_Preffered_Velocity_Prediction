@@ -1,9 +1,6 @@
 source;share/human_data_buffer/hook/pythonpath.ps1
 source;share/human_data_buffer/hook/pythonpath.dsv
 source;share/human_data_buffer/hook/pythonpath.sh
-source;share/human_data_buffer/hook/ament_prefix_path.ps1
-source;share/human_data_buffer/hook/ament_prefix_path.dsv
-source;share/human_data_buffer/hook/ament_prefix_path.sh
 source;../../build/human_data_buffer/share/human_data_buffer/hook/pythonpath_develop.ps1
 source;../../build/human_data_buffer/share/human_data_buffer/hook/pythonpath_develop.dsv
 source;../../build/human_data_buffer/share/human_data_buffer/hook/pythonpath_develop.sh

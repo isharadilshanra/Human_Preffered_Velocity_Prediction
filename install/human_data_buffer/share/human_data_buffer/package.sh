@@ -79,7 +79,6 @@ _colcon_package_sh_source_script() {
 
 # source sh hooks
 _colcon_package_sh_source_script "$COLCON_CURRENT_PREFIX/share/human_data_buffer/hook/pythonpath.sh"
-_colcon_package_sh_source_script "$COLCON_CURRENT_PREFIX/share/human_data_buffer/hook/ament_prefix_path.sh"
 _colcon_package_sh_source_script "$COLCON_CURRENT_PREFIX/../../build/human_data_buffer/share/human_data_buffer/hook/pythonpath_develop.sh"
 
 unset _colcon_package_sh_source_script

@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 
 import rclpy
+import numpy as np
+from collections import deque
 from rclpy.node import Node
 from smrr_interfaces.msg import VelocityClassData
 
