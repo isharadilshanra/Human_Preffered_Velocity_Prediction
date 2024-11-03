@@ -1,5 +1,9 @@
 file(REMOVE_RECURSE
   "CMakeFiles/smrr_interfaces__cpp"
+  "rosidl_generator_cpp/smrr_interfaces/msg/buffer.hpp"
+  "rosidl_generator_cpp/smrr_interfaces/msg/detail/buffer__builder.hpp"
+  "rosidl_generator_cpp/smrr_interfaces/msg/detail/buffer__struct.hpp"
+  "rosidl_generator_cpp/smrr_interfaces/msg/detail/buffer__traits.hpp"
   "rosidl_generator_cpp/smrr_interfaces/msg/detail/entities__builder.hpp"
   "rosidl_generator_cpp/smrr_interfaces/msg/detail/entities__struct.hpp"
   "rosidl_generator_cpp/smrr_interfaces/msg/detail/entities__traits.hpp"

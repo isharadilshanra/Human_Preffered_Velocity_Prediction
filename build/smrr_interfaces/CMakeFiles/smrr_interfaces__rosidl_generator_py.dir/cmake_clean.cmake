@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/smrr_interfaces__rosidl_generator_py.dir/rosidl_generator_py/smrr_interfaces/msg/_buffer_s.c.o"
+  "CMakeFiles/smrr_interfaces__rosidl_generator_py.dir/rosidl_generator_py/smrr_interfaces/msg/_buffer_s.c.o.d"
   "CMakeFiles/smrr_interfaces__rosidl_generator_py.dir/rosidl_generator_py/smrr_interfaces/msg/_entities_s.c.o"
   "CMakeFiles/smrr_interfaces__rosidl_generator_py.dir/rosidl_generator_py/smrr_interfaces/msg/_entities_s.c.o.d"
   "CMakeFiles/smrr_interfaces__rosidl_generator_py.dir/rosidl_generator_py/smrr_interfaces/msg/_velocity_class_data_s.c.o"

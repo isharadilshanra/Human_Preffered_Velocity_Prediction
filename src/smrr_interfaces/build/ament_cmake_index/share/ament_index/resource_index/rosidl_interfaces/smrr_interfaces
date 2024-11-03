@@ -1,3 +1,5 @@
+msg/Buffer.idl
+msg/Buffer.msg
 msg/Entities.idl
 msg/Entities.msg
 msg/VelocityClassData.idl

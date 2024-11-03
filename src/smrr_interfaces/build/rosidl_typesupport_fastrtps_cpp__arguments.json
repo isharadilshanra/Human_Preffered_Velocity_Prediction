@@ -4,7 +4,8 @@
   "template_dir": "/opt/ros/humble/share/rosidl_typesupport_fastrtps_cpp/resource",
   "idl_tuples": [
     "/home/ishara/fyp/Human_Preffered_Velocity_Prediction/src/smrr_interfaces/build/rosidl_adapter/smrr_interfaces:msg/Entities.idl",
-    "/home/ishara/fyp/Human_Preffered_Velocity_Prediction/src/smrr_interfaces/build/rosidl_adapter/smrr_interfaces:msg/VelocityClassData.idl"
+    "/home/ishara/fyp/Human_Preffered_Velocity_Prediction/src/smrr_interfaces/build/rosidl_adapter/smrr_interfaces:msg/VelocityClassData.idl",
+    "/home/ishara/fyp/Human_Preffered_Velocity_Prediction/src/smrr_interfaces/build/rosidl_adapter/smrr_interfaces:msg/Buffer.idl"
   ],
   "ros_interface_dependencies": [
     "std_msgs:/opt/ros/humble/share/std_msgs/msg/Bool.idl",
@@ -81,6 +82,7 @@
     "/opt/ros/humble/share/rosidl_typesupport_fastrtps_cpp/resource/srv__type_support.cpp.em",
     "/home/ishara/fyp/Human_Preffered_Velocity_Prediction/src/smrr_interfaces/build/rosidl_adapter/smrr_interfaces/msg/Entities.idl",
     "/home/ishara/fyp/Human_Preffered_Velocity_Prediction/src/smrr_interfaces/build/rosidl_adapter/smrr_interfaces/msg/VelocityClassData.idl",
+    "/home/ishara/fyp/Human_Preffered_Velocity_Prediction/src/smrr_interfaces/build/rosidl_adapter/smrr_interfaces/msg/Buffer.idl",
     "/opt/ros/humble/share/std_msgs/msg/Bool.idl",
     "/opt/ros/humble/share/std_msgs/msg/Byte.idl",
     "/opt/ros/humble/share/std_msgs/msg/ByteMultiArray.idl",

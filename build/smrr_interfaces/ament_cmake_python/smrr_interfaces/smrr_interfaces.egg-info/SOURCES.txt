@@ -5,5 +5,6 @@ smrr_interfaces.egg-info/SOURCES.txt
 smrr_interfaces.egg-info/dependency_links.txt
 smrr_interfaces.egg-info/top_level.txt
 smrr_interfaces/msg/__init__.py
+smrr_interfaces/msg/_buffer.py
 smrr_interfaces/msg/_entities.py
 smrr_interfaces/msg/_velocity_class_data.py

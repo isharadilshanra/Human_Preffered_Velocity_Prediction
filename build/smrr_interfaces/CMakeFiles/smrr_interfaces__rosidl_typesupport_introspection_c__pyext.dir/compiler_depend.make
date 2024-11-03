@@ -250,7 +250,10 @@ CMakeFiles/smrr_interfaces__rosidl_typesupport_introspection_c__pyext.dir/rosidl
   rosidl_generator_c/smrr_interfaces/msg/detail/entities__functions.h \
   rosidl_generator_c/smrr_interfaces/msg/detail/velocity_class_data__type_support.h \
   rosidl_generator_c/smrr_interfaces/msg/detail/velocity_class_data__struct.h \
-  rosidl_generator_c/smrr_interfaces/msg/detail/velocity_class_data__functions.h
+  rosidl_generator_c/smrr_interfaces/msg/detail/velocity_class_data__functions.h \
+  rosidl_generator_c/smrr_interfaces/msg/detail/buffer__type_support.h \
+  rosidl_generator_c/smrr_interfaces/msg/detail/buffer__struct.h \
+  rosidl_generator_c/smrr_interfaces/msg/detail/buffer__functions.h
 
 
 /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h:
@@ -300,6 +303,8 @@ rosidl_generator_c/smrr_interfaces/msg/detail/entities__type_support.h:
 /usr/include/python3.10/genericaliasobject.h:
 
 /usr/include/python3.10/descrobject.h:
+
+rosidl_generator_c/smrr_interfaces/msg/detail/buffer__struct.h:
 
 /usr/include/python3.10/pythonrun.h:
 
@@ -415,6 +420,8 @@ rosidl_generator_c/smrr_interfaces/msg/rosidl_generator_c__visibility_control.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
 
+rosidl_generator_c/smrr_interfaces/msg/detail/buffer__functions.h:
+
 /opt/ros/humble/include/rosidl_typesupport_interface/rosidl_typesupport_interface/macros.h:
 
 /usr/include/python3.10/bltinmodule.h:
@@ -444,6 +451,8 @@ rosidl_generator_c/smrr_interfaces/msg/detail/entities__struct.h:
 /usr/include/python3.10/sliceobject.h:
 
 /usr/include/features.h:
+
+rosidl_generator_c/smrr_interfaces/msg/detail/buffer__type_support.h:
 
 /usr/include/python3.10/pyconfig.h:
 
