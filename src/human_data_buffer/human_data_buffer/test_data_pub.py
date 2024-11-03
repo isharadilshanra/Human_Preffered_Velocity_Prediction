@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 import rclpy
-from rclpy import Node
+from rclpy.node import Node
 from smrr_interfaces.msg import Entities, VelocityClassData
 from std_msgs.msg import Int32MultiArray, Float32MultiArray
 import numpy as np
@@ -19,7 +19,7 @@ class TestDataPub(Node):
         self.y_positions = []
 
     def agennt_entry(self):
-        new_class = random.randint(0, 3)
+        new_class = str(random.randint(0, 3))
         new_x =random.uniform(1.0,10.0)
         new_y = random.uniform(1.0,10.0)
 
@@ -27,14 +27,14 @@ class TestDataPub(Node):
         self.x_positions.append(new_x)
         self.y_positions.append(new_y)
 
-        self.get_logger().info('New agent: class: %d, x: %f, y: %f' % (new_class, new_x, new_y))
+        self.get_logger().info('New agent: class: {new_class}, x: {new_x}, y: {new_y}')
     def agent_exit(self):
         if self.x_positions:
             inx = random.randint(0,len(self.x_positions)-1)
             self.x_positions[inx] = 0.0
             self.y_positions[inx] = 0.0
 
-            self.get_logger().info('Agent exit: class: %d, x: %f, y: %f' % (self.clases[inx], self.x_positions[inx], self.y_positions[inx]))
+            self.get_logger().info(' Agent exit : class: {self.clases[inx]}, x: {self.x_positions[inx]}, y: {self.y_positions[inx]}')
 
             # publish the data
             self.publish_data()
@@ -47,11 +47,11 @@ class TestDataPub(Node):
 
     def timer_callback(self):
         flag = 0
-        if random.random() < 0.2:
+        if random.random() < 0.4:
             # 20 % chance of agent enter
             self.agennt_entry()
             flag = 1
-        if random.random() < 0.15 and self.x_positions:
+        if random.random() < 0.38 and self.x_positions:
             # 15 % chance of agent exit
             self.agent_exit()
             flag = 1
@@ -77,7 +77,8 @@ class TestDataPub(Node):
         msg.count = len(self.x_positions)
         self.pub.publish(msg)
 
-        self.get_logger().info('Publishing data: count = {msg.count}, x = {msg.x}, y = {msg.y}, class = {msg.classes}')
+        self.get_logger().info(f'Published {msg.count} agents , x: {msg.x}, y: {msg.y}, classes: {msg.classes}')
+        
 
 def main(args=None):
     rclpy.init(args=args)

@@ -50,9 +50,9 @@ class VelocityExtractor(Node):
 
             try:
                 # if agent left
-                if pre_x == 0 or pre_y == 0:
-                    vx = -1
-                    vy = -1
+                if pre_x == 0.0 or pre_y == 0.0:
+                    vx = -100.0
+                    vy = -100.0
                     cl_id = "-1"
                     # remove agent from previous positions
                     self.prev_x.pop(i, None)
@@ -63,9 +63,9 @@ class VelocityExtractor(Node):
                     vy = (y_position - pre_y) / self.update_rate
                     cl_id = class_id
             except:
-                vx = 0
-                vy = 0
-                cl_id = 0
+                vx = 0.0
+                vy = 0.0
+                cl_id = '0'
                 self.get_logger().info('Error calculating velocity in callback_velocity_input')
 
 

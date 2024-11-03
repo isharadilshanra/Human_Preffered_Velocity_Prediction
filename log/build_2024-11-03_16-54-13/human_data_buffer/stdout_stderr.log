@@ -1,0 +1,19 @@
+/usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+  warnings.warn(
+running develop
+running egg_info
+writing human_data_buffer.egg-info/PKG-INFO
+writing dependency_links to human_data_buffer.egg-info/dependency_links.txt
+writing entry points to human_data_buffer.egg-info/entry_points.txt
+writing requirements to human_data_buffer.egg-info/requires.txt
+writing top-level names to human_data_buffer.egg-info/top_level.txt
+reading manifest file 'human_data_buffer.egg-info/SOURCES.txt'
+writing manifest file 'human_data_buffer.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/human_data_buffer/lib/python3.10/site-packages/human-data-buffer.egg-link (link to .)
+Installing human_data_buffer script to /home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/human_data_buffer/lib/human_data_buffer
+Installing human_data_extracter script to /home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/human_data_buffer/lib/human_data_buffer
+Installing human_data_pub script to /home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/human_data_buffer/lib/human_data_buffer
+
+Installed /home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/human_data_buffer
+running symlink_data
