@@ -5,16 +5,26 @@ import numpy as np
 import random
 from std_msgs.msg import Float32MultiArray, Int32MultiArray
 from filterpy.kalman import KalmanFilter
-from smrr_interfaces.msg import Buffer
+from smrr_interfaces.msg import Buffer, PrefVelocity
 
 class HumanPrefferedVelocity(Node):
     def __init__(self):
         super().__init__('human_preffered_velocity')
+
         #self.data_reader = self.create_subscription(Float32MultiArray, 'lidar_readings', self.process_lidar_data,10)
         #self.cls_reader = self.create_subscription(Int32MultiArray, 'human_clsses', self.process_cls_data,10)
         
         # subscribe to buffer
         self.data_reader = self.create_subscription(Buffer, 'buffer', self.process_buffer_data,10)
+
+        # publisher for preffered velocity
+        self.preferred_velocity_publisher = self.create_publisher(PrefVelocity, 'preferred_velocity', 10)
+        self.timer = self.create_timer(0.5, self.publish_preferred_velocity)
+
+        # class id and agent id for interface 
+        self.cls_ids = []
+        self.agent_ids = []
+        self.preferred_velocity = []
 
         self.velocity_data = []
         self.cls_data = []
@@ -23,8 +33,19 @@ class HumanPrefferedVelocity(Node):
         self.num_of_people = 0
         
     def process_buffer_data(self, msg):
+        self.agent_ids = msg.agent_ids
+        self.cls_ids = msg.class_ids
+
         self.process_lidar_data(msg)
         self.process_cls_data(msg)
+
+    def publish_preferred_velocity(self):
+        msg = PrefVelocity()
+        msg.agent_ids = self.agent_ids
+        msg.preferred_velocities = self.preferred_velocity
+        msg.class_ids = self.cls_ids
+        self.preferred_velocity_publisher.publish(msg)
+        self.get_logger().info('Publishing preferred velocity')
 
     def kalman_filter(self):
         # initialize kalman filter 
@@ -85,7 +106,7 @@ class HumanPrefferedVelocity(Node):
         # assume x and y variance are independent
         std_dev = np.sqrt(variance)
 
-        mean_speed_data = np.sqrt(mean_x_velocity_data ** 2 + mean_y_velocity_data ** 2)
+        mean_speed_data = np.sqrt(np.array(mean_x_velocity_data) ** 2 + np.array(mean_y_velocity_data) ** 2)
         
         self.velocity_data = np.array([mean_speed_data, std_dev, variance])
         # -1 assumes that the number of humans is unknown
@@ -151,6 +172,7 @@ class HumanPrefferedVelocity(Node):
                                 f'Preferred velocity: {preferred_velocity_i:.2f}')
         
         # create a publisher & publish the preferred velocity
+        self.preferred_velocity = preferred_velocity
 
 def main(args=None):
     rclpy.init(args=args)

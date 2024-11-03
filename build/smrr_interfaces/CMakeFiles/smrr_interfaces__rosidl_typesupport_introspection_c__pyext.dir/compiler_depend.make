@@ -253,8 +253,13 @@ CMakeFiles/smrr_interfaces__rosidl_typesupport_introspection_c__pyext.dir/rosidl
   rosidl_generator_c/smrr_interfaces/msg/detail/velocity_class_data__functions.h \
   rosidl_generator_c/smrr_interfaces/msg/detail/buffer__type_support.h \
   rosidl_generator_c/smrr_interfaces/msg/detail/buffer__struct.h \
-  rosidl_generator_c/smrr_interfaces/msg/detail/buffer__functions.h
+  rosidl_generator_c/smrr_interfaces/msg/detail/buffer__functions.h \
+  rosidl_generator_c/smrr_interfaces/msg/detail/pref_velocity__type_support.h \
+  rosidl_generator_c/smrr_interfaces/msg/detail/pref_velocity__struct.h \
+  rosidl_generator_c/smrr_interfaces/msg/detail/pref_velocity__functions.h
 
+
+rosidl_generator_c/smrr_interfaces/msg/detail/pref_velocity__struct.h:
 
 /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h:
 
@@ -606,6 +611,8 @@ rosidl_generator_c/smrr_interfaces/msg/detail/velocity_class_data__type_support.
 
 /usr/include/limits.h:
 
+rosidl_generator_c/smrr_interfaces/msg/detail/pref_velocity__functions.h:
+
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
 
 /usr/include/x86_64-linux-gnu/python3.10/pyconfig.h:
@@ -699,6 +706,8 @@ rosidl_generator_c/smrr_interfaces/msg/detail/entities__functions.h:
 /usr/include/unistd.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
+
+rosidl_generator_c/smrr_interfaces/msg/detail/pref_velocity__type_support.h:
 
 /usr/include/python3.10/cpython/pyctype.h:
 
