@@ -78,9 +78,9 @@ class VelocityExtractor(Node):
             class_list.append(cl_id)
 
         # publish the velocity data
-        self.publish_velocity(x_vel, y_vel, class_list)
+        self.publish_velocity(x_vel, y_vel, class_list, x_positions, y_positions)
 
-    def publish_velocity(self, x_vel,y_vel, class_list):
+    def publish_velocity(self, x_vel,y_vel, class_list, x_positions, y_positions):
         # publish x velocity
         # msg = Float32MultiArray()
         # msg.data = x_vel
@@ -101,6 +101,8 @@ class VelocityExtractor(Node):
         msg.x_velocities = x_vel
         msg.y_velocities = y_vel
         msg.class_ids = class_list
+        msg.x_positions = x_positions
+        msg.y_positions = y_positions
         self.pub_velocity_class.publish(msg)
 
 
@@ -108,6 +110,8 @@ class VelocityExtractor(Node):
         self.get_logger().info(f'Published x velocity: {x_vel}')
         self.get_logger().info(f'Published y velocity: {y_vel}')
         self.get_logger().info(f'Published class data: {class_list}')
+        self.get_logger().info(f'Published x positions: {x_positions}')
+        self.get_logger().info(f'Published y positions: {y_positions}')
 
 def main(args=None):
     rclpy.init(args=args)

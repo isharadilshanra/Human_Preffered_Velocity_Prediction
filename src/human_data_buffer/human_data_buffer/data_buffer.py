@@ -226,19 +226,21 @@ class DataBufferNode(Node):
         )
 
         # Initialize the buffer matrix with a numpy array
-        # Structure: each row is [human_id, x_velocities (deque), y_velocities (deque), class_details (deque), statistics (dict)]
-        self.agent_matrix = np.empty((0, 5), dtype=object)
+        # Structure: each row is [human_id, x_velocities (deque), y_velocities (deque), class_details (deque), x_positions(deque), y_positions(deque), statistics (dict)]
+        self.agent_matrix = np.empty((0, 6), dtype=object)
         self.next_available_id = 0  # Tracks the next unique ID for new agents
         self.reset_threshold = 1000  # Reset IDs if they exceed this value
 
     def callback_velocity_data(self, msg):
         x_velocities = msg.x_velocities  # List of x velocities from the message
         y_velocities = msg.y_velocities  # List of y velocities from the message
+        x_positions = msg.x_positions    # List of x positions from the message
+        y_positions = msg.y_positions    # List of y positions from the message
         class_ids = msg.class_ids        # List of class IDs from the message
 
         try:
             # Process each agent's data from the message
-            for i, (x_vel, y_vel, class_id) in enumerate(zip(x_velocities, y_velocities, class_ids)):
+            for i, (x_vel, y_vel, class_id, x_position, y_position) in enumerate(zip(x_velocities, y_velocities, class_ids, x_positions, y_positions)):
                 # Check if the agent has left (indicated by -1 velocities)
 
                 if x_vel == -1.0 and y_vel == -1.0:
@@ -253,13 +255,13 @@ class DataBufferNode(Node):
                 if i < len(self.agent_matrix):
                     # Existing agent - update their data
                     try:
-                        self.update_existing_agent(i, x_vel, y_vel, class_id)
+                        self.update_existing_agent(i, x_vel, y_vel, class_id, x_position, y_position)
                     except Exception as e:
                         self.get_logger().error(f"Error updating existing agent in buffer: {e}")
                 else:
                     # New agent - add a new row for this agent
                     try:
-                        self.add_new_agent(x_vel, y_vel, class_id)
+                        self.add_new_agent(x_vel, y_vel, class_id, x_position, y_position)
 
                     except Exception as e:
                         self.get_logger().error(f"Error adding new agent to buffer: {e}")
@@ -280,13 +282,15 @@ class DataBufferNode(Node):
         except Exception as e:
             self.get_logger().error(f"Error assigning data to buffer in the loop: {e}")
 
-    def add_new_agent(self, x_vel, y_vel, class_id):
+    def add_new_agent(self, x_vel, y_vel, class_id, x_position, y_position):
         # Initialize lists with a max of 10 entries each for velocities and class details, plus a dictionary for statistics
         new_row = [
             self.next_available_id,      # Assign the next available ID
             deque([x_vel], maxlen=10),   # x velocities deque
             deque([y_vel], maxlen=10),   # y velocities deque
             deque([class_id], maxlen=10), # class details deque
+            deque([x_position], maxlen=10), # x positions deque
+            deque([y_position], maxlen=10), # y positions deque
             {}                           # Placeholder for statistics dictionary
         ]
         self.agent_matrix = np.vstack([self.agent_matrix, new_row])  # Add new row to the numpy matrix
@@ -296,11 +300,13 @@ class DataBufferNode(Node):
         if self.next_available_id > self.reset_threshold:
             self.reset_ids()
 
-    def update_existing_agent(self, index, x_vel, y_vel, class_id):
+    def update_existing_agent(self, index, x_vel, y_vel, class_id, x_position, y_position):
         # Append new data to existing agent's deques
         self.agent_matrix[index, 1].append(x_vel)  # Update x velocities
         self.agent_matrix[index, 2].append(y_vel)  # Update y velocities
         self.agent_matrix[index, 3].append(class_id)  # Update class IDs
+        self.agent_matrix[index, 4].append(x_position)  # Update x positions
+        self.agent_matrix[index, 5].append(y_position)  # Update y positions
 
     def calculate_statistics(self, index):
         # Calculate statistics for the agent's velocities and class data
@@ -347,9 +353,10 @@ class DataBufferNode(Node):
     def log_buffer_status(self):
         # Log the current status of the buffer for debugging
         for row in self.agent_matrix:
-            stats = row[4] if row[4] else {}  # Access the statistics column
+            stats = row[6] if row[6] else {}  # Access the statistics column
             self.get_logger().info(f'Agent ID: {row[0]}, X Velocities: {list(row[1])}, '
                                    f'Y Velocities: {list(row[2])}, Class Details: {list(row[3])}, '
+                                   f'X Positions: {list(row[4])}, Y Positions: {list(row[5])}, '
                                    f'Statistics: {stats}')
 
     def get_buffer_for_agent(self, agent_id):

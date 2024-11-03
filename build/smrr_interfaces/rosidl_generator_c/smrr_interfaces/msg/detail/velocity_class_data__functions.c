@@ -16,6 +16,8 @@
 #include "rosidl_runtime_c/string_functions.h"
 // Member `x_velocities`
 // Member `y_velocities`
+// Member `x_positions`
+// Member `y_positions`
 #include "rosidl_runtime_c/primitives_sequence_functions.h"
 
 bool
@@ -39,6 +41,16 @@ smrr_interfaces__msg__VelocityClassData__init(smrr_interfaces__msg__VelocityClas
     smrr_interfaces__msg__VelocityClassData__fini(msg);
     return false;
   }
+  // x_positions
+  if (!rosidl_runtime_c__float__Sequence__init(&msg->x_positions, 0)) {
+    smrr_interfaces__msg__VelocityClassData__fini(msg);
+    return false;
+  }
+  // y_positions
+  if (!rosidl_runtime_c__float__Sequence__init(&msg->y_positions, 0)) {
+    smrr_interfaces__msg__VelocityClassData__fini(msg);
+    return false;
+  }
   return true;
 }
 
@@ -54,6 +66,10 @@ smrr_interfaces__msg__VelocityClassData__fini(smrr_interfaces__msg__VelocityClas
   rosidl_runtime_c__float__Sequence__fini(&msg->x_velocities);
   // y_velocities
   rosidl_runtime_c__float__Sequence__fini(&msg->y_velocities);
+  // x_positions
+  rosidl_runtime_c__float__Sequence__fini(&msg->x_positions);
+  // y_positions
+  rosidl_runtime_c__float__Sequence__fini(&msg->y_positions);
 }
 
 bool
@@ -77,6 +93,18 @@ smrr_interfaces__msg__VelocityClassData__are_equal(const smrr_interfaces__msg__V
   // y_velocities
   if (!rosidl_runtime_c__float__Sequence__are_equal(
       &(lhs->y_velocities), &(rhs->y_velocities)))
+  {
+    return false;
+  }
+  // x_positions
+  if (!rosidl_runtime_c__float__Sequence__are_equal(
+      &(lhs->x_positions), &(rhs->x_positions)))
+  {
+    return false;
+  }
+  // y_positions
+  if (!rosidl_runtime_c__float__Sequence__are_equal(
+      &(lhs->y_positions), &(rhs->y_positions)))
   {
     return false;
   }
@@ -106,6 +134,18 @@ smrr_interfaces__msg__VelocityClassData__copy(
   // y_velocities
   if (!rosidl_runtime_c__float__Sequence__copy(
       &(input->y_velocities), &(output->y_velocities)))
+  {
+    return false;
+  }
+  // x_positions
+  if (!rosidl_runtime_c__float__Sequence__copy(
+      &(input->x_positions), &(output->x_positions)))
+  {
+    return false;
+  }
+  // y_positions
+  if (!rosidl_runtime_c__float__Sequence__copy(
+      &(input->y_positions), &(output->y_positions)))
   {
     return false;
   }

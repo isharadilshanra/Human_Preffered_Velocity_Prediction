@@ -22,6 +22,8 @@ extern "C"
 #include "rosidl_runtime_c/string.h"
 // Member 'x_velocities'
 // Member 'y_velocities'
+// Member 'x_positions'
+// Member 'y_positions'
 #include "rosidl_runtime_c/primitives_sequence.h"
 
 /// Struct defined in msg/VelocityClassData in the package smrr_interfaces.
@@ -30,6 +32,8 @@ typedef struct smrr_interfaces__msg__VelocityClassData
   rosidl_runtime_c__String__Sequence class_ids;
   rosidl_runtime_c__float__Sequence x_velocities;
   rosidl_runtime_c__float__Sequence y_velocities;
+  rosidl_runtime_c__float__Sequence x_positions;
+  rosidl_runtime_c__float__Sequence y_positions;
 } smrr_interfaces__msg__VelocityClassData;
 
 // Struct for a sequence of smrr_interfaces__msg__VelocityClassData.

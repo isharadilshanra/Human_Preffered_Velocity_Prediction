@@ -76,6 +76,42 @@ inline void to_flow_style_yaml(
       }
       out << "]";
     }
+    out << ", ";
+  }
+
+  // member: x_positions
+  {
+    if (msg.x_positions.size() == 0) {
+      out << "x_positions: []";
+    } else {
+      out << "x_positions: [";
+      size_t pending_items = msg.x_positions.size();
+      for (auto item : msg.x_positions) {
+        rosidl_generator_traits::value_to_yaml(item, out);
+        if (--pending_items > 0) {
+          out << ", ";
+        }
+      }
+      out << "]";
+    }
+    out << ", ";
+  }
+
+  // member: y_positions
+  {
+    if (msg.y_positions.size() == 0) {
+      out << "y_positions: []";
+    } else {
+      out << "y_positions: [";
+      size_t pending_items = msg.y_positions.size();
+      for (auto item : msg.y_positions) {
+        rosidl_generator_traits::value_to_yaml(item, out);
+        if (--pending_items > 0) {
+          out << ", ";
+        }
+      }
+      out << "]";
+    }
   }
   out << "}";
 }  // NOLINT(readability/fn_size)
@@ -134,6 +170,46 @@ inline void to_block_style_yaml(
     } else {
       out << "y_velocities:\n";
       for (auto item : msg.y_velocities) {
+        if (indentation > 0) {
+          out << std::string(indentation, ' ');
+        }
+        out << "- ";
+        rosidl_generator_traits::value_to_yaml(item, out);
+        out << "\n";
+      }
+    }
+  }
+
+  // member: x_positions
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    if (msg.x_positions.size() == 0) {
+      out << "x_positions: []\n";
+    } else {
+      out << "x_positions:\n";
+      for (auto item : msg.x_positions) {
+        if (indentation > 0) {
+          out << std::string(indentation, ' ');
+        }
+        out << "- ";
+        rosidl_generator_traits::value_to_yaml(item, out);
+        out << "\n";
+      }
+    }
+  }
+
+  // member: y_positions
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    if (msg.y_positions.size() == 0) {
+      out << "y_positions: []\n";
+    } else {
+      out << "y_positions:\n";
+      for (auto item : msg.y_positions) {
         if (indentation > 0) {
           out << std::string(indentation, ' ');
         }

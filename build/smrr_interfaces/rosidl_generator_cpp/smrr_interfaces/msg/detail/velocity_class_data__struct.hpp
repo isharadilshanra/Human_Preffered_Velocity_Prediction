@@ -54,6 +54,12 @@ struct VelocityClassData_
   using _y_velocities_type =
     std::vector<float, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<float>>;
   _y_velocities_type y_velocities;
+  using _x_positions_type =
+    std::vector<float, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<float>>;
+  _x_positions_type x_positions;
+  using _y_positions_type =
+    std::vector<float, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<float>>;
+  _y_positions_type y_positions;
 
   // setters for named parameter idiom
   Type & set__class_ids(
@@ -72,6 +78,18 @@ struct VelocityClassData_
     const std::vector<float, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<float>> & _arg)
   {
     this->y_velocities = _arg;
+    return *this;
+  }
+  Type & set__x_positions(
+    const std::vector<float, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<float>> & _arg)
+  {
+    this->x_positions = _arg;
+    return *this;
+  }
+  Type & set__y_positions(
+    const std::vector<float, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<float>> & _arg)
+  {
+    this->y_positions = _arg;
     return *this;
   }
 
@@ -124,6 +142,12 @@ struct VelocityClassData_
       return false;
     }
     if (this->y_velocities != other.y_velocities) {
+      return false;
+    }
+    if (this->x_positions != other.x_positions) {
+      return false;
+    }
+    if (this->y_positions != other.y_positions) {
       return false;
     }
     return true;

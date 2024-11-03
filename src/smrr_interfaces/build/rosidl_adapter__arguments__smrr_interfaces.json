@@ -1,0 +1,7 @@
+{
+  "package_name": "smrr_interfaces",
+  "non_idl_tuples": [
+    "/home/ishara/fyp/Human_Preffered_Velocity_Prediction/src/smrr_interfaces:msg/Entities.msg",
+    "/home/ishara/fyp/Human_Preffered_Velocity_Prediction/src/smrr_interfaces:msg/VelocityClassData.msg"
+  ]
+}

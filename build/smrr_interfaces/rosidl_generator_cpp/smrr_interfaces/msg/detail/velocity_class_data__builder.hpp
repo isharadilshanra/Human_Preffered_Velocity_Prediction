@@ -21,16 +21,48 @@ namespace msg
 namespace builder
 {
 
+class Init_VelocityClassData_y_positions
+{
+public:
+  explicit Init_VelocityClassData_y_positions(::smrr_interfaces::msg::VelocityClassData & msg)
+  : msg_(msg)
+  {}
+  ::smrr_interfaces::msg::VelocityClassData y_positions(::smrr_interfaces::msg::VelocityClassData::_y_positions_type arg)
+  {
+    msg_.y_positions = std::move(arg);
+    return std::move(msg_);
+  }
+
+private:
+  ::smrr_interfaces::msg::VelocityClassData msg_;
+};
+
+class Init_VelocityClassData_x_positions
+{
+public:
+  explicit Init_VelocityClassData_x_positions(::smrr_interfaces::msg::VelocityClassData & msg)
+  : msg_(msg)
+  {}
+  Init_VelocityClassData_y_positions x_positions(::smrr_interfaces::msg::VelocityClassData::_x_positions_type arg)
+  {
+    msg_.x_positions = std::move(arg);
+    return Init_VelocityClassData_y_positions(msg_);
+  }
+
+private:
+  ::smrr_interfaces::msg::VelocityClassData msg_;
+};
+
 class Init_VelocityClassData_y_velocities
 {
 public:
   explicit Init_VelocityClassData_y_velocities(::smrr_interfaces::msg::VelocityClassData & msg)
   : msg_(msg)
   {}
-  ::smrr_interfaces::msg::VelocityClassData y_velocities(::smrr_interfaces::msg::VelocityClassData::_y_velocities_type arg)
+  Init_VelocityClassData_x_positions y_velocities(::smrr_interfaces::msg::VelocityClassData::_y_velocities_type arg)
   {
     msg_.y_velocities = std::move(arg);
-    return std::move(msg_);
+    return Init_VelocityClassData_x_positions(msg_);
   }
 
 private:

@@ -172,7 +172,97 @@ void resize_function__VelocityClassData__y_velocities(void * untyped_member, siz
   member->resize(size);
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember VelocityClassData_message_member_array[3] = {
+size_t size_function__VelocityClassData__x_positions(const void * untyped_member)
+{
+  const auto * member = reinterpret_cast<const std::vector<float> *>(untyped_member);
+  return member->size();
+}
+
+const void * get_const_function__VelocityClassData__x_positions(const void * untyped_member, size_t index)
+{
+  const auto & member =
+    *reinterpret_cast<const std::vector<float> *>(untyped_member);
+  return &member[index];
+}
+
+void * get_function__VelocityClassData__x_positions(void * untyped_member, size_t index)
+{
+  auto & member =
+    *reinterpret_cast<std::vector<float> *>(untyped_member);
+  return &member[index];
+}
+
+void fetch_function__VelocityClassData__x_positions(
+  const void * untyped_member, size_t index, void * untyped_value)
+{
+  const auto & item = *reinterpret_cast<const float *>(
+    get_const_function__VelocityClassData__x_positions(untyped_member, index));
+  auto & value = *reinterpret_cast<float *>(untyped_value);
+  value = item;
+}
+
+void assign_function__VelocityClassData__x_positions(
+  void * untyped_member, size_t index, const void * untyped_value)
+{
+  auto & item = *reinterpret_cast<float *>(
+    get_function__VelocityClassData__x_positions(untyped_member, index));
+  const auto & value = *reinterpret_cast<const float *>(untyped_value);
+  item = value;
+}
+
+void resize_function__VelocityClassData__x_positions(void * untyped_member, size_t size)
+{
+  auto * member =
+    reinterpret_cast<std::vector<float> *>(untyped_member);
+  member->resize(size);
+}
+
+size_t size_function__VelocityClassData__y_positions(const void * untyped_member)
+{
+  const auto * member = reinterpret_cast<const std::vector<float> *>(untyped_member);
+  return member->size();
+}
+
+const void * get_const_function__VelocityClassData__y_positions(const void * untyped_member, size_t index)
+{
+  const auto & member =
+    *reinterpret_cast<const std::vector<float> *>(untyped_member);
+  return &member[index];
+}
+
+void * get_function__VelocityClassData__y_positions(void * untyped_member, size_t index)
+{
+  auto & member =
+    *reinterpret_cast<std::vector<float> *>(untyped_member);
+  return &member[index];
+}
+
+void fetch_function__VelocityClassData__y_positions(
+  const void * untyped_member, size_t index, void * untyped_value)
+{
+  const auto & item = *reinterpret_cast<const float *>(
+    get_const_function__VelocityClassData__y_positions(untyped_member, index));
+  auto & value = *reinterpret_cast<float *>(untyped_value);
+  value = item;
+}
+
+void assign_function__VelocityClassData__y_positions(
+  void * untyped_member, size_t index, const void * untyped_value)
+{
+  auto & item = *reinterpret_cast<float *>(
+    get_function__VelocityClassData__y_positions(untyped_member, index));
+  const auto & value = *reinterpret_cast<const float *>(untyped_value);
+  item = value;
+}
+
+void resize_function__VelocityClassData__y_positions(void * untyped_member, size_t size)
+{
+  auto * member =
+    reinterpret_cast<std::vector<float> *>(untyped_member);
+  member->resize(size);
+}
+
+static const ::rosidl_typesupport_introspection_cpp::MessageMember VelocityClassData_message_member_array[5] = {
   {
     "class_ids",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_STRING,  // type
@@ -223,13 +313,47 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember VelocityClass
     fetch_function__VelocityClassData__y_velocities,  // fetch(index, &value) function pointer
     assign_function__VelocityClassData__y_velocities,  // assign(index, value) function pointer
     resize_function__VelocityClassData__y_velocities  // resize(index) function pointer
+  },
+  {
+    "x_positions",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_FLOAT,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    true,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(smrr_interfaces::msg::VelocityClassData, x_positions),  // bytes offset in struct
+    nullptr,  // default value
+    size_function__VelocityClassData__x_positions,  // size() function pointer
+    get_const_function__VelocityClassData__x_positions,  // get_const(index) function pointer
+    get_function__VelocityClassData__x_positions,  // get(index) function pointer
+    fetch_function__VelocityClassData__x_positions,  // fetch(index, &value) function pointer
+    assign_function__VelocityClassData__x_positions,  // assign(index, value) function pointer
+    resize_function__VelocityClassData__x_positions  // resize(index) function pointer
+  },
+  {
+    "y_positions",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_FLOAT,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    true,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(smrr_interfaces::msg::VelocityClassData, y_positions),  // bytes offset in struct
+    nullptr,  // default value
+    size_function__VelocityClassData__y_positions,  // size() function pointer
+    get_const_function__VelocityClassData__y_positions,  // get_const(index) function pointer
+    get_function__VelocityClassData__y_positions,  // get(index) function pointer
+    fetch_function__VelocityClassData__y_positions,  // fetch(index, &value) function pointer
+    assign_function__VelocityClassData__y_positions,  // assign(index, value) function pointer
+    resize_function__VelocityClassData__y_positions  // resize(index) function pointer
   }
 };
 
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers VelocityClassData_message_members = {
   "smrr_interfaces::msg",  // message namespace
   "VelocityClassData",  // message name
-  3,  // number of fields
+  5,  // number of fields
   sizeof(smrr_interfaces::msg::VelocityClassData),
   VelocityClassData_message_member_array,  // message members
   VelocityClassData_init_function,  // function to initialize message memory (memory has to be allocated)

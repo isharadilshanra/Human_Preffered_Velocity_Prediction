@@ -17,6 +17,8 @@
 #include "rosidl_runtime_c/string_functions.h"
 // Member `x_velocities`
 // Member `y_velocities`
+// Member `x_positions`
+// Member `y_positions`
 #include "rosidl_runtime_c/primitives_sequence_functions.h"
 
 #ifdef __cplusplus
@@ -203,7 +205,117 @@ bool smrr_interfaces__msg__VelocityClassData__rosidl_typesupport_introspection_c
   return rosidl_runtime_c__float__Sequence__init(member, size);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember smrr_interfaces__msg__VelocityClassData__rosidl_typesupport_introspection_c__VelocityClassData_message_member_array[3] = {
+size_t smrr_interfaces__msg__VelocityClassData__rosidl_typesupport_introspection_c__size_function__VelocityClassData__x_positions(
+  const void * untyped_member)
+{
+  const rosidl_runtime_c__float__Sequence * member =
+    (const rosidl_runtime_c__float__Sequence *)(untyped_member);
+  return member->size;
+}
+
+const void * smrr_interfaces__msg__VelocityClassData__rosidl_typesupport_introspection_c__get_const_function__VelocityClassData__x_positions(
+  const void * untyped_member, size_t index)
+{
+  const rosidl_runtime_c__float__Sequence * member =
+    (const rosidl_runtime_c__float__Sequence *)(untyped_member);
+  return &member->data[index];
+}
+
+void * smrr_interfaces__msg__VelocityClassData__rosidl_typesupport_introspection_c__get_function__VelocityClassData__x_positions(
+  void * untyped_member, size_t index)
+{
+  rosidl_runtime_c__float__Sequence * member =
+    (rosidl_runtime_c__float__Sequence *)(untyped_member);
+  return &member->data[index];
+}
+
+void smrr_interfaces__msg__VelocityClassData__rosidl_typesupport_introspection_c__fetch_function__VelocityClassData__x_positions(
+  const void * untyped_member, size_t index, void * untyped_value)
+{
+  const float * item =
+    ((const float *)
+    smrr_interfaces__msg__VelocityClassData__rosidl_typesupport_introspection_c__get_const_function__VelocityClassData__x_positions(untyped_member, index));
+  float * value =
+    (float *)(untyped_value);
+  *value = *item;
+}
+
+void smrr_interfaces__msg__VelocityClassData__rosidl_typesupport_introspection_c__assign_function__VelocityClassData__x_positions(
+  void * untyped_member, size_t index, const void * untyped_value)
+{
+  float * item =
+    ((float *)
+    smrr_interfaces__msg__VelocityClassData__rosidl_typesupport_introspection_c__get_function__VelocityClassData__x_positions(untyped_member, index));
+  const float * value =
+    (const float *)(untyped_value);
+  *item = *value;
+}
+
+bool smrr_interfaces__msg__VelocityClassData__rosidl_typesupport_introspection_c__resize_function__VelocityClassData__x_positions(
+  void * untyped_member, size_t size)
+{
+  rosidl_runtime_c__float__Sequence * member =
+    (rosidl_runtime_c__float__Sequence *)(untyped_member);
+  rosidl_runtime_c__float__Sequence__fini(member);
+  return rosidl_runtime_c__float__Sequence__init(member, size);
+}
+
+size_t smrr_interfaces__msg__VelocityClassData__rosidl_typesupport_introspection_c__size_function__VelocityClassData__y_positions(
+  const void * untyped_member)
+{
+  const rosidl_runtime_c__float__Sequence * member =
+    (const rosidl_runtime_c__float__Sequence *)(untyped_member);
+  return member->size;
+}
+
+const void * smrr_interfaces__msg__VelocityClassData__rosidl_typesupport_introspection_c__get_const_function__VelocityClassData__y_positions(
+  const void * untyped_member, size_t index)
+{
+  const rosidl_runtime_c__float__Sequence * member =
+    (const rosidl_runtime_c__float__Sequence *)(untyped_member);
+  return &member->data[index];
+}
+
+void * smrr_interfaces__msg__VelocityClassData__rosidl_typesupport_introspection_c__get_function__VelocityClassData__y_positions(
+  void * untyped_member, size_t index)
+{
+  rosidl_runtime_c__float__Sequence * member =
+    (rosidl_runtime_c__float__Sequence *)(untyped_member);
+  return &member->data[index];
+}
+
+void smrr_interfaces__msg__VelocityClassData__rosidl_typesupport_introspection_c__fetch_function__VelocityClassData__y_positions(
+  const void * untyped_member, size_t index, void * untyped_value)
+{
+  const float * item =
+    ((const float *)
+    smrr_interfaces__msg__VelocityClassData__rosidl_typesupport_introspection_c__get_const_function__VelocityClassData__y_positions(untyped_member, index));
+  float * value =
+    (float *)(untyped_value);
+  *value = *item;
+}
+
+void smrr_interfaces__msg__VelocityClassData__rosidl_typesupport_introspection_c__assign_function__VelocityClassData__y_positions(
+  void * untyped_member, size_t index, const void * untyped_value)
+{
+  float * item =
+    ((float *)
+    smrr_interfaces__msg__VelocityClassData__rosidl_typesupport_introspection_c__get_function__VelocityClassData__y_positions(untyped_member, index));
+  const float * value =
+    (const float *)(untyped_value);
+  *item = *value;
+}
+
+bool smrr_interfaces__msg__VelocityClassData__rosidl_typesupport_introspection_c__resize_function__VelocityClassData__y_positions(
+  void * untyped_member, size_t size)
+{
+  rosidl_runtime_c__float__Sequence * member =
+    (rosidl_runtime_c__float__Sequence *)(untyped_member);
+  rosidl_runtime_c__float__Sequence__fini(member);
+  return rosidl_runtime_c__float__Sequence__init(member, size);
+}
+
+static rosidl_typesupport_introspection_c__MessageMember smrr_interfaces__msg__VelocityClassData__rosidl_typesupport_introspection_c__VelocityClassData_message_member_array[5] = {
   {
     "class_ids",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_STRING,  // type
@@ -254,13 +366,47 @@ static rosidl_typesupport_introspection_c__MessageMember smrr_interfaces__msg__V
     smrr_interfaces__msg__VelocityClassData__rosidl_typesupport_introspection_c__fetch_function__VelocityClassData__y_velocities,  // fetch(index, &value) function pointer
     smrr_interfaces__msg__VelocityClassData__rosidl_typesupport_introspection_c__assign_function__VelocityClassData__y_velocities,  // assign(index, value) function pointer
     smrr_interfaces__msg__VelocityClassData__rosidl_typesupport_introspection_c__resize_function__VelocityClassData__y_velocities  // resize(index) function pointer
+  },
+  {
+    "x_positions",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_FLOAT,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    true,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(smrr_interfaces__msg__VelocityClassData, x_positions),  // bytes offset in struct
+    NULL,  // default value
+    smrr_interfaces__msg__VelocityClassData__rosidl_typesupport_introspection_c__size_function__VelocityClassData__x_positions,  // size() function pointer
+    smrr_interfaces__msg__VelocityClassData__rosidl_typesupport_introspection_c__get_const_function__VelocityClassData__x_positions,  // get_const(index) function pointer
+    smrr_interfaces__msg__VelocityClassData__rosidl_typesupport_introspection_c__get_function__VelocityClassData__x_positions,  // get(index) function pointer
+    smrr_interfaces__msg__VelocityClassData__rosidl_typesupport_introspection_c__fetch_function__VelocityClassData__x_positions,  // fetch(index, &value) function pointer
+    smrr_interfaces__msg__VelocityClassData__rosidl_typesupport_introspection_c__assign_function__VelocityClassData__x_positions,  // assign(index, value) function pointer
+    smrr_interfaces__msg__VelocityClassData__rosidl_typesupport_introspection_c__resize_function__VelocityClassData__x_positions  // resize(index) function pointer
+  },
+  {
+    "y_positions",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_FLOAT,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    true,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(smrr_interfaces__msg__VelocityClassData, y_positions),  // bytes offset in struct
+    NULL,  // default value
+    smrr_interfaces__msg__VelocityClassData__rosidl_typesupport_introspection_c__size_function__VelocityClassData__y_positions,  // size() function pointer
+    smrr_interfaces__msg__VelocityClassData__rosidl_typesupport_introspection_c__get_const_function__VelocityClassData__y_positions,  // get_const(index) function pointer
+    smrr_interfaces__msg__VelocityClassData__rosidl_typesupport_introspection_c__get_function__VelocityClassData__y_positions,  // get(index) function pointer
+    smrr_interfaces__msg__VelocityClassData__rosidl_typesupport_introspection_c__fetch_function__VelocityClassData__y_positions,  // fetch(index, &value) function pointer
+    smrr_interfaces__msg__VelocityClassData__rosidl_typesupport_introspection_c__assign_function__VelocityClassData__y_positions,  // assign(index, value) function pointer
+    smrr_interfaces__msg__VelocityClassData__rosidl_typesupport_introspection_c__resize_function__VelocityClassData__y_positions  // resize(index) function pointer
   }
 };
 
 static const rosidl_typesupport_introspection_c__MessageMembers smrr_interfaces__msg__VelocityClassData__rosidl_typesupport_introspection_c__VelocityClassData_message_members = {
   "smrr_interfaces__msg",  // message namespace
   "VelocityClassData",  // message name
-  3,  // number of fields
+  5,  // number of fields
   sizeof(smrr_interfaces__msg__VelocityClassData),
   smrr_interfaces__msg__VelocityClassData__rosidl_typesupport_introspection_c__VelocityClassData_message_member_array,  // message members
   smrr_interfaces__msg__VelocityClassData__rosidl_typesupport_introspection_c__VelocityClassData_init_function,  // function to initialize message memory (memory has to be allocated)
