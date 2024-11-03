@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/smrr_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/smrr_interfaces/msg/detail/buffer__type_support_c.cpp.o.d"
   "CMakeFiles/smrr_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/smrr_interfaces/msg/detail/entities__type_support_c.cpp.o"
   "CMakeFiles/smrr_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/smrr_interfaces/msg/detail/entities__type_support_c.cpp.o.d"
+  "CMakeFiles/smrr_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/smrr_interfaces/msg/detail/pref_velocity__type_support_c.cpp.o"
+  "CMakeFiles/smrr_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/smrr_interfaces/msg/detail/pref_velocity__type_support_c.cpp.o.d"
   "CMakeFiles/smrr_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/smrr_interfaces/msg/detail/velocity_class_data__type_support_c.cpp.o"
   "CMakeFiles/smrr_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/smrr_interfaces/msg/detail/velocity_class_data__type_support_c.cpp.o.d"
   "libsmrr_interfaces__rosidl_typesupport_fastrtps_c.pdb"
@@ -11,6 +13,8 @@ file(REMOVE_RECURSE
   "rosidl_typesupport_fastrtps_c/smrr_interfaces/msg/detail/buffer__type_support_c.cpp"
   "rosidl_typesupport_fastrtps_c/smrr_interfaces/msg/detail/entities__rosidl_typesupport_fastrtps_c.h"
   "rosidl_typesupport_fastrtps_c/smrr_interfaces/msg/detail/entities__type_support_c.cpp"
+  "rosidl_typesupport_fastrtps_c/smrr_interfaces/msg/detail/pref_velocity__rosidl_typesupport_fastrtps_c.h"
+  "rosidl_typesupport_fastrtps_c/smrr_interfaces/msg/detail/pref_velocity__type_support_c.cpp"
   "rosidl_typesupport_fastrtps_c/smrr_interfaces/msg/detail/velocity_class_data__rosidl_typesupport_fastrtps_c.h"
   "rosidl_typesupport_fastrtps_c/smrr_interfaces/msg/detail/velocity_class_data__type_support_c.cpp"
 )

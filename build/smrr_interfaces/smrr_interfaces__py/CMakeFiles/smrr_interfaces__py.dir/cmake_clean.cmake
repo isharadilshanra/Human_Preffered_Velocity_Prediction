@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "../rosidl_generator_py/smrr_interfaces/msg/_buffer_s.c"
   "../rosidl_generator_py/smrr_interfaces/msg/_entities.py"
   "../rosidl_generator_py/smrr_interfaces/msg/_entities_s.c"
+  "../rosidl_generator_py/smrr_interfaces/msg/_pref_velocity.py"
+  "../rosidl_generator_py/smrr_interfaces/msg/_pref_velocity_s.c"
   "../rosidl_generator_py/smrr_interfaces/msg/_velocity_class_data.py"
   "../rosidl_generator_py/smrr_interfaces/msg/_velocity_class_data_s.c"
   "CMakeFiles/smrr_interfaces__py"

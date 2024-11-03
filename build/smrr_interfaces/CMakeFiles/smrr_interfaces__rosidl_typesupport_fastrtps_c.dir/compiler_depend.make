@@ -223,10 +223,12 @@ CMakeFiles/smrr_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport
   /usr/include/c++/11/bits/istream.tcc \
   /usr/include/malloc.h \
   rosidl_generator_c/smrr_interfaces/msg/detail/buffer__struct.h \
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
   rosidl_generator_c/smrr_interfaces/msg/detail/buffer__functions.h \
   /usr/include/c++/11/stdlib.h \
   rosidl_generator_c/smrr_interfaces/msg/rosidl_generator_c__visibility_control.h \
-  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence_functions.h
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence_functions.h \
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string_functions.h
 
 CMakeFiles/smrr_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/smrr_interfaces/msg/detail/entities__type_support_c.cpp.o: rosidl_typesupport_fastrtps_c/smrr_interfaces/msg/detail/entities__type_support_c.cpp \
   /usr/include/stdc-predef.h \
@@ -689,17 +691,17 @@ CMakeFiles/smrr_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport
 
 rosidl_generator_c/smrr_interfaces/msg/detail/velocity_class_data__functions.h:
 
-/opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string_functions.h:
-
 rosidl_generator_c/smrr_interfaces/msg/detail/entities__functions.h:
-
-/opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h:
 
 rosidl_typesupport_fastrtps_c/smrr_interfaces/msg/detail/entities__rosidl_typesupport_fastrtps_c.h:
 
 rosidl_typesupport_fastrtps_c/smrr_interfaces/msg/detail/entities__type_support_c.cpp:
 
+/opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string_functions.h:
+
 /usr/include/c++/11/stdlib.h:
+
+/opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h:
 
 rosidl_generator_c/smrr_interfaces/msg/detail/buffer__struct.h:
 

@@ -368,6 +368,10 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/smrr_interfaces/msg" TYPE FILE FILES "/home/ishara/fyp/Human_Preffered_Velocity_Prediction/src/smrr_interfaces/build/rosidl_adapter/smrr_interfaces/msg/PrefVelocity.idl")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/smrr_interfaces/msg" TYPE FILE FILES "/home/ishara/fyp/Human_Preffered_Velocity_Prediction/src/smrr_interfaces/msg/Entities.msg")
 endif()
 
@@ -377,6 +381,10 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/smrr_interfaces/msg" TYPE FILE FILES "/home/ishara/fyp/Human_Preffered_Velocity_Prediction/src/smrr_interfaces/msg/Buffer.msg")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/smrr_interfaces/msg" TYPE FILE FILES "/home/ishara/fyp/Human_Preffered_Velocity_Prediction/src/smrr_interfaces/msg/PrefVelocity.msg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)

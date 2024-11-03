@@ -56,6 +56,7 @@ CMakeFiles/smrr_interfaces__rosidl_generator_c.dir/rosidl_generator_c/smrr_inter
   /usr/include/x86_64-linux-gnu/bits/wchar.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
   /usr/include/assert.h \
   /usr/include/string.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
@@ -76,7 +77,8 @@ CMakeFiles/smrr_interfaces__rosidl_generator_c.dir/rosidl_generator_c/smrr_inter
   /opt/ros/humble/include/rcutils/rcutils/visibility_control.h \
   /opt/ros/humble/include/rcutils/rcutils/visibility_control_macros.h \
   /opt/ros/humble/include/rcutils/rcutils/types/rcutils_ret.h \
-  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence_functions.h
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence_functions.h \
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string_functions.h
 
 CMakeFiles/smrr_interfaces__rosidl_generator_c.dir/rosidl_generator_c/smrr_interfaces/msg/detail/entities__functions.c.o: rosidl_generator_c/smrr_interfaces/msg/detail/entities__functions.c \
   /usr/include/stdc-predef.h \
@@ -263,6 +265,10 @@ rosidl_generator_c/smrr_interfaces/msg/detail/entities__functions.h:
 
 /usr/include/strings.h:
 
+/usr/include/stdio.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
+
 /usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
 
 /usr/include/x86_64-linux-gnu/bits/typesizes.h:
@@ -306,10 +312,6 @@ rosidl_generator_c/smrr_interfaces/msg/detail/buffer__functions.c:
 /usr/include/stdlib.h:
 
 /usr/include/x86_64-linux-gnu/bits/wordsize.h:
-
-/opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h:
-
-/opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/visibility_control.h:
 
 rosidl_generator_c/smrr_interfaces/msg/detail/entities__functions.c:
 
@@ -369,6 +371,10 @@ rosidl_generator_c/smrr_interfaces/msg/detail/buffer__struct.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
 
+/opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/visibility_control.h:
+
+/opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h:
+
 /usr/include/x86_64-linux-gnu/sys/cdefs.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
@@ -400,7 +406,3 @@ rosidl_generator_c/smrr_interfaces/msg/rosidl_generator_c__visibility_control.h:
 /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h:
 
 /usr/include/assert.h:
-
-/usr/include/stdio.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:

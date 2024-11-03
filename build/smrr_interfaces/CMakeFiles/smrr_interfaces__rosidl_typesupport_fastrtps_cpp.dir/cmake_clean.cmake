@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/smrr_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/smrr_interfaces/msg/detail/dds_fastrtps/buffer__type_support.cpp.o.d"
   "CMakeFiles/smrr_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/smrr_interfaces/msg/detail/dds_fastrtps/entities__type_support.cpp.o"
   "CMakeFiles/smrr_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/smrr_interfaces/msg/detail/dds_fastrtps/entities__type_support.cpp.o.d"
+  "CMakeFiles/smrr_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/smrr_interfaces/msg/detail/dds_fastrtps/pref_velocity__type_support.cpp.o"
+  "CMakeFiles/smrr_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/smrr_interfaces/msg/detail/dds_fastrtps/pref_velocity__type_support.cpp.o.d"
   "CMakeFiles/smrr_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/smrr_interfaces/msg/detail/dds_fastrtps/velocity_class_data__type_support.cpp.o"
   "CMakeFiles/smrr_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/smrr_interfaces/msg/detail/dds_fastrtps/velocity_class_data__type_support.cpp.o.d"
   "libsmrr_interfaces__rosidl_typesupport_fastrtps_cpp.pdb"
@@ -10,8 +12,10 @@ file(REMOVE_RECURSE
   "rosidl_typesupport_fastrtps_cpp/smrr_interfaces/msg/detail/buffer__rosidl_typesupport_fastrtps_cpp.hpp"
   "rosidl_typesupport_fastrtps_cpp/smrr_interfaces/msg/detail/dds_fastrtps/buffer__type_support.cpp"
   "rosidl_typesupport_fastrtps_cpp/smrr_interfaces/msg/detail/dds_fastrtps/entities__type_support.cpp"
+  "rosidl_typesupport_fastrtps_cpp/smrr_interfaces/msg/detail/dds_fastrtps/pref_velocity__type_support.cpp"
   "rosidl_typesupport_fastrtps_cpp/smrr_interfaces/msg/detail/dds_fastrtps/velocity_class_data__type_support.cpp"
   "rosidl_typesupport_fastrtps_cpp/smrr_interfaces/msg/detail/entities__rosidl_typesupport_fastrtps_cpp.hpp"
+  "rosidl_typesupport_fastrtps_cpp/smrr_interfaces/msg/detail/pref_velocity__rosidl_typesupport_fastrtps_cpp.hpp"
   "rosidl_typesupport_fastrtps_cpp/smrr_interfaces/msg/detail/velocity_class_data__rosidl_typesupport_fastrtps_cpp.hpp"
 )
 

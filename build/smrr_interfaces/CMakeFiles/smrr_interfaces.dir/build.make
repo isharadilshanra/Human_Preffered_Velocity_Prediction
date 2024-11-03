@@ -69,6 +69,7 @@ include CMakeFiles/smrr_interfaces.dir/progress.make
 CMakeFiles/smrr_interfaces: /home/ishara/fyp/Human_Preffered_Velocity_Prediction/src/smrr_interfaces/msg/Entities.msg
 CMakeFiles/smrr_interfaces: /home/ishara/fyp/Human_Preffered_Velocity_Prediction/src/smrr_interfaces/msg/VelocityClassData.msg
 CMakeFiles/smrr_interfaces: /home/ishara/fyp/Human_Preffered_Velocity_Prediction/src/smrr_interfaces/msg/Buffer.msg
+CMakeFiles/smrr_interfaces: /home/ishara/fyp/Human_Preffered_Velocity_Prediction/src/smrr_interfaces/msg/PrefVelocity.msg
 CMakeFiles/smrr_interfaces: /opt/ros/humble/share/std_msgs/msg/Bool.idl
 CMakeFiles/smrr_interfaces: /opt/ros/humble/share/std_msgs/msg/Byte.idl
 CMakeFiles/smrr_interfaces: /opt/ros/humble/share/std_msgs/msg/ByteMultiArray.idl

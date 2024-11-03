@@ -250,9 +250,11 @@ CMakeFiles/smrr_interfaces__rosidl_generator_py.dir/rosidl_generator_py/smrr_int
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/visibility_control.h \
   rosidl_generator_c/smrr_interfaces/msg/detail/buffer__struct.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
   rosidl_generator_c/smrr_interfaces/msg/detail/buffer__functions.h \
   rosidl_generator_c/smrr_interfaces/msg/rosidl_generator_c__visibility_control.h \
-  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence_functions.h
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence_functions.h \
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string_functions.h
 
 CMakeFiles/smrr_interfaces__rosidl_generator_py.dir/rosidl_generator_py/smrr_interfaces/msg/_entities_s.c.o: rosidl_generator_py/smrr_interfaces/msg/_entities_s.c \
   /usr/include/stdc-predef.h \

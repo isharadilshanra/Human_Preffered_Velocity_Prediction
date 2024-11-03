@@ -65,7 +65,9 @@ CMakeFiles/smrr_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesu
   rosidl_generator_c/smrr_interfaces/msg/rosidl_generator_c__visibility_control.h \
   rosidl_generator_c/smrr_interfaces/msg/detail/buffer__struct.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
-  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence_functions.h
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence_functions.h \
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string_functions.h
 
 CMakeFiles/smrr_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/smrr_interfaces/msg/detail/entities__type_support.c.o: rosidl_typesupport_introspection_c/smrr_interfaces/msg/detail/entities__type_support.c \
   /usr/include/stdc-predef.h \

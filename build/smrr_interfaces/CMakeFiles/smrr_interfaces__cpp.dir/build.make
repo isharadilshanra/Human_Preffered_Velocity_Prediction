@@ -78,6 +78,10 @@ CMakeFiles/smrr_interfaces__cpp: rosidl_generator_cpp/smrr_interfaces/msg/buffer
 CMakeFiles/smrr_interfaces__cpp: rosidl_generator_cpp/smrr_interfaces/msg/detail/buffer__builder.hpp
 CMakeFiles/smrr_interfaces__cpp: rosidl_generator_cpp/smrr_interfaces/msg/detail/buffer__struct.hpp
 CMakeFiles/smrr_interfaces__cpp: rosidl_generator_cpp/smrr_interfaces/msg/detail/buffer__traits.hpp
+CMakeFiles/smrr_interfaces__cpp: rosidl_generator_cpp/smrr_interfaces/msg/pref_velocity.hpp
+CMakeFiles/smrr_interfaces__cpp: rosidl_generator_cpp/smrr_interfaces/msg/detail/pref_velocity__builder.hpp
+CMakeFiles/smrr_interfaces__cpp: rosidl_generator_cpp/smrr_interfaces/msg/detail/pref_velocity__struct.hpp
+CMakeFiles/smrr_interfaces__cpp: rosidl_generator_cpp/smrr_interfaces/msg/detail/pref_velocity__traits.hpp
 
 rosidl_generator_cpp/smrr_interfaces/msg/entities.hpp: /opt/ros/humble/lib/rosidl_generator_cpp/rosidl_generator_cpp
 rosidl_generator_cpp/smrr_interfaces/msg/entities.hpp: /opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_generator_cpp/__init__.py
@@ -97,6 +101,7 @@ rosidl_generator_cpp/smrr_interfaces/msg/entities.hpp: /opt/ros/humble/share/ros
 rosidl_generator_cpp/smrr_interfaces/msg/entities.hpp: rosidl_adapter/smrr_interfaces/msg/Entities.idl
 rosidl_generator_cpp/smrr_interfaces/msg/entities.hpp: rosidl_adapter/smrr_interfaces/msg/VelocityClassData.idl
 rosidl_generator_cpp/smrr_interfaces/msg/entities.hpp: rosidl_adapter/smrr_interfaces/msg/Buffer.idl
+rosidl_generator_cpp/smrr_interfaces/msg/entities.hpp: rosidl_adapter/smrr_interfaces/msg/PrefVelocity.idl
 rosidl_generator_cpp/smrr_interfaces/msg/entities.hpp: /opt/ros/humble/share/std_msgs/msg/Bool.idl
 rosidl_generator_cpp/smrr_interfaces/msg/entities.hpp: /opt/ros/humble/share/std_msgs/msg/Byte.idl
 rosidl_generator_cpp/smrr_interfaces/msg/entities.hpp: /opt/ros/humble/share/std_msgs/msg/ByteMultiArray.idl
@@ -195,6 +200,18 @@ rosidl_generator_cpp/smrr_interfaces/msg/detail/buffer__struct.hpp: rosidl_gener
 rosidl_generator_cpp/smrr_interfaces/msg/detail/buffer__traits.hpp: rosidl_generator_cpp/smrr_interfaces/msg/entities.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/smrr_interfaces/msg/detail/buffer__traits.hpp
 
+rosidl_generator_cpp/smrr_interfaces/msg/pref_velocity.hpp: rosidl_generator_cpp/smrr_interfaces/msg/entities.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/smrr_interfaces/msg/pref_velocity.hpp
+
+rosidl_generator_cpp/smrr_interfaces/msg/detail/pref_velocity__builder.hpp: rosidl_generator_cpp/smrr_interfaces/msg/entities.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/smrr_interfaces/msg/detail/pref_velocity__builder.hpp
+
+rosidl_generator_cpp/smrr_interfaces/msg/detail/pref_velocity__struct.hpp: rosidl_generator_cpp/smrr_interfaces/msg/entities.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/smrr_interfaces/msg/detail/pref_velocity__struct.hpp
+
+rosidl_generator_cpp/smrr_interfaces/msg/detail/pref_velocity__traits.hpp: rosidl_generator_cpp/smrr_interfaces/msg/entities.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/smrr_interfaces/msg/detail/pref_velocity__traits.hpp
+
 smrr_interfaces__cpp: CMakeFiles/smrr_interfaces__cpp
 smrr_interfaces__cpp: rosidl_generator_cpp/smrr_interfaces/msg/buffer.hpp
 smrr_interfaces__cpp: rosidl_generator_cpp/smrr_interfaces/msg/detail/buffer__builder.hpp
@@ -203,10 +220,14 @@ smrr_interfaces__cpp: rosidl_generator_cpp/smrr_interfaces/msg/detail/buffer__tr
 smrr_interfaces__cpp: rosidl_generator_cpp/smrr_interfaces/msg/detail/entities__builder.hpp
 smrr_interfaces__cpp: rosidl_generator_cpp/smrr_interfaces/msg/detail/entities__struct.hpp
 smrr_interfaces__cpp: rosidl_generator_cpp/smrr_interfaces/msg/detail/entities__traits.hpp
+smrr_interfaces__cpp: rosidl_generator_cpp/smrr_interfaces/msg/detail/pref_velocity__builder.hpp
+smrr_interfaces__cpp: rosidl_generator_cpp/smrr_interfaces/msg/detail/pref_velocity__struct.hpp
+smrr_interfaces__cpp: rosidl_generator_cpp/smrr_interfaces/msg/detail/pref_velocity__traits.hpp
 smrr_interfaces__cpp: rosidl_generator_cpp/smrr_interfaces/msg/detail/velocity_class_data__builder.hpp
 smrr_interfaces__cpp: rosidl_generator_cpp/smrr_interfaces/msg/detail/velocity_class_data__struct.hpp
 smrr_interfaces__cpp: rosidl_generator_cpp/smrr_interfaces/msg/detail/velocity_class_data__traits.hpp
 smrr_interfaces__cpp: rosidl_generator_cpp/smrr_interfaces/msg/entities.hpp
+smrr_interfaces__cpp: rosidl_generator_cpp/smrr_interfaces/msg/pref_velocity.hpp
 smrr_interfaces__cpp: rosidl_generator_cpp/smrr_interfaces/msg/velocity_class_data.hpp
 smrr_interfaces__cpp: CMakeFiles/smrr_interfaces__cpp.dir/build.make
 .PHONY : smrr_interfaces__cpp

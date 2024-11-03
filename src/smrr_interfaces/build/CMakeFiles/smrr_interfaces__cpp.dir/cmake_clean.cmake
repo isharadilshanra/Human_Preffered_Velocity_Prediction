@@ -7,10 +7,14 @@ file(REMOVE_RECURSE
   "rosidl_generator_cpp/smrr_interfaces/msg/detail/entities__builder.hpp"
   "rosidl_generator_cpp/smrr_interfaces/msg/detail/entities__struct.hpp"
   "rosidl_generator_cpp/smrr_interfaces/msg/detail/entities__traits.hpp"
+  "rosidl_generator_cpp/smrr_interfaces/msg/detail/pref_velocity__builder.hpp"
+  "rosidl_generator_cpp/smrr_interfaces/msg/detail/pref_velocity__struct.hpp"
+  "rosidl_generator_cpp/smrr_interfaces/msg/detail/pref_velocity__traits.hpp"
   "rosidl_generator_cpp/smrr_interfaces/msg/detail/velocity_class_data__builder.hpp"
   "rosidl_generator_cpp/smrr_interfaces/msg/detail/velocity_class_data__struct.hpp"
   "rosidl_generator_cpp/smrr_interfaces/msg/detail/velocity_class_data__traits.hpp"
   "rosidl_generator_cpp/smrr_interfaces/msg/entities.hpp"
+  "rosidl_generator_cpp/smrr_interfaces/msg/pref_velocity.hpp"
   "rosidl_generator_cpp/smrr_interfaces/msg/velocity_class_data.hpp"
 )
 
