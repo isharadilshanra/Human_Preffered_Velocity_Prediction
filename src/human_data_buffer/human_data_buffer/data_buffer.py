@@ -236,27 +236,49 @@ class DataBufferNode(Node):
         y_velocities = msg.y_velocities  # List of y velocities from the message
         class_ids = msg.class_ids        # List of class IDs from the message
 
-        # Process each agent's data from the message
-        for i, (x_vel, y_vel, class_id) in enumerate(zip(x_velocities, y_velocities, class_ids)):
-            # Check if the agent has left (indicated by -1 velocities)
-            if x_vel == -1.0 and y_vel == -1.0:
-                # If agent has left, remove their row from the buffer
-                self.remove_agent(i)
-                continue
+        try:
+            # Process each agent's data from the message
+            for i, (x_vel, y_vel, class_id) in enumerate(zip(x_velocities, y_velocities, class_ids)):
+                # Check if the agent has left (indicated by -1 velocities)
 
-            # Update data for existing agent or add new agent
-            if i < len(self.agent_matrix):
-                # Existing agent - update their data
-                self.update_existing_agent(i, x_vel, y_vel, class_id)
-            else:
-                # New agent - add a new row for this agent
-                self.add_new_agent(x_vel, y_vel, class_id)
+                if x_vel == -1.0 and y_vel == -1.0:
+                    # If agent has left, remove their row from the buffer
+                    try:
+                        self.remove_agent(i)
+                    except Exception as e:
+                        self.get_logger().error(f"Error removing agent from buffer: {e}")
+                    continue
 
-            # Calculate and store statistics after updating each agent
-            self.calculate_statistics(i)
-            
-            # Log buffer status for debugging
-            self.log_buffer_status()
+                # Update data for existing agent or add new agent
+                if i < len(self.agent_matrix):
+                    # Existing agent - update their data
+                    try:
+                        self.update_existing_agent(i, x_vel, y_vel, class_id)
+                    except Exception as e:
+                        self.get_logger().error(f"Error updating existing agent in buffer: {e}")
+                else:
+                    # New agent - add a new row for this agent
+                    try:
+                        self.add_new_agent(x_vel, y_vel, class_id)
+
+                    except Exception as e:
+                        self.get_logger().error(f"Error adding new agent to buffer: {e}")
+
+                # Calculate and store statistics after updating each agent
+                try:
+                    self.calculate_statistics(i)
+                except Exception as e:
+                    self.get_logger().error(f"Error calculating statistics for agent in buffer: {e}")
+
+                
+                # Log buffer status for debugging
+                try:
+                    self.log_buffer_status()
+                except Exception as e:
+                    self.get_logger().error(f"Error logging buffer status in the loop: {e}")
+
+        except Exception as e:
+            self.get_logger().error(f"Error assigning data to buffer in the loop: {e}")
 
     def add_new_agent(self, x_vel, y_vel, class_id):
         # Initialize lists with a max of 10 entries each for velocities and class details, plus a dictionary for statistics
