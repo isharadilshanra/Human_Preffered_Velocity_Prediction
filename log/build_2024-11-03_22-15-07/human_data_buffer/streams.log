@@ -1,0 +1,21 @@
+[1.463s] Invoking command in '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/human_data_buffer': PYTHONPATH=/home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/human_data_buffer/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/human_data_buffer/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/human_data_buffer/build --no-deps symlink_data
+[1.823s] running develop
+[1.823s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[1.824s]   warnings.warn(
+[2.044s] running egg_info
+[2.045s] writing human_data_buffer.egg-info/PKG-INFO
+[2.045s] writing dependency_links to human_data_buffer.egg-info/dependency_links.txt
+[2.045s] writing entry points to human_data_buffer.egg-info/entry_points.txt
+[2.045s] writing requirements to human_data_buffer.egg-info/requires.txt
+[2.045s] writing top-level names to human_data_buffer.egg-info/top_level.txt
+[2.047s] reading manifest file 'human_data_buffer.egg-info/SOURCES.txt'
+[2.048s] writing manifest file 'human_data_buffer.egg-info/SOURCES.txt'
+[2.050s] running build_ext
+[2.051s] Creating /home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/human_data_buffer/lib/python3.10/site-packages/human-data-buffer.egg-link (link to .)
+[2.052s] Installing human_data_buffer script to /home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/human_data_buffer/lib/human_data_buffer
+[2.052s] Installing human_data_extracter script to /home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/human_data_buffer/lib/human_data_buffer
+[2.052s] Installing human_data_pub script to /home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/human_data_buffer/lib/human_data_buffer
+[2.052s] 
+[2.052s] Installed /home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/human_data_buffer
+[2.052s] running symlink_data
+[2.095s] Invoked command in '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/human_data_buffer' returned '0': PYTHONPATH=/home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/human_data_buffer/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/human_data_buffer/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/human_data_buffer/build --no-deps symlink_data

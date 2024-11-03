@@ -99,16 +99,18 @@ class HumanPrefferedVelocity(Node):
         
     def process_lidar_data(self, msg):
         # x velocity data from buffer
-        mean_x_velocity_data = msg.x_mean
-        mean_y_velocity_data = msg.y_mean
+        mean_x_velocity_data = np.array(msg.x_mean)
+        mean_y_velocity_data = np.array(msg.y_mean)
 
-        variance = msg.x_variance + msg.y_variance
+        variance = np.array(msg.x_variance) + np.array(msg.y_variance)
         # assume x and y variance are independent
         std_dev = np.sqrt(variance)
 
-        mean_speed_data = np.sqrt(np.array(mean_x_velocity_data) ** 2 + np.array(mean_y_velocity_data) ** 2)
+        mean_speed_data = np.sqrt((mean_x_velocity_data) ** 2 + (mean_y_velocity_data) ** 2)
+
         
-        self.velocity_data = np.array([mean_speed_data, std_dev, variance])
+        self.velocity_data = np.vstack((mean_speed_data, std_dev, variance))
+
         # -1 assumes that the number of humans is unknown
         num_people = len(msg.agent_ids)
         self.get_logger().info('Received data from lidar_readings with {} people'.format(num_people))
