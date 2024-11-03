@@ -257,16 +257,16 @@
 	"dependencies" : 
 	[
 		{
-			"backtrace" : 13,
-			"id" : "smrr_interfaces__py::@8f09d3f0cd4190723e54"
-		},
-		{
 			"backtrace" : 10,
 			"id" : "smrr_interfaces__rosidl_generator_c::@6890427a1f51a3e7e1df"
 		},
 		{
 			"backtrace" : 13,
 			"id" : "smrr_interfaces__rosidl_typesupport_c::@6890427a1f51a3e7e1df"
+		},
+		{
+			"backtrace" : 13,
+			"id" : "smrr_interfaces__py::@8f09d3f0cd4190723e54"
 		}
 	],
 	"id" : "smrr_interfaces__rosidl_generator_py::@6890427a1f51a3e7e1df",
