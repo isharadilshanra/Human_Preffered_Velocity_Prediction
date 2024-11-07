@@ -20,6 +20,7 @@ class DataBufferNode(Node):
             10
         )
         # Publisher for the buffer data
+        # The buffer message contains lists of data for each agent
         self.pub_buffer = self.create_publisher(Buffer, 'buffer', 10)
         self.pub_timer = self.create_timer(0.5, self.publish_buffer)
 
