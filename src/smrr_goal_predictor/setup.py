@@ -20,6 +20,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+            'crowd_flow_publisher = goal_predictor.crowd_flow_publisher:main',
+            'goal_predictor = goal_predictor.goal_predictor:main',
         ],
     },
 )
