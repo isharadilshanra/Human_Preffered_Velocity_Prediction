@@ -12,7 +12,7 @@ class DataBufferNode(Node):
     def __init__(self):
         super().__init__('data_buffer_node')
 
-        # Subscribe to the velocity_class_data topic
+        # New subscription for the velocity data
         self.subscription = self.create_subscription(
             VelocityClassData,
             'velocity_class_data',
