@@ -3,17 +3,20 @@ import numpy                as np
 import matplotlib.pyplot    as plt
 from scipy.stats    import norm
 from rclpy.node     import Node
-from smrr_interfaces.msg import Entities
+from smrr_interfaces.msg import Entities, Buffer
 
 
 class GoalPredictor(Node):
     def __init__(self):
         super().__init__('goal_predictor')
-        self.pos_subscription = self.create_subscription(
-            Entities,
-            'map_data',
-            self.predictor_callback,
-            10)
+        # self.pos_subscription = self.create_subscription(
+        #     Entities,
+        #     'map_data',
+        #     self.predictor_callback,
+        #     10)
+
+        # subscribe to the buffer topic
+        self.pos_subscription = self.create_subscription(Buffer, '/buffer', self.predictor_callback, 10)
         
         self.pos_publisher  = self.create_publisher(Entities,'/pos', 10)
         self.vel_publisher  = self.create_publisher(Entities,'/vel', 10)
@@ -46,11 +49,13 @@ class GoalPredictor(Node):
         self.goals  = Entities()
 
     def predictor_callback(self, msg):
-        self.agents          = msg   
+        # self.agents          = msg   
       
-        self.vel.count       = self.agents.count
-        self.vel.x           = [0.0]*self.vel.count  
-        self.vel.y           = [0.0]*self.vel.count 
+        # self.vel.count       = self.agents.count
+        # self.vel.x           = [0.0]*self.vel.count  
+        # self.vel.y           = [0.0]*self.vel.count 
+
+        
         
         self.goals.count     = self.agents.count
         self.goals.x         = [0.0]*self.vel.count  
