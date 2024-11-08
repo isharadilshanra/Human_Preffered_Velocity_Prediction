@@ -34,8 +34,8 @@ extern "C"
 {
 #endif
 
-#include "rosidl_runtime_c/primitives_sequence.h"  // agent_ids, x_mean, x_positions, x_std_dev, x_variance, x_velocities, y_mean, y_positions, y_std_dev, y_variance, y_velocities
-#include "rosidl_runtime_c/primitives_sequence_functions.h"  // agent_ids, x_mean, x_positions, x_std_dev, x_variance, x_velocities, y_mean, y_positions, y_std_dev, y_variance, y_velocities
+#include "rosidl_runtime_c/primitives_sequence.h"  // agent_count, agent_ids, x_mean, x_positions, x_std_dev, x_variance, x_velocities, y_mean, y_positions, y_std_dev, y_variance, y_velocities
+#include "rosidl_runtime_c/primitives_sequence_functions.h"  // agent_count, agent_ids, x_mean, x_positions, x_std_dev, x_variance, x_velocities, y_mean, y_positions, y_std_dev, y_variance, y_velocities
 #include "rosidl_runtime_c/string.h"  // class_ids, majority_class_id
 #include "rosidl_runtime_c/string_functions.h"  // class_ids, majority_class_id
 
@@ -57,6 +57,14 @@ static bool _Buffer__cdr_serialize(
   {
     size_t size = ros_message->agent_ids.size;
     auto array_ptr = ros_message->agent_ids.data;
+    cdr << static_cast<uint32_t>(size);
+    cdr.serializeArray(array_ptr, size);
+  }
+
+  // Field name: agent_count
+  {
+    size_t size = ros_message->agent_count.size;
+    auto array_ptr = ros_message->agent_count.data;
     cdr << static_cast<uint32_t>(size);
     cdr.serializeArray(array_ptr, size);
   }
@@ -204,6 +212,22 @@ static bool _Buffer__cdr_deserialize(
       return false;
     }
     auto array_ptr = ros_message->agent_ids.data;
+    cdr.deserializeArray(array_ptr, size);
+  }
+
+  // Field name: agent_count
+  {
+    uint32_t cdrSize;
+    cdr >> cdrSize;
+    size_t size = static_cast<size_t>(cdrSize);
+    if (ros_message->agent_count.data) {
+      rosidl_runtime_c__int32__Sequence__fini(&ros_message->agent_count);
+    }
+    if (!rosidl_runtime_c__int32__Sequence__init(&ros_message->agent_count, size)) {
+      fprintf(stderr, "failed to create array for field 'agent_count'");
+      return false;
+    }
+    auto array_ptr = ros_message->agent_count.data;
     cdr.deserializeArray(array_ptr, size);
   }
 
@@ -455,6 +479,17 @@ size_t get_serialized_size_smrr_interfaces__msg__Buffer(
     current_alignment += array_size * item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
+  // field.name agent_count
+  {
+    size_t array_size = ros_message->agent_count.size;
+    auto array_ptr = ros_message->agent_count.data;
+    current_alignment += padding +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
+    (void)array_ptr;
+    size_t item_size = sizeof(array_ptr[0]);
+    current_alignment += array_size * item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
   // field.name x_velocities
   {
     size_t array_size = ros_message->x_velocities.size;
@@ -619,6 +654,18 @@ size_t max_serialized_size_smrr_interfaces__msg__Buffer(
   is_plain = true;
 
   // member: agent_ids
+  {
+    size_t array_size = 0;
+    full_bounded = false;
+    is_plain = false;
+    current_alignment += padding +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
+
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+  // member: agent_count
   {
     size_t array_size = 0;
     full_bounded = false;

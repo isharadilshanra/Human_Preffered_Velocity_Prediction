@@ -14,6 +14,7 @@
 
 // Include directives for member types
 // Member `agent_ids`
+// Member `agent_count`
 // Member `x_velocities`
 // Member `y_velocities`
 // Member `x_positions`
@@ -95,6 +96,61 @@ void smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__assign_fu
 }
 
 bool smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__resize_function__Buffer__agent_ids(
+  void * untyped_member, size_t size)
+{
+  rosidl_runtime_c__int32__Sequence * member =
+    (rosidl_runtime_c__int32__Sequence *)(untyped_member);
+  rosidl_runtime_c__int32__Sequence__fini(member);
+  return rosidl_runtime_c__int32__Sequence__init(member, size);
+}
+
+size_t smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__size_function__Buffer__agent_count(
+  const void * untyped_member)
+{
+  const rosidl_runtime_c__int32__Sequence * member =
+    (const rosidl_runtime_c__int32__Sequence *)(untyped_member);
+  return member->size;
+}
+
+const void * smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__get_const_function__Buffer__agent_count(
+  const void * untyped_member, size_t index)
+{
+  const rosidl_runtime_c__int32__Sequence * member =
+    (const rosidl_runtime_c__int32__Sequence *)(untyped_member);
+  return &member->data[index];
+}
+
+void * smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__get_function__Buffer__agent_count(
+  void * untyped_member, size_t index)
+{
+  rosidl_runtime_c__int32__Sequence * member =
+    (rosidl_runtime_c__int32__Sequence *)(untyped_member);
+  return &member->data[index];
+}
+
+void smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__fetch_function__Buffer__agent_count(
+  const void * untyped_member, size_t index, void * untyped_value)
+{
+  const int32_t * item =
+    ((const int32_t *)
+    smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__get_const_function__Buffer__agent_count(untyped_member, index));
+  int32_t * value =
+    (int32_t *)(untyped_value);
+  *value = *item;
+}
+
+void smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__assign_function__Buffer__agent_count(
+  void * untyped_member, size_t index, const void * untyped_value)
+{
+  int32_t * item =
+    ((int32_t *)
+    smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__get_function__Buffer__agent_count(untyped_member, index));
+  const int32_t * value =
+    (const int32_t *)(untyped_value);
+  *item = *value;
+}
+
+bool smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__resize_function__Buffer__agent_count(
   void * untyped_member, size_t size)
 {
   rosidl_runtime_c__int32__Sequence * member =
@@ -763,7 +819,7 @@ bool smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__resize_fu
   return rosidl_runtime_c__String__Sequence__init(member, size);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__Buffer_message_member_array[13] = {
+static rosidl_typesupport_introspection_c__MessageMember smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__Buffer_message_member_array[14] = {
   {
     "agent_ids",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_INT32,  // type
@@ -780,6 +836,23 @@ static rosidl_typesupport_introspection_c__MessageMember smrr_interfaces__msg__B
     smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__fetch_function__Buffer__agent_ids,  // fetch(index, &value) function pointer
     smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__assign_function__Buffer__agent_ids,  // assign(index, value) function pointer
     smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__resize_function__Buffer__agent_ids  // resize(index) function pointer
+  },
+  {
+    "agent_count",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_INT32,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    true,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(smrr_interfaces__msg__Buffer, agent_count),  // bytes offset in struct
+    NULL,  // default value
+    smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__size_function__Buffer__agent_count,  // size() function pointer
+    smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__get_const_function__Buffer__agent_count,  // get_const(index) function pointer
+    smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__get_function__Buffer__agent_count,  // get(index) function pointer
+    smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__fetch_function__Buffer__agent_count,  // fetch(index, &value) function pointer
+    smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__assign_function__Buffer__agent_count,  // assign(index, value) function pointer
+    smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__resize_function__Buffer__agent_count  // resize(index) function pointer
   },
   {
     "x_velocities",  // name
@@ -990,7 +1063,7 @@ static rosidl_typesupport_introspection_c__MessageMember smrr_interfaces__msg__B
 static const rosidl_typesupport_introspection_c__MessageMembers smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__Buffer_message_members = {
   "smrr_interfaces__msg",  // message namespace
   "Buffer",  // message name
-  13,  // number of fields
+  14,  // number of fields
   sizeof(smrr_interfaces__msg__Buffer),
   smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__Buffer_message_member_array,  // message members
   smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__Buffer_init_function,  // function to initialize message memory (memory has to be allocated)

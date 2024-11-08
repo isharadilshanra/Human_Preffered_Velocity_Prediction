@@ -43,6 +43,24 @@ inline void to_flow_style_yaml(
     out << ", ";
   }
 
+  // member: agent_count
+  {
+    if (msg.agent_count.size() == 0) {
+      out << "agent_count: []";
+    } else {
+      out << "agent_count: [";
+      size_t pending_items = msg.agent_count.size();
+      for (auto item : msg.agent_count) {
+        rosidl_generator_traits::value_to_yaml(item, out);
+        if (--pending_items > 0) {
+          out << ", ";
+        }
+      }
+      out << "]";
+    }
+    out << ", ";
+  }
+
   // member: x_velocities
   {
     if (msg.x_velocities.size() == 0) {
@@ -274,6 +292,26 @@ inline void to_block_style_yaml(
     } else {
       out << "agent_ids:\n";
       for (auto item : msg.agent_ids) {
+        if (indentation > 0) {
+          out << std::string(indentation, ' ');
+        }
+        out << "- ";
+        rosidl_generator_traits::value_to_yaml(item, out);
+        out << "\n";
+      }
+    }
+  }
+
+  // member: agent_count
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    if (msg.agent_count.size() == 0) {
+      out << "agent_count: []\n";
+    } else {
+      out << "agent_count:\n";
+      for (auto item : msg.agent_count) {
         if (indentation > 0) {
           out << std::string(indentation, ' ');
         }
