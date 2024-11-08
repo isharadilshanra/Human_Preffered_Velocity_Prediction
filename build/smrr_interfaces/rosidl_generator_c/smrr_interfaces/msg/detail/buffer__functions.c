@@ -13,7 +13,6 @@
 
 // Include directives for member types
 // Member `agent_ids`
-// Member `agent_count`
 // Member `x_velocities`
 // Member `y_velocities`
 // Member `x_positions`
@@ -41,10 +40,6 @@ smrr_interfaces__msg__Buffer__init(smrr_interfaces__msg__Buffer * msg)
     return false;
   }
   // agent_count
-  if (!rosidl_runtime_c__int32__Sequence__init(&msg->agent_count, 0)) {
-    smrr_interfaces__msg__Buffer__fini(msg);
-    return false;
-  }
   // x_velocities
   if (!rosidl_runtime_c__float__Sequence__init(&msg->x_velocities, 0)) {
     smrr_interfaces__msg__Buffer__fini(msg);
@@ -117,7 +112,6 @@ smrr_interfaces__msg__Buffer__fini(smrr_interfaces__msg__Buffer * msg)
   // agent_ids
   rosidl_runtime_c__int32__Sequence__fini(&msg->agent_ids);
   // agent_count
-  rosidl_runtime_c__int32__Sequence__fini(&msg->agent_count);
   // x_velocities
   rosidl_runtime_c__float__Sequence__fini(&msg->x_velocities);
   // y_velocities
@@ -157,9 +151,7 @@ smrr_interfaces__msg__Buffer__are_equal(const smrr_interfaces__msg__Buffer * lhs
     return false;
   }
   // agent_count
-  if (!rosidl_runtime_c__int32__Sequence__are_equal(
-      &(lhs->agent_count), &(rhs->agent_count)))
-  {
+  if (lhs->agent_count != rhs->agent_count) {
     return false;
   }
   // x_velocities
@@ -252,11 +244,7 @@ smrr_interfaces__msg__Buffer__copy(
     return false;
   }
   // agent_count
-  if (!rosidl_runtime_c__int32__Sequence__copy(
-      &(input->agent_count), &(output->agent_count)))
-  {
-    return false;
-  }
+  output->agent_count = input->agent_count;
   // x_velocities
   if (!rosidl_runtime_c__float__Sequence__copy(
       &(input->x_velocities), &(output->x_velocities)))

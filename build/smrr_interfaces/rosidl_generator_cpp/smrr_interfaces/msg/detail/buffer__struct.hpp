@@ -35,13 +35,21 @@ struct Buffer_
 
   explicit Buffer_(rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
   {
-    (void)_init;
+    if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
+      rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
+    {
+      this->agent_count = 0;
+    }
   }
 
   explicit Buffer_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
   {
-    (void)_init;
     (void)_alloc;
+    if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
+      rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
+    {
+      this->agent_count = 0;
+    }
   }
 
   // field types and members
@@ -49,7 +57,7 @@ struct Buffer_
     std::vector<int32_t, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<int32_t>>;
   _agent_ids_type agent_ids;
   using _agent_count_type =
-    std::vector<int32_t, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<int32_t>>;
+    int16_t;
   _agent_count_type agent_count;
   using _x_velocities_type =
     std::vector<float, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<float>>;
@@ -96,7 +104,7 @@ struct Buffer_
     return *this;
   }
   Type & set__agent_count(
-    const std::vector<int32_t, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<int32_t>> & _arg)
+    const int16_t & _arg)
   {
     this->agent_count = _arg;
     return *this;

@@ -19,7 +19,6 @@ extern "C"
 
 // Include directives for member types
 // Member 'agent_ids'
-// Member 'agent_count'
 // Member 'x_velocities'
 // Member 'y_velocities'
 // Member 'x_positions'
@@ -39,7 +38,7 @@ extern "C"
 typedef struct smrr_interfaces__msg__Buffer
 {
   rosidl_runtime_c__int32__Sequence agent_ids;
-  rosidl_runtime_c__int32__Sequence agent_count;
+  int16_t agent_count;
   /// Buffer data for each agent (last 10 values for each field)
   /// Flattened array with up to 10 values per agent
   rosidl_runtime_c__float__Sequence x_velocities;

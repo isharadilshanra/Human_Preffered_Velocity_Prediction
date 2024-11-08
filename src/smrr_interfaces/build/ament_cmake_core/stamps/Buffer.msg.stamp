@@ -1,5 +1,5 @@
 int32[] agent_ids
-int32[] agent_count
+int16 agent_count
 
 # Buffer data for each agent (last 10 values for each field)
 float32[] x_velocities    # Flattened array with up to 10 values per agent

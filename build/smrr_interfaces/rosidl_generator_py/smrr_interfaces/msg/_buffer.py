@@ -6,7 +6,6 @@
 # Import statements for member types
 
 # Member 'agent_ids'
-# Member 'agent_count'
 # Member 'x_velocities'
 # Member 'y_velocities'
 # Member 'x_positions'
@@ -89,7 +88,7 @@ class Buffer(metaclass=Metaclass_Buffer):
 
     _fields_and_field_types = {
         'agent_ids': 'sequence<int32>',
-        'agent_count': 'sequence<int32>',
+        'agent_count': 'int16',
         'x_velocities': 'sequence<float>',
         'y_velocities': 'sequence<float>',
         'class_ids': 'sequence<string>',
@@ -106,7 +105,7 @@ class Buffer(metaclass=Metaclass_Buffer):
 
     SLOT_TYPES = (
         rosidl_parser.definition.UnboundedSequence(rosidl_parser.definition.BasicType('int32')),  # noqa: E501
-        rosidl_parser.definition.UnboundedSequence(rosidl_parser.definition.BasicType('int32')),  # noqa: E501
+        rosidl_parser.definition.BasicType('int16'),  # noqa: E501
         rosidl_parser.definition.UnboundedSequence(rosidl_parser.definition.BasicType('float')),  # noqa: E501
         rosidl_parser.definition.UnboundedSequence(rosidl_parser.definition.BasicType('float')),  # noqa: E501
         rosidl_parser.definition.UnboundedSequence(rosidl_parser.definition.UnboundedString()),  # noqa: E501
@@ -126,7 +125,7 @@ class Buffer(metaclass=Metaclass_Buffer):
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
         self.agent_ids = array.array('i', kwargs.get('agent_ids', []))
-        self.agent_count = array.array('i', kwargs.get('agent_count', []))
+        self.agent_count = kwargs.get('agent_count', int())
         self.x_velocities = array.array('f', kwargs.get('x_velocities', []))
         self.y_velocities = array.array('f', kwargs.get('y_velocities', []))
         self.class_ids = kwargs.get('class_ids', [])
@@ -239,26 +238,13 @@ class Buffer(metaclass=Metaclass_Buffer):
 
     @agent_count.setter
     def agent_count(self, value):
-        if isinstance(value, array.array):
-            assert value.typecode == 'i', \
-                "The 'agent_count' array.array() must have the type code of 'i'"
-            self._agent_count = value
-            return
         if __debug__:
-            from collections.abc import Sequence
-            from collections.abc import Set
-            from collections import UserList
-            from collections import UserString
             assert \
-                ((isinstance(value, Sequence) or
-                  isinstance(value, Set) or
-                  isinstance(value, UserList)) and
-                 not isinstance(value, str) and
-                 not isinstance(value, UserString) and
-                 all(isinstance(v, int) for v in value) and
-                 all(val >= -2147483648 and val < 2147483648 for val in value)), \
-                "The 'agent_count' field must be a set or sequence and each value of type 'int' and each integer in [-2147483648, 2147483647]"
-        self._agent_count = array.array('i', value)
+                isinstance(value, int), \
+                "The 'agent_count' field must be of type 'int'"
+            assert value >= -32768 and value < 32768, \
+                "The 'agent_count' field must be an integer in [-32768, 32767]"
+        self._agent_count = value
 
     @builtins.property
     def x_velocities(self):
