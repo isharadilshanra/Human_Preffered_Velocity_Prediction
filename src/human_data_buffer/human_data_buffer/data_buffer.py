@@ -4,7 +4,7 @@
 
 import rclpy
 from rclpy.node import Node
-from smrr_interfaces.msg import VelocityClassData, Buffer
+from smrr_interfaces.msg import VelocityClassData, Buffer, DataElementFloat, DataElementString
 import numpy as np
 from collections import deque, Counter
 
@@ -74,7 +74,8 @@ class DataBufferNode(Node):
                 
                 # Log buffer status for debugging
                 try:
-                    self.log_buffer_status()
+                    #self.log_buffer_status()
+                    pass
                 except Exception as e:
                     self.get_logger().error(f"Error logging buffer status in the loop: {e}")
 
@@ -148,7 +149,22 @@ class DataBufferNode(Node):
         msg = Buffer()  # Create a new Buffer message
 
         # fill the messge data
-        agent_count = 0
+        
+        # agent_ids = []
+        # x_velocities = []
+        # y_velocities = []
+        # class_ids = []
+        # x_positions = []
+        # y_positions = []
+        # x_mean = []
+        # y_mean = []
+        # x_std_dev = []
+        # y_std_dev = []
+        # x_variance = []
+        # y_variance = []
+        # majority_class_ids = []
+
+        # nested structure
         agent_ids = []
         x_velocities = []
         y_velocities = []
@@ -166,11 +182,30 @@ class DataBufferNode(Node):
 
         for i in range(len(self.agent_matrix)):
             agent_ids.append(self.agent_matrix[i, 0])
-            x_velocities.extend(list(self.agent_matrix[i, 1]))
-            y_velocities.extend(list(self.agent_matrix[i, 2]))
-            class_ids.extend(list(self.agent_matrix[i, 3]))
-            x_positions.extend(list(self.agent_matrix[i, 4]))
-            y_positions.extend(list(self.agent_matrix[i, 5]))
+            # x_velocities.extend(list(self.agent_matrix[i, 1]))
+            # y_velocities.extend(list(self.agent_matrix[i, 2]))
+            # class_ids.extend(list(self.agent_matrix[i, 3]))
+            # x_positions.extend(list(self.agent_matrix[i, 4]))
+            # y_positions.extend(list(self.agent_matrix[i, 5]))
+
+            x_vel_list = DataElementFloat()
+            y_vel_list = DataElementFloat()
+            class_list = DataElementString()
+            x_pos_list = DataElementFloat()
+            y_pos_list = DataElementFloat()
+
+            x_vel_list.data = list(self.agent_matrix[i, 1])
+            y_vel_list.data = list(self.agent_matrix[i, 2])
+            class_list.data = list(self.agent_matrix[i, 3])
+            x_pos_list.data = list(self.agent_matrix[i, 4])
+            y_pos_list.data = list(self.agent_matrix[i, 5])
+
+            x_velocities.append(x_vel_list)
+            y_velocities.append(y_vel_list)
+            class_ids.append(class_list)
+            x_positions.append(x_pos_list)
+            y_positions.append(y_pos_list)
+
 
             # Get statistics from the statistics dictionary
             stats = self.agent_matrix[i, 6]
@@ -200,6 +235,10 @@ class DataBufferNode(Node):
         # publish the message
         self.pub_buffer.publish(msg)
         self.get_logger().info("Published buffer data.")
+        
+        # log buffer x and y velocities
+        self.get_logger().info(f"x_velocities: {x_velocities}")
+        self.get_logger().info(f"y_velocities: {y_velocities}")
 
     def remove_agent(self, index):
         # Remove the row corresponding to the agent that has left
