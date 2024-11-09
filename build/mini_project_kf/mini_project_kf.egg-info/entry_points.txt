@@ -1,0 +1,3 @@
+[console_scripts]
+preferred_velocity_prediction_kf = mini_project_kf.preferred_velocity_prediction_kf:main
+

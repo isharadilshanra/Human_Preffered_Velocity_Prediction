@@ -1,0 +1,9 @@
+source;share/mini_project_kf/hook/pythonpath.ps1
+source;share/mini_project_kf/hook/pythonpath.dsv
+source;share/mini_project_kf/hook/pythonpath.sh
+source;share/mini_project_kf/hook/ament_prefix_path.ps1
+source;share/mini_project_kf/hook/ament_prefix_path.dsv
+source;share/mini_project_kf/hook/ament_prefix_path.sh
+source;../../build/mini_project_kf/share/mini_project_kf/hook/pythonpath_develop.ps1
+source;../../build/mini_project_kf/share/mini_project_kf/hook/pythonpath_develop.dsv
+source;../../build/mini_project_kf/share/mini_project_kf/hook/pythonpath_develop.sh
