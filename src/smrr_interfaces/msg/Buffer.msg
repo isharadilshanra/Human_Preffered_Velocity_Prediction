@@ -10,6 +10,11 @@ int16 agent_count
 
 # nested data structure for each agent
 
+DataElementFloat[] x_velocities
+DataElementFloat[] y_velocities
+DataElementString[] class_ids
+DataElementFloat[] x_positions
+DataElementFloat[] y_positions
 
 # Statistical data for each agent
 float32[] x_mean          # Mean x-velocity for each agent

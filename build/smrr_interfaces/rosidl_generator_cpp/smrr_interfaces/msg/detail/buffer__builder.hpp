@@ -133,16 +133,96 @@ private:
   ::smrr_interfaces::msg::Buffer msg_;
 };
 
+class Init_Buffer_y_positions
+{
+public:
+  explicit Init_Buffer_y_positions(::smrr_interfaces::msg::Buffer & msg)
+  : msg_(msg)
+  {}
+  Init_Buffer_x_mean y_positions(::smrr_interfaces::msg::Buffer::_y_positions_type arg)
+  {
+    msg_.y_positions = std::move(arg);
+    return Init_Buffer_x_mean(msg_);
+  }
+
+private:
+  ::smrr_interfaces::msg::Buffer msg_;
+};
+
+class Init_Buffer_x_positions
+{
+public:
+  explicit Init_Buffer_x_positions(::smrr_interfaces::msg::Buffer & msg)
+  : msg_(msg)
+  {}
+  Init_Buffer_y_positions x_positions(::smrr_interfaces::msg::Buffer::_x_positions_type arg)
+  {
+    msg_.x_positions = std::move(arg);
+    return Init_Buffer_y_positions(msg_);
+  }
+
+private:
+  ::smrr_interfaces::msg::Buffer msg_;
+};
+
+class Init_Buffer_class_ids
+{
+public:
+  explicit Init_Buffer_class_ids(::smrr_interfaces::msg::Buffer & msg)
+  : msg_(msg)
+  {}
+  Init_Buffer_x_positions class_ids(::smrr_interfaces::msg::Buffer::_class_ids_type arg)
+  {
+    msg_.class_ids = std::move(arg);
+    return Init_Buffer_x_positions(msg_);
+  }
+
+private:
+  ::smrr_interfaces::msg::Buffer msg_;
+};
+
+class Init_Buffer_y_velocities
+{
+public:
+  explicit Init_Buffer_y_velocities(::smrr_interfaces::msg::Buffer & msg)
+  : msg_(msg)
+  {}
+  Init_Buffer_class_ids y_velocities(::smrr_interfaces::msg::Buffer::_y_velocities_type arg)
+  {
+    msg_.y_velocities = std::move(arg);
+    return Init_Buffer_class_ids(msg_);
+  }
+
+private:
+  ::smrr_interfaces::msg::Buffer msg_;
+};
+
+class Init_Buffer_x_velocities
+{
+public:
+  explicit Init_Buffer_x_velocities(::smrr_interfaces::msg::Buffer & msg)
+  : msg_(msg)
+  {}
+  Init_Buffer_y_velocities x_velocities(::smrr_interfaces::msg::Buffer::_x_velocities_type arg)
+  {
+    msg_.x_velocities = std::move(arg);
+    return Init_Buffer_y_velocities(msg_);
+  }
+
+private:
+  ::smrr_interfaces::msg::Buffer msg_;
+};
+
 class Init_Buffer_agent_count
 {
 public:
   explicit Init_Buffer_agent_count(::smrr_interfaces::msg::Buffer & msg)
   : msg_(msg)
   {}
-  Init_Buffer_x_mean agent_count(::smrr_interfaces::msg::Buffer::_agent_count_type arg)
+  Init_Buffer_x_velocities agent_count(::smrr_interfaces::msg::Buffer::_agent_count_type arg)
   {
     msg_.agent_count = std::move(arg);
-    return Init_Buffer_x_mean(msg_);
+    return Init_Buffer_x_velocities(msg_);
   }
 
 private:

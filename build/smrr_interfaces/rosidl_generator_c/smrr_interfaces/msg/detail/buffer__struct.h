@@ -26,6 +26,13 @@ extern "C"
 // Member 'x_variance'
 // Member 'y_variance'
 #include "rosidl_runtime_c/primitives_sequence.h"
+// Member 'x_velocities'
+// Member 'y_velocities'
+// Member 'x_positions'
+// Member 'y_positions'
+#include "smrr_interfaces/msg/detail/data_element_float__struct.h"
+// Member 'class_ids'
+#include "smrr_interfaces/msg/detail/data_element_string__struct.h"
 // Member 'majority_class_id'
 #include "rosidl_runtime_c/string.h"
 
@@ -41,6 +48,11 @@ typedef struct smrr_interfaces__msg__Buffer
   /// float32[] x_positions     # Flattened array with up to 10 values per agent
   /// float32[] y_positions     # Flattened array with up to 10 values per agent
   /// nested data structure for each agent
+  smrr_interfaces__msg__DataElementFloat__Sequence x_velocities;
+  smrr_interfaces__msg__DataElementFloat__Sequence y_velocities;
+  smrr_interfaces__msg__DataElementString__Sequence class_ids;
+  smrr_interfaces__msg__DataElementFloat__Sequence x_positions;
+  smrr_interfaces__msg__DataElementFloat__Sequence y_positions;
   /// Statistical data for each agent
   /// Mean x-velocity for each agent
   rosidl_runtime_c__float__Sequence x_mean;

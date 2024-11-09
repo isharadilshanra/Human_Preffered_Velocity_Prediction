@@ -22,6 +22,20 @@
 #include "rosidl_runtime_c/string.h"
 #include "rosidl_runtime_c/string_functions.h"
 
+// Nested array functions includes
+#include "smrr_interfaces/msg/detail/data_element_float__functions.h"
+#include "smrr_interfaces/msg/detail/data_element_string__functions.h"
+// end nested array functions include
+bool smrr_interfaces__msg__data_element_float__convert_from_py(PyObject * _pymsg, void * _ros_message);
+PyObject * smrr_interfaces__msg__data_element_float__convert_to_py(void * raw_ros_message);
+bool smrr_interfaces__msg__data_element_float__convert_from_py(PyObject * _pymsg, void * _ros_message);
+PyObject * smrr_interfaces__msg__data_element_float__convert_to_py(void * raw_ros_message);
+bool smrr_interfaces__msg__data_element_string__convert_from_py(PyObject * _pymsg, void * _ros_message);
+PyObject * smrr_interfaces__msg__data_element_string__convert_to_py(void * raw_ros_message);
+bool smrr_interfaces__msg__data_element_float__convert_from_py(PyObject * _pymsg, void * _ros_message);
+PyObject * smrr_interfaces__msg__data_element_float__convert_to_py(void * raw_ros_message);
+bool smrr_interfaces__msg__data_element_float__convert_from_py(PyObject * _pymsg, void * _ros_message);
+PyObject * smrr_interfaces__msg__data_element_float__convert_to_py(void * raw_ros_message);
 
 ROSIDL_GENERATOR_C_EXPORT
 bool smrr_interfaces__msg__buffer__convert_from_py(PyObject * _pymsg, void * _ros_message)
@@ -125,6 +139,171 @@ bool smrr_interfaces__msg__buffer__convert_from_py(PyObject * _pymsg, void * _ro
     }
     assert(PyLong_Check(field));
     ros_message->agent_count = (int16_t)PyLong_AsLong(field);
+    Py_DECREF(field);
+  }
+  {  // x_velocities
+    PyObject * field = PyObject_GetAttrString(_pymsg, "x_velocities");
+    if (!field) {
+      return false;
+    }
+    PyObject * seq_field = PySequence_Fast(field, "expected a sequence in 'x_velocities'");
+    if (!seq_field) {
+      Py_DECREF(field);
+      return false;
+    }
+    Py_ssize_t size = PySequence_Size(field);
+    if (-1 == size) {
+      Py_DECREF(seq_field);
+      Py_DECREF(field);
+      return false;
+    }
+    if (!smrr_interfaces__msg__DataElementFloat__Sequence__init(&(ros_message->x_velocities), size)) {
+      PyErr_SetString(PyExc_RuntimeError, "unable to create smrr_interfaces__msg__DataElementFloat__Sequence ros_message");
+      Py_DECREF(seq_field);
+      Py_DECREF(field);
+      return false;
+    }
+    smrr_interfaces__msg__DataElementFloat * dest = ros_message->x_velocities.data;
+    for (Py_ssize_t i = 0; i < size; ++i) {
+      if (!smrr_interfaces__msg__data_element_float__convert_from_py(PySequence_Fast_GET_ITEM(seq_field, i), &dest[i])) {
+        Py_DECREF(seq_field);
+        Py_DECREF(field);
+        return false;
+      }
+    }
+    Py_DECREF(seq_field);
+    Py_DECREF(field);
+  }
+  {  // y_velocities
+    PyObject * field = PyObject_GetAttrString(_pymsg, "y_velocities");
+    if (!field) {
+      return false;
+    }
+    PyObject * seq_field = PySequence_Fast(field, "expected a sequence in 'y_velocities'");
+    if (!seq_field) {
+      Py_DECREF(field);
+      return false;
+    }
+    Py_ssize_t size = PySequence_Size(field);
+    if (-1 == size) {
+      Py_DECREF(seq_field);
+      Py_DECREF(field);
+      return false;
+    }
+    if (!smrr_interfaces__msg__DataElementFloat__Sequence__init(&(ros_message->y_velocities), size)) {
+      PyErr_SetString(PyExc_RuntimeError, "unable to create smrr_interfaces__msg__DataElementFloat__Sequence ros_message");
+      Py_DECREF(seq_field);
+      Py_DECREF(field);
+      return false;
+    }
+    smrr_interfaces__msg__DataElementFloat * dest = ros_message->y_velocities.data;
+    for (Py_ssize_t i = 0; i < size; ++i) {
+      if (!smrr_interfaces__msg__data_element_float__convert_from_py(PySequence_Fast_GET_ITEM(seq_field, i), &dest[i])) {
+        Py_DECREF(seq_field);
+        Py_DECREF(field);
+        return false;
+      }
+    }
+    Py_DECREF(seq_field);
+    Py_DECREF(field);
+  }
+  {  // class_ids
+    PyObject * field = PyObject_GetAttrString(_pymsg, "class_ids");
+    if (!field) {
+      return false;
+    }
+    PyObject * seq_field = PySequence_Fast(field, "expected a sequence in 'class_ids'");
+    if (!seq_field) {
+      Py_DECREF(field);
+      return false;
+    }
+    Py_ssize_t size = PySequence_Size(field);
+    if (-1 == size) {
+      Py_DECREF(seq_field);
+      Py_DECREF(field);
+      return false;
+    }
+    if (!smrr_interfaces__msg__DataElementString__Sequence__init(&(ros_message->class_ids), size)) {
+      PyErr_SetString(PyExc_RuntimeError, "unable to create smrr_interfaces__msg__DataElementString__Sequence ros_message");
+      Py_DECREF(seq_field);
+      Py_DECREF(field);
+      return false;
+    }
+    smrr_interfaces__msg__DataElementString * dest = ros_message->class_ids.data;
+    for (Py_ssize_t i = 0; i < size; ++i) {
+      if (!smrr_interfaces__msg__data_element_string__convert_from_py(PySequence_Fast_GET_ITEM(seq_field, i), &dest[i])) {
+        Py_DECREF(seq_field);
+        Py_DECREF(field);
+        return false;
+      }
+    }
+    Py_DECREF(seq_field);
+    Py_DECREF(field);
+  }
+  {  // x_positions
+    PyObject * field = PyObject_GetAttrString(_pymsg, "x_positions");
+    if (!field) {
+      return false;
+    }
+    PyObject * seq_field = PySequence_Fast(field, "expected a sequence in 'x_positions'");
+    if (!seq_field) {
+      Py_DECREF(field);
+      return false;
+    }
+    Py_ssize_t size = PySequence_Size(field);
+    if (-1 == size) {
+      Py_DECREF(seq_field);
+      Py_DECREF(field);
+      return false;
+    }
+    if (!smrr_interfaces__msg__DataElementFloat__Sequence__init(&(ros_message->x_positions), size)) {
+      PyErr_SetString(PyExc_RuntimeError, "unable to create smrr_interfaces__msg__DataElementFloat__Sequence ros_message");
+      Py_DECREF(seq_field);
+      Py_DECREF(field);
+      return false;
+    }
+    smrr_interfaces__msg__DataElementFloat * dest = ros_message->x_positions.data;
+    for (Py_ssize_t i = 0; i < size; ++i) {
+      if (!smrr_interfaces__msg__data_element_float__convert_from_py(PySequence_Fast_GET_ITEM(seq_field, i), &dest[i])) {
+        Py_DECREF(seq_field);
+        Py_DECREF(field);
+        return false;
+      }
+    }
+    Py_DECREF(seq_field);
+    Py_DECREF(field);
+  }
+  {  // y_positions
+    PyObject * field = PyObject_GetAttrString(_pymsg, "y_positions");
+    if (!field) {
+      return false;
+    }
+    PyObject * seq_field = PySequence_Fast(field, "expected a sequence in 'y_positions'");
+    if (!seq_field) {
+      Py_DECREF(field);
+      return false;
+    }
+    Py_ssize_t size = PySequence_Size(field);
+    if (-1 == size) {
+      Py_DECREF(seq_field);
+      Py_DECREF(field);
+      return false;
+    }
+    if (!smrr_interfaces__msg__DataElementFloat__Sequence__init(&(ros_message->y_positions), size)) {
+      PyErr_SetString(PyExc_RuntimeError, "unable to create smrr_interfaces__msg__DataElementFloat__Sequence ros_message");
+      Py_DECREF(seq_field);
+      Py_DECREF(field);
+      return false;
+    }
+    smrr_interfaces__msg__DataElementFloat * dest = ros_message->y_positions.data;
+    for (Py_ssize_t i = 0; i < size; ++i) {
+      if (!smrr_interfaces__msg__data_element_float__convert_from_py(PySequence_Fast_GET_ITEM(seq_field, i), &dest[i])) {
+        Py_DECREF(seq_field);
+        Py_DECREF(field);
+        return false;
+      }
+    }
+    Py_DECREF(seq_field);
     Py_DECREF(field);
   }
   {  // x_mean
@@ -628,6 +807,146 @@ PyObject * smrr_interfaces__msg__buffer__convert_to_py(void * raw_ros_message)
     field = PyLong_FromLong(ros_message->agent_count);
     {
       int rc = PyObject_SetAttrString(_pymessage, "agent_count", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // x_velocities
+    PyObject * field = NULL;
+    size_t size = ros_message->x_velocities.size;
+    field = PyList_New(size);
+    if (!field) {
+      return NULL;
+    }
+    smrr_interfaces__msg__DataElementFloat * item;
+    for (size_t i = 0; i < size; ++i) {
+      item = &(ros_message->x_velocities.data[i]);
+      PyObject * pyitem = smrr_interfaces__msg__data_element_float__convert_to_py(item);
+      if (!pyitem) {
+        Py_DECREF(field);
+        return NULL;
+      }
+      int rc = PyList_SetItem(field, i, pyitem);
+      (void)rc;
+      assert(rc == 0);
+    }
+    assert(PySequence_Check(field));
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "x_velocities", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // y_velocities
+    PyObject * field = NULL;
+    size_t size = ros_message->y_velocities.size;
+    field = PyList_New(size);
+    if (!field) {
+      return NULL;
+    }
+    smrr_interfaces__msg__DataElementFloat * item;
+    for (size_t i = 0; i < size; ++i) {
+      item = &(ros_message->y_velocities.data[i]);
+      PyObject * pyitem = smrr_interfaces__msg__data_element_float__convert_to_py(item);
+      if (!pyitem) {
+        Py_DECREF(field);
+        return NULL;
+      }
+      int rc = PyList_SetItem(field, i, pyitem);
+      (void)rc;
+      assert(rc == 0);
+    }
+    assert(PySequence_Check(field));
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "y_velocities", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // class_ids
+    PyObject * field = NULL;
+    size_t size = ros_message->class_ids.size;
+    field = PyList_New(size);
+    if (!field) {
+      return NULL;
+    }
+    smrr_interfaces__msg__DataElementString * item;
+    for (size_t i = 0; i < size; ++i) {
+      item = &(ros_message->class_ids.data[i]);
+      PyObject * pyitem = smrr_interfaces__msg__data_element_string__convert_to_py(item);
+      if (!pyitem) {
+        Py_DECREF(field);
+        return NULL;
+      }
+      int rc = PyList_SetItem(field, i, pyitem);
+      (void)rc;
+      assert(rc == 0);
+    }
+    assert(PySequence_Check(field));
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "class_ids", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // x_positions
+    PyObject * field = NULL;
+    size_t size = ros_message->x_positions.size;
+    field = PyList_New(size);
+    if (!field) {
+      return NULL;
+    }
+    smrr_interfaces__msg__DataElementFloat * item;
+    for (size_t i = 0; i < size; ++i) {
+      item = &(ros_message->x_positions.data[i]);
+      PyObject * pyitem = smrr_interfaces__msg__data_element_float__convert_to_py(item);
+      if (!pyitem) {
+        Py_DECREF(field);
+        return NULL;
+      }
+      int rc = PyList_SetItem(field, i, pyitem);
+      (void)rc;
+      assert(rc == 0);
+    }
+    assert(PySequence_Check(field));
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "x_positions", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // y_positions
+    PyObject * field = NULL;
+    size_t size = ros_message->y_positions.size;
+    field = PyList_New(size);
+    if (!field) {
+      return NULL;
+    }
+    smrr_interfaces__msg__DataElementFloat * item;
+    for (size_t i = 0; i < size; ++i) {
+      item = &(ros_message->y_positions.data[i]);
+      PyObject * pyitem = smrr_interfaces__msg__data_element_float__convert_to_py(item);
+      if (!pyitem) {
+        Py_DECREF(field);
+        return NULL;
+      }
+      int rc = PyList_SetItem(field, i, pyitem);
+      (void)rc;
+      assert(rc == 0);
+    }
+    assert(PySequence_Check(field));
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "y_positions", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

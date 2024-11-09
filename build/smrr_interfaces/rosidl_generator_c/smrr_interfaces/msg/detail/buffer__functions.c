@@ -20,6 +20,13 @@
 // Member `x_variance`
 // Member `y_variance`
 #include "rosidl_runtime_c/primitives_sequence_functions.h"
+// Member `x_velocities`
+// Member `y_velocities`
+// Member `x_positions`
+// Member `y_positions`
+#include "smrr_interfaces/msg/detail/data_element_float__functions.h"
+// Member `class_ids`
+#include "smrr_interfaces/msg/detail/data_element_string__functions.h"
 // Member `majority_class_id`
 #include "rosidl_runtime_c/string_functions.h"
 
@@ -35,6 +42,31 @@ smrr_interfaces__msg__Buffer__init(smrr_interfaces__msg__Buffer * msg)
     return false;
   }
   // agent_count
+  // x_velocities
+  if (!smrr_interfaces__msg__DataElementFloat__Sequence__init(&msg->x_velocities, 0)) {
+    smrr_interfaces__msg__Buffer__fini(msg);
+    return false;
+  }
+  // y_velocities
+  if (!smrr_interfaces__msg__DataElementFloat__Sequence__init(&msg->y_velocities, 0)) {
+    smrr_interfaces__msg__Buffer__fini(msg);
+    return false;
+  }
+  // class_ids
+  if (!smrr_interfaces__msg__DataElementString__Sequence__init(&msg->class_ids, 0)) {
+    smrr_interfaces__msg__Buffer__fini(msg);
+    return false;
+  }
+  // x_positions
+  if (!smrr_interfaces__msg__DataElementFloat__Sequence__init(&msg->x_positions, 0)) {
+    smrr_interfaces__msg__Buffer__fini(msg);
+    return false;
+  }
+  // y_positions
+  if (!smrr_interfaces__msg__DataElementFloat__Sequence__init(&msg->y_positions, 0)) {
+    smrr_interfaces__msg__Buffer__fini(msg);
+    return false;
+  }
   // x_mean
   if (!rosidl_runtime_c__float__Sequence__init(&msg->x_mean, 0)) {
     smrr_interfaces__msg__Buffer__fini(msg);
@@ -82,6 +114,16 @@ smrr_interfaces__msg__Buffer__fini(smrr_interfaces__msg__Buffer * msg)
   // agent_ids
   rosidl_runtime_c__int32__Sequence__fini(&msg->agent_ids);
   // agent_count
+  // x_velocities
+  smrr_interfaces__msg__DataElementFloat__Sequence__fini(&msg->x_velocities);
+  // y_velocities
+  smrr_interfaces__msg__DataElementFloat__Sequence__fini(&msg->y_velocities);
+  // class_ids
+  smrr_interfaces__msg__DataElementString__Sequence__fini(&msg->class_ids);
+  // x_positions
+  smrr_interfaces__msg__DataElementFloat__Sequence__fini(&msg->x_positions);
+  // y_positions
+  smrr_interfaces__msg__DataElementFloat__Sequence__fini(&msg->y_positions);
   // x_mean
   rosidl_runtime_c__float__Sequence__fini(&msg->x_mean);
   // y_mean
@@ -112,6 +154,36 @@ smrr_interfaces__msg__Buffer__are_equal(const smrr_interfaces__msg__Buffer * lhs
   }
   // agent_count
   if (lhs->agent_count != rhs->agent_count) {
+    return false;
+  }
+  // x_velocities
+  if (!smrr_interfaces__msg__DataElementFloat__Sequence__are_equal(
+      &(lhs->x_velocities), &(rhs->x_velocities)))
+  {
+    return false;
+  }
+  // y_velocities
+  if (!smrr_interfaces__msg__DataElementFloat__Sequence__are_equal(
+      &(lhs->y_velocities), &(rhs->y_velocities)))
+  {
+    return false;
+  }
+  // class_ids
+  if (!smrr_interfaces__msg__DataElementString__Sequence__are_equal(
+      &(lhs->class_ids), &(rhs->class_ids)))
+  {
+    return false;
+  }
+  // x_positions
+  if (!smrr_interfaces__msg__DataElementFloat__Sequence__are_equal(
+      &(lhs->x_positions), &(rhs->x_positions)))
+  {
+    return false;
+  }
+  // y_positions
+  if (!smrr_interfaces__msg__DataElementFloat__Sequence__are_equal(
+      &(lhs->y_positions), &(rhs->y_positions)))
+  {
     return false;
   }
   // x_mean
@@ -175,6 +247,36 @@ smrr_interfaces__msg__Buffer__copy(
   }
   // agent_count
   output->agent_count = input->agent_count;
+  // x_velocities
+  if (!smrr_interfaces__msg__DataElementFloat__Sequence__copy(
+      &(input->x_velocities), &(output->x_velocities)))
+  {
+    return false;
+  }
+  // y_velocities
+  if (!smrr_interfaces__msg__DataElementFloat__Sequence__copy(
+      &(input->y_velocities), &(output->y_velocities)))
+  {
+    return false;
+  }
+  // class_ids
+  if (!smrr_interfaces__msg__DataElementString__Sequence__copy(
+      &(input->class_ids), &(output->class_ids)))
+  {
+    return false;
+  }
+  // x_positions
+  if (!smrr_interfaces__msg__DataElementFloat__Sequence__copy(
+      &(input->x_positions), &(output->x_positions)))
+  {
+    return false;
+  }
+  // y_positions
+  if (!smrr_interfaces__msg__DataElementFloat__Sequence__copy(
+      &(input->y_positions), &(output->y_positions)))
+  {
+    return false;
+  }
   // x_mean
   if (!rosidl_runtime_c__float__Sequence__copy(
       &(input->x_mean), &(output->x_mean)))

@@ -14,6 +14,15 @@
 #include "smrr_interfaces/msg/detail/buffer__struct.hpp"
 #include "rosidl_runtime_cpp/traits.hpp"
 
+// Include directives for member types
+// Member 'x_velocities'
+// Member 'y_velocities'
+// Member 'x_positions'
+// Member 'y_positions'
+#include "smrr_interfaces/msg/detail/data_element_float__traits.hpp"
+// Member 'class_ids'
+#include "smrr_interfaces/msg/detail/data_element_string__traits.hpp"
+
 namespace smrr_interfaces
 {
 
@@ -47,6 +56,96 @@ inline void to_flow_style_yaml(
   {
     out << "agent_count: ";
     rosidl_generator_traits::value_to_yaml(msg.agent_count, out);
+    out << ", ";
+  }
+
+  // member: x_velocities
+  {
+    if (msg.x_velocities.size() == 0) {
+      out << "x_velocities: []";
+    } else {
+      out << "x_velocities: [";
+      size_t pending_items = msg.x_velocities.size();
+      for (auto item : msg.x_velocities) {
+        to_flow_style_yaml(item, out);
+        if (--pending_items > 0) {
+          out << ", ";
+        }
+      }
+      out << "]";
+    }
+    out << ", ";
+  }
+
+  // member: y_velocities
+  {
+    if (msg.y_velocities.size() == 0) {
+      out << "y_velocities: []";
+    } else {
+      out << "y_velocities: [";
+      size_t pending_items = msg.y_velocities.size();
+      for (auto item : msg.y_velocities) {
+        to_flow_style_yaml(item, out);
+        if (--pending_items > 0) {
+          out << ", ";
+        }
+      }
+      out << "]";
+    }
+    out << ", ";
+  }
+
+  // member: class_ids
+  {
+    if (msg.class_ids.size() == 0) {
+      out << "class_ids: []";
+    } else {
+      out << "class_ids: [";
+      size_t pending_items = msg.class_ids.size();
+      for (auto item : msg.class_ids) {
+        to_flow_style_yaml(item, out);
+        if (--pending_items > 0) {
+          out << ", ";
+        }
+      }
+      out << "]";
+    }
+    out << ", ";
+  }
+
+  // member: x_positions
+  {
+    if (msg.x_positions.size() == 0) {
+      out << "x_positions: []";
+    } else {
+      out << "x_positions: [";
+      size_t pending_items = msg.x_positions.size();
+      for (auto item : msg.x_positions) {
+        to_flow_style_yaml(item, out);
+        if (--pending_items > 0) {
+          out << ", ";
+        }
+      }
+      out << "]";
+    }
+    out << ", ";
+  }
+
+  // member: y_positions
+  {
+    if (msg.y_positions.size() == 0) {
+      out << "y_positions: []";
+    } else {
+      out << "y_positions: [";
+      size_t pending_items = msg.y_positions.size();
+      for (auto item : msg.y_positions) {
+        to_flow_style_yaml(item, out);
+        if (--pending_items > 0) {
+          out << ", ";
+        }
+      }
+      out << "]";
+    }
     out << ", ";
   }
 
@@ -209,6 +308,101 @@ inline void to_block_style_yaml(
     out << "agent_count: ";
     rosidl_generator_traits::value_to_yaml(msg.agent_count, out);
     out << "\n";
+  }
+
+  // member: x_velocities
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    if (msg.x_velocities.size() == 0) {
+      out << "x_velocities: []\n";
+    } else {
+      out << "x_velocities:\n";
+      for (auto item : msg.x_velocities) {
+        if (indentation > 0) {
+          out << std::string(indentation, ' ');
+        }
+        out << "-\n";
+        to_block_style_yaml(item, out, indentation + 2);
+      }
+    }
+  }
+
+  // member: y_velocities
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    if (msg.y_velocities.size() == 0) {
+      out << "y_velocities: []\n";
+    } else {
+      out << "y_velocities:\n";
+      for (auto item : msg.y_velocities) {
+        if (indentation > 0) {
+          out << std::string(indentation, ' ');
+        }
+        out << "-\n";
+        to_block_style_yaml(item, out, indentation + 2);
+      }
+    }
+  }
+
+  // member: class_ids
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    if (msg.class_ids.size() == 0) {
+      out << "class_ids: []\n";
+    } else {
+      out << "class_ids:\n";
+      for (auto item : msg.class_ids) {
+        if (indentation > 0) {
+          out << std::string(indentation, ' ');
+        }
+        out << "-\n";
+        to_block_style_yaml(item, out, indentation + 2);
+      }
+    }
+  }
+
+  // member: x_positions
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    if (msg.x_positions.size() == 0) {
+      out << "x_positions: []\n";
+    } else {
+      out << "x_positions:\n";
+      for (auto item : msg.x_positions) {
+        if (indentation > 0) {
+          out << std::string(indentation, ' ');
+        }
+        out << "-\n";
+        to_block_style_yaml(item, out, indentation + 2);
+      }
+    }
+  }
+
+  // member: y_positions
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    if (msg.y_positions.size() == 0) {
+      out << "y_positions: []\n";
+    } else {
+      out << "y_positions:\n";
+      for (auto item : msg.y_positions) {
+        if (indentation > 0) {
+          out << std::string(indentation, ' ');
+        }
+        out << "-\n";
+        to_block_style_yaml(item, out, indentation + 2);
+      }
+    }
   }
 
   // member: x_mean

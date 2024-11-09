@@ -15,6 +15,15 @@
 #include "rosidl_runtime_cpp/message_initialization.hpp"
 
 
+// Include directives for member types
+// Member 'x_velocities'
+// Member 'y_velocities'
+// Member 'x_positions'
+// Member 'y_positions'
+#include "smrr_interfaces/msg/detail/data_element_float__struct.hpp"
+// Member 'class_ids'
+#include "smrr_interfaces/msg/detail/data_element_string__struct.hpp"
+
 #ifndef _WIN32
 # define DEPRECATED__smrr_interfaces__msg__Buffer __attribute__((deprecated))
 #else
@@ -59,6 +68,21 @@ struct Buffer_
   using _agent_count_type =
     int16_t;
   _agent_count_type agent_count;
+  using _x_velocities_type =
+    std::vector<smrr_interfaces::msg::DataElementFloat_<ContainerAllocator>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<smrr_interfaces::msg::DataElementFloat_<ContainerAllocator>>>;
+  _x_velocities_type x_velocities;
+  using _y_velocities_type =
+    std::vector<smrr_interfaces::msg::DataElementFloat_<ContainerAllocator>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<smrr_interfaces::msg::DataElementFloat_<ContainerAllocator>>>;
+  _y_velocities_type y_velocities;
+  using _class_ids_type =
+    std::vector<smrr_interfaces::msg::DataElementString_<ContainerAllocator>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<smrr_interfaces::msg::DataElementString_<ContainerAllocator>>>;
+  _class_ids_type class_ids;
+  using _x_positions_type =
+    std::vector<smrr_interfaces::msg::DataElementFloat_<ContainerAllocator>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<smrr_interfaces::msg::DataElementFloat_<ContainerAllocator>>>;
+  _x_positions_type x_positions;
+  using _y_positions_type =
+    std::vector<smrr_interfaces::msg::DataElementFloat_<ContainerAllocator>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<smrr_interfaces::msg::DataElementFloat_<ContainerAllocator>>>;
+  _y_positions_type y_positions;
   using _x_mean_type =
     std::vector<float, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<float>>;
   _x_mean_type x_mean;
@@ -92,6 +116,36 @@ struct Buffer_
     const int16_t & _arg)
   {
     this->agent_count = _arg;
+    return *this;
+  }
+  Type & set__x_velocities(
+    const std::vector<smrr_interfaces::msg::DataElementFloat_<ContainerAllocator>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<smrr_interfaces::msg::DataElementFloat_<ContainerAllocator>>> & _arg)
+  {
+    this->x_velocities = _arg;
+    return *this;
+  }
+  Type & set__y_velocities(
+    const std::vector<smrr_interfaces::msg::DataElementFloat_<ContainerAllocator>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<smrr_interfaces::msg::DataElementFloat_<ContainerAllocator>>> & _arg)
+  {
+    this->y_velocities = _arg;
+    return *this;
+  }
+  Type & set__class_ids(
+    const std::vector<smrr_interfaces::msg::DataElementString_<ContainerAllocator>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<smrr_interfaces::msg::DataElementString_<ContainerAllocator>>> & _arg)
+  {
+    this->class_ids = _arg;
+    return *this;
+  }
+  Type & set__x_positions(
+    const std::vector<smrr_interfaces::msg::DataElementFloat_<ContainerAllocator>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<smrr_interfaces::msg::DataElementFloat_<ContainerAllocator>>> & _arg)
+  {
+    this->x_positions = _arg;
+    return *this;
+  }
+  Type & set__y_positions(
+    const std::vector<smrr_interfaces::msg::DataElementFloat_<ContainerAllocator>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<smrr_interfaces::msg::DataElementFloat_<ContainerAllocator>>> & _arg)
+  {
+    this->y_positions = _arg;
     return *this;
   }
   Type & set__x_mean(
@@ -183,6 +237,21 @@ struct Buffer_
       return false;
     }
     if (this->agent_count != other.agent_count) {
+      return false;
+    }
+    if (this->x_velocities != other.x_velocities) {
+      return false;
+    }
+    if (this->y_velocities != other.y_velocities) {
+      return false;
+    }
+    if (this->class_ids != other.class_ids) {
+      return false;
+    }
+    if (this->x_positions != other.x_positions) {
+      return false;
+    }
+    if (this->y_positions != other.y_positions) {
       return false;
     }
     if (this->x_mean != other.x_mean) {

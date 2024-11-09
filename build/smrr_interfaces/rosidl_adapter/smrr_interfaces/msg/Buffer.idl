@@ -2,6 +2,8 @@
 // with input from smrr_interfaces/msg/Buffer.msg
 // generated code does not contain a copyright notice
 
+#include "smrr_interfaces/msg/DataElementFloat.idl"
+#include "smrr_interfaces/msg/DataElementString.idl"
 
 module smrr_interfaces {
   module msg {
@@ -17,7 +19,18 @@ module smrr_interfaces {
         "string[] class_ids         # Flattened array with up to 10 values per agent" "\n"
         "float32[] x_positions     # Flattened array with up to 10 values per agent" "\n"
         "float32[] y_positions     # Flattened array with up to 10 values per agent" "\n"
-        "nested data structure for each agent" "\n"
+        "nested data structure for each agent")
+      sequence<smrr_interfaces::msg::DataElementFloat> x_velocities;
+
+      sequence<smrr_interfaces::msg::DataElementFloat> y_velocities;
+
+      sequence<smrr_interfaces::msg::DataElementString> class_ids;
+
+      sequence<smrr_interfaces::msg::DataElementFloat> x_positions;
+
+      sequence<smrr_interfaces::msg::DataElementFloat> y_positions;
+
+      @verbatim (language="comment", text=
         "Statistical data for each agent" "\n"
         "Mean x-velocity for each agent")
       sequence<float> x_mean;
