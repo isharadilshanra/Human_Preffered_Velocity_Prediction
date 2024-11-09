@@ -79,6 +79,7 @@ _colcon_package_sh_source_script() {
 
 # source sh hooks
 _colcon_package_sh_source_script "$COLCON_CURRENT_PREFIX/share/smrr_goal_predictor/hook/pythonpath.sh"
+_colcon_package_sh_source_script "$COLCON_CURRENT_PREFIX/share/smrr_goal_predictor/hook/ament_prefix_path.sh"
 _colcon_package_sh_source_script "$COLCON_CURRENT_PREFIX/../../build/smrr_goal_predictor/share/smrr_goal_predictor/hook/pythonpath_develop.sh"
 
 unset _colcon_package_sh_source_script

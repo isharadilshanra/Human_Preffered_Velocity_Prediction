@@ -1,6 +1,9 @@
 source;share/smrr_goal_predictor/hook/pythonpath.ps1
 source;share/smrr_goal_predictor/hook/pythonpath.dsv
 source;share/smrr_goal_predictor/hook/pythonpath.sh
+source;share/smrr_goal_predictor/hook/ament_prefix_path.ps1
+source;share/smrr_goal_predictor/hook/ament_prefix_path.dsv
+source;share/smrr_goal_predictor/hook/ament_prefix_path.sh
 source;../../build/smrr_goal_predictor/share/smrr_goal_predictor/hook/pythonpath_develop.ps1
 source;../../build/smrr_goal_predictor/share/smrr_goal_predictor/hook/pythonpath_develop.dsv
 source;../../build/smrr_goal_predictor/share/smrr_goal_predictor/hook/pythonpath_develop.sh

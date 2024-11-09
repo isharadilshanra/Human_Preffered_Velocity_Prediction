@@ -1,0 +1,14 @@
+package.xml
+setup.cfg
+setup.py
+goal_predictor/__init__.py
+goal_predictor/crowd_flow_publisher.py
+goal_predictor/goal_predictor.py
+goal_predictor.egg-info/PKG-INFO
+goal_predictor.egg-info/SOURCES.txt
+goal_predictor.egg-info/dependency_links.txt
+goal_predictor.egg-info/entry_points.txt
+goal_predictor.egg-info/requires.txt
+goal_predictor.egg-info/top_level.txt
+goal_predictor.egg-info/zip-safe
+resource/goal_predictor

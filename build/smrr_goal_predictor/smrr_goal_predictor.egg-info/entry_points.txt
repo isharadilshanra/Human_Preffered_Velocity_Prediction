@@ -1,4 +1,4 @@
 [console_scripts]
-crowd_flow_publisher = goal_predictor.crowd_flow_publisher:main
-goal_predictor = goal_predictor.goal_predictor:main
+crowd_flow_publisher = smrr_goal_predictor.crowd_flow_publisher:main
+goal_predictor = smrr_goal_predictor.goal_predictor:main
 
