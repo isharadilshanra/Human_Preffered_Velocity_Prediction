@@ -34,6 +34,9 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/VelocityClassData.msg"
   "msg/Buffer.msg"
   "msg/PrefVelocity.msg"
+  "msg/DataElementFloat.msg"
+  "msg/DataElementString.msg"
+  "msg/DataElementInt.msg"
   DEPENDENCIES std_msgs geometry_msgs
  )
 ament_package()

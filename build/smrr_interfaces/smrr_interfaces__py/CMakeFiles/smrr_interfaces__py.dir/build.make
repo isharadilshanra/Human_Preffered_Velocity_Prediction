@@ -73,11 +73,17 @@ smrr_interfaces__py/CMakeFiles/smrr_interfaces__py: rosidl_generator_py/smrr_int
 smrr_interfaces__py/CMakeFiles/smrr_interfaces__py: rosidl_generator_py/smrr_interfaces/msg/_velocity_class_data.py
 smrr_interfaces__py/CMakeFiles/smrr_interfaces__py: rosidl_generator_py/smrr_interfaces/msg/_buffer.py
 smrr_interfaces__py/CMakeFiles/smrr_interfaces__py: rosidl_generator_py/smrr_interfaces/msg/_pref_velocity.py
+smrr_interfaces__py/CMakeFiles/smrr_interfaces__py: rosidl_generator_py/smrr_interfaces/msg/_data_element_float.py
+smrr_interfaces__py/CMakeFiles/smrr_interfaces__py: rosidl_generator_py/smrr_interfaces/msg/_data_element_string.py
+smrr_interfaces__py/CMakeFiles/smrr_interfaces__py: rosidl_generator_py/smrr_interfaces/msg/_data_element_int.py
 smrr_interfaces__py/CMakeFiles/smrr_interfaces__py: rosidl_generator_py/smrr_interfaces/msg/__init__.py
 smrr_interfaces__py/CMakeFiles/smrr_interfaces__py: rosidl_generator_py/smrr_interfaces/msg/_entities_s.c
 smrr_interfaces__py/CMakeFiles/smrr_interfaces__py: rosidl_generator_py/smrr_interfaces/msg/_velocity_class_data_s.c
 smrr_interfaces__py/CMakeFiles/smrr_interfaces__py: rosidl_generator_py/smrr_interfaces/msg/_buffer_s.c
 smrr_interfaces__py/CMakeFiles/smrr_interfaces__py: rosidl_generator_py/smrr_interfaces/msg/_pref_velocity_s.c
+smrr_interfaces__py/CMakeFiles/smrr_interfaces__py: rosidl_generator_py/smrr_interfaces/msg/_data_element_float_s.c
+smrr_interfaces__py/CMakeFiles/smrr_interfaces__py: rosidl_generator_py/smrr_interfaces/msg/_data_element_string_s.c
+smrr_interfaces__py/CMakeFiles/smrr_interfaces__py: rosidl_generator_py/smrr_interfaces/msg/_data_element_int_s.c
 
 rosidl_generator_py/smrr_interfaces/_smrr_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/lib/rosidl_generator_py/rosidl_generator_py
 rosidl_generator_py/smrr_interfaces/_smrr_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_generator_py/__init__.py
@@ -96,6 +102,9 @@ rosidl_generator_py/smrr_interfaces/_smrr_interfaces_s.ep.rosidl_typesupport_fas
 rosidl_generator_py/smrr_interfaces/_smrr_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/smrr_interfaces/msg/VelocityClassData.idl
 rosidl_generator_py/smrr_interfaces/_smrr_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/smrr_interfaces/msg/Buffer.idl
 rosidl_generator_py/smrr_interfaces/_smrr_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/smrr_interfaces/msg/PrefVelocity.idl
+rosidl_generator_py/smrr_interfaces/_smrr_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/smrr_interfaces/msg/DataElementFloat.idl
+rosidl_generator_py/smrr_interfaces/_smrr_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/smrr_interfaces/msg/DataElementString.idl
+rosidl_generator_py/smrr_interfaces/_smrr_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/smrr_interfaces/msg/DataElementInt.idl
 rosidl_generator_py/smrr_interfaces/_smrr_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/std_msgs/msg/Bool.idl
 rosidl_generator_py/smrr_interfaces/_smrr_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/std_msgs/msg/Byte.idl
 rosidl_generator_py/smrr_interfaces/_smrr_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/std_msgs/msg/ByteMultiArray.idl
@@ -179,6 +188,15 @@ rosidl_generator_py/smrr_interfaces/msg/_buffer.py: rosidl_generator_py/smrr_int
 rosidl_generator_py/smrr_interfaces/msg/_pref_velocity.py: rosidl_generator_py/smrr_interfaces/_smrr_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/smrr_interfaces/msg/_pref_velocity.py
 
+rosidl_generator_py/smrr_interfaces/msg/_data_element_float.py: rosidl_generator_py/smrr_interfaces/_smrr_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/smrr_interfaces/msg/_data_element_float.py
+
+rosidl_generator_py/smrr_interfaces/msg/_data_element_string.py: rosidl_generator_py/smrr_interfaces/_smrr_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/smrr_interfaces/msg/_data_element_string.py
+
+rosidl_generator_py/smrr_interfaces/msg/_data_element_int.py: rosidl_generator_py/smrr_interfaces/_smrr_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/smrr_interfaces/msg/_data_element_int.py
+
 rosidl_generator_py/smrr_interfaces/msg/__init__.py: rosidl_generator_py/smrr_interfaces/_smrr_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/smrr_interfaces/msg/__init__.py
 
@@ -194,12 +212,27 @@ rosidl_generator_py/smrr_interfaces/msg/_buffer_s.c: rosidl_generator_py/smrr_in
 rosidl_generator_py/smrr_interfaces/msg/_pref_velocity_s.c: rosidl_generator_py/smrr_interfaces/_smrr_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/smrr_interfaces/msg/_pref_velocity_s.c
 
+rosidl_generator_py/smrr_interfaces/msg/_data_element_float_s.c: rosidl_generator_py/smrr_interfaces/_smrr_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/smrr_interfaces/msg/_data_element_float_s.c
+
+rosidl_generator_py/smrr_interfaces/msg/_data_element_string_s.c: rosidl_generator_py/smrr_interfaces/_smrr_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/smrr_interfaces/msg/_data_element_string_s.c
+
+rosidl_generator_py/smrr_interfaces/msg/_data_element_int_s.c: rosidl_generator_py/smrr_interfaces/_smrr_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/smrr_interfaces/msg/_data_element_int_s.c
+
 smrr_interfaces__py: rosidl_generator_py/smrr_interfaces/_smrr_interfaces_s.ep.rosidl_typesupport_c.c
 smrr_interfaces__py: rosidl_generator_py/smrr_interfaces/_smrr_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 smrr_interfaces__py: rosidl_generator_py/smrr_interfaces/_smrr_interfaces_s.ep.rosidl_typesupport_introspection_c.c
 smrr_interfaces__py: rosidl_generator_py/smrr_interfaces/msg/__init__.py
 smrr_interfaces__py: rosidl_generator_py/smrr_interfaces/msg/_buffer.py
 smrr_interfaces__py: rosidl_generator_py/smrr_interfaces/msg/_buffer_s.c
+smrr_interfaces__py: rosidl_generator_py/smrr_interfaces/msg/_data_element_float.py
+smrr_interfaces__py: rosidl_generator_py/smrr_interfaces/msg/_data_element_float_s.c
+smrr_interfaces__py: rosidl_generator_py/smrr_interfaces/msg/_data_element_int.py
+smrr_interfaces__py: rosidl_generator_py/smrr_interfaces/msg/_data_element_int_s.c
+smrr_interfaces__py: rosidl_generator_py/smrr_interfaces/msg/_data_element_string.py
+smrr_interfaces__py: rosidl_generator_py/smrr_interfaces/msg/_data_element_string_s.c
 smrr_interfaces__py: rosidl_generator_py/smrr_interfaces/msg/_entities.py
 smrr_interfaces__py: rosidl_generator_py/smrr_interfaces/msg/_entities_s.c
 smrr_interfaces__py: rosidl_generator_py/smrr_interfaces/msg/_pref_velocity.py

@@ -4,6 +4,9 @@
     "/home/ishara/fyp/Human_Preffered_Velocity_Prediction/src/smrr_interfaces:msg/Entities.msg",
     "/home/ishara/fyp/Human_Preffered_Velocity_Prediction/src/smrr_interfaces:msg/VelocityClassData.msg",
     "/home/ishara/fyp/Human_Preffered_Velocity_Prediction/src/smrr_interfaces:msg/Buffer.msg",
-    "/home/ishara/fyp/Human_Preffered_Velocity_Prediction/src/smrr_interfaces:msg/PrefVelocity.msg"
+    "/home/ishara/fyp/Human_Preffered_Velocity_Prediction/src/smrr_interfaces:msg/PrefVelocity.msg",
+    "/home/ishara/fyp/Human_Preffered_Velocity_Prediction/src/smrr_interfaces:msg/DataElementFloat.msg",
+    "/home/ishara/fyp/Human_Preffered_Velocity_Prediction/src/smrr_interfaces:msg/DataElementString.msg",
+    "/home/ishara/fyp/Human_Preffered_Velocity_Prediction/src/smrr_interfaces:msg/DataElementInt.msg"
   ]
 }

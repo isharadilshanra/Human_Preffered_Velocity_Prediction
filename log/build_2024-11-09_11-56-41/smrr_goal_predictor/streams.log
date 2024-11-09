@@ -1,0 +1,20 @@
+[1.088s] Invoking command in '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/smrr_goal_predictor': PYTHONPATH=/home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/smrr_goal_predictor/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_goal_predictor/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/smrr_goal_predictor/build --no-deps symlink_data
+[1.315s] running develop
+[1.316s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[1.316s]   warnings.warn(
+[1.455s] running egg_info
+[1.455s] writing smrr_goal_predictor.egg-info/PKG-INFO
+[1.456s] writing dependency_links to smrr_goal_predictor.egg-info/dependency_links.txt
+[1.456s] writing entry points to smrr_goal_predictor.egg-info/entry_points.txt
+[1.456s] writing requirements to smrr_goal_predictor.egg-info/requires.txt
+[1.457s] writing top-level names to smrr_goal_predictor.egg-info/top_level.txt
+[1.460s] reading manifest file 'smrr_goal_predictor.egg-info/SOURCES.txt'
+[1.461s] writing manifest file 'smrr_goal_predictor.egg-info/SOURCES.txt'
+[1.462s] running build_ext
+[1.462s] Creating /home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_goal_predictor/lib/python3.10/site-packages/smrr-goal-predictor.egg-link (link to .)
+[1.463s] Installing crowd_flow_publisher script to /home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_goal_predictor/lib/smrr_goal_predictor
+[1.464s] Installing goal_predictor script to /home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_goal_predictor/lib/smrr_goal_predictor
+[1.464s] 
+[1.464s] Installed /home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/smrr_goal_predictor
+[1.464s] running symlink_data
+[1.521s] Invoked command in '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/smrr_goal_predictor' returned '0': PYTHONPATH=/home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/smrr_goal_predictor/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_goal_predictor/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/smrr_goal_predictor/build --no-deps symlink_data

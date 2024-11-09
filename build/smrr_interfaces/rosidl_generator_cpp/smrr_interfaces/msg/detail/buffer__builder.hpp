@@ -213,16 +213,32 @@ private:
   ::smrr_interfaces::msg::Buffer msg_;
 };
 
+class Init_Buffer_agent_count
+{
+public:
+  explicit Init_Buffer_agent_count(::smrr_interfaces::msg::Buffer & msg)
+  : msg_(msg)
+  {}
+  Init_Buffer_x_velocities agent_count(::smrr_interfaces::msg::Buffer::_agent_count_type arg)
+  {
+    msg_.agent_count = std::move(arg);
+    return Init_Buffer_x_velocities(msg_);
+  }
+
+private:
+  ::smrr_interfaces::msg::Buffer msg_;
+};
+
 class Init_Buffer_agent_ids
 {
 public:
   Init_Buffer_agent_ids()
   : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
-  Init_Buffer_x_velocities agent_ids(::smrr_interfaces::msg::Buffer::_agent_ids_type arg)
+  Init_Buffer_agent_count agent_ids(::smrr_interfaces::msg::Buffer::_agent_ids_type arg)
   {
     msg_.agent_ids = std::move(arg);
-    return Init_Buffer_x_velocities(msg_);
+    return Init_Buffer_agent_count(msg_);
   }
 
 private:

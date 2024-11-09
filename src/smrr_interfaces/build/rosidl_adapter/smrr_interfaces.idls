@@ -2,3 +2,6 @@
 /home/ishara/fyp/Human_Preffered_Velocity_Prediction/src/smrr_interfaces/build/rosidl_adapter/smrr_interfaces:msg/VelocityClassData.idl
 /home/ishara/fyp/Human_Preffered_Velocity_Prediction/src/smrr_interfaces/build/rosidl_adapter/smrr_interfaces:msg/Buffer.idl
 /home/ishara/fyp/Human_Preffered_Velocity_Prediction/src/smrr_interfaces/build/rosidl_adapter/smrr_interfaces:msg/PrefVelocity.idl
+/home/ishara/fyp/Human_Preffered_Velocity_Prediction/src/smrr_interfaces/build/rosidl_adapter/smrr_interfaces:msg/DataElementFloat.idl
+/home/ishara/fyp/Human_Preffered_Velocity_Prediction/src/smrr_interfaces/build/rosidl_adapter/smrr_interfaces:msg/DataElementString.idl
+/home/ishara/fyp/Human_Preffered_Velocity_Prediction/src/smrr_interfaces/build/rosidl_adapter/smrr_interfaces:msg/DataElementInt.idl
