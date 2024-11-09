@@ -38,26 +38,6 @@ cdr_serialize(
   }
   // Member: agent_count
   cdr << ros_message.agent_count;
-  // Member: x_velocities
-  {
-    cdr << ros_message.x_velocities;
-  }
-  // Member: y_velocities
-  {
-    cdr << ros_message.y_velocities;
-  }
-  // Member: class_ids
-  {
-    cdr << ros_message.class_ids;
-  }
-  // Member: x_positions
-  {
-    cdr << ros_message.x_positions;
-  }
-  // Member: y_positions
-  {
-    cdr << ros_message.y_positions;
-  }
   // Member: x_mean
   {
     cdr << ros_message.x_mean;
@@ -102,31 +82,6 @@ cdr_deserialize(
 
   // Member: agent_count
   cdr >> ros_message.agent_count;
-
-  // Member: x_velocities
-  {
-    cdr >> ros_message.x_velocities;
-  }
-
-  // Member: y_velocities
-  {
-    cdr >> ros_message.y_velocities;
-  }
-
-  // Member: class_ids
-  {
-    cdr >> ros_message.class_ids;
-  }
-
-  // Member: x_positions
-  {
-    cdr >> ros_message.x_positions;
-  }
-
-  // Member: y_positions
-  {
-    cdr >> ros_message.y_positions;
-  }
 
   // Member: x_mean
   {
@@ -193,58 +148,6 @@ get_serialized_size(
   {
     size_t item_size = sizeof(ros_message.agent_count);
     current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-  // Member: x_velocities
-  {
-    size_t array_size = ros_message.x_velocities.size();
-
-    current_alignment += padding +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
-    size_t item_size = sizeof(ros_message.x_velocities[0]);
-    current_alignment += array_size * item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-  // Member: y_velocities
-  {
-    size_t array_size = ros_message.y_velocities.size();
-
-    current_alignment += padding +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
-    size_t item_size = sizeof(ros_message.y_velocities[0]);
-    current_alignment += array_size * item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-  // Member: class_ids
-  {
-    size_t array_size = ros_message.class_ids.size();
-
-    current_alignment += padding +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
-    for (size_t index = 0; index < array_size; ++index) {
-      current_alignment += padding +
-        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
-        (ros_message.class_ids[index].size() + 1);
-    }
-  }
-  // Member: x_positions
-  {
-    size_t array_size = ros_message.x_positions.size();
-
-    current_alignment += padding +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
-    size_t item_size = sizeof(ros_message.x_positions[0]);
-    current_alignment += array_size * item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-  // Member: y_positions
-  {
-    size_t array_size = ros_message.y_positions.size();
-
-    current_alignment += padding +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
-    size_t item_size = sizeof(ros_message.y_positions[0]);
-    current_alignment += array_size * item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
   // Member: x_mean
@@ -363,75 +266,6 @@ max_serialized_size_Buffer(
     last_member_size = array_size * sizeof(uint16_t);
     current_alignment += array_size * sizeof(uint16_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint16_t));
-  }
-
-  // Member: x_velocities
-  {
-    size_t array_size = 0;
-    full_bounded = false;
-    is_plain = false;
-    current_alignment += padding +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
-
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
-
-  // Member: y_velocities
-  {
-    size_t array_size = 0;
-    full_bounded = false;
-    is_plain = false;
-    current_alignment += padding +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
-
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
-
-  // Member: class_ids
-  {
-    size_t array_size = 0;
-    full_bounded = false;
-    is_plain = false;
-    current_alignment += padding +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
-
-    full_bounded = false;
-    is_plain = false;
-    for (size_t index = 0; index < array_size; ++index) {
-      current_alignment += padding +
-        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
-        1;
-    }
-  }
-
-  // Member: x_positions
-  {
-    size_t array_size = 0;
-    full_bounded = false;
-    is_plain = false;
-    current_alignment += padding +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
-
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
-
-  // Member: y_positions
-  {
-    size_t array_size = 0;
-    full_bounded = false;
-    is_plain = false;
-    current_alignment += padding +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
-
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
 
   // Member: x_mean

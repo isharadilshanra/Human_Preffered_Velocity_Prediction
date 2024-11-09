@@ -14,10 +14,6 @@
 
 // Include directives for member types
 // Member `agent_ids`
-// Member `x_velocities`
-// Member `y_velocities`
-// Member `x_positions`
-// Member `y_positions`
 // Member `x_mean`
 // Member `y_mean`
 // Member `x_std_dev`
@@ -25,7 +21,6 @@
 // Member `x_variance`
 // Member `y_variance`
 #include "rosidl_runtime_c/primitives_sequence_functions.h"
-// Member `class_ids`
 // Member `majority_class_id`
 #include "rosidl_runtime_c/string_functions.h"
 
@@ -101,281 +96,6 @@ bool smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__resize_fu
     (rosidl_runtime_c__int32__Sequence *)(untyped_member);
   rosidl_runtime_c__int32__Sequence__fini(member);
   return rosidl_runtime_c__int32__Sequence__init(member, size);
-}
-
-size_t smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__size_function__Buffer__x_velocities(
-  const void * untyped_member)
-{
-  const rosidl_runtime_c__float__Sequence * member =
-    (const rosidl_runtime_c__float__Sequence *)(untyped_member);
-  return member->size;
-}
-
-const void * smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__get_const_function__Buffer__x_velocities(
-  const void * untyped_member, size_t index)
-{
-  const rosidl_runtime_c__float__Sequence * member =
-    (const rosidl_runtime_c__float__Sequence *)(untyped_member);
-  return &member->data[index];
-}
-
-void * smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__get_function__Buffer__x_velocities(
-  void * untyped_member, size_t index)
-{
-  rosidl_runtime_c__float__Sequence * member =
-    (rosidl_runtime_c__float__Sequence *)(untyped_member);
-  return &member->data[index];
-}
-
-void smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__fetch_function__Buffer__x_velocities(
-  const void * untyped_member, size_t index, void * untyped_value)
-{
-  const float * item =
-    ((const float *)
-    smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__get_const_function__Buffer__x_velocities(untyped_member, index));
-  float * value =
-    (float *)(untyped_value);
-  *value = *item;
-}
-
-void smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__assign_function__Buffer__x_velocities(
-  void * untyped_member, size_t index, const void * untyped_value)
-{
-  float * item =
-    ((float *)
-    smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__get_function__Buffer__x_velocities(untyped_member, index));
-  const float * value =
-    (const float *)(untyped_value);
-  *item = *value;
-}
-
-bool smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__resize_function__Buffer__x_velocities(
-  void * untyped_member, size_t size)
-{
-  rosidl_runtime_c__float__Sequence * member =
-    (rosidl_runtime_c__float__Sequence *)(untyped_member);
-  rosidl_runtime_c__float__Sequence__fini(member);
-  return rosidl_runtime_c__float__Sequence__init(member, size);
-}
-
-size_t smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__size_function__Buffer__y_velocities(
-  const void * untyped_member)
-{
-  const rosidl_runtime_c__float__Sequence * member =
-    (const rosidl_runtime_c__float__Sequence *)(untyped_member);
-  return member->size;
-}
-
-const void * smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__get_const_function__Buffer__y_velocities(
-  const void * untyped_member, size_t index)
-{
-  const rosidl_runtime_c__float__Sequence * member =
-    (const rosidl_runtime_c__float__Sequence *)(untyped_member);
-  return &member->data[index];
-}
-
-void * smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__get_function__Buffer__y_velocities(
-  void * untyped_member, size_t index)
-{
-  rosidl_runtime_c__float__Sequence * member =
-    (rosidl_runtime_c__float__Sequence *)(untyped_member);
-  return &member->data[index];
-}
-
-void smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__fetch_function__Buffer__y_velocities(
-  const void * untyped_member, size_t index, void * untyped_value)
-{
-  const float * item =
-    ((const float *)
-    smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__get_const_function__Buffer__y_velocities(untyped_member, index));
-  float * value =
-    (float *)(untyped_value);
-  *value = *item;
-}
-
-void smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__assign_function__Buffer__y_velocities(
-  void * untyped_member, size_t index, const void * untyped_value)
-{
-  float * item =
-    ((float *)
-    smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__get_function__Buffer__y_velocities(untyped_member, index));
-  const float * value =
-    (const float *)(untyped_value);
-  *item = *value;
-}
-
-bool smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__resize_function__Buffer__y_velocities(
-  void * untyped_member, size_t size)
-{
-  rosidl_runtime_c__float__Sequence * member =
-    (rosidl_runtime_c__float__Sequence *)(untyped_member);
-  rosidl_runtime_c__float__Sequence__fini(member);
-  return rosidl_runtime_c__float__Sequence__init(member, size);
-}
-
-size_t smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__size_function__Buffer__class_ids(
-  const void * untyped_member)
-{
-  const rosidl_runtime_c__String__Sequence * member =
-    (const rosidl_runtime_c__String__Sequence *)(untyped_member);
-  return member->size;
-}
-
-const void * smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__get_const_function__Buffer__class_ids(
-  const void * untyped_member, size_t index)
-{
-  const rosidl_runtime_c__String__Sequence * member =
-    (const rosidl_runtime_c__String__Sequence *)(untyped_member);
-  return &member->data[index];
-}
-
-void * smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__get_function__Buffer__class_ids(
-  void * untyped_member, size_t index)
-{
-  rosidl_runtime_c__String__Sequence * member =
-    (rosidl_runtime_c__String__Sequence *)(untyped_member);
-  return &member->data[index];
-}
-
-void smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__fetch_function__Buffer__class_ids(
-  const void * untyped_member, size_t index, void * untyped_value)
-{
-  const rosidl_runtime_c__String * item =
-    ((const rosidl_runtime_c__String *)
-    smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__get_const_function__Buffer__class_ids(untyped_member, index));
-  rosidl_runtime_c__String * value =
-    (rosidl_runtime_c__String *)(untyped_value);
-  *value = *item;
-}
-
-void smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__assign_function__Buffer__class_ids(
-  void * untyped_member, size_t index, const void * untyped_value)
-{
-  rosidl_runtime_c__String * item =
-    ((rosidl_runtime_c__String *)
-    smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__get_function__Buffer__class_ids(untyped_member, index));
-  const rosidl_runtime_c__String * value =
-    (const rosidl_runtime_c__String *)(untyped_value);
-  *item = *value;
-}
-
-bool smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__resize_function__Buffer__class_ids(
-  void * untyped_member, size_t size)
-{
-  rosidl_runtime_c__String__Sequence * member =
-    (rosidl_runtime_c__String__Sequence *)(untyped_member);
-  rosidl_runtime_c__String__Sequence__fini(member);
-  return rosidl_runtime_c__String__Sequence__init(member, size);
-}
-
-size_t smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__size_function__Buffer__x_positions(
-  const void * untyped_member)
-{
-  const rosidl_runtime_c__float__Sequence * member =
-    (const rosidl_runtime_c__float__Sequence *)(untyped_member);
-  return member->size;
-}
-
-const void * smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__get_const_function__Buffer__x_positions(
-  const void * untyped_member, size_t index)
-{
-  const rosidl_runtime_c__float__Sequence * member =
-    (const rosidl_runtime_c__float__Sequence *)(untyped_member);
-  return &member->data[index];
-}
-
-void * smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__get_function__Buffer__x_positions(
-  void * untyped_member, size_t index)
-{
-  rosidl_runtime_c__float__Sequence * member =
-    (rosidl_runtime_c__float__Sequence *)(untyped_member);
-  return &member->data[index];
-}
-
-void smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__fetch_function__Buffer__x_positions(
-  const void * untyped_member, size_t index, void * untyped_value)
-{
-  const float * item =
-    ((const float *)
-    smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__get_const_function__Buffer__x_positions(untyped_member, index));
-  float * value =
-    (float *)(untyped_value);
-  *value = *item;
-}
-
-void smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__assign_function__Buffer__x_positions(
-  void * untyped_member, size_t index, const void * untyped_value)
-{
-  float * item =
-    ((float *)
-    smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__get_function__Buffer__x_positions(untyped_member, index));
-  const float * value =
-    (const float *)(untyped_value);
-  *item = *value;
-}
-
-bool smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__resize_function__Buffer__x_positions(
-  void * untyped_member, size_t size)
-{
-  rosidl_runtime_c__float__Sequence * member =
-    (rosidl_runtime_c__float__Sequence *)(untyped_member);
-  rosidl_runtime_c__float__Sequence__fini(member);
-  return rosidl_runtime_c__float__Sequence__init(member, size);
-}
-
-size_t smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__size_function__Buffer__y_positions(
-  const void * untyped_member)
-{
-  const rosidl_runtime_c__float__Sequence * member =
-    (const rosidl_runtime_c__float__Sequence *)(untyped_member);
-  return member->size;
-}
-
-const void * smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__get_const_function__Buffer__y_positions(
-  const void * untyped_member, size_t index)
-{
-  const rosidl_runtime_c__float__Sequence * member =
-    (const rosidl_runtime_c__float__Sequence *)(untyped_member);
-  return &member->data[index];
-}
-
-void * smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__get_function__Buffer__y_positions(
-  void * untyped_member, size_t index)
-{
-  rosidl_runtime_c__float__Sequence * member =
-    (rosidl_runtime_c__float__Sequence *)(untyped_member);
-  return &member->data[index];
-}
-
-void smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__fetch_function__Buffer__y_positions(
-  const void * untyped_member, size_t index, void * untyped_value)
-{
-  const float * item =
-    ((const float *)
-    smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__get_const_function__Buffer__y_positions(untyped_member, index));
-  float * value =
-    (float *)(untyped_value);
-  *value = *item;
-}
-
-void smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__assign_function__Buffer__y_positions(
-  void * untyped_member, size_t index, const void * untyped_value)
-{
-  float * item =
-    ((float *)
-    smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__get_function__Buffer__y_positions(untyped_member, index));
-  const float * value =
-    (const float *)(untyped_value);
-  *item = *value;
-}
-
-bool smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__resize_function__Buffer__y_positions(
-  void * untyped_member, size_t size)
-{
-  rosidl_runtime_c__float__Sequence * member =
-    (rosidl_runtime_c__float__Sequence *)(untyped_member);
-  rosidl_runtime_c__float__Sequence__fini(member);
-  return rosidl_runtime_c__float__Sequence__init(member, size);
 }
 
 size_t smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__size_function__Buffer__x_mean(
@@ -763,7 +483,7 @@ bool smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__resize_fu
   return rosidl_runtime_c__String__Sequence__init(member, size);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__Buffer_message_member_array[14] = {
+static rosidl_typesupport_introspection_c__MessageMember smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__Buffer_message_member_array[9] = {
   {
     "agent_ids",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_INT32,  // type
@@ -797,91 +517,6 @@ static rosidl_typesupport_introspection_c__MessageMember smrr_interfaces__msg__B
     NULL,  // fetch(index, &value) function pointer
     NULL,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
-  },
-  {
-    "x_velocities",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_FLOAT,  // type
-    0,  // upper bound of string
-    NULL,  // members of sub message
-    true,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(smrr_interfaces__msg__Buffer, x_velocities),  // bytes offset in struct
-    NULL,  // default value
-    smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__size_function__Buffer__x_velocities,  // size() function pointer
-    smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__get_const_function__Buffer__x_velocities,  // get_const(index) function pointer
-    smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__get_function__Buffer__x_velocities,  // get(index) function pointer
-    smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__fetch_function__Buffer__x_velocities,  // fetch(index, &value) function pointer
-    smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__assign_function__Buffer__x_velocities,  // assign(index, value) function pointer
-    smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__resize_function__Buffer__x_velocities  // resize(index) function pointer
-  },
-  {
-    "y_velocities",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_FLOAT,  // type
-    0,  // upper bound of string
-    NULL,  // members of sub message
-    true,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(smrr_interfaces__msg__Buffer, y_velocities),  // bytes offset in struct
-    NULL,  // default value
-    smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__size_function__Buffer__y_velocities,  // size() function pointer
-    smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__get_const_function__Buffer__y_velocities,  // get_const(index) function pointer
-    smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__get_function__Buffer__y_velocities,  // get(index) function pointer
-    smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__fetch_function__Buffer__y_velocities,  // fetch(index, &value) function pointer
-    smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__assign_function__Buffer__y_velocities,  // assign(index, value) function pointer
-    smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__resize_function__Buffer__y_velocities  // resize(index) function pointer
-  },
-  {
-    "class_ids",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_STRING,  // type
-    0,  // upper bound of string
-    NULL,  // members of sub message
-    true,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(smrr_interfaces__msg__Buffer, class_ids),  // bytes offset in struct
-    NULL,  // default value
-    smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__size_function__Buffer__class_ids,  // size() function pointer
-    smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__get_const_function__Buffer__class_ids,  // get_const(index) function pointer
-    smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__get_function__Buffer__class_ids,  // get(index) function pointer
-    smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__fetch_function__Buffer__class_ids,  // fetch(index, &value) function pointer
-    smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__assign_function__Buffer__class_ids,  // assign(index, value) function pointer
-    smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__resize_function__Buffer__class_ids  // resize(index) function pointer
-  },
-  {
-    "x_positions",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_FLOAT,  // type
-    0,  // upper bound of string
-    NULL,  // members of sub message
-    true,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(smrr_interfaces__msg__Buffer, x_positions),  // bytes offset in struct
-    NULL,  // default value
-    smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__size_function__Buffer__x_positions,  // size() function pointer
-    smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__get_const_function__Buffer__x_positions,  // get_const(index) function pointer
-    smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__get_function__Buffer__x_positions,  // get(index) function pointer
-    smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__fetch_function__Buffer__x_positions,  // fetch(index, &value) function pointer
-    smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__assign_function__Buffer__x_positions,  // assign(index, value) function pointer
-    smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__resize_function__Buffer__x_positions  // resize(index) function pointer
-  },
-  {
-    "y_positions",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_FLOAT,  // type
-    0,  // upper bound of string
-    NULL,  // members of sub message
-    true,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(smrr_interfaces__msg__Buffer, y_positions),  // bytes offset in struct
-    NULL,  // default value
-    smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__size_function__Buffer__y_positions,  // size() function pointer
-    smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__get_const_function__Buffer__y_positions,  // get_const(index) function pointer
-    smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__get_function__Buffer__y_positions,  // get(index) function pointer
-    smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__fetch_function__Buffer__y_positions,  // fetch(index, &value) function pointer
-    smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__assign_function__Buffer__y_positions,  // assign(index, value) function pointer
-    smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__resize_function__Buffer__y_positions  // resize(index) function pointer
   },
   {
     "x_mean",  // name
@@ -1007,7 +642,7 @@ static rosidl_typesupport_introspection_c__MessageMember smrr_interfaces__msg__B
 static const rosidl_typesupport_introspection_c__MessageMembers smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__Buffer_message_members = {
   "smrr_interfaces__msg",  // message namespace
   "Buffer",  // message name
-  14,  // number of fields
+  9,  // number of fields
   sizeof(smrr_interfaces__msg__Buffer),
   smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__Buffer_message_member_array,  // message members
   smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__Buffer_init_function,  // function to initialize message memory (memory has to be allocated)

@@ -19,10 +19,6 @@ extern "C"
 
 // Include directives for member types
 // Member 'agent_ids'
-// Member 'x_velocities'
-// Member 'y_velocities'
-// Member 'x_positions'
-// Member 'y_positions'
 // Member 'x_mean'
 // Member 'y_mean'
 // Member 'x_std_dev'
@@ -30,7 +26,6 @@ extern "C"
 // Member 'x_variance'
 // Member 'y_variance'
 #include "rosidl_runtime_c/primitives_sequence.h"
-// Member 'class_ids'
 // Member 'majority_class_id'
 #include "rosidl_runtime_c/string.h"
 
@@ -39,17 +34,13 @@ typedef struct smrr_interfaces__msg__Buffer
 {
   rosidl_runtime_c__int32__Sequence agent_ids;
   int16_t agent_count;
-  /// Buffer data for each agent (last 10 values for each field)
-  /// Flattened array with up to 10 values per agent
-  rosidl_runtime_c__float__Sequence x_velocities;
-  /// Flattened array with up to 10 values per agent
-  rosidl_runtime_c__float__Sequence y_velocities;
-  /// Flattened array with up to 10 values per agent
-  rosidl_runtime_c__String__Sequence class_ids;
-  /// Flattened array with up to 10 values per agent
-  rosidl_runtime_c__float__Sequence x_positions;
-  /// Flattened array with up to 10 values per agent
-  rosidl_runtime_c__float__Sequence y_positions;
+  /// # Buffer data for each agent (last 10 values for each field)
+  /// float32[] x_velocities    # Flattened array with up to 10 values per agent
+  /// float32[] y_velocities    # Flattened array with up to 10 values per agent
+  /// string[] class_ids         # Flattened array with up to 10 values per agent
+  /// float32[] x_positions     # Flattened array with up to 10 values per agent
+  /// float32[] y_positions     # Flattened array with up to 10 values per agent
+  /// nested data structure for each agent
   /// Statistical data for each agent
   /// Mean x-velocity for each agent
   rosidl_runtime_c__float__Sequence x_mean;

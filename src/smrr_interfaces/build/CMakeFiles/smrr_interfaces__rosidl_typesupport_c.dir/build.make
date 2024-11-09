@@ -79,6 +79,9 @@ rosidl_typesupport_c/smrr_interfaces/msg/entities__type_support.cpp: rosidl_adap
 rosidl_typesupport_c/smrr_interfaces/msg/entities__type_support.cpp: rosidl_adapter/smrr_interfaces/msg/VelocityClassData.idl
 rosidl_typesupport_c/smrr_interfaces/msg/entities__type_support.cpp: rosidl_adapter/smrr_interfaces/msg/Buffer.idl
 rosidl_typesupport_c/smrr_interfaces/msg/entities__type_support.cpp: rosidl_adapter/smrr_interfaces/msg/PrefVelocity.idl
+rosidl_typesupport_c/smrr_interfaces/msg/entities__type_support.cpp: rosidl_adapter/smrr_interfaces/msg/DataElementFloat.idl
+rosidl_typesupport_c/smrr_interfaces/msg/entities__type_support.cpp: rosidl_adapter/smrr_interfaces/msg/DataElementString.idl
+rosidl_typesupport_c/smrr_interfaces/msg/entities__type_support.cpp: rosidl_adapter/smrr_interfaces/msg/DataElementInt.idl
 rosidl_typesupport_c/smrr_interfaces/msg/entities__type_support.cpp: /opt/ros/humble/share/std_msgs/msg/Bool.idl
 rosidl_typesupport_c/smrr_interfaces/msg/entities__type_support.cpp: /opt/ros/humble/share/std_msgs/msg/Byte.idl
 rosidl_typesupport_c/smrr_interfaces/msg/entities__type_support.cpp: /opt/ros/humble/share/std_msgs/msg/ByteMultiArray.idl
@@ -153,6 +156,15 @@ rosidl_typesupport_c/smrr_interfaces/msg/buffer__type_support.cpp: rosidl_typesu
 rosidl_typesupport_c/smrr_interfaces/msg/pref_velocity__type_support.cpp: rosidl_typesupport_c/smrr_interfaces/msg/entities__type_support.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_c/smrr_interfaces/msg/pref_velocity__type_support.cpp
 
+rosidl_typesupport_c/smrr_interfaces/msg/data_element_float__type_support.cpp: rosidl_typesupport_c/smrr_interfaces/msg/entities__type_support.cpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_c/smrr_interfaces/msg/data_element_float__type_support.cpp
+
+rosidl_typesupport_c/smrr_interfaces/msg/data_element_string__type_support.cpp: rosidl_typesupport_c/smrr_interfaces/msg/entities__type_support.cpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_c/smrr_interfaces/msg/data_element_string__type_support.cpp
+
+rosidl_typesupport_c/smrr_interfaces/msg/data_element_int__type_support.cpp: rosidl_typesupport_c/smrr_interfaces/msg/entities__type_support.cpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_c/smrr_interfaces/msg/data_element_int__type_support.cpp
+
 CMakeFiles/smrr_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/smrr_interfaces/msg/entities__type_support.cpp.o: CMakeFiles/smrr_interfaces__rosidl_typesupport_c.dir/flags.make
 CMakeFiles/smrr_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/smrr_interfaces/msg/entities__type_support.cpp.o: rosidl_typesupport_c/smrr_interfaces/msg/entities__type_support.cpp
 CMakeFiles/smrr_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/smrr_interfaces/msg/entities__type_support.cpp.o: CMakeFiles/smrr_interfaces__rosidl_typesupport_c.dir/compiler_depend.ts
@@ -209,12 +221,57 @@ CMakeFiles/smrr_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/smrr_i
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/smrr_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/smrr_interfaces/msg/pref_velocity__type_support.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ishara/fyp/Human_Preffered_Velocity_Prediction/src/smrr_interfaces/build/rosidl_typesupport_c/smrr_interfaces/msg/pref_velocity__type_support.cpp -o CMakeFiles/smrr_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/smrr_interfaces/msg/pref_velocity__type_support.cpp.s
 
+CMakeFiles/smrr_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/smrr_interfaces/msg/data_element_float__type_support.cpp.o: CMakeFiles/smrr_interfaces__rosidl_typesupport_c.dir/flags.make
+CMakeFiles/smrr_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/smrr_interfaces/msg/data_element_float__type_support.cpp.o: rosidl_typesupport_c/smrr_interfaces/msg/data_element_float__type_support.cpp
+CMakeFiles/smrr_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/smrr_interfaces/msg/data_element_float__type_support.cpp.o: CMakeFiles/smrr_interfaces__rosidl_typesupport_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ishara/fyp/Human_Preffered_Velocity_Prediction/src/smrr_interfaces/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/smrr_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/smrr_interfaces/msg/data_element_float__type_support.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/smrr_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/smrr_interfaces/msg/data_element_float__type_support.cpp.o -MF CMakeFiles/smrr_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/smrr_interfaces/msg/data_element_float__type_support.cpp.o.d -o CMakeFiles/smrr_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/smrr_interfaces/msg/data_element_float__type_support.cpp.o -c /home/ishara/fyp/Human_Preffered_Velocity_Prediction/src/smrr_interfaces/build/rosidl_typesupport_c/smrr_interfaces/msg/data_element_float__type_support.cpp
+
+CMakeFiles/smrr_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/smrr_interfaces/msg/data_element_float__type_support.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/smrr_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/smrr_interfaces/msg/data_element_float__type_support.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ishara/fyp/Human_Preffered_Velocity_Prediction/src/smrr_interfaces/build/rosidl_typesupport_c/smrr_interfaces/msg/data_element_float__type_support.cpp > CMakeFiles/smrr_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/smrr_interfaces/msg/data_element_float__type_support.cpp.i
+
+CMakeFiles/smrr_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/smrr_interfaces/msg/data_element_float__type_support.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/smrr_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/smrr_interfaces/msg/data_element_float__type_support.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ishara/fyp/Human_Preffered_Velocity_Prediction/src/smrr_interfaces/build/rosidl_typesupport_c/smrr_interfaces/msg/data_element_float__type_support.cpp -o CMakeFiles/smrr_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/smrr_interfaces/msg/data_element_float__type_support.cpp.s
+
+CMakeFiles/smrr_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/smrr_interfaces/msg/data_element_string__type_support.cpp.o: CMakeFiles/smrr_interfaces__rosidl_typesupport_c.dir/flags.make
+CMakeFiles/smrr_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/smrr_interfaces/msg/data_element_string__type_support.cpp.o: rosidl_typesupport_c/smrr_interfaces/msg/data_element_string__type_support.cpp
+CMakeFiles/smrr_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/smrr_interfaces/msg/data_element_string__type_support.cpp.o: CMakeFiles/smrr_interfaces__rosidl_typesupport_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ishara/fyp/Human_Preffered_Velocity_Prediction/src/smrr_interfaces/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/smrr_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/smrr_interfaces/msg/data_element_string__type_support.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/smrr_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/smrr_interfaces/msg/data_element_string__type_support.cpp.o -MF CMakeFiles/smrr_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/smrr_interfaces/msg/data_element_string__type_support.cpp.o.d -o CMakeFiles/smrr_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/smrr_interfaces/msg/data_element_string__type_support.cpp.o -c /home/ishara/fyp/Human_Preffered_Velocity_Prediction/src/smrr_interfaces/build/rosidl_typesupport_c/smrr_interfaces/msg/data_element_string__type_support.cpp
+
+CMakeFiles/smrr_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/smrr_interfaces/msg/data_element_string__type_support.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/smrr_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/smrr_interfaces/msg/data_element_string__type_support.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ishara/fyp/Human_Preffered_Velocity_Prediction/src/smrr_interfaces/build/rosidl_typesupport_c/smrr_interfaces/msg/data_element_string__type_support.cpp > CMakeFiles/smrr_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/smrr_interfaces/msg/data_element_string__type_support.cpp.i
+
+CMakeFiles/smrr_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/smrr_interfaces/msg/data_element_string__type_support.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/smrr_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/smrr_interfaces/msg/data_element_string__type_support.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ishara/fyp/Human_Preffered_Velocity_Prediction/src/smrr_interfaces/build/rosidl_typesupport_c/smrr_interfaces/msg/data_element_string__type_support.cpp -o CMakeFiles/smrr_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/smrr_interfaces/msg/data_element_string__type_support.cpp.s
+
+CMakeFiles/smrr_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/smrr_interfaces/msg/data_element_int__type_support.cpp.o: CMakeFiles/smrr_interfaces__rosidl_typesupport_c.dir/flags.make
+CMakeFiles/smrr_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/smrr_interfaces/msg/data_element_int__type_support.cpp.o: rosidl_typesupport_c/smrr_interfaces/msg/data_element_int__type_support.cpp
+CMakeFiles/smrr_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/smrr_interfaces/msg/data_element_int__type_support.cpp.o: CMakeFiles/smrr_interfaces__rosidl_typesupport_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ishara/fyp/Human_Preffered_Velocity_Prediction/src/smrr_interfaces/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/smrr_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/smrr_interfaces/msg/data_element_int__type_support.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/smrr_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/smrr_interfaces/msg/data_element_int__type_support.cpp.o -MF CMakeFiles/smrr_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/smrr_interfaces/msg/data_element_int__type_support.cpp.o.d -o CMakeFiles/smrr_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/smrr_interfaces/msg/data_element_int__type_support.cpp.o -c /home/ishara/fyp/Human_Preffered_Velocity_Prediction/src/smrr_interfaces/build/rosidl_typesupport_c/smrr_interfaces/msg/data_element_int__type_support.cpp
+
+CMakeFiles/smrr_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/smrr_interfaces/msg/data_element_int__type_support.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/smrr_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/smrr_interfaces/msg/data_element_int__type_support.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ishara/fyp/Human_Preffered_Velocity_Prediction/src/smrr_interfaces/build/rosidl_typesupport_c/smrr_interfaces/msg/data_element_int__type_support.cpp > CMakeFiles/smrr_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/smrr_interfaces/msg/data_element_int__type_support.cpp.i
+
+CMakeFiles/smrr_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/smrr_interfaces/msg/data_element_int__type_support.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/smrr_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/smrr_interfaces/msg/data_element_int__type_support.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ishara/fyp/Human_Preffered_Velocity_Prediction/src/smrr_interfaces/build/rosidl_typesupport_c/smrr_interfaces/msg/data_element_int__type_support.cpp -o CMakeFiles/smrr_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/smrr_interfaces/msg/data_element_int__type_support.cpp.s
+
 # Object files for target smrr_interfaces__rosidl_typesupport_c
 smrr_interfaces__rosidl_typesupport_c_OBJECTS = \
 "CMakeFiles/smrr_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/smrr_interfaces/msg/entities__type_support.cpp.o" \
 "CMakeFiles/smrr_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/smrr_interfaces/msg/velocity_class_data__type_support.cpp.o" \
 "CMakeFiles/smrr_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/smrr_interfaces/msg/buffer__type_support.cpp.o" \
-"CMakeFiles/smrr_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/smrr_interfaces/msg/pref_velocity__type_support.cpp.o"
+"CMakeFiles/smrr_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/smrr_interfaces/msg/pref_velocity__type_support.cpp.o" \
+"CMakeFiles/smrr_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/smrr_interfaces/msg/data_element_float__type_support.cpp.o" \
+"CMakeFiles/smrr_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/smrr_interfaces/msg/data_element_string__type_support.cpp.o" \
+"CMakeFiles/smrr_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/smrr_interfaces/msg/data_element_int__type_support.cpp.o"
 
 # External object files for target smrr_interfaces__rosidl_typesupport_c
 smrr_interfaces__rosidl_typesupport_c_EXTERNAL_OBJECTS =
@@ -223,6 +280,9 @@ libsmrr_interfaces__rosidl_typesupport_c.so: CMakeFiles/smrr_interfaces__rosidl_
 libsmrr_interfaces__rosidl_typesupport_c.so: CMakeFiles/smrr_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/smrr_interfaces/msg/velocity_class_data__type_support.cpp.o
 libsmrr_interfaces__rosidl_typesupport_c.so: CMakeFiles/smrr_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/smrr_interfaces/msg/buffer__type_support.cpp.o
 libsmrr_interfaces__rosidl_typesupport_c.so: CMakeFiles/smrr_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/smrr_interfaces/msg/pref_velocity__type_support.cpp.o
+libsmrr_interfaces__rosidl_typesupport_c.so: CMakeFiles/smrr_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/smrr_interfaces/msg/data_element_float__type_support.cpp.o
+libsmrr_interfaces__rosidl_typesupport_c.so: CMakeFiles/smrr_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/smrr_interfaces/msg/data_element_string__type_support.cpp.o
+libsmrr_interfaces__rosidl_typesupport_c.so: CMakeFiles/smrr_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/smrr_interfaces/msg/data_element_int__type_support.cpp.o
 libsmrr_interfaces__rosidl_typesupport_c.so: CMakeFiles/smrr_interfaces__rosidl_typesupport_c.dir/build.make
 libsmrr_interfaces__rosidl_typesupport_c.so: libsmrr_interfaces__rosidl_generator_c.so
 libsmrr_interfaces__rosidl_typesupport_c.so: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_c.so
@@ -235,7 +295,7 @@ libsmrr_interfaces__rosidl_typesupport_c.so: /opt/ros/humble/lib/libbuiltin_inte
 libsmrr_interfaces__rosidl_typesupport_c.so: /opt/ros/humble/lib/librosidl_runtime_c.so
 libsmrr_interfaces__rosidl_typesupport_c.so: /opt/ros/humble/lib/librcutils.so
 libsmrr_interfaces__rosidl_typesupport_c.so: CMakeFiles/smrr_interfaces__rosidl_typesupport_c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ishara/fyp/Human_Preffered_Velocity_Prediction/src/smrr_interfaces/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX shared library libsmrr_interfaces__rosidl_typesupport_c.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ishara/fyp/Human_Preffered_Velocity_Prediction/src/smrr_interfaces/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX shared library libsmrr_interfaces__rosidl_typesupport_c.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/smrr_interfaces__rosidl_typesupport_c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -247,6 +307,9 @@ CMakeFiles/smrr_interfaces__rosidl_typesupport_c.dir/clean:
 .PHONY : CMakeFiles/smrr_interfaces__rosidl_typesupport_c.dir/clean
 
 CMakeFiles/smrr_interfaces__rosidl_typesupport_c.dir/depend: rosidl_typesupport_c/smrr_interfaces/msg/buffer__type_support.cpp
+CMakeFiles/smrr_interfaces__rosidl_typesupport_c.dir/depend: rosidl_typesupport_c/smrr_interfaces/msg/data_element_float__type_support.cpp
+CMakeFiles/smrr_interfaces__rosidl_typesupport_c.dir/depend: rosidl_typesupport_c/smrr_interfaces/msg/data_element_int__type_support.cpp
+CMakeFiles/smrr_interfaces__rosidl_typesupport_c.dir/depend: rosidl_typesupport_c/smrr_interfaces/msg/data_element_string__type_support.cpp
 CMakeFiles/smrr_interfaces__rosidl_typesupport_c.dir/depend: rosidl_typesupport_c/smrr_interfaces/msg/entities__type_support.cpp
 CMakeFiles/smrr_interfaces__rosidl_typesupport_c.dir/depend: rosidl_typesupport_c/smrr_interfaces/msg/pref_velocity__type_support.cpp
 CMakeFiles/smrr_interfaces__rosidl_typesupport_c.dir/depend: rosidl_typesupport_c/smrr_interfaces/msg/velocity_class_data__type_support.cpp

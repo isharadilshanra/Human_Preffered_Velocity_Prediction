@@ -148,6 +148,7 @@ class DataBufferNode(Node):
         msg = Buffer()  # Create a new Buffer message
 
         # fill the messge data
+        agent_count = 0
         agent_ids = []
         x_velocities = []
         y_velocities = []
@@ -161,6 +162,7 @@ class DataBufferNode(Node):
         x_variance = []
         y_variance = []
         majority_class_ids = []
+
 
         for i in range(len(self.agent_matrix)):
             agent_ids.append(self.agent_matrix[i, 0])
@@ -181,6 +183,7 @@ class DataBufferNode(Node):
             majority_class_ids.append(stats.get('majority_class_id', -1))
 
         # Assign the formatted data to the message fields
+        msg.agent_count = int(len(agent_ids))
         msg.agent_ids = agent_ids
         msg.x_velocities = x_velocities
         msg.y_velocities = y_velocities

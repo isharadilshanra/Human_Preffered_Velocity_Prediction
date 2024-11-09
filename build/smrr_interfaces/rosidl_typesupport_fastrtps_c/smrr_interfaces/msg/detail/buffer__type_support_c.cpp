@@ -34,10 +34,10 @@ extern "C"
 {
 #endif
 
-#include "rosidl_runtime_c/primitives_sequence.h"  // agent_ids, x_mean, x_positions, x_std_dev, x_variance, x_velocities, y_mean, y_positions, y_std_dev, y_variance, y_velocities
-#include "rosidl_runtime_c/primitives_sequence_functions.h"  // agent_ids, x_mean, x_positions, x_std_dev, x_variance, x_velocities, y_mean, y_positions, y_std_dev, y_variance, y_velocities
-#include "rosidl_runtime_c/string.h"  // class_ids, majority_class_id
-#include "rosidl_runtime_c/string_functions.h"  // class_ids, majority_class_id
+#include "rosidl_runtime_c/primitives_sequence.h"  // agent_ids, x_mean, x_std_dev, x_variance, y_mean, y_std_dev, y_variance
+#include "rosidl_runtime_c/primitives_sequence_functions.h"  // agent_ids, x_mean, x_std_dev, x_variance, y_mean, y_std_dev, y_variance
+#include "rosidl_runtime_c/string.h"  // majority_class_id
+#include "rosidl_runtime_c/string_functions.h"  // majority_class_id
 
 // forward declare type support functions
 
@@ -64,57 +64,6 @@ static bool _Buffer__cdr_serialize(
   // Field name: agent_count
   {
     cdr << ros_message->agent_count;
-  }
-
-  // Field name: x_velocities
-  {
-    size_t size = ros_message->x_velocities.size;
-    auto array_ptr = ros_message->x_velocities.data;
-    cdr << static_cast<uint32_t>(size);
-    cdr.serializeArray(array_ptr, size);
-  }
-
-  // Field name: y_velocities
-  {
-    size_t size = ros_message->y_velocities.size;
-    auto array_ptr = ros_message->y_velocities.data;
-    cdr << static_cast<uint32_t>(size);
-    cdr.serializeArray(array_ptr, size);
-  }
-
-  // Field name: class_ids
-  {
-    size_t size = ros_message->class_ids.size;
-    auto array_ptr = ros_message->class_ids.data;
-    cdr << static_cast<uint32_t>(size);
-    for (size_t i = 0; i < size; ++i) {
-      const rosidl_runtime_c__String * str = &array_ptr[i];
-      if (str->capacity == 0 || str->capacity <= str->size) {
-        fprintf(stderr, "string capacity not greater than size\n");
-        return false;
-      }
-      if (str->data[str->size] != '\0') {
-        fprintf(stderr, "string not null-terminated\n");
-        return false;
-      }
-      cdr << str->data;
-    }
-  }
-
-  // Field name: x_positions
-  {
-    size_t size = ros_message->x_positions.size;
-    auto array_ptr = ros_message->x_positions.data;
-    cdr << static_cast<uint32_t>(size);
-    cdr.serializeArray(array_ptr, size);
-  }
-
-  // Field name: y_positions
-  {
-    size_t size = ros_message->y_positions.size;
-    auto array_ptr = ros_message->y_positions.data;
-    cdr << static_cast<uint32_t>(size);
-    cdr.serializeArray(array_ptr, size);
   }
 
   // Field name: x_mean
@@ -215,100 +164,6 @@ static bool _Buffer__cdr_deserialize(
   // Field name: agent_count
   {
     cdr >> ros_message->agent_count;
-  }
-
-  // Field name: x_velocities
-  {
-    uint32_t cdrSize;
-    cdr >> cdrSize;
-    size_t size = static_cast<size_t>(cdrSize);
-    if (ros_message->x_velocities.data) {
-      rosidl_runtime_c__float__Sequence__fini(&ros_message->x_velocities);
-    }
-    if (!rosidl_runtime_c__float__Sequence__init(&ros_message->x_velocities, size)) {
-      fprintf(stderr, "failed to create array for field 'x_velocities'");
-      return false;
-    }
-    auto array_ptr = ros_message->x_velocities.data;
-    cdr.deserializeArray(array_ptr, size);
-  }
-
-  // Field name: y_velocities
-  {
-    uint32_t cdrSize;
-    cdr >> cdrSize;
-    size_t size = static_cast<size_t>(cdrSize);
-    if (ros_message->y_velocities.data) {
-      rosidl_runtime_c__float__Sequence__fini(&ros_message->y_velocities);
-    }
-    if (!rosidl_runtime_c__float__Sequence__init(&ros_message->y_velocities, size)) {
-      fprintf(stderr, "failed to create array for field 'y_velocities'");
-      return false;
-    }
-    auto array_ptr = ros_message->y_velocities.data;
-    cdr.deserializeArray(array_ptr, size);
-  }
-
-  // Field name: class_ids
-  {
-    uint32_t cdrSize;
-    cdr >> cdrSize;
-    size_t size = static_cast<size_t>(cdrSize);
-    if (ros_message->class_ids.data) {
-      rosidl_runtime_c__String__Sequence__fini(&ros_message->class_ids);
-    }
-    if (!rosidl_runtime_c__String__Sequence__init(&ros_message->class_ids, size)) {
-      fprintf(stderr, "failed to create array for field 'class_ids'");
-      return false;
-    }
-    auto array_ptr = ros_message->class_ids.data;
-    for (size_t i = 0; i < size; ++i) {
-      std::string tmp;
-      cdr >> tmp;
-      auto & ros_i = array_ptr[i];
-      if (!ros_i.data) {
-        rosidl_runtime_c__String__init(&ros_i);
-      }
-      bool succeeded = rosidl_runtime_c__String__assign(
-        &ros_i,
-        tmp.c_str());
-      if (!succeeded) {
-        fprintf(stderr, "failed to assign string into field 'class_ids'\n");
-        return false;
-      }
-    }
-  }
-
-  // Field name: x_positions
-  {
-    uint32_t cdrSize;
-    cdr >> cdrSize;
-    size_t size = static_cast<size_t>(cdrSize);
-    if (ros_message->x_positions.data) {
-      rosidl_runtime_c__float__Sequence__fini(&ros_message->x_positions);
-    }
-    if (!rosidl_runtime_c__float__Sequence__init(&ros_message->x_positions, size)) {
-      fprintf(stderr, "failed to create array for field 'x_positions'");
-      return false;
-    }
-    auto array_ptr = ros_message->x_positions.data;
-    cdr.deserializeArray(array_ptr, size);
-  }
-
-  // Field name: y_positions
-  {
-    uint32_t cdrSize;
-    cdr >> cdrSize;
-    size_t size = static_cast<size_t>(cdrSize);
-    if (ros_message->y_positions.data) {
-      rosidl_runtime_c__float__Sequence__fini(&ros_message->y_positions);
-    }
-    if (!rosidl_runtime_c__float__Sequence__init(&ros_message->y_positions, size)) {
-      fprintf(stderr, "failed to create array for field 'y_positions'");
-      return false;
-    }
-    auto array_ptr = ros_message->y_positions.data;
-    cdr.deserializeArray(array_ptr, size);
   }
 
   // Field name: x_mean
@@ -471,62 +326,6 @@ size_t get_serialized_size_smrr_interfaces__msg__Buffer(
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
-  // field.name x_velocities
-  {
-    size_t array_size = ros_message->x_velocities.size;
-    auto array_ptr = ros_message->x_velocities.data;
-    current_alignment += padding +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
-    (void)array_ptr;
-    size_t item_size = sizeof(array_ptr[0]);
-    current_alignment += array_size * item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-  // field.name y_velocities
-  {
-    size_t array_size = ros_message->y_velocities.size;
-    auto array_ptr = ros_message->y_velocities.data;
-    current_alignment += padding +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
-    (void)array_ptr;
-    size_t item_size = sizeof(array_ptr[0]);
-    current_alignment += array_size * item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-  // field.name class_ids
-  {
-    size_t array_size = ros_message->class_ids.size;
-    auto array_ptr = ros_message->class_ids.data;
-    current_alignment += padding +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
-    for (size_t index = 0; index < array_size; ++index) {
-      current_alignment += padding +
-        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
-        (array_ptr[index].size + 1);
-    }
-  }
-  // field.name x_positions
-  {
-    size_t array_size = ros_message->x_positions.size;
-    auto array_ptr = ros_message->x_positions.data;
-    current_alignment += padding +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
-    (void)array_ptr;
-    size_t item_size = sizeof(array_ptr[0]);
-    current_alignment += array_size * item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-  // field.name y_positions
-  {
-    size_t array_size = ros_message->y_positions.size;
-    auto array_ptr = ros_message->y_positions.data;
-    current_alignment += padding +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
-    (void)array_ptr;
-    size_t item_size = sizeof(array_ptr[0]);
-    current_alignment += array_size * item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
   // field.name x_mean
   {
     size_t array_size = ros_message->x_mean.size;
@@ -653,70 +452,6 @@ size_t max_serialized_size_smrr_interfaces__msg__Buffer(
     last_member_size = array_size * sizeof(uint16_t);
     current_alignment += array_size * sizeof(uint16_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint16_t));
-  }
-  // member: x_velocities
-  {
-    size_t array_size = 0;
-    full_bounded = false;
-    is_plain = false;
-    current_alignment += padding +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
-
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
-  // member: y_velocities
-  {
-    size_t array_size = 0;
-    full_bounded = false;
-    is_plain = false;
-    current_alignment += padding +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
-
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
-  // member: class_ids
-  {
-    size_t array_size = 0;
-    full_bounded = false;
-    is_plain = false;
-    current_alignment += padding +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
-
-    full_bounded = false;
-    is_plain = false;
-    for (size_t index = 0; index < array_size; ++index) {
-      current_alignment += padding +
-        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
-        1;
-    }
-  }
-  // member: x_positions
-  {
-    size_t array_size = 0;
-    full_bounded = false;
-    is_plain = false;
-    current_alignment += padding +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
-
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
-  // member: y_positions
-  {
-    size_t array_size = 0;
-    full_bounded = false;
-    is_plain = false;
-    current_alignment += padding +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
-
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
   // member: x_mean
   {

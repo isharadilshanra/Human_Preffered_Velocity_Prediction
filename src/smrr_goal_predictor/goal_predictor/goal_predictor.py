@@ -48,6 +48,9 @@ class GoalPredictor(Node):
         self.vel    = Entities()
         self.goals  = Entities()
 
+        # extra buffer for the agents
+        self.buffer = Buffer()
+
     def predictor_callback(self, msg):
         # self.agents          = msg   
       
@@ -55,9 +58,12 @@ class GoalPredictor(Node):
         # self.vel.x           = [0.0]*self.vel.count  
         # self.vel.y           = [0.0]*self.vel.count 
 
+        self.buffer = msg
+        self.vel.count       = msg.agent_count
+        self.vel.x           = self.buffer.x_velocities
+        self.vel.y           = self.buffer.y_velocities
         
-        
-        self.goals.count     = self.agents.count
+        self.goals.count     = msg.agent_count
         self.goals.x         = [0.0]*self.vel.count  
         self.goals.y         = [0.0]*self.vel.count 
 

@@ -6,10 +6,6 @@
 # Import statements for member types
 
 # Member 'agent_ids'
-# Member 'x_velocities'
-# Member 'y_velocities'
-# Member 'x_positions'
-# Member 'y_positions'
 # Member 'x_mean'
 # Member 'y_mean'
 # Member 'x_std_dev'
@@ -72,11 +68,6 @@ class Buffer(metaclass=Metaclass_Buffer):
     __slots__ = [
         '_agent_ids',
         '_agent_count',
-        '_x_velocities',
-        '_y_velocities',
-        '_class_ids',
-        '_x_positions',
-        '_y_positions',
         '_x_mean',
         '_y_mean',
         '_x_std_dev',
@@ -89,11 +80,6 @@ class Buffer(metaclass=Metaclass_Buffer):
     _fields_and_field_types = {
         'agent_ids': 'sequence<int32>',
         'agent_count': 'int16',
-        'x_velocities': 'sequence<float>',
-        'y_velocities': 'sequence<float>',
-        'class_ids': 'sequence<string>',
-        'x_positions': 'sequence<float>',
-        'y_positions': 'sequence<float>',
         'x_mean': 'sequence<float>',
         'y_mean': 'sequence<float>',
         'x_std_dev': 'sequence<float>',
@@ -106,11 +92,6 @@ class Buffer(metaclass=Metaclass_Buffer):
     SLOT_TYPES = (
         rosidl_parser.definition.UnboundedSequence(rosidl_parser.definition.BasicType('int32')),  # noqa: E501
         rosidl_parser.definition.BasicType('int16'),  # noqa: E501
-        rosidl_parser.definition.UnboundedSequence(rosidl_parser.definition.BasicType('float')),  # noqa: E501
-        rosidl_parser.definition.UnboundedSequence(rosidl_parser.definition.BasicType('float')),  # noqa: E501
-        rosidl_parser.definition.UnboundedSequence(rosidl_parser.definition.UnboundedString()),  # noqa: E501
-        rosidl_parser.definition.UnboundedSequence(rosidl_parser.definition.BasicType('float')),  # noqa: E501
-        rosidl_parser.definition.UnboundedSequence(rosidl_parser.definition.BasicType('float')),  # noqa: E501
         rosidl_parser.definition.UnboundedSequence(rosidl_parser.definition.BasicType('float')),  # noqa: E501
         rosidl_parser.definition.UnboundedSequence(rosidl_parser.definition.BasicType('float')),  # noqa: E501
         rosidl_parser.definition.UnboundedSequence(rosidl_parser.definition.BasicType('float')),  # noqa: E501
@@ -126,11 +107,6 @@ class Buffer(metaclass=Metaclass_Buffer):
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
         self.agent_ids = array.array('i', kwargs.get('agent_ids', []))
         self.agent_count = kwargs.get('agent_count', int())
-        self.x_velocities = array.array('f', kwargs.get('x_velocities', []))
-        self.y_velocities = array.array('f', kwargs.get('y_velocities', []))
-        self.class_ids = kwargs.get('class_ids', [])
-        self.x_positions = array.array('f', kwargs.get('x_positions', []))
-        self.y_positions = array.array('f', kwargs.get('y_positions', []))
         self.x_mean = array.array('f', kwargs.get('x_mean', []))
         self.y_mean = array.array('f', kwargs.get('y_mean', []))
         self.x_std_dev = array.array('f', kwargs.get('x_std_dev', []))
@@ -171,16 +147,6 @@ class Buffer(metaclass=Metaclass_Buffer):
         if self.agent_ids != other.agent_ids:
             return False
         if self.agent_count != other.agent_count:
-            return False
-        if self.x_velocities != other.x_velocities:
-            return False
-        if self.y_velocities != other.y_velocities:
-            return False
-        if self.class_ids != other.class_ids:
-            return False
-        if self.x_positions != other.x_positions:
-            return False
-        if self.y_positions != other.y_positions:
             return False
         if self.x_mean != other.x_mean:
             return False
@@ -245,141 +211,6 @@ class Buffer(metaclass=Metaclass_Buffer):
             assert value >= -32768 and value < 32768, \
                 "The 'agent_count' field must be an integer in [-32768, 32767]"
         self._agent_count = value
-
-    @builtins.property
-    def x_velocities(self):
-        """Message field 'x_velocities'."""
-        return self._x_velocities
-
-    @x_velocities.setter
-    def x_velocities(self, value):
-        if isinstance(value, array.array):
-            assert value.typecode == 'f', \
-                "The 'x_velocities' array.array() must have the type code of 'f'"
-            self._x_velocities = value
-            return
-        if __debug__:
-            from collections.abc import Sequence
-            from collections.abc import Set
-            from collections import UserList
-            from collections import UserString
-            assert \
-                ((isinstance(value, Sequence) or
-                  isinstance(value, Set) or
-                  isinstance(value, UserList)) and
-                 not isinstance(value, str) and
-                 not isinstance(value, UserString) and
-                 all(isinstance(v, float) for v in value) and
-                 all(not (val < -3.402823466e+38 or val > 3.402823466e+38) or math.isinf(val) for val in value)), \
-                "The 'x_velocities' field must be a set or sequence and each value of type 'float' and each float in [-340282346600000016151267322115014000640.000000, 340282346600000016151267322115014000640.000000]"
-        self._x_velocities = array.array('f', value)
-
-    @builtins.property
-    def y_velocities(self):
-        """Message field 'y_velocities'."""
-        return self._y_velocities
-
-    @y_velocities.setter
-    def y_velocities(self, value):
-        if isinstance(value, array.array):
-            assert value.typecode == 'f', \
-                "The 'y_velocities' array.array() must have the type code of 'f'"
-            self._y_velocities = value
-            return
-        if __debug__:
-            from collections.abc import Sequence
-            from collections.abc import Set
-            from collections import UserList
-            from collections import UserString
-            assert \
-                ((isinstance(value, Sequence) or
-                  isinstance(value, Set) or
-                  isinstance(value, UserList)) and
-                 not isinstance(value, str) and
-                 not isinstance(value, UserString) and
-                 all(isinstance(v, float) for v in value) and
-                 all(not (val < -3.402823466e+38 or val > 3.402823466e+38) or math.isinf(val) for val in value)), \
-                "The 'y_velocities' field must be a set or sequence and each value of type 'float' and each float in [-340282346600000016151267322115014000640.000000, 340282346600000016151267322115014000640.000000]"
-        self._y_velocities = array.array('f', value)
-
-    @builtins.property
-    def class_ids(self):
-        """Message field 'class_ids'."""
-        return self._class_ids
-
-    @class_ids.setter
-    def class_ids(self, value):
-        if __debug__:
-            from collections.abc import Sequence
-            from collections.abc import Set
-            from collections import UserList
-            from collections import UserString
-            assert \
-                ((isinstance(value, Sequence) or
-                  isinstance(value, Set) or
-                  isinstance(value, UserList)) and
-                 not isinstance(value, str) and
-                 not isinstance(value, UserString) and
-                 all(isinstance(v, str) for v in value) and
-                 True), \
-                "The 'class_ids' field must be a set or sequence and each value of type 'str'"
-        self._class_ids = value
-
-    @builtins.property
-    def x_positions(self):
-        """Message field 'x_positions'."""
-        return self._x_positions
-
-    @x_positions.setter
-    def x_positions(self, value):
-        if isinstance(value, array.array):
-            assert value.typecode == 'f', \
-                "The 'x_positions' array.array() must have the type code of 'f'"
-            self._x_positions = value
-            return
-        if __debug__:
-            from collections.abc import Sequence
-            from collections.abc import Set
-            from collections import UserList
-            from collections import UserString
-            assert \
-                ((isinstance(value, Sequence) or
-                  isinstance(value, Set) or
-                  isinstance(value, UserList)) and
-                 not isinstance(value, str) and
-                 not isinstance(value, UserString) and
-                 all(isinstance(v, float) for v in value) and
-                 all(not (val < -3.402823466e+38 or val > 3.402823466e+38) or math.isinf(val) for val in value)), \
-                "The 'x_positions' field must be a set or sequence and each value of type 'float' and each float in [-340282346600000016151267322115014000640.000000, 340282346600000016151267322115014000640.000000]"
-        self._x_positions = array.array('f', value)
-
-    @builtins.property
-    def y_positions(self):
-        """Message field 'y_positions'."""
-        return self._y_positions
-
-    @y_positions.setter
-    def y_positions(self, value):
-        if isinstance(value, array.array):
-            assert value.typecode == 'f', \
-                "The 'y_positions' array.array() must have the type code of 'f'"
-            self._y_positions = value
-            return
-        if __debug__:
-            from collections.abc import Sequence
-            from collections.abc import Set
-            from collections import UserList
-            from collections import UserString
-            assert \
-                ((isinstance(value, Sequence) or
-                  isinstance(value, Set) or
-                  isinstance(value, UserList)) and
-                 not isinstance(value, str) and
-                 not isinstance(value, UserString) and
-                 all(isinstance(v, float) for v in value) and
-                 all(not (val < -3.402823466e+38 or val > 3.402823466e+38) or math.isinf(val) for val in value)), \
-                "The 'y_positions' field must be a set or sequence and each value of type 'float' and each float in [-340282346600000016151267322115014000640.000000, 340282346600000016151267322115014000640.000000]"
-        self._y_positions = array.array('f', value)
 
     @builtins.property
     def x_mean(self):

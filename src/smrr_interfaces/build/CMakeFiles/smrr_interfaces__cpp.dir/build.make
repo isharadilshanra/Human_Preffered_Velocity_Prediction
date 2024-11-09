@@ -82,6 +82,18 @@ CMakeFiles/smrr_interfaces__cpp: rosidl_generator_cpp/smrr_interfaces/msg/pref_v
 CMakeFiles/smrr_interfaces__cpp: rosidl_generator_cpp/smrr_interfaces/msg/detail/pref_velocity__builder.hpp
 CMakeFiles/smrr_interfaces__cpp: rosidl_generator_cpp/smrr_interfaces/msg/detail/pref_velocity__struct.hpp
 CMakeFiles/smrr_interfaces__cpp: rosidl_generator_cpp/smrr_interfaces/msg/detail/pref_velocity__traits.hpp
+CMakeFiles/smrr_interfaces__cpp: rosidl_generator_cpp/smrr_interfaces/msg/data_element_float.hpp
+CMakeFiles/smrr_interfaces__cpp: rosidl_generator_cpp/smrr_interfaces/msg/detail/data_element_float__builder.hpp
+CMakeFiles/smrr_interfaces__cpp: rosidl_generator_cpp/smrr_interfaces/msg/detail/data_element_float__struct.hpp
+CMakeFiles/smrr_interfaces__cpp: rosidl_generator_cpp/smrr_interfaces/msg/detail/data_element_float__traits.hpp
+CMakeFiles/smrr_interfaces__cpp: rosidl_generator_cpp/smrr_interfaces/msg/data_element_string.hpp
+CMakeFiles/smrr_interfaces__cpp: rosidl_generator_cpp/smrr_interfaces/msg/detail/data_element_string__builder.hpp
+CMakeFiles/smrr_interfaces__cpp: rosidl_generator_cpp/smrr_interfaces/msg/detail/data_element_string__struct.hpp
+CMakeFiles/smrr_interfaces__cpp: rosidl_generator_cpp/smrr_interfaces/msg/detail/data_element_string__traits.hpp
+CMakeFiles/smrr_interfaces__cpp: rosidl_generator_cpp/smrr_interfaces/msg/data_element_int.hpp
+CMakeFiles/smrr_interfaces__cpp: rosidl_generator_cpp/smrr_interfaces/msg/detail/data_element_int__builder.hpp
+CMakeFiles/smrr_interfaces__cpp: rosidl_generator_cpp/smrr_interfaces/msg/detail/data_element_int__struct.hpp
+CMakeFiles/smrr_interfaces__cpp: rosidl_generator_cpp/smrr_interfaces/msg/detail/data_element_int__traits.hpp
 
 rosidl_generator_cpp/smrr_interfaces/msg/entities.hpp: /opt/ros/humble/lib/rosidl_generator_cpp/rosidl_generator_cpp
 rosidl_generator_cpp/smrr_interfaces/msg/entities.hpp: /opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_generator_cpp/__init__.py
@@ -102,6 +114,9 @@ rosidl_generator_cpp/smrr_interfaces/msg/entities.hpp: rosidl_adapter/smrr_inter
 rosidl_generator_cpp/smrr_interfaces/msg/entities.hpp: rosidl_adapter/smrr_interfaces/msg/VelocityClassData.idl
 rosidl_generator_cpp/smrr_interfaces/msg/entities.hpp: rosidl_adapter/smrr_interfaces/msg/Buffer.idl
 rosidl_generator_cpp/smrr_interfaces/msg/entities.hpp: rosidl_adapter/smrr_interfaces/msg/PrefVelocity.idl
+rosidl_generator_cpp/smrr_interfaces/msg/entities.hpp: rosidl_adapter/smrr_interfaces/msg/DataElementFloat.idl
+rosidl_generator_cpp/smrr_interfaces/msg/entities.hpp: rosidl_adapter/smrr_interfaces/msg/DataElementString.idl
+rosidl_generator_cpp/smrr_interfaces/msg/entities.hpp: rosidl_adapter/smrr_interfaces/msg/DataElementInt.idl
 rosidl_generator_cpp/smrr_interfaces/msg/entities.hpp: /opt/ros/humble/share/std_msgs/msg/Bool.idl
 rosidl_generator_cpp/smrr_interfaces/msg/entities.hpp: /opt/ros/humble/share/std_msgs/msg/Byte.idl
 rosidl_generator_cpp/smrr_interfaces/msg/entities.hpp: /opt/ros/humble/share/std_msgs/msg/ByteMultiArray.idl
@@ -212,11 +227,59 @@ rosidl_generator_cpp/smrr_interfaces/msg/detail/pref_velocity__struct.hpp: rosid
 rosidl_generator_cpp/smrr_interfaces/msg/detail/pref_velocity__traits.hpp: rosidl_generator_cpp/smrr_interfaces/msg/entities.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/smrr_interfaces/msg/detail/pref_velocity__traits.hpp
 
+rosidl_generator_cpp/smrr_interfaces/msg/data_element_float.hpp: rosidl_generator_cpp/smrr_interfaces/msg/entities.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/smrr_interfaces/msg/data_element_float.hpp
+
+rosidl_generator_cpp/smrr_interfaces/msg/detail/data_element_float__builder.hpp: rosidl_generator_cpp/smrr_interfaces/msg/entities.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/smrr_interfaces/msg/detail/data_element_float__builder.hpp
+
+rosidl_generator_cpp/smrr_interfaces/msg/detail/data_element_float__struct.hpp: rosidl_generator_cpp/smrr_interfaces/msg/entities.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/smrr_interfaces/msg/detail/data_element_float__struct.hpp
+
+rosidl_generator_cpp/smrr_interfaces/msg/detail/data_element_float__traits.hpp: rosidl_generator_cpp/smrr_interfaces/msg/entities.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/smrr_interfaces/msg/detail/data_element_float__traits.hpp
+
+rosidl_generator_cpp/smrr_interfaces/msg/data_element_string.hpp: rosidl_generator_cpp/smrr_interfaces/msg/entities.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/smrr_interfaces/msg/data_element_string.hpp
+
+rosidl_generator_cpp/smrr_interfaces/msg/detail/data_element_string__builder.hpp: rosidl_generator_cpp/smrr_interfaces/msg/entities.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/smrr_interfaces/msg/detail/data_element_string__builder.hpp
+
+rosidl_generator_cpp/smrr_interfaces/msg/detail/data_element_string__struct.hpp: rosidl_generator_cpp/smrr_interfaces/msg/entities.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/smrr_interfaces/msg/detail/data_element_string__struct.hpp
+
+rosidl_generator_cpp/smrr_interfaces/msg/detail/data_element_string__traits.hpp: rosidl_generator_cpp/smrr_interfaces/msg/entities.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/smrr_interfaces/msg/detail/data_element_string__traits.hpp
+
+rosidl_generator_cpp/smrr_interfaces/msg/data_element_int.hpp: rosidl_generator_cpp/smrr_interfaces/msg/entities.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/smrr_interfaces/msg/data_element_int.hpp
+
+rosidl_generator_cpp/smrr_interfaces/msg/detail/data_element_int__builder.hpp: rosidl_generator_cpp/smrr_interfaces/msg/entities.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/smrr_interfaces/msg/detail/data_element_int__builder.hpp
+
+rosidl_generator_cpp/smrr_interfaces/msg/detail/data_element_int__struct.hpp: rosidl_generator_cpp/smrr_interfaces/msg/entities.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/smrr_interfaces/msg/detail/data_element_int__struct.hpp
+
+rosidl_generator_cpp/smrr_interfaces/msg/detail/data_element_int__traits.hpp: rosidl_generator_cpp/smrr_interfaces/msg/entities.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/smrr_interfaces/msg/detail/data_element_int__traits.hpp
+
 smrr_interfaces__cpp: CMakeFiles/smrr_interfaces__cpp
 smrr_interfaces__cpp: rosidl_generator_cpp/smrr_interfaces/msg/buffer.hpp
+smrr_interfaces__cpp: rosidl_generator_cpp/smrr_interfaces/msg/data_element_float.hpp
+smrr_interfaces__cpp: rosidl_generator_cpp/smrr_interfaces/msg/data_element_int.hpp
+smrr_interfaces__cpp: rosidl_generator_cpp/smrr_interfaces/msg/data_element_string.hpp
 smrr_interfaces__cpp: rosidl_generator_cpp/smrr_interfaces/msg/detail/buffer__builder.hpp
 smrr_interfaces__cpp: rosidl_generator_cpp/smrr_interfaces/msg/detail/buffer__struct.hpp
 smrr_interfaces__cpp: rosidl_generator_cpp/smrr_interfaces/msg/detail/buffer__traits.hpp
+smrr_interfaces__cpp: rosidl_generator_cpp/smrr_interfaces/msg/detail/data_element_float__builder.hpp
+smrr_interfaces__cpp: rosidl_generator_cpp/smrr_interfaces/msg/detail/data_element_float__struct.hpp
+smrr_interfaces__cpp: rosidl_generator_cpp/smrr_interfaces/msg/detail/data_element_float__traits.hpp
+smrr_interfaces__cpp: rosidl_generator_cpp/smrr_interfaces/msg/detail/data_element_int__builder.hpp
+smrr_interfaces__cpp: rosidl_generator_cpp/smrr_interfaces/msg/detail/data_element_int__struct.hpp
+smrr_interfaces__cpp: rosidl_generator_cpp/smrr_interfaces/msg/detail/data_element_int__traits.hpp
+smrr_interfaces__cpp: rosidl_generator_cpp/smrr_interfaces/msg/detail/data_element_string__builder.hpp
+smrr_interfaces__cpp: rosidl_generator_cpp/smrr_interfaces/msg/detail/data_element_string__struct.hpp
+smrr_interfaces__cpp: rosidl_generator_cpp/smrr_interfaces/msg/detail/data_element_string__traits.hpp
 smrr_interfaces__cpp: rosidl_generator_cpp/smrr_interfaces/msg/detail/entities__builder.hpp
 smrr_interfaces__cpp: rosidl_generator_cpp/smrr_interfaces/msg/detail/entities__struct.hpp
 smrr_interfaces__cpp: rosidl_generator_cpp/smrr_interfaces/msg/detail/entities__traits.hpp
