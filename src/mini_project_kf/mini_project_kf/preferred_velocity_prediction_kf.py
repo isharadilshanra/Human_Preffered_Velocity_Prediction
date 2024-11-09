@@ -4,8 +4,11 @@ from rclpy.node import Node
 import numpy as np
 import random
 from std_msgs.msg import Float32MultiArray, Int32MultiArray
-from filterpy.kalman import KalmanFilter
 from smrr_interfaces.msg import Buffer, PrefVelocity
+
+# import the custom kalman filter class
+from kf_lib.kalman_filter import KalmanFilter
+
 
 class HumanPrefferedVelocity(Node):
     def __init__(self):
@@ -50,13 +53,20 @@ class HumanPrefferedVelocity(Node):
     def kalman_filter(self):
         # initialize kalman filter 
         # each human will have its own kalman filter
-        kf = KalmanFilter(dim_x=2, dim_z=1)
-        kf.x = np.array([[0.], [0.]])  # Start with zero speed and acceleration
-        kf.F = np.array([[1., 1.], [0., 1.]])  # Constant velocity model
-        kf.H = np.array([[1., 0.]])  # Measure speed only
-        kf.P *= 1000.  # Initial high uncertainty of Initial Covariance Matrix
-        kf.R = 1.0  # Initial measurement noise (will be updated later)
-        kf.Q = np.array([[0.1, 0.0], [0.0, 0.1]])  # Process noise (will be updated later)
+        #kf = KalmanFilter(dim_x=2, dim_z=1)
+        # kf.x = np.array([[0.], [0.]])  # Start with zero speed and acceleration
+        # kf.F = np.array([[1., 1.], [0., 1.]])  # Constant velocity model
+        # kf.H = np.array([[1., 0.]])  # Measure speed only
+        # kf.P *= 1000.  # Initial high uncertainty of Initial Covariance Matrix
+        # kf.R = 1.0  # Initial measurement noise (will be updated later)
+        # kf.Q = np.array([[0.1, 0.0], [0.0, 0.1]])  # Process noise (will be updated later)
+
+        kf = KalmanFilter(dim_x=1, dim_z=1)
+        kf.set_initial_state(np.array([[0.], [0.]])) # Start with zero speed and acceleration
+        kf.set_state_transition(np.array([[1., 1.], [0., 1.]])) # Constant velocity model
+        kf.set_measurement_matrix(np.array([[1., 0.]])) # Measure speed only
+        kf.set_process_noise_matrix(np.array([[0.1, 0.], [0., 0.1]])) # Process noise (will be updated later)
+        kf.set_measurement_noise(np.array([[1.]])) # Initial measurement noise (will be updated later)
         return kf
 
     def update_filter_parameters(self, kf, class_id, std_dev, variance):

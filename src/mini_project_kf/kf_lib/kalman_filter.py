@@ -18,4 +18,37 @@ class KalmanFilter:
         self.R = np.eye(dim_z)            # measurement noise covariance matrix
         self.H = np.zeros((dim_z, dim_x)) # measurement function matrix
 
+    def predict(self):
+        self.x = np.dot(self.F, self.x)
+        self.P = np.dot(np.dot(self.F, self.P), self.F.T) + self.Q
+
+    def update(self, z):
+        y = z - np.dot(self.H, self.x)  # mesurement residual
+        S = np.dot(np.dot(self.H, self.P), self.H.T) + self.R  # residual covariance
+        K = np.dot(np.dot(self.P, self.H.T), np.linalg.inv(S)) # kalman gain
+
+        # update state and covariance
+        self.x = self.x + np.dot(K, y)
+        self.P = self.P - np.dot(np.dot(K, self.H), self.P)
+
+    # def set_measurement(self, z):
+    #     self.H = np.eye(self.dim_z, self.dim_x)
+    #     self.R = np.eye(self.dim_z) * z
     
+    # def set_process_noise(self, q):
+    #     self.Q = np.eye(self.dim_x) * q
+
+    def set_state_transition(self, F):
+        self.F = F
+
+    def set_initial_state(self, x):
+        self.x = x
+
+    def set_measurement_matrix(self, H):
+        self.H = H
+
+    def set_process_noise_matrix(self, Q):
+        self.Q = Q
+
+    def set_measurement_noise(self, R):
+        self.R = R
