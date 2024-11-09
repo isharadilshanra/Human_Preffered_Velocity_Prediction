@@ -194,11 +194,12 @@ class DataBufferNode(Node):
             x_pos_list = DataElementFloat()
             y_pos_list = DataElementFloat()
 
-            x_vel_list.data = list(self.agent_matrix[i, 1])
-            y_vel_list.data = list(self.agent_matrix[i, 2])
-            class_list.data = list(self.agent_matrix[i, 3])
-            x_pos_list.data = list(self.agent_matrix[i, 4])
-            y_pos_list.data = list(self.agent_matrix[i, 5])
+            x_vel_list.float_data = list(self.agent_matrix[i, 1])
+            y_vel_list.float_data = list(self.agent_matrix[i, 2])
+            class_list.string_data = list(self.agent_matrix[i, 3])
+            x_pos_list.float_data = list(self.agent_matrix[i, 4])
+            y_pos_list.float_data = list(self.agent_matrix[i, 5])
+
 
             x_velocities.append(x_vel_list)
             y_velocities.append(y_vel_list)
@@ -235,7 +236,7 @@ class DataBufferNode(Node):
         # publish the message
         self.pub_buffer.publish(msg)
         self.get_logger().info("Published buffer data.")
-        
+
         # log buffer x and y velocities
         self.get_logger().info(f"x_velocities: {x_velocities}")
         self.get_logger().info(f"y_velocities: {y_velocities}")
