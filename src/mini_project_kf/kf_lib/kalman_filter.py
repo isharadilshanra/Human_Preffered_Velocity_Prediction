@@ -27,7 +27,7 @@ class KalmanFilter:
 
         # predict the state and covariance
         self.X = self.F @ self.X # @ means matrix multiplication
-        self.F = self.F @ self.P @ self.F.T + self.Q
+        self.P = self.F @ self.P @ self.F.T + self.Q
 
     def update(self, z):
 
@@ -37,8 +37,8 @@ class KalmanFilter:
         assert z.shape == (self.dim_z, 1), f"z shape should be ({self.dim_z}, 1)"
 
         y = z - np.dot(self.H, self.X)  # mesurement residual
-        S = np.dot(np.dot(self.H, self.P), self.H.T) + self.R  # residual covariance
-        K = np.dot(np.dot(self.P, self.H.T), np.linalg.inv(S)) # kalman gain
+        S = np.dot(np.dot(self.H, self.P), self.H.T) + self.R + 1e-5 # residual covariance
+        K = self.P @ self.H.T @ np.linalg.inv(S)
 
         # update state and covariance
         self.X = self.X + np.dot(K, y)
