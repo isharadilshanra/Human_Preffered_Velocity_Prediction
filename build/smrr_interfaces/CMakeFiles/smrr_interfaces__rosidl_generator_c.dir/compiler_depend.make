@@ -450,6 +450,7 @@ CMakeFiles/smrr_interfaces__rosidl_generator_c.dir/rosidl_generator_c/smrr_inter
   /usr/include/x86_64-linux-gnu/bits/wchar.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
+  rosidl_generator_c/smrr_interfaces/msg/detail/data_element_string__struct.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
   /usr/include/assert.h \
   /usr/include/string.h \
@@ -472,7 +473,7 @@ CMakeFiles/smrr_interfaces__rosidl_generator_c.dir/rosidl_generator_c/smrr_inter
   /opt/ros/humble/include/rcutils/rcutils/visibility_control_macros.h \
   /opt/ros/humble/include/rcutils/rcutils/types/rcutils_ret.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence_functions.h \
-  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string_functions.h
+  rosidl_generator_c/smrr_interfaces/msg/detail/data_element_string__functions.h
 
 CMakeFiles/smrr_interfaces__rosidl_generator_c.dir/rosidl_generator_c/smrr_interfaces/msg/detail/velocity_class_data__functions.c.o: rosidl_generator_c/smrr_interfaces/msg/detail/velocity_class_data__functions.c \
   /usr/include/stdc-predef.h \

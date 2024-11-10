@@ -15,6 +15,10 @@
 #include "rosidl_runtime_cpp/message_initialization.hpp"
 
 
+// Include directives for member types
+// Member 'class_ids'
+#include "smrr_interfaces/msg/detail/data_element_string__struct.hpp"
+
 #ifndef _WIN32
 # define DEPRECATED__smrr_interfaces__msg__PrefVelocity __attribute__((deprecated))
 #else
@@ -49,7 +53,7 @@ struct PrefVelocity_
     std::vector<int32_t, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<int32_t>>;
   _agent_ids_type agent_ids;
   using _class_ids_type =
-    std::vector<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>>>;
+    std::vector<smrr_interfaces::msg::DataElementString_<ContainerAllocator>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<smrr_interfaces::msg::DataElementString_<ContainerAllocator>>>;
   _class_ids_type class_ids;
   using _preferred_velocities_type =
     std::vector<float, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<float>>;
@@ -63,7 +67,7 @@ struct PrefVelocity_
     return *this;
   }
   Type & set__class_ids(
-    const std::vector<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>>> & _arg)
+    const std::vector<smrr_interfaces::msg::DataElementString_<ContainerAllocator>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<smrr_interfaces::msg::DataElementString_<ContainerAllocator>>> & _arg)
   {
     this->class_ids = _arg;
     return *this;

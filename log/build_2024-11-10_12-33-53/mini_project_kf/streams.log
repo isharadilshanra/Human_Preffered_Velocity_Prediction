@@ -1,0 +1,19 @@
+[1.395s] Invoking command in '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/mini_project_kf': PYTHONPATH=/home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/mini_project_kf/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/mini_project_kf/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/mini_project_kf/build --no-deps symlink_data
+[1.635s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[1.635s]   warnings.warn(
+[1.635s] running develop
+[1.779s] running egg_info
+[1.779s] writing mini_project_kf.egg-info/PKG-INFO
+[1.780s] writing dependency_links to mini_project_kf.egg-info/dependency_links.txt
+[1.780s] writing entry points to mini_project_kf.egg-info/entry_points.txt
+[1.780s] writing requirements to mini_project_kf.egg-info/requires.txt
+[1.780s] writing top-level names to mini_project_kf.egg-info/top_level.txt
+[1.783s] reading manifest file 'mini_project_kf.egg-info/SOURCES.txt'
+[1.784s] writing manifest file 'mini_project_kf.egg-info/SOURCES.txt'
+[1.786s] running build_ext
+[1.786s] Creating /home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/mini_project_kf/lib/python3.10/site-packages/mini-project-kf.egg-link (link to .)
+[1.788s] Installing preferred_velocity_prediction_kf script to /home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/mini_project_kf/lib/mini_project_kf
+[1.788s] 
+[1.788s] Installed /home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/mini_project_kf
+[1.788s] running symlink_data
+[1.844s] Invoked command in '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/mini_project_kf' returned '0': PYTHONPATH=/home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/mini_project_kf/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/mini_project_kf/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/mini_project_kf/build --no-deps symlink_data
