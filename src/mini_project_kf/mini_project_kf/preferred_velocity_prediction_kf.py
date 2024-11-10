@@ -67,7 +67,7 @@ class HumanPrefferedVelocity(Node):
         kf.set_state_transition(np.array([[1., 1.], [0., 1.]])) # Constant velocity model
         kf.set_measurement_matrix(np.array([[1., 0.]])) # Measure speed only
         kf.set_process_noise_matrix(np.array([[0.1, 0.], [0., 0.1]])) # Process noise (will be updated later)
-        kf.set_measurement_noise(np.array([1.0])) # Initial measurement noise (will be updated later)
+        kf.set_measurement_noise(np.array([[1.0]])) # Initial measurement noise (will be updated later)
         return kf
 
     def update_filter_parameters(self, kf, class_id, std_dev, variance):
@@ -90,7 +90,8 @@ class HumanPrefferedVelocity(Node):
             base_Q = 1.0
 
         # Adjust measurement noise R based on the variance (higher variance, higher noise)
-        kf.R = base_R * (1 + variance / (1 + variance))  # Scale R using variance
+        #kf.R = base_R * (1 + variance / (1 + variance))  # Scale R using variance
+        kf.R = np.array([[base_R * (1 + variance / (1 + variance))]])
         
         # Adjust process noise Q based on standard deviation (higher std_dev, more flexibility)
         kf.Q = np.array([[base_Q * (1 + std_dev), 0], [0, base_Q * (1 + std_dev)]])
