@@ -178,7 +178,7 @@ class HumanPrefferedVelocity(Node):
             kf.update(np.array([[mean_velocity_i]]))
 
             # get the preferred velocity
-            preferred_velocity_i = kf.x[0, 0]
+            preferred_velocity_i = kf.X[0, 0]
             preferred_velocity.append(preferred_velocity_i)
 
             self.get_logger().info(f'Agent {i} - class: {class_id}, '
