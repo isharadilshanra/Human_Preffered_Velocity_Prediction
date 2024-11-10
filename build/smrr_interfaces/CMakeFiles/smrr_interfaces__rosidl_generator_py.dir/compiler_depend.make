@@ -1525,11 +1525,12 @@ CMakeFiles/smrr_interfaces__rosidl_generator_py.dir/rosidl_generator_py/smrr_int
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/visibility_control.h \
   rosidl_generator_c/smrr_interfaces/msg/detail/pref_velocity__struct.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
+  rosidl_generator_c/smrr_interfaces/msg/detail/data_element_string__struct.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
   rosidl_generator_c/smrr_interfaces/msg/detail/pref_velocity__functions.h \
   rosidl_generator_c/smrr_interfaces/msg/rosidl_generator_c__visibility_control.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence_functions.h \
-  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string_functions.h
+  rosidl_generator_c/smrr_interfaces/msg/detail/data_element_string__functions.h
 
 CMakeFiles/smrr_interfaces__rosidl_generator_py.dir/rosidl_generator_py/smrr_interfaces/msg/_velocity_class_data_s.c.o: rosidl_generator_py/smrr_interfaces/msg/_velocity_class_data_s.c \
   /usr/include/stdc-predef.h \

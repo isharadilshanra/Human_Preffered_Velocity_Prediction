@@ -16,7 +16,7 @@
 // Member `preferred_velocities`
 #include "rosidl_runtime_c/primitives_sequence_functions.h"
 // Member `class_ids`
-#include "rosidl_runtime_c/string_functions.h"
+#include "smrr_interfaces/msg/detail/data_element_string__functions.h"
 
 bool
 smrr_interfaces__msg__PrefVelocity__init(smrr_interfaces__msg__PrefVelocity * msg)
@@ -30,7 +30,7 @@ smrr_interfaces__msg__PrefVelocity__init(smrr_interfaces__msg__PrefVelocity * ms
     return false;
   }
   // class_ids
-  if (!rosidl_runtime_c__String__Sequence__init(&msg->class_ids, 0)) {
+  if (!smrr_interfaces__msg__DataElementString__Sequence__init(&msg->class_ids, 0)) {
     smrr_interfaces__msg__PrefVelocity__fini(msg);
     return false;
   }
@@ -51,7 +51,7 @@ smrr_interfaces__msg__PrefVelocity__fini(smrr_interfaces__msg__PrefVelocity * ms
   // agent_ids
   rosidl_runtime_c__int32__Sequence__fini(&msg->agent_ids);
   // class_ids
-  rosidl_runtime_c__String__Sequence__fini(&msg->class_ids);
+  smrr_interfaces__msg__DataElementString__Sequence__fini(&msg->class_ids);
   // preferred_velocities
   rosidl_runtime_c__float__Sequence__fini(&msg->preferred_velocities);
 }
@@ -69,7 +69,7 @@ smrr_interfaces__msg__PrefVelocity__are_equal(const smrr_interfaces__msg__PrefVe
     return false;
   }
   // class_ids
-  if (!rosidl_runtime_c__String__Sequence__are_equal(
+  if (!smrr_interfaces__msg__DataElementString__Sequence__are_equal(
       &(lhs->class_ids), &(rhs->class_ids)))
   {
     return false;
@@ -98,7 +98,7 @@ smrr_interfaces__msg__PrefVelocity__copy(
     return false;
   }
   // class_ids
-  if (!rosidl_runtime_c__String__Sequence__copy(
+  if (!smrr_interfaces__msg__DataElementString__Sequence__copy(
       &(input->class_ids), &(output->class_ids)))
   {
     return false;

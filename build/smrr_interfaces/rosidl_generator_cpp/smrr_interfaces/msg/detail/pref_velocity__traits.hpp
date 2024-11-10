@@ -14,6 +14,10 @@
 #include "smrr_interfaces/msg/detail/pref_velocity__struct.hpp"
 #include "rosidl_runtime_cpp/traits.hpp"
 
+// Include directives for member types
+// Member 'class_ids'
+#include "smrr_interfaces/msg/detail/data_element_string__traits.hpp"
+
 namespace smrr_interfaces
 {
 
@@ -51,7 +55,7 @@ inline void to_flow_style_yaml(
       out << "class_ids: [";
       size_t pending_items = msg.class_ids.size();
       for (auto item : msg.class_ids) {
-        rosidl_generator_traits::value_to_yaml(item, out);
+        to_flow_style_yaml(item, out);
         if (--pending_items > 0) {
           out << ", ";
         }
@@ -117,9 +121,8 @@ inline void to_block_style_yaml(
         if (indentation > 0) {
           out << std::string(indentation, ' ');
         }
-        out << "- ";
-        rosidl_generator_traits::value_to_yaml(item, out);
-        out << "\n";
+        out << "-\n";
+        to_block_style_yaml(item, out, indentation + 2);
       }
     }
   }
