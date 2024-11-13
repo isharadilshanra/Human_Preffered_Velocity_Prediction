@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 
-# custom kalman filter class
-
 import numpy as np
 
 class KalmanFilter:
+    """ Kalman Filter implementation """
+
     def __init__(self, dim_x=2, dim_z=1):
         
         self.dim_x = dim_x
@@ -43,13 +43,6 @@ class KalmanFilter:
         # update state and covariance
         self.X = self.X + np.dot(K, y)
         self.P = (np.eye(self.dim_x) - np.dot(K, self.H)) @ self.P
-
-    # def set_measurement(self, z):
-    #     self.H = np.eye(self.dim_z, self.dim_x)
-    #     self.R = np.eye(self.dim_z) * z
-    
-    # def set_process_noise(self, q):
-    #     self.Q = np.eye(self.dim_x) * q
 
     def set_state_transition(self, F):
         assert F.shape == (self.dim_x, self.dim_x), f"F shape should be ({self.dim_x}, {self.dim_x})"
