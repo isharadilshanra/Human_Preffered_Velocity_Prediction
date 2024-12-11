@@ -1,0 +1,20 @@
+[3.182s] Invoking command in '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/goal_predictor': PYTHONPATH=/home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/goal_predictor/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/goal_predictor/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/goal_predictor/build --no-deps symlink_data
+[3.414s] running develop
+[3.431s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[3.431s]   warnings.warn(
+[3.716s] running egg_info
+[3.716s] writing goal_predictor.egg-info/PKG-INFO
+[3.717s] writing dependency_links to goal_predictor.egg-info/dependency_links.txt
+[3.717s] writing entry points to goal_predictor.egg-info/entry_points.txt
+[3.717s] writing requirements to goal_predictor.egg-info/requires.txt
+[3.717s] writing top-level names to goal_predictor.egg-info/top_level.txt
+[3.718s] reading manifest file 'goal_predictor.egg-info/SOURCES.txt'
+[3.734s] writing manifest file 'goal_predictor.egg-info/SOURCES.txt'
+[3.739s] running build_ext
+[3.740s] Creating /home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/goal_predictor/lib/python3.10/site-packages/goal-predictor.egg-link (link to .)
+[3.740s] Installing crowd_flow_publisher script to /home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/goal_predictor/lib/goal_predictor
+[3.741s] Installing goal_predictor script to /home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/goal_predictor/lib/goal_predictor
+[3.741s] 
+[3.741s] Installed /home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/goal_predictor
+[3.741s] running symlink_data
+[3.838s] Invoked command in '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/goal_predictor' returned '0': PYTHONPATH=/home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/goal_predictor/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/goal_predictor/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/goal_predictor/build --no-deps symlink_data

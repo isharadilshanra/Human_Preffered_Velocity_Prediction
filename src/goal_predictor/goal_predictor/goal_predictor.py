@@ -72,14 +72,6 @@ class GoalPredictor(Node):
         self.goals.x         = [0.0]*self.vel.count  
         self.goals.y         = [0.0]*self.vel.count 
 
-        # if(self.agents.count!=0): # Handling errors in human detection
-        #     self.update_path()
-        #     self.predict_goals()
-        #     self.vel_publisher.publish(self.vel)
-        #     self.goal_publisher.publish(self.goals)
-        #     self.pos_publisher.publish(self.agents)
-
-        # process the buffer data
         for i in range(msg.agent_count):
             x_vel = msg.x_velocities[i].float_data[-1] # most recent data in the buffer
             y_vel = msg.y_velocities[i].float_data[-1] # most recent data in the buffer
