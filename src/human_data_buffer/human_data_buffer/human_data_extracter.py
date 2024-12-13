@@ -47,7 +47,6 @@ class VelocityExtractor(Node):
         for i, (x_position, y_position, class_id) in enumerate(zip(x_positions, y_positions, class_ids)):
             pre_x = self.prev_x.get(i, x_position)
             pre_y = self.prev_y.get(i, y_position)
-
             try:
                 # if agent left
                 if pre_x == 0.0 or pre_y == 0.0:
@@ -67,8 +66,6 @@ class VelocityExtractor(Node):
                 vy = 0.0
                 cl_id = '0'
                 self.get_logger().info('Error calculating velocity in callback_velocity_input')
-
-
             # update previous positions
             self.prev_x[i] = x_position
             self.prev_y[i] = y_position
