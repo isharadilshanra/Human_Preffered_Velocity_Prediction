@@ -64,7 +64,7 @@ class HumanPrefferedVelocity(Node):
 
         kf = KalmanFilter(dim_x=2, dim_z=1)
         kf.set_initial_state(np.array([[0.], [0.]])) # Start with zero speed and acceleration
-        kf.set_state_transition(np.array([[1., 1.], [0., 1.]])) # Constant velocity model
+        kf.set_state_transition(np.array([[1., 1.], [0., 1.]])) # linear acceleration model
         kf.set_measurement_matrix(np.array([[1., 0.]])) # Measure speed only
         kf.set_process_noise_matrix(np.array([[0.1, 0.], [0., 0.1]])) # Process noise (will be updated later)
         kf.set_measurement_noise(np.array([[1.0]])) # Initial measurement noise (will be updated later)
@@ -118,12 +118,8 @@ class HumanPrefferedVelocity(Node):
         # assume x and y variance are independent
         std_dev = np.sqrt(variance)
 
-        mean_speed_data = np.sqrt((mean_x_velocity_data) ** 2 + (mean_y_velocity_data) ** 2)
-
-        
+        mean_speed_data = np.sqrt((mean_x_velocity_data) ** 2 + (mean_y_velocity_data) ** 2)        
         self.velocity_data = np.vstack((mean_speed_data, std_dev, variance))
-
-        # -1 assumes that the number of humans is unknown
         num_people = len(msg.agent_ids)
         self.get_logger().info('Received data from lidar_readings with {} people'.format(num_people))
 

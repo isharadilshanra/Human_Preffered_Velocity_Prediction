@@ -48,11 +48,11 @@ class TestDataPub(Node):
     def timer_callback(self):
         flag = 0
         if random.random() < 0.4:
-            # 20 % chance of agent enter
+            # 40 % chance of agent enter
             self.agennt_entry()
             flag = 1
         if random.random() < 0.38 and self.x_positions:
-            # 15 % chance of agent exit
+            # 38 % chance of agent exit
             self.agent_exit()
             flag = 1
 
