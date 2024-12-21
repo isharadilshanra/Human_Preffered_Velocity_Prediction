@@ -10,6 +10,13 @@ class GoalPredictor(Node):
     def __init__(self):
         super().__init__('goal_predictor')
 
+        # commmented
+        # self.pos_subscription = self.create_subscription(
+        #     Entities,
+        #     'map_data',
+        #     self.predictor_callback,
+        #     10)
+
         # subscribe to the buffer topic
         self.pos_subscription = self.create_subscription(Buffer, '/buffer', self.predictor_callback, 10)
         
