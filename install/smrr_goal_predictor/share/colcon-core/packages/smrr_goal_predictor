@@ -1,1 +1,1 @@
-setuptools
+matplotlib:numpy:rclpy:scipy:std_msgs
