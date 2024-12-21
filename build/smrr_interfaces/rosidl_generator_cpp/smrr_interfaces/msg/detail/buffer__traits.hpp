@@ -43,6 +43,13 @@ inline void to_flow_style_yaml(
     out << ", ";
   }
 
+  // member: agent_count
+  {
+    out << "agent_count: ";
+    rosidl_generator_traits::value_to_yaml(msg.agent_count, out);
+    out << ", ";
+  }
+
   // member: x_velocities
   {
     if (msg.x_velocities.size() == 0) {
@@ -282,6 +289,16 @@ inline void to_block_style_yaml(
         out << "\n";
       }
     }
+  }
+
+  // member: agent_count
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "agent_count: ";
+    rosidl_generator_traits::value_to_yaml(msg.agent_count, out);
+    out << "\n";
   }
 
   // member: x_velocities

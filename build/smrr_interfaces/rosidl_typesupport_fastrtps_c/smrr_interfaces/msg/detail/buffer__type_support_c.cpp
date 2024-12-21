@@ -61,6 +61,11 @@ static bool _Buffer__cdr_serialize(
     cdr.serializeArray(array_ptr, size);
   }
 
+  // Field name: agent_count
+  {
+    cdr << ros_message->agent_count;
+  }
+
   // Field name: x_velocities
   {
     size_t size = ros_message->x_velocities.size;
@@ -205,6 +210,11 @@ static bool _Buffer__cdr_deserialize(
     }
     auto array_ptr = ros_message->agent_ids.data;
     cdr.deserializeArray(array_ptr, size);
+  }
+
+  // Field name: agent_count
+  {
+    cdr >> ros_message->agent_count;
   }
 
   // Field name: x_velocities
@@ -455,6 +465,12 @@ size_t get_serialized_size_smrr_interfaces__msg__Buffer(
     current_alignment += array_size * item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
+  // field.name agent_count
+  {
+    size_t item_size = sizeof(ros_message->agent_count);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
   // field.name x_velocities
   {
     size_t array_size = ros_message->x_velocities.size;
@@ -629,6 +645,14 @@ size_t max_serialized_size_smrr_interfaces__msg__Buffer(
     last_member_size = array_size * sizeof(uint32_t);
     current_alignment += array_size * sizeof(uint32_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+  // member: agent_count
+  {
+    size_t array_size = 1;
+
+    last_member_size = array_size * sizeof(uint16_t);
+    current_alignment += array_size * sizeof(uint16_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint16_t));
   }
   // member: x_velocities
   {

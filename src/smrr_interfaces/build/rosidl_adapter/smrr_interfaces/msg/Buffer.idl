@@ -8,6 +8,8 @@ module smrr_interfaces {
     struct Buffer {
       sequence<int32> agent_ids;
 
+      int16 agent_count;
+
       @verbatim (language="comment", text=
         "Buffer data for each agent (last 10 values for each field)" "\n"
         "Flattened array with up to 10 values per agent")

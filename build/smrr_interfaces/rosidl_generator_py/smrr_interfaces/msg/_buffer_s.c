@@ -118,6 +118,15 @@ bool smrr_interfaces__msg__buffer__convert_from_py(PyObject * _pymsg, void * _ro
     }
     Py_DECREF(field);
   }
+  {  // agent_count
+    PyObject * field = PyObject_GetAttrString(_pymsg, "agent_count");
+    if (!field) {
+      return false;
+    }
+    assert(PyLong_Check(field));
+    ros_message->agent_count = (int16_t)PyLong_AsLong(field);
+    Py_DECREF(field);
+  }
   {  // x_velocities
     PyObject * field = PyObject_GetAttrString(_pymsg, "x_velocities");
     if (!field) {
@@ -906,6 +915,17 @@ PyObject * smrr_interfaces__msg__buffer__convert_to_py(void * raw_ros_message)
       Py_DECREF(ret);
     }
     Py_DECREF(field);
+  }
+  {  // agent_count
+    PyObject * field = NULL;
+    field = PyLong_FromLong(ros_message->agent_count);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "agent_count", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
   }
   {  // x_velocities
     PyObject * field = NULL;

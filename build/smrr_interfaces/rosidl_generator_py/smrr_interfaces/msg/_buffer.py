@@ -71,6 +71,7 @@ class Buffer(metaclass=Metaclass_Buffer):
 
     __slots__ = [
         '_agent_ids',
+        '_agent_count',
         '_x_velocities',
         '_y_velocities',
         '_class_ids',
@@ -87,6 +88,7 @@ class Buffer(metaclass=Metaclass_Buffer):
 
     _fields_and_field_types = {
         'agent_ids': 'sequence<int32>',
+        'agent_count': 'int16',
         'x_velocities': 'sequence<float>',
         'y_velocities': 'sequence<float>',
         'class_ids': 'sequence<string>',
@@ -103,6 +105,7 @@ class Buffer(metaclass=Metaclass_Buffer):
 
     SLOT_TYPES = (
         rosidl_parser.definition.UnboundedSequence(rosidl_parser.definition.BasicType('int32')),  # noqa: E501
+        rosidl_parser.definition.BasicType('int16'),  # noqa: E501
         rosidl_parser.definition.UnboundedSequence(rosidl_parser.definition.BasicType('float')),  # noqa: E501
         rosidl_parser.definition.UnboundedSequence(rosidl_parser.definition.BasicType('float')),  # noqa: E501
         rosidl_parser.definition.UnboundedSequence(rosidl_parser.definition.UnboundedString()),  # noqa: E501
@@ -122,6 +125,7 @@ class Buffer(metaclass=Metaclass_Buffer):
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
         self.agent_ids = array.array('i', kwargs.get('agent_ids', []))
+        self.agent_count = kwargs.get('agent_count', int())
         self.x_velocities = array.array('f', kwargs.get('x_velocities', []))
         self.y_velocities = array.array('f', kwargs.get('y_velocities', []))
         self.class_ids = kwargs.get('class_ids', [])
@@ -165,6 +169,8 @@ class Buffer(metaclass=Metaclass_Buffer):
         if not isinstance(other, self.__class__):
             return False
         if self.agent_ids != other.agent_ids:
+            return False
+        if self.agent_count != other.agent_count:
             return False
         if self.x_velocities != other.x_velocities:
             return False
@@ -224,6 +230,21 @@ class Buffer(metaclass=Metaclass_Buffer):
                  all(val >= -2147483648 and val < 2147483648 for val in value)), \
                 "The 'agent_ids' field must be a set or sequence and each value of type 'int' and each integer in [-2147483648, 2147483647]"
         self._agent_ids = array.array('i', value)
+
+    @builtins.property
+    def agent_count(self):
+        """Message field 'agent_count'."""
+        return self._agent_count
+
+    @agent_count.setter
+    def agent_count(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, int), \
+                "The 'agent_count' field must be of type 'int'"
+            assert value >= -32768 and value < 32768, \
+                "The 'agent_count' field must be an integer in [-32768, 32767]"
+        self._agent_count = value
 
     @builtins.property
     def x_velocities(self):

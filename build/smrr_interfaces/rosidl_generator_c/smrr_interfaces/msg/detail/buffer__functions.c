@@ -39,6 +39,7 @@ smrr_interfaces__msg__Buffer__init(smrr_interfaces__msg__Buffer * msg)
     smrr_interfaces__msg__Buffer__fini(msg);
     return false;
   }
+  // agent_count
   // x_velocities
   if (!rosidl_runtime_c__float__Sequence__init(&msg->x_velocities, 0)) {
     smrr_interfaces__msg__Buffer__fini(msg);
@@ -110,6 +111,7 @@ smrr_interfaces__msg__Buffer__fini(smrr_interfaces__msg__Buffer * msg)
   }
   // agent_ids
   rosidl_runtime_c__int32__Sequence__fini(&msg->agent_ids);
+  // agent_count
   // x_velocities
   rosidl_runtime_c__float__Sequence__fini(&msg->x_velocities);
   // y_velocities
@@ -146,6 +148,10 @@ smrr_interfaces__msg__Buffer__are_equal(const smrr_interfaces__msg__Buffer * lhs
   if (!rosidl_runtime_c__int32__Sequence__are_equal(
       &(lhs->agent_ids), &(rhs->agent_ids)))
   {
+    return false;
+  }
+  // agent_count
+  if (lhs->agent_count != rhs->agent_count) {
     return false;
   }
   // x_velocities
@@ -237,6 +243,8 @@ smrr_interfaces__msg__Buffer__copy(
   {
     return false;
   }
+  // agent_count
+  output->agent_count = input->agent_count;
   // x_velocities
   if (!rosidl_runtime_c__float__Sequence__copy(
       &(input->x_velocities), &(output->x_velocities)))

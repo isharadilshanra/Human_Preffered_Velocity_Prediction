@@ -763,7 +763,7 @@ bool smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__resize_fu
   return rosidl_runtime_c__String__Sequence__init(member, size);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__Buffer_message_member_array[13] = {
+static rosidl_typesupport_introspection_c__MessageMember smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__Buffer_message_member_array[14] = {
   {
     "agent_ids",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_INT32,  // type
@@ -780,6 +780,23 @@ static rosidl_typesupport_introspection_c__MessageMember smrr_interfaces__msg__B
     smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__fetch_function__Buffer__agent_ids,  // fetch(index, &value) function pointer
     smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__assign_function__Buffer__agent_ids,  // assign(index, value) function pointer
     smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__resize_function__Buffer__agent_ids  // resize(index) function pointer
+  },
+  {
+    "agent_count",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_INT16,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(smrr_interfaces__msg__Buffer, agent_count),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
   },
   {
     "x_velocities",  // name
@@ -990,7 +1007,7 @@ static rosidl_typesupport_introspection_c__MessageMember smrr_interfaces__msg__B
 static const rosidl_typesupport_introspection_c__MessageMembers smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__Buffer_message_members = {
   "smrr_interfaces__msg",  // message namespace
   "Buffer",  // message name
-  13,  // number of fields
+  14,  // number of fields
   sizeof(smrr_interfaces__msg__Buffer),
   smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__Buffer_message_member_array,  // message members
   smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__Buffer_init_function,  // function to initialize message memory (memory has to be allocated)

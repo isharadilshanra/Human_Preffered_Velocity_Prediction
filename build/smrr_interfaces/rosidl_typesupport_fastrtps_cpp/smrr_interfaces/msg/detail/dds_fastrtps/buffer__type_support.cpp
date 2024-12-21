@@ -36,6 +36,8 @@ cdr_serialize(
   {
     cdr << ros_message.agent_ids;
   }
+  // Member: agent_count
+  cdr << ros_message.agent_count;
   // Member: x_velocities
   {
     cdr << ros_message.x_velocities;
@@ -97,6 +99,9 @@ cdr_deserialize(
   {
     cdr >> ros_message.agent_ids;
   }
+
+  // Member: agent_count
+  cdr >> ros_message.agent_count;
 
   // Member: x_velocities
   {
@@ -182,6 +187,12 @@ get_serialized_size(
       eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
     size_t item_size = sizeof(ros_message.agent_ids[0]);
     current_alignment += array_size * item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // Member: agent_count
+  {
+    size_t item_size = sizeof(ros_message.agent_count);
+    current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
   // Member: x_velocities
@@ -343,6 +354,15 @@ max_serialized_size_Buffer(
     last_member_size = array_size * sizeof(uint32_t);
     current_alignment += array_size * sizeof(uint32_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+
+  // Member: agent_count
+  {
+    size_t array_size = 1;
+
+    last_member_size = array_size * sizeof(uint16_t);
+    current_alignment += array_size * sizeof(uint16_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint16_t));
   }
 
   // Member: x_velocities

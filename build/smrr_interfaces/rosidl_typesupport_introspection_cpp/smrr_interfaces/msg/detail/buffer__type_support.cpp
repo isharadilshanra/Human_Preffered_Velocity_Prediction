@@ -622,7 +622,7 @@ void resize_function__Buffer__majority_class_id(void * untyped_member, size_t si
   member->resize(size);
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember Buffer_message_member_array[13] = {
+static const ::rosidl_typesupport_introspection_cpp::MessageMember Buffer_message_member_array[14] = {
   {
     "agent_ids",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_INT32,  // type
@@ -639,6 +639,23 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember Buffer_messag
     fetch_function__Buffer__agent_ids,  // fetch(index, &value) function pointer
     assign_function__Buffer__agent_ids,  // assign(index, value) function pointer
     resize_function__Buffer__agent_ids  // resize(index) function pointer
+  },
+  {
+    "agent_count",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_INT16,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(smrr_interfaces::msg::Buffer, agent_count),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
+    nullptr  // resize(index) function pointer
   },
   {
     "x_velocities",  // name
@@ -849,7 +866,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember Buffer_messag
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers Buffer_message_members = {
   "smrr_interfaces::msg",  // message namespace
   "Buffer",  // message name
-  13,  // number of fields
+  14,  // number of fields
   sizeof(smrr_interfaces::msg::Buffer),
   Buffer_message_member_array,  // message members
   Buffer_init_function,  // function to initialize message memory (memory has to be allocated)

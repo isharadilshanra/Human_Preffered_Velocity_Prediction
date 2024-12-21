@@ -38,6 +38,7 @@ extern "C"
 typedef struct smrr_interfaces__msg__Buffer
 {
   rosidl_runtime_c__int32__Sequence agent_ids;
+  int16_t agent_count;
   /// Buffer data for each agent (last 10 values for each field)
   /// Flattened array with up to 10 values per agent
   rosidl_runtime_c__float__Sequence x_velocities;
