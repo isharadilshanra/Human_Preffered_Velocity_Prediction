@@ -22,6 +22,7 @@ setup(
         'console_scripts': [
             'crowd_flow_publisher = goal_predictor.crowd_flow_publisher:main',
             'goal_predictor = goal_predictor.goal_predictor:main',
+            'goal_pedictor_prev = goal_predictor.goal_predictor_prev:main',
         ],
     },
 )

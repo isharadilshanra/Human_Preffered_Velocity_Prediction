@@ -7,7 +7,7 @@
   <maintainer email="isharadilshanra11@gmail.com">ishara</maintainer>
   <license>TODO: License declaration</license>
 
-  <depend>rclpy</depend>
+  
 
   <exec_depend>std_msgs</exec_depend>
   <exec_depend>rclpy</exec_depend>
