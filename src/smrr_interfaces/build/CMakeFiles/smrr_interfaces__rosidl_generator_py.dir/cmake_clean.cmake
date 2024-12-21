@@ -1,6 +1,12 @@
 file(REMOVE_RECURSE
   "CMakeFiles/smrr_interfaces__rosidl_generator_py.dir/rosidl_generator_py/smrr_interfaces/msg/_buffer_s.c.o"
   "CMakeFiles/smrr_interfaces__rosidl_generator_py.dir/rosidl_generator_py/smrr_interfaces/msg/_buffer_s.c.o.d"
+  "CMakeFiles/smrr_interfaces__rosidl_generator_py.dir/rosidl_generator_py/smrr_interfaces/msg/_data_element_float_s.c.o"
+  "CMakeFiles/smrr_interfaces__rosidl_generator_py.dir/rosidl_generator_py/smrr_interfaces/msg/_data_element_float_s.c.o.d"
+  "CMakeFiles/smrr_interfaces__rosidl_generator_py.dir/rosidl_generator_py/smrr_interfaces/msg/_data_element_int_s.c.o"
+  "CMakeFiles/smrr_interfaces__rosidl_generator_py.dir/rosidl_generator_py/smrr_interfaces/msg/_data_element_int_s.c.o.d"
+  "CMakeFiles/smrr_interfaces__rosidl_generator_py.dir/rosidl_generator_py/smrr_interfaces/msg/_data_element_string_s.c.o"
+  "CMakeFiles/smrr_interfaces__rosidl_generator_py.dir/rosidl_generator_py/smrr_interfaces/msg/_data_element_string_s.c.o.d"
   "CMakeFiles/smrr_interfaces__rosidl_generator_py.dir/rosidl_generator_py/smrr_interfaces/msg/_entities_s.c.o"
   "CMakeFiles/smrr_interfaces__rosidl_generator_py.dir/rosidl_generator_py/smrr_interfaces/msg/_entities_s.c.o.d"
   "CMakeFiles/smrr_interfaces__rosidl_generator_py.dir/rosidl_generator_py/smrr_interfaces/msg/_pref_velocity_s.c.o"

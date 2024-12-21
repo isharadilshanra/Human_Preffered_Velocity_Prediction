@@ -1,5 +1,11 @@
 msg/Buffer.idl
 msg/Buffer.msg
+msg/DataElementFloat.idl
+msg/DataElementFloat.msg
+msg/DataElementInt.idl
+msg/DataElementInt.msg
+msg/DataElementString.idl
+msg/DataElementString.msg
 msg/Entities.idl
 msg/Entities.msg
 msg/PrefVelocity.idl

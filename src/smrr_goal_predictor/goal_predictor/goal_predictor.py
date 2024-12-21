@@ -9,6 +9,8 @@ from smrr_interfaces.msg import Entities, Buffer
 class GoalPredictor(Node):
     def __init__(self):
         super().__init__('goal_predictor')
+
+        # commmented
         # self.pos_subscription = self.create_subscription(
         #     Entities,
         #     'map_data',
@@ -49,11 +51,28 @@ class GoalPredictor(Node):
         self.goals  = Entities()
 
     def predictor_callback(self, msg):
-        # self.agents          = msg   
-      
-        # self.vel.count       = self.agents.count
-        # self.vel.x           = [0.0]*self.vel.count  
-        # self.vel.y           = [0.0]*self.vel.count 
+
+        # extract agent positions from buffer
+        # 0th index of buffer same as 0th index of x_positions
+        xpositions_of_agents = []
+        ypositions_of_agents = []
+        xvelocities_of_agents = []
+        yvelocities_of_agents = []
+
+        for i in range(msg.agent_count):
+            xvelocities_of_agents.append(msg.x_velocities[i].float_data[-1]) # most recent data in the buffer
+            yvelocities_of_agents.append(msg.y_velocities[i].float_data[-1]) # most recent data in the buffer
+            xpositions_of_agents.append(msg.x_positions[i].float_data[-1]) # most recent data in the buffer
+            ypositions_of_agents.append(msg.y_positions[i].float_data[-1]) # most recent data in the buffer
+
+        # extract agent count from buffer 
+        self.agents.count    = msg.agent_count
+        self.agents.x        = xpositions_of_agents
+        self.agents.y        = ypositions_of_agents  
+        # extract x and y mean velocities for each agents
+        self.vel.count       = self.agents.count
+        self.vel.x           = xvelocities_of_agents 
+        self.vel.y           = yvelocities_of_agents
 
         
         
@@ -80,8 +99,9 @@ class GoalPredictor(Node):
             for j in range(self.agents.count):
                 self.pedestrian_vel[j][:2*self.path_buffer-2] = self.pedestrian_vel[j][2:2*self.path_buffer] # Shifting velocity buffer
                 
-                self.vel.x[j] = ((self.pedestrian_pos[j][-2] + self.pedestrian_pos[j][-4]) - (self.pedestrian_pos[j][-6] + self.pedestrian_pos[j][-8]))/self.dt
-                self.vel.y[j] = ((self.pedestrian_pos[j][-1] + self.pedestrian_pos[j][-3]) - (self.pedestrian_pos[j][-5] + self.pedestrian_pos[j][-7]))/self.dt  # Velocity calculation
+                # commented
+                #self.vel.x[j] = ((self.pedestrian_pos[j][-2] + self.pedestrian_pos[j][-4]) - (self.pedestrian_pos[j][-6] + self.pedestrian_pos[j][-8]))/self.dt
+                #self.vel.y[j] = ((self.pedestrian_pos[j][-1] + self.pedestrian_pos[j][-3]) - (self.pedestrian_pos[j][-5] + self.pedestrian_pos[j][-7]))/self.dt  # Velocity calculation
                 
                 self.pedestrian_vel[j][2*self.path_buffer-2:] = [self.vel.x[j], self.vel.y[j]]
 
