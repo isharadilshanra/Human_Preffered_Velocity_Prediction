@@ -1,0 +1,350 @@
+[0.575s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install']
+[0.575s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=6, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x77668d1503a0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x77668d123e50>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x77668d123e50>>, mixin_verb=('build',))
+[0.823s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.823s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.823s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.823s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.823s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.823s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.823s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/ishara/fyp/Human_Preffered_Velocity_Prediction'
+[0.823s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.824s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.824s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.824s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.824s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.824s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.824s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.824s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.824s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.838s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.838s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.839s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.839s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.839s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.839s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.839s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.839s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.839s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.839s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.839s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.840s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.840s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.840s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.840s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.840s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.840s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.840s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.840s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.840s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.840s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.840s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.840s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.840s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.840s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.840s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.841s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.841s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.841s] Level 1:colcon.colcon_core.package_identification:_identify(src/goal_predictor) by extensions ['ignore', 'ignore_ament_install']
+[0.841s] Level 1:colcon.colcon_core.package_identification:_identify(src/goal_predictor) by extension 'ignore'
+[0.841s] Level 1:colcon.colcon_core.package_identification:_identify(src/goal_predictor) by extension 'ignore_ament_install'
+[0.841s] Level 1:colcon.colcon_core.package_identification:_identify(src/goal_predictor) by extensions ['colcon_pkg']
+[0.841s] Level 1:colcon.colcon_core.package_identification:_identify(src/goal_predictor) by extension 'colcon_pkg'
+[0.841s] Level 1:colcon.colcon_core.package_identification:_identify(src/goal_predictor) by extensions ['colcon_meta']
+[0.841s] Level 1:colcon.colcon_core.package_identification:_identify(src/goal_predictor) by extension 'colcon_meta'
+[0.841s] Level 1:colcon.colcon_core.package_identification:_identify(src/goal_predictor) by extensions ['ros']
+[0.841s] Level 1:colcon.colcon_core.package_identification:_identify(src/goal_predictor) by extension 'ros'
+[0.841s] Level 1:colcon.colcon_core.package_identification:_identify(src/goal_predictor) by extensions ['cmake', 'python']
+[0.841s] Level 1:colcon.colcon_core.package_identification:_identify(src/goal_predictor) by extension 'cmake'
+[0.841s] Level 1:colcon.colcon_core.package_identification:_identify(src/goal_predictor) by extension 'python'
+[0.841s] Level 1:colcon.colcon_core.package_identification:_identify(src/goal_predictor) by extensions ['python_setup_py']
+[0.841s] Level 1:colcon.colcon_core.package_identification:_identify(src/goal_predictor) by extension 'python_setup_py'
+[0.841s] Level 1:colcon.colcon_core.package_identification:_identify(src/goal_predictor/goal_predictor) by extensions ['ignore', 'ignore_ament_install']
+[0.842s] Level 1:colcon.colcon_core.package_identification:_identify(src/goal_predictor/goal_predictor) by extension 'ignore'
+[0.842s] Level 1:colcon.colcon_core.package_identification:_identify(src/goal_predictor/goal_predictor) by extension 'ignore_ament_install'
+[0.842s] Level 1:colcon.colcon_core.package_identification:_identify(src/goal_predictor/goal_predictor) by extensions ['colcon_pkg']
+[0.842s] Level 1:colcon.colcon_core.package_identification:_identify(src/goal_predictor/goal_predictor) by extension 'colcon_pkg'
+[0.842s] Level 1:colcon.colcon_core.package_identification:_identify(src/goal_predictor/goal_predictor) by extensions ['colcon_meta']
+[0.842s] Level 1:colcon.colcon_core.package_identification:_identify(src/goal_predictor/goal_predictor) by extension 'colcon_meta'
+[0.842s] Level 1:colcon.colcon_core.package_identification:_identify(src/goal_predictor/goal_predictor) by extensions ['ros']
+[0.842s] Level 1:colcon.colcon_core.package_identification:_identify(src/goal_predictor/goal_predictor) by extension 'ros'
+[0.842s] Level 1:colcon.colcon_core.package_identification:_identify(src/goal_predictor/goal_predictor) by extensions ['cmake', 'python']
+[0.842s] Level 1:colcon.colcon_core.package_identification:_identify(src/goal_predictor/goal_predictor) by extension 'cmake'
+[0.842s] Level 1:colcon.colcon_core.package_identification:_identify(src/goal_predictor/goal_predictor) by extension 'python'
+[0.842s] Level 1:colcon.colcon_core.package_identification:_identify(src/goal_predictor/goal_predictor) by extensions ['python_setup_py']
+[0.842s] Level 1:colcon.colcon_core.package_identification:_identify(src/goal_predictor/goal_predictor) by extension 'python_setup_py'
+[0.842s] Level 1:colcon.colcon_core.package_identification:_identify(src/human_data_buffer) by extensions ['ignore', 'ignore_ament_install']
+[0.842s] Level 1:colcon.colcon_core.package_identification:_identify(src/human_data_buffer) by extension 'ignore'
+[0.842s] Level 1:colcon.colcon_core.package_identification:_identify(src/human_data_buffer) by extension 'ignore_ament_install'
+[0.842s] Level 1:colcon.colcon_core.package_identification:_identify(src/human_data_buffer) by extensions ['colcon_pkg']
+[0.843s] Level 1:colcon.colcon_core.package_identification:_identify(src/human_data_buffer) by extension 'colcon_pkg'
+[0.843s] Level 1:colcon.colcon_core.package_identification:_identify(src/human_data_buffer) by extensions ['colcon_meta']
+[0.843s] Level 1:colcon.colcon_core.package_identification:_identify(src/human_data_buffer) by extension 'colcon_meta'
+[0.843s] Level 1:colcon.colcon_core.package_identification:_identify(src/human_data_buffer) by extensions ['ros']
+[0.843s] Level 1:colcon.colcon_core.package_identification:_identify(src/human_data_buffer) by extension 'ros'
+[0.847s] DEBUG:colcon.colcon_core.package_identification:Package 'src/human_data_buffer' with type 'ros.ament_python' and name 'human_data_buffer'
+[0.847s] Level 1:colcon.colcon_core.package_identification:_identify(src/preffered_velocity_prediction) by extensions ['ignore', 'ignore_ament_install']
+[0.847s] Level 1:colcon.colcon_core.package_identification:_identify(src/preffered_velocity_prediction) by extension 'ignore'
+[0.847s] Level 1:colcon.colcon_core.package_identification:_identify(src/preffered_velocity_prediction) by extension 'ignore_ament_install'
+[0.847s] Level 1:colcon.colcon_core.package_identification:_identify(src/preffered_velocity_prediction) by extensions ['colcon_pkg']
+[0.848s] Level 1:colcon.colcon_core.package_identification:_identify(src/preffered_velocity_prediction) by extension 'colcon_pkg'
+[0.848s] Level 1:colcon.colcon_core.package_identification:_identify(src/preffered_velocity_prediction) by extensions ['colcon_meta']
+[0.848s] Level 1:colcon.colcon_core.package_identification:_identify(src/preffered_velocity_prediction) by extension 'colcon_meta'
+[0.848s] Level 1:colcon.colcon_core.package_identification:_identify(src/preffered_velocity_prediction) by extensions ['ros']
+[0.848s] Level 1:colcon.colcon_core.package_identification:_identify(src/preffered_velocity_prediction) by extension 'ros'
+[0.849s] DEBUG:colcon.colcon_core.package_identification:Package 'src/preffered_velocity_prediction' with type 'ros.ament_python' and name 'preffered_velocity_prediction'
+[0.849s] Level 1:colcon.colcon_core.package_identification:_identify(src/smrr_goal_predictor) by extensions ['ignore', 'ignore_ament_install']
+[0.849s] Level 1:colcon.colcon_core.package_identification:_identify(src/smrr_goal_predictor) by extension 'ignore'
+[0.849s] Level 1:colcon.colcon_core.package_identification:_identify(src/smrr_goal_predictor) by extension 'ignore_ament_install'
+[0.849s] Level 1:colcon.colcon_core.package_identification:_identify(src/smrr_goal_predictor) by extensions ['colcon_pkg']
+[0.849s] Level 1:colcon.colcon_core.package_identification:_identify(src/smrr_goal_predictor) by extension 'colcon_pkg'
+[0.849s] Level 1:colcon.colcon_core.package_identification:_identify(src/smrr_goal_predictor) by extensions ['colcon_meta']
+[0.850s] Level 1:colcon.colcon_core.package_identification:_identify(src/smrr_goal_predictor) by extension 'colcon_meta'
+[0.850s] Level 1:colcon.colcon_core.package_identification:_identify(src/smrr_goal_predictor) by extensions ['ros']
+[0.850s] Level 1:colcon.colcon_core.package_identification:_identify(src/smrr_goal_predictor) by extension 'ros'
+[0.850s] DEBUG:colcon.colcon_core.package_identification:Package 'src/smrr_goal_predictor' with type 'ros.ament_python' and name 'smrr_goal_predictor'
+[0.850s] Level 1:colcon.colcon_core.package_identification:_identify(src/smrr_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.850s] Level 1:colcon.colcon_core.package_identification:_identify(src/smrr_interfaces) by extension 'ignore'
+[0.851s] Level 1:colcon.colcon_core.package_identification:_identify(src/smrr_interfaces) by extension 'ignore_ament_install'
+[0.851s] Level 1:colcon.colcon_core.package_identification:_identify(src/smrr_interfaces) by extensions ['colcon_pkg']
+[0.851s] Level 1:colcon.colcon_core.package_identification:_identify(src/smrr_interfaces) by extension 'colcon_pkg'
+[0.851s] Level 1:colcon.colcon_core.package_identification:_identify(src/smrr_interfaces) by extensions ['colcon_meta']
+[0.851s] Level 1:colcon.colcon_core.package_identification:_identify(src/smrr_interfaces) by extension 'colcon_meta'
+[0.851s] Level 1:colcon.colcon_core.package_identification:_identify(src/smrr_interfaces) by extensions ['ros']
+[0.851s] Level 1:colcon.colcon_core.package_identification:_identify(src/smrr_interfaces) by extension 'ros'
+[0.851s] DEBUG:colcon.colcon_core.package_identification:Package 'src/smrr_interfaces' with type 'ros.ament_cmake' and name 'smrr_interfaces'
+[0.851s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.852s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.852s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.852s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.852s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[1.001s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[1.001s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[1.051s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 4 installed packages in /home/ishara/fyp/Human_Preffered_Velocity_Prediction/install
+[1.052s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/ishara/cpp_pubsub/install
+[1.053s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/ishara/ros2_ws/install
+[1.054s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 7 installed packages in /home/ishara/prelab_ros2_ws/install
+[1.058s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 398 installed packages in /opt/ros/humble
+[1.062s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[1.269s] Level 5:colcon.colcon_core.verb:set package 'human_data_buffer' build argument 'cmake_args' from command line to 'None'
+[1.269s] Level 5:colcon.colcon_core.verb:set package 'human_data_buffer' build argument 'cmake_target' from command line to 'None'
+[1.269s] Level 5:colcon.colcon_core.verb:set package 'human_data_buffer' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.269s] Level 5:colcon.colcon_core.verb:set package 'human_data_buffer' build argument 'cmake_clean_cache' from command line to 'False'
+[1.269s] Level 5:colcon.colcon_core.verb:set package 'human_data_buffer' build argument 'cmake_clean_first' from command line to 'False'
+[1.269s] Level 5:colcon.colcon_core.verb:set package 'human_data_buffer' build argument 'cmake_force_configure' from command line to 'False'
+[1.269s] Level 5:colcon.colcon_core.verb:set package 'human_data_buffer' build argument 'ament_cmake_args' from command line to 'None'
+[1.270s] Level 5:colcon.colcon_core.verb:set package 'human_data_buffer' build argument 'catkin_cmake_args' from command line to 'None'
+[1.270s] Level 5:colcon.colcon_core.verb:set package 'human_data_buffer' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.270s] DEBUG:colcon.colcon_core.verb:Building package 'human_data_buffer' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/human_data_buffer', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/human_data_buffer', 'merge_install': False, 'path': '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/src/human_data_buffer', 'symlink_install': True, 'test_result_base': None}
+[1.270s] Level 5:colcon.colcon_core.verb:set package 'preffered_velocity_prediction' build argument 'cmake_args' from command line to 'None'
+[1.270s] Level 5:colcon.colcon_core.verb:set package 'preffered_velocity_prediction' build argument 'cmake_target' from command line to 'None'
+[1.270s] Level 5:colcon.colcon_core.verb:set package 'preffered_velocity_prediction' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.270s] Level 5:colcon.colcon_core.verb:set package 'preffered_velocity_prediction' build argument 'cmake_clean_cache' from command line to 'False'
+[1.270s] Level 5:colcon.colcon_core.verb:set package 'preffered_velocity_prediction' build argument 'cmake_clean_first' from command line to 'False'
+[1.270s] Level 5:colcon.colcon_core.verb:set package 'preffered_velocity_prediction' build argument 'cmake_force_configure' from command line to 'False'
+[1.270s] Level 5:colcon.colcon_core.verb:set package 'preffered_velocity_prediction' build argument 'ament_cmake_args' from command line to 'None'
+[1.270s] Level 5:colcon.colcon_core.verb:set package 'preffered_velocity_prediction' build argument 'catkin_cmake_args' from command line to 'None'
+[1.270s] Level 5:colcon.colcon_core.verb:set package 'preffered_velocity_prediction' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.270s] DEBUG:colcon.colcon_core.verb:Building package 'preffered_velocity_prediction' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/preffered_velocity_prediction', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/preffered_velocity_prediction', 'merge_install': False, 'path': '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/src/preffered_velocity_prediction', 'symlink_install': True, 'test_result_base': None}
+[1.271s] Level 5:colcon.colcon_core.verb:set package 'smrr_goal_predictor' build argument 'cmake_args' from command line to 'None'
+[1.271s] Level 5:colcon.colcon_core.verb:set package 'smrr_goal_predictor' build argument 'cmake_target' from command line to 'None'
+[1.271s] Level 5:colcon.colcon_core.verb:set package 'smrr_goal_predictor' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.271s] Level 5:colcon.colcon_core.verb:set package 'smrr_goal_predictor' build argument 'cmake_clean_cache' from command line to 'False'
+[1.271s] Level 5:colcon.colcon_core.verb:set package 'smrr_goal_predictor' build argument 'cmake_clean_first' from command line to 'False'
+[1.271s] Level 5:colcon.colcon_core.verb:set package 'smrr_goal_predictor' build argument 'cmake_force_configure' from command line to 'False'
+[1.271s] Level 5:colcon.colcon_core.verb:set package 'smrr_goal_predictor' build argument 'ament_cmake_args' from command line to 'None'
+[1.271s] Level 5:colcon.colcon_core.verb:set package 'smrr_goal_predictor' build argument 'catkin_cmake_args' from command line to 'None'
+[1.271s] Level 5:colcon.colcon_core.verb:set package 'smrr_goal_predictor' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.271s] DEBUG:colcon.colcon_core.verb:Building package 'smrr_goal_predictor' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/smrr_goal_predictor', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_goal_predictor', 'merge_install': False, 'path': '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/src/smrr_goal_predictor', 'symlink_install': True, 'test_result_base': None}
+[1.271s] Level 5:colcon.colcon_core.verb:set package 'smrr_interfaces' build argument 'cmake_args' from command line to 'None'
+[1.271s] Level 5:colcon.colcon_core.verb:set package 'smrr_interfaces' build argument 'cmake_target' from command line to 'None'
+[1.271s] Level 5:colcon.colcon_core.verb:set package 'smrr_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.271s] Level 5:colcon.colcon_core.verb:set package 'smrr_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[1.272s] Level 5:colcon.colcon_core.verb:set package 'smrr_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[1.272s] Level 5:colcon.colcon_core.verb:set package 'smrr_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[1.272s] Level 5:colcon.colcon_core.verb:set package 'smrr_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[1.272s] Level 5:colcon.colcon_core.verb:set package 'smrr_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[1.272s] Level 5:colcon.colcon_core.verb:set package 'smrr_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.272s] DEBUG:colcon.colcon_core.verb:Building package 'smrr_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/smrr_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_interfaces', 'merge_install': False, 'path': '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/src/smrr_interfaces', 'symlink_install': True, 'test_result_base': None}
+[1.272s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[1.274s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[1.274s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/src/human_data_buffer' with build type 'ament_python'
+[1.274s] Level 1:colcon.colcon_core.shell:create_environment_hook('human_data_buffer', 'ament_prefix_path')
+[1.303s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[1.304s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/human_data_buffer/share/human_data_buffer/hook/ament_prefix_path.ps1'
+[1.318s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/human_data_buffer/share/human_data_buffer/hook/ament_prefix_path.dsv'
+[1.337s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/human_data_buffer/share/human_data_buffer/hook/ament_prefix_path.sh'
+[1.339s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.339s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.350s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/src/preffered_velocity_prediction' with build type 'ament_python'
+[1.350s] Level 1:colcon.colcon_core.shell:create_environment_hook('preffered_velocity_prediction', 'ament_prefix_path')
+[1.351s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/preffered_velocity_prediction/share/preffered_velocity_prediction/hook/ament_prefix_path.ps1'
+[1.352s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/preffered_velocity_prediction/share/preffered_velocity_prediction/hook/ament_prefix_path.dsv'
+[1.353s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/preffered_velocity_prediction/share/preffered_velocity_prediction/hook/ament_prefix_path.sh'
+[1.354s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.354s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.364s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/src/smrr_goal_predictor' with build type 'ament_python'
+[1.365s] Level 1:colcon.colcon_core.shell:create_environment_hook('smrr_goal_predictor', 'ament_prefix_path')
+[1.365s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_goal_predictor/share/smrr_goal_predictor/hook/ament_prefix_path.ps1'
+[1.367s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_goal_predictor/share/smrr_goal_predictor/hook/ament_prefix_path.dsv'
+[1.368s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_goal_predictor/share/smrr_goal_predictor/hook/ament_prefix_path.sh'
+[1.369s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.369s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.378s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/src/smrr_interfaces' with build type 'ament_cmake'
+[1.378s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/src/smrr_interfaces'
+[1.378s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.378s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.865s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/src/human_data_buffer'
+[1.866s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.866s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.326s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/src/preffered_velocity_prediction'
+[2.327s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.327s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.792s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/src/smrr_goal_predictor'
+[2.793s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.793s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.852s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/smrr_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_goal_predictor:/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/preffered_velocity_prediction:/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/human_data_buffer:/home/ishara/ros2_ws/install/my_robot_controller:/opt/ros/humble /usr/bin/cmake --build /home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/smrr_interfaces -- -j6 -l6
+[4.100s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/smrr_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_goal_predictor:/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/preffered_velocity_prediction:/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/human_data_buffer:/home/ishara/ros2_ws/install/my_robot_controller:/opt/ros/humble /usr/bin/cmake --build /home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/smrr_interfaces -- -j6 -l6
+[4.364s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/smrr_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_goal_predictor:/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/preffered_velocity_prediction:/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/human_data_buffer:/home/ishara/ros2_ws/install/my_robot_controller:/opt/ros/humble /usr/bin/cmake --install /home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/smrr_interfaces
+[4.471s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/preffered_velocity_prediction': PYTHONPATH=/home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/preffered_velocity_prediction/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/preffered_velocity_prediction/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/preffered_velocity_prediction/build --no-deps symlink_data
+[4.487s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/smrr_goal_predictor': PYTHONPATH=/home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/smrr_goal_predictor/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_goal_predictor/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/smrr_goal_predictor/build --no-deps symlink_data
+[4.497s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/human_data_buffer': PYTHONPATH=/home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/human_data_buffer/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/human_data_buffer/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/human_data_buffer/build --no-deps symlink_data
+[4.886s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(smrr_interfaces)
+[4.888s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/smrr_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_goal_predictor:/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/preffered_velocity_prediction:/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/human_data_buffer:/home/ishara/ros2_ws/install/my_robot_controller:/opt/ros/humble /usr/bin/cmake --install /home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/smrr_interfaces
+[4.953s] Level 1:colcon.colcon_core.environment:checking '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_interfaces' for CMake module files
+[4.954s] Level 1:colcon.colcon_core.environment:checking '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_interfaces' for CMake config files
+[4.957s] Level 1:colcon.colcon_core.shell:create_environment_hook('smrr_interfaces', 'cmake_prefix_path')
+[4.957s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_interfaces/share/smrr_interfaces/hook/cmake_prefix_path.ps1'
+[4.958s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_interfaces/share/smrr_interfaces/hook/cmake_prefix_path.dsv'
+[4.959s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_interfaces/share/smrr_interfaces/hook/cmake_prefix_path.sh'
+[4.960s] Level 1:colcon.colcon_core.environment:checking '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_interfaces/lib'
+[4.961s] Level 1:colcon.colcon_core.shell:create_environment_hook('smrr_interfaces', 'ld_library_path_lib')
+[4.961s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_interfaces/share/smrr_interfaces/hook/ld_library_path_lib.ps1'
+[4.962s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_interfaces/share/smrr_interfaces/hook/ld_library_path_lib.dsv'
+[4.963s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_interfaces/share/smrr_interfaces/hook/ld_library_path_lib.sh'
+[4.963s] Level 1:colcon.colcon_core.environment:checking '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_interfaces/bin'
+[4.963s] Level 1:colcon.colcon_core.environment:checking '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_interfaces/lib/pkgconfig/smrr_interfaces.pc'
+[4.964s] Level 1:colcon.colcon_core.environment:checking '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_interfaces/lib/python3.10/site-packages'
+[4.964s] Level 1:colcon.colcon_core.shell:create_environment_hook('smrr_interfaces', 'pythonpath')
+[4.965s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_interfaces/share/smrr_interfaces/hook/pythonpath.ps1'
+[4.965s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_interfaces/share/smrr_interfaces/hook/pythonpath.dsv'
+[4.966s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_interfaces/share/smrr_interfaces/hook/pythonpath.sh'
+[4.967s] Level 1:colcon.colcon_core.environment:checking '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_interfaces/bin'
+[4.968s] INFO:colcon.colcon_core.shell:Creating package script '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_interfaces/share/smrr_interfaces/package.ps1'
+[4.970s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_interfaces/share/smrr_interfaces/package.dsv'
+[4.972s] INFO:colcon.colcon_core.shell:Creating package script '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_interfaces/share/smrr_interfaces/package.sh'
+[4.973s] INFO:colcon.colcon_core.shell:Creating package script '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_interfaces/share/smrr_interfaces/package.bash'
+[4.990s] INFO:colcon.colcon_core.shell:Creating package script '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_interfaces/share/smrr_interfaces/package.zsh'
+[4.999s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_interfaces/share/colcon-core/packages/smrr_interfaces)
+[5.225s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(smrr_interfaces)
+[5.225s] Level 1:colcon.colcon_core.environment:checking '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_interfaces' for CMake module files
+[5.226s] Level 1:colcon.colcon_core.environment:checking '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_interfaces' for CMake config files
+[5.227s] Level 1:colcon.colcon_core.shell:create_environment_hook('smrr_interfaces', 'cmake_prefix_path')
+[5.227s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_interfaces/share/smrr_interfaces/hook/cmake_prefix_path.ps1'
+[5.228s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_interfaces/share/smrr_interfaces/hook/cmake_prefix_path.dsv'
+[5.228s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_interfaces/share/smrr_interfaces/hook/cmake_prefix_path.sh'
+[5.229s] Level 1:colcon.colcon_core.environment:checking '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_interfaces/lib'
+[5.229s] Level 1:colcon.colcon_core.shell:create_environment_hook('smrr_interfaces', 'ld_library_path_lib')
+[5.229s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_interfaces/share/smrr_interfaces/hook/ld_library_path_lib.ps1'
+[5.230s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_interfaces/share/smrr_interfaces/hook/ld_library_path_lib.dsv'
+[5.230s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_interfaces/share/smrr_interfaces/hook/ld_library_path_lib.sh'
+[5.231s] Level 1:colcon.colcon_core.environment:checking '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_interfaces/bin'
+[5.231s] Level 1:colcon.colcon_core.environment:checking '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_interfaces/lib/pkgconfig/smrr_interfaces.pc'
+[5.231s] Level 1:colcon.colcon_core.environment:checking '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_interfaces/lib/python3.10/site-packages'
+[5.231s] Level 1:colcon.colcon_core.shell:create_environment_hook('smrr_interfaces', 'pythonpath')
+[5.231s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_interfaces/share/smrr_interfaces/hook/pythonpath.ps1'
+[5.261s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_interfaces/share/smrr_interfaces/hook/pythonpath.dsv'
+[5.262s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_interfaces/share/smrr_interfaces/hook/pythonpath.sh'
+[5.264s] Level 1:colcon.colcon_core.environment:checking '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_interfaces/bin'
+[5.265s] INFO:colcon.colcon_core.shell:Creating package script '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_interfaces/share/smrr_interfaces/package.ps1'
+[5.266s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_interfaces/share/smrr_interfaces/package.dsv'
+[5.267s] INFO:colcon.colcon_core.shell:Creating package script '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_interfaces/share/smrr_interfaces/package.sh'
+[5.268s] INFO:colcon.colcon_core.shell:Creating package script '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_interfaces/share/smrr_interfaces/package.bash'
+[5.269s] INFO:colcon.colcon_core.shell:Creating package script '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_interfaces/share/smrr_interfaces/package.zsh'
+[5.270s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_interfaces/share/colcon-core/packages/smrr_interfaces)
+[5.302s] Level 1:colcon.colcon_core.shell:create_environment_hook('human_data_buffer', 'pythonpath_develop')
+[5.302s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/human_data_buffer/share/human_data_buffer/hook/pythonpath_develop.ps1'
+[5.303s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/human_data_buffer' returned '0': PYTHONPATH=/home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/human_data_buffer/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/human_data_buffer/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/human_data_buffer/build --no-deps symlink_data
+[5.304s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/human_data_buffer/share/human_data_buffer/hook/pythonpath_develop.dsv'
+[5.305s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/human_data_buffer/share/human_data_buffer/hook/pythonpath_develop.sh'
+[5.306s] Level 1:colcon.colcon_core.environment:checking '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/human_data_buffer' for CMake module files
+[5.307s] Level 1:colcon.colcon_core.environment:checking '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/human_data_buffer' for CMake config files
+[5.309s] Level 1:colcon.colcon_core.environment:checking '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/human_data_buffer/lib'
+[5.309s] Level 1:colcon.colcon_core.environment:checking '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/human_data_buffer/bin'
+[5.309s] Level 1:colcon.colcon_core.environment:checking '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/human_data_buffer/lib/pkgconfig/human_data_buffer.pc'
+[5.310s] Level 1:colcon.colcon_core.environment:checking '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/human_data_buffer/lib/python3.10/site-packages'
+[5.310s] Level 1:colcon.colcon_core.shell:create_environment_hook('human_data_buffer', 'pythonpath')
+[5.310s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/human_data_buffer/share/human_data_buffer/hook/pythonpath.ps1'
+[5.312s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/human_data_buffer/share/human_data_buffer/hook/pythonpath.dsv'
+[5.313s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/human_data_buffer/share/human_data_buffer/hook/pythonpath.sh'
+[5.314s] Level 1:colcon.colcon_core.environment:checking '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/human_data_buffer/bin'
+[5.314s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(human_data_buffer)
+[5.315s] INFO:colcon.colcon_core.shell:Creating package script '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/human_data_buffer/share/human_data_buffer/package.ps1'
+[5.316s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/human_data_buffer/share/human_data_buffer/package.dsv'
+[5.317s] INFO:colcon.colcon_core.shell:Creating package script '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/human_data_buffer/share/human_data_buffer/package.sh'
+[5.318s] INFO:colcon.colcon_core.shell:Creating package script '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/human_data_buffer/share/human_data_buffer/package.bash'
+[5.319s] INFO:colcon.colcon_core.shell:Creating package script '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/human_data_buffer/share/human_data_buffer/package.zsh'
+[5.320s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/human_data_buffer/share/colcon-core/packages/human_data_buffer)
+[5.320s] Level 1:colcon.colcon_core.shell:create_environment_hook('smrr_goal_predictor', 'pythonpath_develop')
+[5.321s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/smrr_goal_predictor/share/smrr_goal_predictor/hook/pythonpath_develop.ps1'
+[5.322s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/smrr_goal_predictor/share/smrr_goal_predictor/hook/pythonpath_develop.dsv'
+[5.323s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/smrr_goal_predictor' returned '0': PYTHONPATH=/home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/smrr_goal_predictor/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_goal_predictor/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/smrr_goal_predictor/build --no-deps symlink_data
+[5.324s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/smrr_goal_predictor/share/smrr_goal_predictor/hook/pythonpath_develop.sh'
+[5.325s] Level 1:colcon.colcon_core.environment:checking '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_goal_predictor' for CMake module files
+[5.326s] Level 1:colcon.colcon_core.environment:checking '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_goal_predictor' for CMake config files
+[5.327s] Level 1:colcon.colcon_core.environment:checking '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_goal_predictor/lib'
+[5.327s] Level 1:colcon.colcon_core.environment:checking '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_goal_predictor/bin'
+[5.327s] Level 1:colcon.colcon_core.environment:checking '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_goal_predictor/lib/pkgconfig/smrr_goal_predictor.pc'
+[5.328s] Level 1:colcon.colcon_core.environment:checking '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_goal_predictor/lib/python3.10/site-packages'
+[5.328s] Level 1:colcon.colcon_core.shell:create_environment_hook('smrr_goal_predictor', 'pythonpath')
+[5.328s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_goal_predictor/share/smrr_goal_predictor/hook/pythonpath.ps1'
+[5.329s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_goal_predictor/share/smrr_goal_predictor/hook/pythonpath.dsv'
+[5.330s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_goal_predictor/share/smrr_goal_predictor/hook/pythonpath.sh'
+[5.331s] Level 1:colcon.colcon_core.environment:checking '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_goal_predictor/bin'
+[5.331s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(smrr_goal_predictor)
+[5.331s] INFO:colcon.colcon_core.shell:Creating package script '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_goal_predictor/share/smrr_goal_predictor/package.ps1'
+[5.333s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_goal_predictor/share/smrr_goal_predictor/package.dsv'
+[5.333s] INFO:colcon.colcon_core.shell:Creating package script '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_goal_predictor/share/smrr_goal_predictor/package.sh'
+[5.334s] INFO:colcon.colcon_core.shell:Creating package script '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_goal_predictor/share/smrr_goal_predictor/package.bash'
+[5.335s] INFO:colcon.colcon_core.shell:Creating package script '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_goal_predictor/share/smrr_goal_predictor/package.zsh'
+[5.336s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/smrr_goal_predictor/share/colcon-core/packages/smrr_goal_predictor)
+[5.337s] Level 1:colcon.colcon_core.shell:create_environment_hook('preffered_velocity_prediction', 'pythonpath_develop')
+[5.338s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/preffered_velocity_prediction/share/preffered_velocity_prediction/hook/pythonpath_develop.ps1'
+[5.338s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/preffered_velocity_prediction/share/preffered_velocity_prediction/hook/pythonpath_develop.dsv'
+[5.339s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/preffered_velocity_prediction' returned '0': PYTHONPATH=/home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/preffered_velocity_prediction/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/preffered_velocity_prediction/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/preffered_velocity_prediction/build --no-deps symlink_data
+[5.339s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/preffered_velocity_prediction/share/preffered_velocity_prediction/hook/pythonpath_develop.sh'
+[5.340s] Level 1:colcon.colcon_core.environment:checking '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/preffered_velocity_prediction' for CMake module files
+[5.341s] Level 1:colcon.colcon_core.environment:checking '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/preffered_velocity_prediction' for CMake config files
+[5.341s] Level 1:colcon.colcon_core.environment:checking '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/preffered_velocity_prediction/lib'
+[5.341s] Level 1:colcon.colcon_core.environment:checking '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/preffered_velocity_prediction/bin'
+[5.341s] Level 1:colcon.colcon_core.environment:checking '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/preffered_velocity_prediction/lib/pkgconfig/preffered_velocity_prediction.pc'
+[5.342s] Level 1:colcon.colcon_core.environment:checking '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/preffered_velocity_prediction/lib/python3.10/site-packages'
+[5.342s] Level 1:colcon.colcon_core.shell:create_environment_hook('preffered_velocity_prediction', 'pythonpath')
+[5.342s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/preffered_velocity_prediction/share/preffered_velocity_prediction/hook/pythonpath.ps1'
+[5.343s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/preffered_velocity_prediction/share/preffered_velocity_prediction/hook/pythonpath.dsv'
+[5.343s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/preffered_velocity_prediction/share/preffered_velocity_prediction/hook/pythonpath.sh'
+[5.344s] Level 1:colcon.colcon_core.environment:checking '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/preffered_velocity_prediction/bin'
+[5.344s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(preffered_velocity_prediction)
+[5.344s] INFO:colcon.colcon_core.shell:Creating package script '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/preffered_velocity_prediction/share/preffered_velocity_prediction/package.ps1'
+[5.345s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/preffered_velocity_prediction/share/preffered_velocity_prediction/package.dsv'
+[5.345s] INFO:colcon.colcon_core.shell:Creating package script '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/preffered_velocity_prediction/share/preffered_velocity_prediction/package.sh'
+[5.346s] INFO:colcon.colcon_core.shell:Creating package script '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/preffered_velocity_prediction/share/preffered_velocity_prediction/package.bash'
+[5.346s] INFO:colcon.colcon_core.shell:Creating package script '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/preffered_velocity_prediction/share/preffered_velocity_prediction/package.zsh'
+[5.347s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/preffered_velocity_prediction/share/colcon-core/packages/preffered_velocity_prediction)
+[5.347s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[5.347s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[5.347s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[5.347s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[5.369s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[5.369s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[5.369s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[5.410s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[5.411s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/local_setup.ps1'
+[5.417s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/_local_setup_util_ps1.py'
+[5.430s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/setup.ps1'
+[5.482s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/local_setup.sh'
+[5.505s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/_local_setup_util_sh.py'
+[5.506s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/setup.sh'
+[5.509s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/local_setup.bash'
+[5.510s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/setup.bash'
+[5.513s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/local_setup.zsh'
+[5.515s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/setup.zsh'

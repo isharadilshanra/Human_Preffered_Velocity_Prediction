@@ -14,10 +14,6 @@
 
 // Include directives for member types
 // Member `agent_ids`
-// Member `x_velocities`
-// Member `y_velocities`
-// Member `x_positions`
-// Member `y_positions`
 // Member `x_mean`
 // Member `y_mean`
 // Member `x_std_dev`
@@ -25,7 +21,20 @@
 // Member `x_variance`
 // Member `y_variance`
 #include "rosidl_runtime_c/primitives_sequence_functions.h"
+// Member `x_velocities`
+// Member `y_velocities`
+// Member `x_positions`
+// Member `y_positions`
+#include "smrr_interfaces/msg/data_element_float.h"
+// Member `x_velocities`
+// Member `y_velocities`
+// Member `x_positions`
+// Member `y_positions`
+#include "smrr_interfaces/msg/detail/data_element_float__rosidl_typesupport_introspection_c.h"
 // Member `class_ids`
+#include "smrr_interfaces/msg/data_element_string.h"
+// Member `class_ids`
+#include "smrr_interfaces/msg/detail/data_element_string__rosidl_typesupport_introspection_c.h"
 // Member `majority_class_id`
 #include "rosidl_runtime_c/string_functions.h"
 
@@ -106,276 +115,276 @@ bool smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__resize_fu
 size_t smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__size_function__Buffer__x_velocities(
   const void * untyped_member)
 {
-  const rosidl_runtime_c__float__Sequence * member =
-    (const rosidl_runtime_c__float__Sequence *)(untyped_member);
+  const smrr_interfaces__msg__DataElementFloat__Sequence * member =
+    (const smrr_interfaces__msg__DataElementFloat__Sequence *)(untyped_member);
   return member->size;
 }
 
 const void * smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__get_const_function__Buffer__x_velocities(
   const void * untyped_member, size_t index)
 {
-  const rosidl_runtime_c__float__Sequence * member =
-    (const rosidl_runtime_c__float__Sequence *)(untyped_member);
+  const smrr_interfaces__msg__DataElementFloat__Sequence * member =
+    (const smrr_interfaces__msg__DataElementFloat__Sequence *)(untyped_member);
   return &member->data[index];
 }
 
 void * smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__get_function__Buffer__x_velocities(
   void * untyped_member, size_t index)
 {
-  rosidl_runtime_c__float__Sequence * member =
-    (rosidl_runtime_c__float__Sequence *)(untyped_member);
+  smrr_interfaces__msg__DataElementFloat__Sequence * member =
+    (smrr_interfaces__msg__DataElementFloat__Sequence *)(untyped_member);
   return &member->data[index];
 }
 
 void smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__fetch_function__Buffer__x_velocities(
   const void * untyped_member, size_t index, void * untyped_value)
 {
-  const float * item =
-    ((const float *)
+  const smrr_interfaces__msg__DataElementFloat * item =
+    ((const smrr_interfaces__msg__DataElementFloat *)
     smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__get_const_function__Buffer__x_velocities(untyped_member, index));
-  float * value =
-    (float *)(untyped_value);
+  smrr_interfaces__msg__DataElementFloat * value =
+    (smrr_interfaces__msg__DataElementFloat *)(untyped_value);
   *value = *item;
 }
 
 void smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__assign_function__Buffer__x_velocities(
   void * untyped_member, size_t index, const void * untyped_value)
 {
-  float * item =
-    ((float *)
+  smrr_interfaces__msg__DataElementFloat * item =
+    ((smrr_interfaces__msg__DataElementFloat *)
     smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__get_function__Buffer__x_velocities(untyped_member, index));
-  const float * value =
-    (const float *)(untyped_value);
+  const smrr_interfaces__msg__DataElementFloat * value =
+    (const smrr_interfaces__msg__DataElementFloat *)(untyped_value);
   *item = *value;
 }
 
 bool smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__resize_function__Buffer__x_velocities(
   void * untyped_member, size_t size)
 {
-  rosidl_runtime_c__float__Sequence * member =
-    (rosidl_runtime_c__float__Sequence *)(untyped_member);
-  rosidl_runtime_c__float__Sequence__fini(member);
-  return rosidl_runtime_c__float__Sequence__init(member, size);
+  smrr_interfaces__msg__DataElementFloat__Sequence * member =
+    (smrr_interfaces__msg__DataElementFloat__Sequence *)(untyped_member);
+  smrr_interfaces__msg__DataElementFloat__Sequence__fini(member);
+  return smrr_interfaces__msg__DataElementFloat__Sequence__init(member, size);
 }
 
 size_t smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__size_function__Buffer__y_velocities(
   const void * untyped_member)
 {
-  const rosidl_runtime_c__float__Sequence * member =
-    (const rosidl_runtime_c__float__Sequence *)(untyped_member);
+  const smrr_interfaces__msg__DataElementFloat__Sequence * member =
+    (const smrr_interfaces__msg__DataElementFloat__Sequence *)(untyped_member);
   return member->size;
 }
 
 const void * smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__get_const_function__Buffer__y_velocities(
   const void * untyped_member, size_t index)
 {
-  const rosidl_runtime_c__float__Sequence * member =
-    (const rosidl_runtime_c__float__Sequence *)(untyped_member);
+  const smrr_interfaces__msg__DataElementFloat__Sequence * member =
+    (const smrr_interfaces__msg__DataElementFloat__Sequence *)(untyped_member);
   return &member->data[index];
 }
 
 void * smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__get_function__Buffer__y_velocities(
   void * untyped_member, size_t index)
 {
-  rosidl_runtime_c__float__Sequence * member =
-    (rosidl_runtime_c__float__Sequence *)(untyped_member);
+  smrr_interfaces__msg__DataElementFloat__Sequence * member =
+    (smrr_interfaces__msg__DataElementFloat__Sequence *)(untyped_member);
   return &member->data[index];
 }
 
 void smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__fetch_function__Buffer__y_velocities(
   const void * untyped_member, size_t index, void * untyped_value)
 {
-  const float * item =
-    ((const float *)
+  const smrr_interfaces__msg__DataElementFloat * item =
+    ((const smrr_interfaces__msg__DataElementFloat *)
     smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__get_const_function__Buffer__y_velocities(untyped_member, index));
-  float * value =
-    (float *)(untyped_value);
+  smrr_interfaces__msg__DataElementFloat * value =
+    (smrr_interfaces__msg__DataElementFloat *)(untyped_value);
   *value = *item;
 }
 
 void smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__assign_function__Buffer__y_velocities(
   void * untyped_member, size_t index, const void * untyped_value)
 {
-  float * item =
-    ((float *)
+  smrr_interfaces__msg__DataElementFloat * item =
+    ((smrr_interfaces__msg__DataElementFloat *)
     smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__get_function__Buffer__y_velocities(untyped_member, index));
-  const float * value =
-    (const float *)(untyped_value);
+  const smrr_interfaces__msg__DataElementFloat * value =
+    (const smrr_interfaces__msg__DataElementFloat *)(untyped_value);
   *item = *value;
 }
 
 bool smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__resize_function__Buffer__y_velocities(
   void * untyped_member, size_t size)
 {
-  rosidl_runtime_c__float__Sequence * member =
-    (rosidl_runtime_c__float__Sequence *)(untyped_member);
-  rosidl_runtime_c__float__Sequence__fini(member);
-  return rosidl_runtime_c__float__Sequence__init(member, size);
+  smrr_interfaces__msg__DataElementFloat__Sequence * member =
+    (smrr_interfaces__msg__DataElementFloat__Sequence *)(untyped_member);
+  smrr_interfaces__msg__DataElementFloat__Sequence__fini(member);
+  return smrr_interfaces__msg__DataElementFloat__Sequence__init(member, size);
 }
 
 size_t smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__size_function__Buffer__class_ids(
   const void * untyped_member)
 {
-  const rosidl_runtime_c__String__Sequence * member =
-    (const rosidl_runtime_c__String__Sequence *)(untyped_member);
+  const smrr_interfaces__msg__DataElementString__Sequence * member =
+    (const smrr_interfaces__msg__DataElementString__Sequence *)(untyped_member);
   return member->size;
 }
 
 const void * smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__get_const_function__Buffer__class_ids(
   const void * untyped_member, size_t index)
 {
-  const rosidl_runtime_c__String__Sequence * member =
-    (const rosidl_runtime_c__String__Sequence *)(untyped_member);
+  const smrr_interfaces__msg__DataElementString__Sequence * member =
+    (const smrr_interfaces__msg__DataElementString__Sequence *)(untyped_member);
   return &member->data[index];
 }
 
 void * smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__get_function__Buffer__class_ids(
   void * untyped_member, size_t index)
 {
-  rosidl_runtime_c__String__Sequence * member =
-    (rosidl_runtime_c__String__Sequence *)(untyped_member);
+  smrr_interfaces__msg__DataElementString__Sequence * member =
+    (smrr_interfaces__msg__DataElementString__Sequence *)(untyped_member);
   return &member->data[index];
 }
 
 void smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__fetch_function__Buffer__class_ids(
   const void * untyped_member, size_t index, void * untyped_value)
 {
-  const rosidl_runtime_c__String * item =
-    ((const rosidl_runtime_c__String *)
+  const smrr_interfaces__msg__DataElementString * item =
+    ((const smrr_interfaces__msg__DataElementString *)
     smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__get_const_function__Buffer__class_ids(untyped_member, index));
-  rosidl_runtime_c__String * value =
-    (rosidl_runtime_c__String *)(untyped_value);
+  smrr_interfaces__msg__DataElementString * value =
+    (smrr_interfaces__msg__DataElementString *)(untyped_value);
   *value = *item;
 }
 
 void smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__assign_function__Buffer__class_ids(
   void * untyped_member, size_t index, const void * untyped_value)
 {
-  rosidl_runtime_c__String * item =
-    ((rosidl_runtime_c__String *)
+  smrr_interfaces__msg__DataElementString * item =
+    ((smrr_interfaces__msg__DataElementString *)
     smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__get_function__Buffer__class_ids(untyped_member, index));
-  const rosidl_runtime_c__String * value =
-    (const rosidl_runtime_c__String *)(untyped_value);
+  const smrr_interfaces__msg__DataElementString * value =
+    (const smrr_interfaces__msg__DataElementString *)(untyped_value);
   *item = *value;
 }
 
 bool smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__resize_function__Buffer__class_ids(
   void * untyped_member, size_t size)
 {
-  rosidl_runtime_c__String__Sequence * member =
-    (rosidl_runtime_c__String__Sequence *)(untyped_member);
-  rosidl_runtime_c__String__Sequence__fini(member);
-  return rosidl_runtime_c__String__Sequence__init(member, size);
+  smrr_interfaces__msg__DataElementString__Sequence * member =
+    (smrr_interfaces__msg__DataElementString__Sequence *)(untyped_member);
+  smrr_interfaces__msg__DataElementString__Sequence__fini(member);
+  return smrr_interfaces__msg__DataElementString__Sequence__init(member, size);
 }
 
 size_t smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__size_function__Buffer__x_positions(
   const void * untyped_member)
 {
-  const rosidl_runtime_c__float__Sequence * member =
-    (const rosidl_runtime_c__float__Sequence *)(untyped_member);
+  const smrr_interfaces__msg__DataElementFloat__Sequence * member =
+    (const smrr_interfaces__msg__DataElementFloat__Sequence *)(untyped_member);
   return member->size;
 }
 
 const void * smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__get_const_function__Buffer__x_positions(
   const void * untyped_member, size_t index)
 {
-  const rosidl_runtime_c__float__Sequence * member =
-    (const rosidl_runtime_c__float__Sequence *)(untyped_member);
+  const smrr_interfaces__msg__DataElementFloat__Sequence * member =
+    (const smrr_interfaces__msg__DataElementFloat__Sequence *)(untyped_member);
   return &member->data[index];
 }
 
 void * smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__get_function__Buffer__x_positions(
   void * untyped_member, size_t index)
 {
-  rosidl_runtime_c__float__Sequence * member =
-    (rosidl_runtime_c__float__Sequence *)(untyped_member);
+  smrr_interfaces__msg__DataElementFloat__Sequence * member =
+    (smrr_interfaces__msg__DataElementFloat__Sequence *)(untyped_member);
   return &member->data[index];
 }
 
 void smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__fetch_function__Buffer__x_positions(
   const void * untyped_member, size_t index, void * untyped_value)
 {
-  const float * item =
-    ((const float *)
+  const smrr_interfaces__msg__DataElementFloat * item =
+    ((const smrr_interfaces__msg__DataElementFloat *)
     smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__get_const_function__Buffer__x_positions(untyped_member, index));
-  float * value =
-    (float *)(untyped_value);
+  smrr_interfaces__msg__DataElementFloat * value =
+    (smrr_interfaces__msg__DataElementFloat *)(untyped_value);
   *value = *item;
 }
 
 void smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__assign_function__Buffer__x_positions(
   void * untyped_member, size_t index, const void * untyped_value)
 {
-  float * item =
-    ((float *)
+  smrr_interfaces__msg__DataElementFloat * item =
+    ((smrr_interfaces__msg__DataElementFloat *)
     smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__get_function__Buffer__x_positions(untyped_member, index));
-  const float * value =
-    (const float *)(untyped_value);
+  const smrr_interfaces__msg__DataElementFloat * value =
+    (const smrr_interfaces__msg__DataElementFloat *)(untyped_value);
   *item = *value;
 }
 
 bool smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__resize_function__Buffer__x_positions(
   void * untyped_member, size_t size)
 {
-  rosidl_runtime_c__float__Sequence * member =
-    (rosidl_runtime_c__float__Sequence *)(untyped_member);
-  rosidl_runtime_c__float__Sequence__fini(member);
-  return rosidl_runtime_c__float__Sequence__init(member, size);
+  smrr_interfaces__msg__DataElementFloat__Sequence * member =
+    (smrr_interfaces__msg__DataElementFloat__Sequence *)(untyped_member);
+  smrr_interfaces__msg__DataElementFloat__Sequence__fini(member);
+  return smrr_interfaces__msg__DataElementFloat__Sequence__init(member, size);
 }
 
 size_t smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__size_function__Buffer__y_positions(
   const void * untyped_member)
 {
-  const rosidl_runtime_c__float__Sequence * member =
-    (const rosidl_runtime_c__float__Sequence *)(untyped_member);
+  const smrr_interfaces__msg__DataElementFloat__Sequence * member =
+    (const smrr_interfaces__msg__DataElementFloat__Sequence *)(untyped_member);
   return member->size;
 }
 
 const void * smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__get_const_function__Buffer__y_positions(
   const void * untyped_member, size_t index)
 {
-  const rosidl_runtime_c__float__Sequence * member =
-    (const rosidl_runtime_c__float__Sequence *)(untyped_member);
+  const smrr_interfaces__msg__DataElementFloat__Sequence * member =
+    (const smrr_interfaces__msg__DataElementFloat__Sequence *)(untyped_member);
   return &member->data[index];
 }
 
 void * smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__get_function__Buffer__y_positions(
   void * untyped_member, size_t index)
 {
-  rosidl_runtime_c__float__Sequence * member =
-    (rosidl_runtime_c__float__Sequence *)(untyped_member);
+  smrr_interfaces__msg__DataElementFloat__Sequence * member =
+    (smrr_interfaces__msg__DataElementFloat__Sequence *)(untyped_member);
   return &member->data[index];
 }
 
 void smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__fetch_function__Buffer__y_positions(
   const void * untyped_member, size_t index, void * untyped_value)
 {
-  const float * item =
-    ((const float *)
+  const smrr_interfaces__msg__DataElementFloat * item =
+    ((const smrr_interfaces__msg__DataElementFloat *)
     smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__get_const_function__Buffer__y_positions(untyped_member, index));
-  float * value =
-    (float *)(untyped_value);
+  smrr_interfaces__msg__DataElementFloat * value =
+    (smrr_interfaces__msg__DataElementFloat *)(untyped_value);
   *value = *item;
 }
 
 void smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__assign_function__Buffer__y_positions(
   void * untyped_member, size_t index, const void * untyped_value)
 {
-  float * item =
-    ((float *)
+  smrr_interfaces__msg__DataElementFloat * item =
+    ((smrr_interfaces__msg__DataElementFloat *)
     smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__get_function__Buffer__y_positions(untyped_member, index));
-  const float * value =
-    (const float *)(untyped_value);
+  const smrr_interfaces__msg__DataElementFloat * value =
+    (const smrr_interfaces__msg__DataElementFloat *)(untyped_value);
   *item = *value;
 }
 
 bool smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__resize_function__Buffer__y_positions(
   void * untyped_member, size_t size)
 {
-  rosidl_runtime_c__float__Sequence * member =
-    (rosidl_runtime_c__float__Sequence *)(untyped_member);
-  rosidl_runtime_c__float__Sequence__fini(member);
-  return rosidl_runtime_c__float__Sequence__init(member, size);
+  smrr_interfaces__msg__DataElementFloat__Sequence * member =
+    (smrr_interfaces__msg__DataElementFloat__Sequence *)(untyped_member);
+  smrr_interfaces__msg__DataElementFloat__Sequence__fini(member);
+  return smrr_interfaces__msg__DataElementFloat__Sequence__init(member, size);
 }
 
 size_t smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__size_function__Buffer__x_mean(
@@ -800,9 +809,9 @@ static rosidl_typesupport_introspection_c__MessageMember smrr_interfaces__msg__B
   },
   {
     "x_velocities",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_FLOAT,  // type
+    rosidl_typesupport_introspection_c__ROS_TYPE_MESSAGE,  // type
     0,  // upper bound of string
-    NULL,  // members of sub message
+    NULL,  // members of sub message (initialized later)
     true,  // is array
     0,  // array size
     false,  // is upper bound
@@ -817,9 +826,9 @@ static rosidl_typesupport_introspection_c__MessageMember smrr_interfaces__msg__B
   },
   {
     "y_velocities",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_FLOAT,  // type
+    rosidl_typesupport_introspection_c__ROS_TYPE_MESSAGE,  // type
     0,  // upper bound of string
-    NULL,  // members of sub message
+    NULL,  // members of sub message (initialized later)
     true,  // is array
     0,  // array size
     false,  // is upper bound
@@ -834,9 +843,9 @@ static rosidl_typesupport_introspection_c__MessageMember smrr_interfaces__msg__B
   },
   {
     "class_ids",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_STRING,  // type
+    rosidl_typesupport_introspection_c__ROS_TYPE_MESSAGE,  // type
     0,  // upper bound of string
-    NULL,  // members of sub message
+    NULL,  // members of sub message (initialized later)
     true,  // is array
     0,  // array size
     false,  // is upper bound
@@ -851,9 +860,9 @@ static rosidl_typesupport_introspection_c__MessageMember smrr_interfaces__msg__B
   },
   {
     "x_positions",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_FLOAT,  // type
+    rosidl_typesupport_introspection_c__ROS_TYPE_MESSAGE,  // type
     0,  // upper bound of string
-    NULL,  // members of sub message
+    NULL,  // members of sub message (initialized later)
     true,  // is array
     0,  // array size
     false,  // is upper bound
@@ -868,9 +877,9 @@ static rosidl_typesupport_introspection_c__MessageMember smrr_interfaces__msg__B
   },
   {
     "y_positions",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_FLOAT,  // type
+    rosidl_typesupport_introspection_c__ROS_TYPE_MESSAGE,  // type
     0,  // upper bound of string
-    NULL,  // members of sub message
+    NULL,  // members of sub message (initialized later)
     true,  // is array
     0,  // array size
     false,  // is upper bound
@@ -1025,6 +1034,16 @@ static rosidl_message_type_support_t smrr_interfaces__msg__Buffer__rosidl_typesu
 ROSIDL_TYPESUPPORT_INTROSPECTION_C_EXPORT_smrr_interfaces
 const rosidl_message_type_support_t *
 ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, smrr_interfaces, msg, Buffer)() {
+  smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__Buffer_message_member_array[2].members_ =
+    ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, smrr_interfaces, msg, DataElementFloat)();
+  smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__Buffer_message_member_array[3].members_ =
+    ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, smrr_interfaces, msg, DataElementFloat)();
+  smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__Buffer_message_member_array[4].members_ =
+    ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, smrr_interfaces, msg, DataElementString)();
+  smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__Buffer_message_member_array[5].members_ =
+    ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, smrr_interfaces, msg, DataElementFloat)();
+  smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__Buffer_message_member_array[6].members_ =
+    ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, smrr_interfaces, msg, DataElementFloat)();
   if (!smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__Buffer_message_type_support_handle.typesupport_identifier) {
     smrr_interfaces__msg__Buffer__rosidl_typesupport_introspection_c__Buffer_message_type_support_handle.typesupport_identifier =
       rosidl_typesupport_introspection_c__identifier;

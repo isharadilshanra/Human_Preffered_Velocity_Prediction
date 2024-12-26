@@ -14,6 +14,15 @@
 #include "smrr_interfaces/msg/detail/buffer__struct.hpp"
 #include "rosidl_runtime_cpp/traits.hpp"
 
+// Include directives for member types
+// Member 'x_velocities'
+// Member 'y_velocities'
+// Member 'x_positions'
+// Member 'y_positions'
+#include "smrr_interfaces/msg/detail/data_element_float__traits.hpp"
+// Member 'class_ids'
+#include "smrr_interfaces/msg/detail/data_element_string__traits.hpp"
+
 namespace smrr_interfaces
 {
 
@@ -58,7 +67,7 @@ inline void to_flow_style_yaml(
       out << "x_velocities: [";
       size_t pending_items = msg.x_velocities.size();
       for (auto item : msg.x_velocities) {
-        rosidl_generator_traits::value_to_yaml(item, out);
+        to_flow_style_yaml(item, out);
         if (--pending_items > 0) {
           out << ", ";
         }
@@ -76,7 +85,7 @@ inline void to_flow_style_yaml(
       out << "y_velocities: [";
       size_t pending_items = msg.y_velocities.size();
       for (auto item : msg.y_velocities) {
-        rosidl_generator_traits::value_to_yaml(item, out);
+        to_flow_style_yaml(item, out);
         if (--pending_items > 0) {
           out << ", ";
         }
@@ -94,7 +103,7 @@ inline void to_flow_style_yaml(
       out << "class_ids: [";
       size_t pending_items = msg.class_ids.size();
       for (auto item : msg.class_ids) {
-        rosidl_generator_traits::value_to_yaml(item, out);
+        to_flow_style_yaml(item, out);
         if (--pending_items > 0) {
           out << ", ";
         }
@@ -112,7 +121,7 @@ inline void to_flow_style_yaml(
       out << "x_positions: [";
       size_t pending_items = msg.x_positions.size();
       for (auto item : msg.x_positions) {
-        rosidl_generator_traits::value_to_yaml(item, out);
+        to_flow_style_yaml(item, out);
         if (--pending_items > 0) {
           out << ", ";
         }
@@ -130,7 +139,7 @@ inline void to_flow_style_yaml(
       out << "y_positions: [";
       size_t pending_items = msg.y_positions.size();
       for (auto item : msg.y_positions) {
-        rosidl_generator_traits::value_to_yaml(item, out);
+        to_flow_style_yaml(item, out);
         if (--pending_items > 0) {
           out << ", ";
         }
@@ -314,9 +323,8 @@ inline void to_block_style_yaml(
         if (indentation > 0) {
           out << std::string(indentation, ' ');
         }
-        out << "- ";
-        rosidl_generator_traits::value_to_yaml(item, out);
-        out << "\n";
+        out << "-\n";
+        to_block_style_yaml(item, out, indentation + 2);
       }
     }
   }
@@ -334,9 +342,8 @@ inline void to_block_style_yaml(
         if (indentation > 0) {
           out << std::string(indentation, ' ');
         }
-        out << "- ";
-        rosidl_generator_traits::value_to_yaml(item, out);
-        out << "\n";
+        out << "-\n";
+        to_block_style_yaml(item, out, indentation + 2);
       }
     }
   }
@@ -354,9 +361,8 @@ inline void to_block_style_yaml(
         if (indentation > 0) {
           out << std::string(indentation, ' ');
         }
-        out << "- ";
-        rosidl_generator_traits::value_to_yaml(item, out);
-        out << "\n";
+        out << "-\n";
+        to_block_style_yaml(item, out, indentation + 2);
       }
     }
   }
@@ -374,9 +380,8 @@ inline void to_block_style_yaml(
         if (indentation > 0) {
           out << std::string(indentation, ' ');
         }
-        out << "- ";
-        rosidl_generator_traits::value_to_yaml(item, out);
-        out << "\n";
+        out << "-\n";
+        to_block_style_yaml(item, out, indentation + 2);
       }
     }
   }
@@ -394,9 +399,8 @@ inline void to_block_style_yaml(
         if (indentation > 0) {
           out << std::string(indentation, ' ');
         }
-        out << "- ";
-        rosidl_generator_traits::value_to_yaml(item, out);
-        out << "\n";
+        out << "-\n";
+        to_block_style_yaml(item, out, indentation + 2);
       }
     }
   }

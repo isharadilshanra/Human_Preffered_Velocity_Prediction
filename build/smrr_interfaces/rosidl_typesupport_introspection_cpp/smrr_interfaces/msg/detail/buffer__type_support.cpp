@@ -84,226 +84,226 @@ void resize_function__Buffer__agent_ids(void * untyped_member, size_t size)
 
 size_t size_function__Buffer__x_velocities(const void * untyped_member)
 {
-  const auto * member = reinterpret_cast<const std::vector<float> *>(untyped_member);
+  const auto * member = reinterpret_cast<const std::vector<smrr_interfaces::msg::DataElementFloat> *>(untyped_member);
   return member->size();
 }
 
 const void * get_const_function__Buffer__x_velocities(const void * untyped_member, size_t index)
 {
   const auto & member =
-    *reinterpret_cast<const std::vector<float> *>(untyped_member);
+    *reinterpret_cast<const std::vector<smrr_interfaces::msg::DataElementFloat> *>(untyped_member);
   return &member[index];
 }
 
 void * get_function__Buffer__x_velocities(void * untyped_member, size_t index)
 {
   auto & member =
-    *reinterpret_cast<std::vector<float> *>(untyped_member);
+    *reinterpret_cast<std::vector<smrr_interfaces::msg::DataElementFloat> *>(untyped_member);
   return &member[index];
 }
 
 void fetch_function__Buffer__x_velocities(
   const void * untyped_member, size_t index, void * untyped_value)
 {
-  const auto & item = *reinterpret_cast<const float *>(
+  const auto & item = *reinterpret_cast<const smrr_interfaces::msg::DataElementFloat *>(
     get_const_function__Buffer__x_velocities(untyped_member, index));
-  auto & value = *reinterpret_cast<float *>(untyped_value);
+  auto & value = *reinterpret_cast<smrr_interfaces::msg::DataElementFloat *>(untyped_value);
   value = item;
 }
 
 void assign_function__Buffer__x_velocities(
   void * untyped_member, size_t index, const void * untyped_value)
 {
-  auto & item = *reinterpret_cast<float *>(
+  auto & item = *reinterpret_cast<smrr_interfaces::msg::DataElementFloat *>(
     get_function__Buffer__x_velocities(untyped_member, index));
-  const auto & value = *reinterpret_cast<const float *>(untyped_value);
+  const auto & value = *reinterpret_cast<const smrr_interfaces::msg::DataElementFloat *>(untyped_value);
   item = value;
 }
 
 void resize_function__Buffer__x_velocities(void * untyped_member, size_t size)
 {
   auto * member =
-    reinterpret_cast<std::vector<float> *>(untyped_member);
+    reinterpret_cast<std::vector<smrr_interfaces::msg::DataElementFloat> *>(untyped_member);
   member->resize(size);
 }
 
 size_t size_function__Buffer__y_velocities(const void * untyped_member)
 {
-  const auto * member = reinterpret_cast<const std::vector<float> *>(untyped_member);
+  const auto * member = reinterpret_cast<const std::vector<smrr_interfaces::msg::DataElementFloat> *>(untyped_member);
   return member->size();
 }
 
 const void * get_const_function__Buffer__y_velocities(const void * untyped_member, size_t index)
 {
   const auto & member =
-    *reinterpret_cast<const std::vector<float> *>(untyped_member);
+    *reinterpret_cast<const std::vector<smrr_interfaces::msg::DataElementFloat> *>(untyped_member);
   return &member[index];
 }
 
 void * get_function__Buffer__y_velocities(void * untyped_member, size_t index)
 {
   auto & member =
-    *reinterpret_cast<std::vector<float> *>(untyped_member);
+    *reinterpret_cast<std::vector<smrr_interfaces::msg::DataElementFloat> *>(untyped_member);
   return &member[index];
 }
 
 void fetch_function__Buffer__y_velocities(
   const void * untyped_member, size_t index, void * untyped_value)
 {
-  const auto & item = *reinterpret_cast<const float *>(
+  const auto & item = *reinterpret_cast<const smrr_interfaces::msg::DataElementFloat *>(
     get_const_function__Buffer__y_velocities(untyped_member, index));
-  auto & value = *reinterpret_cast<float *>(untyped_value);
+  auto & value = *reinterpret_cast<smrr_interfaces::msg::DataElementFloat *>(untyped_value);
   value = item;
 }
 
 void assign_function__Buffer__y_velocities(
   void * untyped_member, size_t index, const void * untyped_value)
 {
-  auto & item = *reinterpret_cast<float *>(
+  auto & item = *reinterpret_cast<smrr_interfaces::msg::DataElementFloat *>(
     get_function__Buffer__y_velocities(untyped_member, index));
-  const auto & value = *reinterpret_cast<const float *>(untyped_value);
+  const auto & value = *reinterpret_cast<const smrr_interfaces::msg::DataElementFloat *>(untyped_value);
   item = value;
 }
 
 void resize_function__Buffer__y_velocities(void * untyped_member, size_t size)
 {
   auto * member =
-    reinterpret_cast<std::vector<float> *>(untyped_member);
+    reinterpret_cast<std::vector<smrr_interfaces::msg::DataElementFloat> *>(untyped_member);
   member->resize(size);
 }
 
 size_t size_function__Buffer__class_ids(const void * untyped_member)
 {
-  const auto * member = reinterpret_cast<const std::vector<std::string> *>(untyped_member);
+  const auto * member = reinterpret_cast<const std::vector<smrr_interfaces::msg::DataElementString> *>(untyped_member);
   return member->size();
 }
 
 const void * get_const_function__Buffer__class_ids(const void * untyped_member, size_t index)
 {
   const auto & member =
-    *reinterpret_cast<const std::vector<std::string> *>(untyped_member);
+    *reinterpret_cast<const std::vector<smrr_interfaces::msg::DataElementString> *>(untyped_member);
   return &member[index];
 }
 
 void * get_function__Buffer__class_ids(void * untyped_member, size_t index)
 {
   auto & member =
-    *reinterpret_cast<std::vector<std::string> *>(untyped_member);
+    *reinterpret_cast<std::vector<smrr_interfaces::msg::DataElementString> *>(untyped_member);
   return &member[index];
 }
 
 void fetch_function__Buffer__class_ids(
   const void * untyped_member, size_t index, void * untyped_value)
 {
-  const auto & item = *reinterpret_cast<const std::string *>(
+  const auto & item = *reinterpret_cast<const smrr_interfaces::msg::DataElementString *>(
     get_const_function__Buffer__class_ids(untyped_member, index));
-  auto & value = *reinterpret_cast<std::string *>(untyped_value);
+  auto & value = *reinterpret_cast<smrr_interfaces::msg::DataElementString *>(untyped_value);
   value = item;
 }
 
 void assign_function__Buffer__class_ids(
   void * untyped_member, size_t index, const void * untyped_value)
 {
-  auto & item = *reinterpret_cast<std::string *>(
+  auto & item = *reinterpret_cast<smrr_interfaces::msg::DataElementString *>(
     get_function__Buffer__class_ids(untyped_member, index));
-  const auto & value = *reinterpret_cast<const std::string *>(untyped_value);
+  const auto & value = *reinterpret_cast<const smrr_interfaces::msg::DataElementString *>(untyped_value);
   item = value;
 }
 
 void resize_function__Buffer__class_ids(void * untyped_member, size_t size)
 {
   auto * member =
-    reinterpret_cast<std::vector<std::string> *>(untyped_member);
+    reinterpret_cast<std::vector<smrr_interfaces::msg::DataElementString> *>(untyped_member);
   member->resize(size);
 }
 
 size_t size_function__Buffer__x_positions(const void * untyped_member)
 {
-  const auto * member = reinterpret_cast<const std::vector<float> *>(untyped_member);
+  const auto * member = reinterpret_cast<const std::vector<smrr_interfaces::msg::DataElementFloat> *>(untyped_member);
   return member->size();
 }
 
 const void * get_const_function__Buffer__x_positions(const void * untyped_member, size_t index)
 {
   const auto & member =
-    *reinterpret_cast<const std::vector<float> *>(untyped_member);
+    *reinterpret_cast<const std::vector<smrr_interfaces::msg::DataElementFloat> *>(untyped_member);
   return &member[index];
 }
 
 void * get_function__Buffer__x_positions(void * untyped_member, size_t index)
 {
   auto & member =
-    *reinterpret_cast<std::vector<float> *>(untyped_member);
+    *reinterpret_cast<std::vector<smrr_interfaces::msg::DataElementFloat> *>(untyped_member);
   return &member[index];
 }
 
 void fetch_function__Buffer__x_positions(
   const void * untyped_member, size_t index, void * untyped_value)
 {
-  const auto & item = *reinterpret_cast<const float *>(
+  const auto & item = *reinterpret_cast<const smrr_interfaces::msg::DataElementFloat *>(
     get_const_function__Buffer__x_positions(untyped_member, index));
-  auto & value = *reinterpret_cast<float *>(untyped_value);
+  auto & value = *reinterpret_cast<smrr_interfaces::msg::DataElementFloat *>(untyped_value);
   value = item;
 }
 
 void assign_function__Buffer__x_positions(
   void * untyped_member, size_t index, const void * untyped_value)
 {
-  auto & item = *reinterpret_cast<float *>(
+  auto & item = *reinterpret_cast<smrr_interfaces::msg::DataElementFloat *>(
     get_function__Buffer__x_positions(untyped_member, index));
-  const auto & value = *reinterpret_cast<const float *>(untyped_value);
+  const auto & value = *reinterpret_cast<const smrr_interfaces::msg::DataElementFloat *>(untyped_value);
   item = value;
 }
 
 void resize_function__Buffer__x_positions(void * untyped_member, size_t size)
 {
   auto * member =
-    reinterpret_cast<std::vector<float> *>(untyped_member);
+    reinterpret_cast<std::vector<smrr_interfaces::msg::DataElementFloat> *>(untyped_member);
   member->resize(size);
 }
 
 size_t size_function__Buffer__y_positions(const void * untyped_member)
 {
-  const auto * member = reinterpret_cast<const std::vector<float> *>(untyped_member);
+  const auto * member = reinterpret_cast<const std::vector<smrr_interfaces::msg::DataElementFloat> *>(untyped_member);
   return member->size();
 }
 
 const void * get_const_function__Buffer__y_positions(const void * untyped_member, size_t index)
 {
   const auto & member =
-    *reinterpret_cast<const std::vector<float> *>(untyped_member);
+    *reinterpret_cast<const std::vector<smrr_interfaces::msg::DataElementFloat> *>(untyped_member);
   return &member[index];
 }
 
 void * get_function__Buffer__y_positions(void * untyped_member, size_t index)
 {
   auto & member =
-    *reinterpret_cast<std::vector<float> *>(untyped_member);
+    *reinterpret_cast<std::vector<smrr_interfaces::msg::DataElementFloat> *>(untyped_member);
   return &member[index];
 }
 
 void fetch_function__Buffer__y_positions(
   const void * untyped_member, size_t index, void * untyped_value)
 {
-  const auto & item = *reinterpret_cast<const float *>(
+  const auto & item = *reinterpret_cast<const smrr_interfaces::msg::DataElementFloat *>(
     get_const_function__Buffer__y_positions(untyped_member, index));
-  auto & value = *reinterpret_cast<float *>(untyped_value);
+  auto & value = *reinterpret_cast<smrr_interfaces::msg::DataElementFloat *>(untyped_value);
   value = item;
 }
 
 void assign_function__Buffer__y_positions(
   void * untyped_member, size_t index, const void * untyped_value)
 {
-  auto & item = *reinterpret_cast<float *>(
+  auto & item = *reinterpret_cast<smrr_interfaces::msg::DataElementFloat *>(
     get_function__Buffer__y_positions(untyped_member, index));
-  const auto & value = *reinterpret_cast<const float *>(untyped_value);
+  const auto & value = *reinterpret_cast<const smrr_interfaces::msg::DataElementFloat *>(untyped_value);
   item = value;
 }
 
 void resize_function__Buffer__y_positions(void * untyped_member, size_t size)
 {
   auto * member =
-    reinterpret_cast<std::vector<float> *>(untyped_member);
+    reinterpret_cast<std::vector<smrr_interfaces::msg::DataElementFloat> *>(untyped_member);
   member->resize(size);
 }
 
@@ -659,9 +659,9 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember Buffer_messag
   },
   {
     "x_velocities",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_FLOAT,  // type
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_MESSAGE,  // type
     0,  // upper bound of string
-    nullptr,  // members of sub message
+    ::rosidl_typesupport_introspection_cpp::get_message_type_support_handle<smrr_interfaces::msg::DataElementFloat>(),  // members of sub message
     true,  // is array
     0,  // array size
     false,  // is upper bound
@@ -676,9 +676,9 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember Buffer_messag
   },
   {
     "y_velocities",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_FLOAT,  // type
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_MESSAGE,  // type
     0,  // upper bound of string
-    nullptr,  // members of sub message
+    ::rosidl_typesupport_introspection_cpp::get_message_type_support_handle<smrr_interfaces::msg::DataElementFloat>(),  // members of sub message
     true,  // is array
     0,  // array size
     false,  // is upper bound
@@ -693,9 +693,9 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember Buffer_messag
   },
   {
     "class_ids",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_STRING,  // type
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_MESSAGE,  // type
     0,  // upper bound of string
-    nullptr,  // members of sub message
+    ::rosidl_typesupport_introspection_cpp::get_message_type_support_handle<smrr_interfaces::msg::DataElementString>(),  // members of sub message
     true,  // is array
     0,  // array size
     false,  // is upper bound
@@ -710,9 +710,9 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember Buffer_messag
   },
   {
     "x_positions",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_FLOAT,  // type
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_MESSAGE,  // type
     0,  // upper bound of string
-    nullptr,  // members of sub message
+    ::rosidl_typesupport_introspection_cpp::get_message_type_support_handle<smrr_interfaces::msg::DataElementFloat>(),  // members of sub message
     true,  // is array
     0,  // array size
     false,  // is upper bound
@@ -727,9 +727,9 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember Buffer_messag
   },
   {
     "y_positions",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_FLOAT,  // type
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_MESSAGE,  // type
     0,  // upper bound of string
-    nullptr,  // members of sub message
+    ::rosidl_typesupport_introspection_cpp::get_message_type_support_handle<smrr_interfaces::msg::DataElementFloat>(),  // members of sub message
     true,  // is array
     0,  // array size
     false,  // is upper bound

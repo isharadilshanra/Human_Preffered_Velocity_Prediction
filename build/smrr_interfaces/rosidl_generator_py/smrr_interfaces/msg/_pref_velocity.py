@@ -48,6 +48,10 @@ class Metaclass_PrefVelocity(type):
             cls._TYPE_SUPPORT = module.type_support_msg__msg__pref_velocity
             cls._DESTROY_ROS_MESSAGE = module.destroy_ros_message_msg__msg__pref_velocity
 
+            from smrr_interfaces.msg import DataElementString
+            if DataElementString.__class__._TYPE_SUPPORT is None:
+                DataElementString.__class__.__import_type_support__()
+
     @classmethod
     def __prepare__(cls, name, bases, **kwargs):
         # list constant names here so that they appear in the help text of
@@ -68,13 +72,13 @@ class PrefVelocity(metaclass=Metaclass_PrefVelocity):
 
     _fields_and_field_types = {
         'agent_ids': 'sequence<int32>',
-        'class_ids': 'sequence<string>',
+        'class_ids': 'sequence<smrr_interfaces/DataElementString>',
         'preferred_velocities': 'sequence<float>',
     }
 
     SLOT_TYPES = (
         rosidl_parser.definition.UnboundedSequence(rosidl_parser.definition.BasicType('int32')),  # noqa: E501
-        rosidl_parser.definition.UnboundedSequence(rosidl_parser.definition.UnboundedString()),  # noqa: E501
+        rosidl_parser.definition.UnboundedSequence(rosidl_parser.definition.NamespacedType(['smrr_interfaces', 'msg'], 'DataElementString')),  # noqa: E501
         rosidl_parser.definition.UnboundedSequence(rosidl_parser.definition.BasicType('float')),  # noqa: E501
     )
 
@@ -164,6 +168,7 @@ class PrefVelocity(metaclass=Metaclass_PrefVelocity):
     @class_ids.setter
     def class_ids(self, value):
         if __debug__:
+            from smrr_interfaces.msg import DataElementString
             from collections.abc import Sequence
             from collections.abc import Set
             from collections import UserList
@@ -174,9 +179,9 @@ class PrefVelocity(metaclass=Metaclass_PrefVelocity):
                   isinstance(value, UserList)) and
                  not isinstance(value, str) and
                  not isinstance(value, UserString) and
-                 all(isinstance(v, str) for v in value) and
+                 all(isinstance(v, DataElementString) for v in value) and
                  True), \
-                "The 'class_ids' field must be a set or sequence and each value of type 'str'"
+                "The 'class_ids' field must be a set or sequence and each value of type 'DataElementString'"
         self._class_ids = value
 
     @builtins.property
