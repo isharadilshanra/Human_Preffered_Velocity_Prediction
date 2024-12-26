@@ -32,7 +32,7 @@ class GoalPredictor(Node):
         self.dt             = 0.2       # Position publisher rate
         self.sigma_phi      = 0.1
 
-        self.max_agent_buffer = 12
+        self.max_agent_buffer = 12      # if number of agents in the buffere exceed this limit there will be out of range error
 
         self.destinations = np.array([[5.0, 8.0], 
            [2.3, 1.4], 
