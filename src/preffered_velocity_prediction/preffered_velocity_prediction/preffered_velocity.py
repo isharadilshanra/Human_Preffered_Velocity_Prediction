@@ -34,7 +34,7 @@ class HumanPrefferedVelocity(Node):
         
     def process_buffer_data(self, msg):
         self.agent_ids = msg.agent_ids
-        self.cls_ids = msg.class_ids
+        self.cls_ids = msg.majority_class_id
 
         self.process_lidar_data(msg)
         self.process_cls_data(msg)
@@ -61,16 +61,16 @@ class HumanPrefferedVelocity(Node):
 
     def update_filter_parameters(self, kf, class_id, std_dev, variance):
         # update the parameters of the kalman filter based on the class id
-        if class_id == '0':  # Children (typically more erratic)
+        if class_id == 'child': #'0':  # Children (typically more erratic)
             base_R = 2.0  # Base measurement noise
             base_Q = 1.5  # Base process noise factor
-        elif class_id == '1':  # Normal adults
+        elif class_id == 'normal_adult':#'1':  # Normal adults
             base_R = 1.0
             base_Q = 1.0
-        elif class_id == '2':  # Seniors (usually smoother)
+        elif class_id == 'seniors': #'2':  # Seniors (usually smoother)
             base_R = 0.8
             base_Q = 0.8
-        elif class_id == '3':  # People with disabilities
+        elif class_id == 'disabled': #'3':  # People with disabilities
             base_R = 0.5
             base_Q = 0.5
         else:
@@ -126,7 +126,8 @@ class HumanPrefferedVelocity(Node):
             self.get_logger().info('No data received')
 
     def process_cls_data(self, msg):
-        self.cls_data = msg.class_ids
+        #self.cls_data = msg.class_ids
+        self.cls_data = msg.majority_class_id
         self.get_logger().info('Received data from human_classes')
 
         # check for valid data
@@ -152,7 +153,7 @@ class HumanPrefferedVelocity(Node):
 
             # handle the case where class data is not available 
             if (len(self.cls_data) -1) < i:
-                class_id = '1' # default to normal adults
+                class_id = 'normal_adult' #'1' # default to normal adults
             else:
                 class_id = self.cls_data[i]
 
