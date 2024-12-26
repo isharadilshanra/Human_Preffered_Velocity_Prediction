@@ -36,20 +36,10 @@ extern "C"
 
 #include "rosidl_runtime_c/primitives_sequence.h"  // agent_ids, preferred_velocities
 #include "rosidl_runtime_c/primitives_sequence_functions.h"  // agent_ids, preferred_velocities
-#include "smrr_interfaces/msg/detail/data_element_string__functions.h"  // class_ids
+#include "rosidl_runtime_c/string.h"  // class_ids
+#include "rosidl_runtime_c/string_functions.h"  // class_ids
 
 // forward declare type support functions
-size_t get_serialized_size_smrr_interfaces__msg__DataElementString(
-  const void * untyped_ros_message,
-  size_t current_alignment);
-
-size_t max_serialized_size_smrr_interfaces__msg__DataElementString(
-  bool & full_bounded,
-  bool & is_plain,
-  size_t current_alignment);
-
-const rosidl_message_type_support_t *
-  ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_fastrtps_c, smrr_interfaces, msg, DataElementString)();
 
 
 using _PrefVelocity__ros_msg_type = smrr_interfaces__msg__PrefVelocity;
@@ -73,20 +63,20 @@ static bool _PrefVelocity__cdr_serialize(
 
   // Field name: class_ids
   {
-    const message_type_support_callbacks_t * callbacks =
-      static_cast<const message_type_support_callbacks_t *>(
-      ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
-        rosidl_typesupport_fastrtps_c, smrr_interfaces, msg, DataElementString
-      )()->data);
     size_t size = ros_message->class_ids.size;
     auto array_ptr = ros_message->class_ids.data;
     cdr << static_cast<uint32_t>(size);
     for (size_t i = 0; i < size; ++i) {
-      if (!callbacks->cdr_serialize(
-          &array_ptr[i], cdr))
-      {
+      const rosidl_runtime_c__String * str = &array_ptr[i];
+      if (str->capacity == 0 || str->capacity <= str->size) {
+        fprintf(stderr, "string capacity not greater than size\n");
         return false;
       }
+      if (str->data[str->size] != '\0') {
+        fprintf(stderr, "string not null-terminated\n");
+        return false;
+      }
+      cdr << str->data;
     }
   }
 
@@ -128,26 +118,29 @@ static bool _PrefVelocity__cdr_deserialize(
 
   // Field name: class_ids
   {
-    const message_type_support_callbacks_t * callbacks =
-      static_cast<const message_type_support_callbacks_t *>(
-      ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
-        rosidl_typesupport_fastrtps_c, smrr_interfaces, msg, DataElementString
-      )()->data);
     uint32_t cdrSize;
     cdr >> cdrSize;
     size_t size = static_cast<size_t>(cdrSize);
     if (ros_message->class_ids.data) {
-      smrr_interfaces__msg__DataElementString__Sequence__fini(&ros_message->class_ids);
+      rosidl_runtime_c__String__Sequence__fini(&ros_message->class_ids);
     }
-    if (!smrr_interfaces__msg__DataElementString__Sequence__init(&ros_message->class_ids, size)) {
+    if (!rosidl_runtime_c__String__Sequence__init(&ros_message->class_ids, size)) {
       fprintf(stderr, "failed to create array for field 'class_ids'");
       return false;
     }
     auto array_ptr = ros_message->class_ids.data;
     for (size_t i = 0; i < size; ++i) {
-      if (!callbacks->cdr_deserialize(
-          cdr, &array_ptr[i]))
-      {
+      std::string tmp;
+      cdr >> tmp;
+      auto & ros_i = array_ptr[i];
+      if (!ros_i.data) {
+        rosidl_runtime_c__String__init(&ros_i);
+      }
+      bool succeeded = rosidl_runtime_c__String__assign(
+        &ros_i,
+        tmp.c_str());
+      if (!succeeded) {
+        fprintf(stderr, "failed to assign string into field 'class_ids'\n");
         return false;
       }
     }
@@ -203,10 +196,10 @@ size_t get_serialized_size_smrr_interfaces__msg__PrefVelocity(
     auto array_ptr = ros_message->class_ids.data;
     current_alignment += padding +
       eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
-
     for (size_t index = 0; index < array_size; ++index) {
-      current_alignment += get_serialized_size_smrr_interfaces__msg__DataElementString(
-        &array_ptr[index], current_alignment);
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        (array_ptr[index].size + 1);
     }
   }
   // field.name preferred_velocities
@@ -269,19 +262,12 @@ size_t max_serialized_size_smrr_interfaces__msg__PrefVelocity(
     current_alignment += padding +
       eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
 
-
-    last_member_size = 0;
+    full_bounded = false;
+    is_plain = false;
     for (size_t index = 0; index < array_size; ++index) {
-      bool inner_full_bounded;
-      bool inner_is_plain;
-      size_t inner_size;
-      inner_size =
-        max_serialized_size_smrr_interfaces__msg__DataElementString(
-        inner_full_bounded, inner_is_plain, current_alignment);
-      last_member_size += inner_size;
-      current_alignment += inner_size;
-      full_bounded &= inner_full_bounded;
-      is_plain &= inner_is_plain;
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        1;
     }
   }
   // member: preferred_velocities

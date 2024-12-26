@@ -19,11 +19,9 @@
 #include "rosidl_runtime_c/primitives_sequence.h"
 #include "rosidl_runtime_c/primitives_sequence_functions.h"
 
-// Nested array functions includes
-#include "smrr_interfaces/msg/detail/data_element_string__functions.h"
-// end nested array functions include
-bool smrr_interfaces__msg__data_element_string__convert_from_py(PyObject * _pymsg, void * _ros_message);
-PyObject * smrr_interfaces__msg__data_element_string__convert_to_py(void * raw_ros_message);
+#include "rosidl_runtime_c/string.h"
+#include "rosidl_runtime_c/string_functions.h"
+
 
 ROSIDL_GENERATOR_C_EXPORT
 bool smrr_interfaces__msg__pref_velocity__convert_from_py(PyObject * _pymsg, void * _ros_message)
@@ -125,32 +123,44 @@ bool smrr_interfaces__msg__pref_velocity__convert_from_py(PyObject * _pymsg, voi
     if (!field) {
       return false;
     }
-    PyObject * seq_field = PySequence_Fast(field, "expected a sequence in 'class_ids'");
-    if (!seq_field) {
-      Py_DECREF(field);
-      return false;
-    }
-    Py_ssize_t size = PySequence_Size(field);
-    if (-1 == size) {
-      Py_DECREF(seq_field);
-      Py_DECREF(field);
-      return false;
-    }
-    if (!smrr_interfaces__msg__DataElementString__Sequence__init(&(ros_message->class_ids), size)) {
-      PyErr_SetString(PyExc_RuntimeError, "unable to create smrr_interfaces__msg__DataElementString__Sequence ros_message");
-      Py_DECREF(seq_field);
-      Py_DECREF(field);
-      return false;
-    }
-    smrr_interfaces__msg__DataElementString * dest = ros_message->class_ids.data;
-    for (Py_ssize_t i = 0; i < size; ++i) {
-      if (!smrr_interfaces__msg__data_element_string__convert_from_py(PySequence_Fast_GET_ITEM(seq_field, i), &dest[i])) {
+    {
+      PyObject * seq_field = PySequence_Fast(field, "expected a sequence in 'class_ids'");
+      if (!seq_field) {
+        Py_DECREF(field);
+        return false;
+      }
+      Py_ssize_t size = PySequence_Size(field);
+      if (-1 == size) {
         Py_DECREF(seq_field);
         Py_DECREF(field);
         return false;
       }
+      if (!rosidl_runtime_c__String__Sequence__init(&(ros_message->class_ids), size)) {
+        PyErr_SetString(PyExc_RuntimeError, "unable to create String__Sequence ros_message");
+        Py_DECREF(seq_field);
+        Py_DECREF(field);
+        return false;
+      }
+      rosidl_runtime_c__String * dest = ros_message->class_ids.data;
+      for (Py_ssize_t i = 0; i < size; ++i) {
+        PyObject * item = PySequence_Fast_GET_ITEM(seq_field, i);
+        if (!item) {
+          Py_DECREF(seq_field);
+          Py_DECREF(field);
+          return false;
+        }
+        assert(PyUnicode_Check(item));
+        PyObject * encoded_item = PyUnicode_AsUTF8String(item);
+        if (!encoded_item) {
+          Py_DECREF(seq_field);
+          Py_DECREF(field);
+          return false;
+        }
+        rosidl_runtime_c__String__assign(&dest[i], PyBytes_AS_STRING(encoded_item));
+        Py_DECREF(encoded_item);
+      }
+      Py_DECREF(seq_field);
     }
-    Py_DECREF(seq_field);
     Py_DECREF(field);
   }
   {  // preferred_velocities
@@ -297,19 +307,17 @@ PyObject * smrr_interfaces__msg__pref_velocity__convert_to_py(void * raw_ros_mes
   {  // class_ids
     PyObject * field = NULL;
     size_t size = ros_message->class_ids.size;
+    rosidl_runtime_c__String * src = ros_message->class_ids.data;
     field = PyList_New(size);
     if (!field) {
       return NULL;
     }
-    smrr_interfaces__msg__DataElementString * item;
     for (size_t i = 0; i < size; ++i) {
-      item = &(ros_message->class_ids.data[i]);
-      PyObject * pyitem = smrr_interfaces__msg__data_element_string__convert_to_py(item);
-      if (!pyitem) {
-        Py_DECREF(field);
+      PyObject * decoded_item = PyUnicode_DecodeUTF8(src[i].data, strlen(src[i].data), "replace");
+      if (!decoded_item) {
         return NULL;
       }
-      int rc = PyList_SetItem(field, i, pyitem);
+      int rc = PyList_SetItem(field, i, decoded_item);
       (void)rc;
       assert(rc == 0);
     }

@@ -2,14 +2,13 @@
 // with input from smrr_interfaces/msg/PrefVelocity.msg
 // generated code does not contain a copyright notice
 
-#include "smrr_interfaces/msg/DataElementString.idl"
 
 module smrr_interfaces {
   module msg {
     struct PrefVelocity {
       sequence<int32> agent_ids;
 
-      sequence<smrr_interfaces::msg::DataElementString> class_ids;
+      sequence<string> class_ids;
 
       sequence<float> preferred_velocities;
     };

@@ -17,9 +17,7 @@
 // Member `preferred_velocities`
 #include "rosidl_runtime_c/primitives_sequence_functions.h"
 // Member `class_ids`
-#include "smrr_interfaces/msg/data_element_string.h"
-// Member `class_ids`
-#include "smrr_interfaces/msg/detail/data_element_string__rosidl_typesupport_introspection_c.h"
+#include "rosidl_runtime_c/string_functions.h"
 
 #ifdef __cplusplus
 extern "C"
@@ -98,56 +96,56 @@ bool smrr_interfaces__msg__PrefVelocity__rosidl_typesupport_introspection_c__res
 size_t smrr_interfaces__msg__PrefVelocity__rosidl_typesupport_introspection_c__size_function__PrefVelocity__class_ids(
   const void * untyped_member)
 {
-  const smrr_interfaces__msg__DataElementString__Sequence * member =
-    (const smrr_interfaces__msg__DataElementString__Sequence *)(untyped_member);
+  const rosidl_runtime_c__String__Sequence * member =
+    (const rosidl_runtime_c__String__Sequence *)(untyped_member);
   return member->size;
 }
 
 const void * smrr_interfaces__msg__PrefVelocity__rosidl_typesupport_introspection_c__get_const_function__PrefVelocity__class_ids(
   const void * untyped_member, size_t index)
 {
-  const smrr_interfaces__msg__DataElementString__Sequence * member =
-    (const smrr_interfaces__msg__DataElementString__Sequence *)(untyped_member);
+  const rosidl_runtime_c__String__Sequence * member =
+    (const rosidl_runtime_c__String__Sequence *)(untyped_member);
   return &member->data[index];
 }
 
 void * smrr_interfaces__msg__PrefVelocity__rosidl_typesupport_introspection_c__get_function__PrefVelocity__class_ids(
   void * untyped_member, size_t index)
 {
-  smrr_interfaces__msg__DataElementString__Sequence * member =
-    (smrr_interfaces__msg__DataElementString__Sequence *)(untyped_member);
+  rosidl_runtime_c__String__Sequence * member =
+    (rosidl_runtime_c__String__Sequence *)(untyped_member);
   return &member->data[index];
 }
 
 void smrr_interfaces__msg__PrefVelocity__rosidl_typesupport_introspection_c__fetch_function__PrefVelocity__class_ids(
   const void * untyped_member, size_t index, void * untyped_value)
 {
-  const smrr_interfaces__msg__DataElementString * item =
-    ((const smrr_interfaces__msg__DataElementString *)
+  const rosidl_runtime_c__String * item =
+    ((const rosidl_runtime_c__String *)
     smrr_interfaces__msg__PrefVelocity__rosidl_typesupport_introspection_c__get_const_function__PrefVelocity__class_ids(untyped_member, index));
-  smrr_interfaces__msg__DataElementString * value =
-    (smrr_interfaces__msg__DataElementString *)(untyped_value);
+  rosidl_runtime_c__String * value =
+    (rosidl_runtime_c__String *)(untyped_value);
   *value = *item;
 }
 
 void smrr_interfaces__msg__PrefVelocity__rosidl_typesupport_introspection_c__assign_function__PrefVelocity__class_ids(
   void * untyped_member, size_t index, const void * untyped_value)
 {
-  smrr_interfaces__msg__DataElementString * item =
-    ((smrr_interfaces__msg__DataElementString *)
+  rosidl_runtime_c__String * item =
+    ((rosidl_runtime_c__String *)
     smrr_interfaces__msg__PrefVelocity__rosidl_typesupport_introspection_c__get_function__PrefVelocity__class_ids(untyped_member, index));
-  const smrr_interfaces__msg__DataElementString * value =
-    (const smrr_interfaces__msg__DataElementString *)(untyped_value);
+  const rosidl_runtime_c__String * value =
+    (const rosidl_runtime_c__String *)(untyped_value);
   *item = *value;
 }
 
 bool smrr_interfaces__msg__PrefVelocity__rosidl_typesupport_introspection_c__resize_function__PrefVelocity__class_ids(
   void * untyped_member, size_t size)
 {
-  smrr_interfaces__msg__DataElementString__Sequence * member =
-    (smrr_interfaces__msg__DataElementString__Sequence *)(untyped_member);
-  smrr_interfaces__msg__DataElementString__Sequence__fini(member);
-  return smrr_interfaces__msg__DataElementString__Sequence__init(member, size);
+  rosidl_runtime_c__String__Sequence * member =
+    (rosidl_runtime_c__String__Sequence *)(untyped_member);
+  rosidl_runtime_c__String__Sequence__fini(member);
+  return rosidl_runtime_c__String__Sequence__init(member, size);
 }
 
 size_t smrr_interfaces__msg__PrefVelocity__rosidl_typesupport_introspection_c__size_function__PrefVelocity__preferred_velocities(
@@ -225,9 +223,9 @@ static rosidl_typesupport_introspection_c__MessageMember smrr_interfaces__msg__P
   },
   {
     "class_ids",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_MESSAGE,  // type
+    rosidl_typesupport_introspection_c__ROS_TYPE_STRING,  // type
     0,  // upper bound of string
-    NULL,  // members of sub message (initialized later)
+    NULL,  // members of sub message
     true,  // is array
     0,  // array size
     false,  // is upper bound
@@ -280,8 +278,6 @@ static rosidl_message_type_support_t smrr_interfaces__msg__PrefVelocity__rosidl_
 ROSIDL_TYPESUPPORT_INTROSPECTION_C_EXPORT_smrr_interfaces
 const rosidl_message_type_support_t *
 ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, smrr_interfaces, msg, PrefVelocity)() {
-  smrr_interfaces__msg__PrefVelocity__rosidl_typesupport_introspection_c__PrefVelocity_message_member_array[1].members_ =
-    ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, smrr_interfaces, msg, DataElementString)();
   if (!smrr_interfaces__msg__PrefVelocity__rosidl_typesupport_introspection_c__PrefVelocity_message_type_support_handle.typesupport_identifier) {
     smrr_interfaces__msg__PrefVelocity__rosidl_typesupport_introspection_c__PrefVelocity_message_type_support_handle.typesupport_identifier =
       rosidl_typesupport_introspection_c__identifier;
