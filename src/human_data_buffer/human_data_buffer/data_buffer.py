@@ -188,7 +188,7 @@ class DataBufferNode(Node):
             # x_positions.extend(list(self.agent_matrix[i, 4]))
             # y_positions.extend(list(self.agent_matrix[i, 5]))
 
-            x_vel_list = DataElementFloat() # create a new DataElementFloat object for each agent to store x velocities of the agent
+            x_vel_list = DataElementFloat()
             y_vel_list = DataElementFloat()
             class_list = DataElementString()
             x_pos_list = DataElementFloat()
