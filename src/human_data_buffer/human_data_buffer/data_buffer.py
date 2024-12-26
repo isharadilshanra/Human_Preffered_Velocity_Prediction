@@ -67,6 +67,8 @@ class DataBufferNode(Node):
 
                 # Calculate and store statistics after updating each agent
                 try:
+                    # even the agent is removed, try to calculate statistics
+                    # but capture this in calculation function
                     self.calculate_statistics(i)
                 except Exception as e:
                     self.get_logger().error(f"Error calculating statistics for agent in buffer: {e}")
