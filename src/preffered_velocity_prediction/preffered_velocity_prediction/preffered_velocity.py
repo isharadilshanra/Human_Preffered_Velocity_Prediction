@@ -64,10 +64,10 @@ class HumanPrefferedVelocity(Node):
         if class_id == 'child': #'0':  # Children (typically more erratic)
             base_R = 2.0  # Base measurement noise
             base_Q = 1.5  # Base process noise factor
-        elif class_id == 'normal_adult':#'1':  # Normal adults
+        elif class_id == 'normal-adult':#'1':  # Normal adults
             base_R = 1.0
             base_Q = 1.0
-        elif class_id == 'seniors': #'2':  # Seniors (usually smoother)
+        elif class_id == 'elder-no-disabilities': #'2':  # Seniors (usually smoother)
             base_R = 0.8
             base_Q = 0.8
         elif class_id == 'disabled': #'3':  # People with disabilities
@@ -153,7 +153,7 @@ class HumanPrefferedVelocity(Node):
 
             # handle the case where class data is not available 
             if (len(self.cls_data) -1) < i:
-                class_id = 'normal_adult' #'1' # default to normal adults
+                class_id = 'normal-adult' #'1' # default to normal adults
             else:
                 class_id = self.cls_data[i]
 

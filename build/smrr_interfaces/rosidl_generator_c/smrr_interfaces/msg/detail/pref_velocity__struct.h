@@ -22,13 +22,13 @@ extern "C"
 // Member 'preferred_velocities'
 #include "rosidl_runtime_c/primitives_sequence.h"
 // Member 'class_ids'
-#include "smrr_interfaces/msg/detail/data_element_string__struct.h"
+#include "rosidl_runtime_c/string.h"
 
 /// Struct defined in msg/PrefVelocity in the package smrr_interfaces.
 typedef struct smrr_interfaces__msg__PrefVelocity
 {
   rosidl_runtime_c__int32__Sequence agent_ids;
-  smrr_interfaces__msg__DataElementString__Sequence class_ids;
+  rosidl_runtime_c__String__Sequence class_ids;
   rosidl_runtime_c__float__Sequence preferred_velocities;
 } smrr_interfaces__msg__PrefVelocity;
 

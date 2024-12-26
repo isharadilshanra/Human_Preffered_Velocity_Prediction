@@ -17,9 +17,12 @@ class TestDataPub(Node):
         self.clases = []
         self.x_positions = []
         self.y_positions = []
+        #self.set_of_human_classes = [child,normal-adult,elder-no-disabilities,disabled]
+        self.set_of_human_classes = ['child','normal-adult','elder-no-disabilities','disabled']
 
     def agennt_entry(self):
-        new_class = str(random.randint(0, 3))
+        #new_class = str(random.randint(0, 3))
+        new_class = self.set_of_human_classes[random.randint(0,3)] # pick a random class from the set of classes
         new_x =random.uniform(1.0,10.0)
         new_y = random.uniform(1.0,10.0)
 
