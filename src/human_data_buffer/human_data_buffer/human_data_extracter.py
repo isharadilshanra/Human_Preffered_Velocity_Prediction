@@ -27,8 +27,12 @@ class VelocityExtractor(Node):
         self.pub_velocity_class = self.create_publisher(VelocityClassData, 'velocity_class_data', 10)
 
         # storage for previous data
-        self.prev_x = {}
-        self.prev_y = {}
+        # self.prev_x = {}
+        # self.prev_y = {}
+
+        # list based method to handle human leaving and arriving
+        self.prev_x = []
+        self.prev_y = []
 
         # update rate
         self.update_rate = 0.5 # 2 Hz
@@ -45,18 +49,25 @@ class VelocityExtractor(Node):
         class_list = []
 
         for i, (x_position, y_position, class_id) in enumerate(zip(x_positions, y_positions, class_ids)):
-            pre_x = self.prev_x.get(i, x_position)
-            pre_y = self.prev_y.get(i, y_position)
+            #pre_x = self.prev_x.get(i, x_position)
+            #pre_y = self.prev_y.get(i, y_position)
+            pre_x = self.prev_x[i] if i < len(self.prev_x) else x_position
+            pre_y = self.prev_y[i] if i < len(self.prev_y) else y_position
 
             try:
                 # if agent left
-                if pre_x == 0.0 or pre_y == 0.0:
+                #if pre_x == 0.0 or pre_y == 0.0:
+                if x_position == 0.0 and y_position == 0.0:
                     vx = -100.0
                     vy = -100.0
                     cl_id = "-1"
                     # remove agent from previous positions
-                    self.prev_x.pop(i, None)
-                    self.prev_y.pop(i, None)
+                    #self.prev_x.pop(i, None)
+                    #self.prev_y.pop(i, None)
+
+                    # list based method
+                    self.prev_x.pop(i)
+                    self.prev_y.pop(i)
 
                 else:
                     vx = (x_position - pre_x) / self.update_rate
@@ -70,8 +81,17 @@ class VelocityExtractor(Node):
 
 
             # update previous positions
-            self.prev_x[i] = x_position
-            self.prev_y[i] = y_position
+            # self.prev_x[i] = x_position
+            # self.prev_y[i] = y_position
+
+            # list based method
+            if i < len(self.prev_x):
+                self.prev_x[i] = x_position
+                self.prev_y[i] = y_position
+            else:
+                self.prev_x.append(x_position)
+                self.prev_y.append(y_position)
+
 
             x_vel.append(vx)
             y_vel.append(vy)
