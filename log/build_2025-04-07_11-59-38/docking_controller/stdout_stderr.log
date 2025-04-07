@@ -1,0 +1,18 @@
+running develop
+/usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+  warnings.warn(
+running egg_info
+writing docking_controller.egg-info/PKG-INFO
+writing dependency_links to docking_controller.egg-info/dependency_links.txt
+writing entry points to docking_controller.egg-info/entry_points.txt
+writing requirements to docking_controller.egg-info/requires.txt
+writing top-level names to docking_controller.egg-info/top_level.txt
+reading manifest file 'docking_controller.egg-info/SOURCES.txt'
+writing manifest file 'docking_controller.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/docking_controller/lib/python3.10/site-packages/docking-controller.egg-link (link to .)
+Installing motor_controller script to /home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/docking_controller/lib/docking_controller
+Installing pub_sensor_data script to /home/ishara/fyp/Human_Preffered_Velocity_Prediction/install/docking_controller/lib/docking_controller
+
+Installed /home/ishara/fyp/Human_Preffered_Velocity_Prediction/build/docking_controller
+running symlink_data

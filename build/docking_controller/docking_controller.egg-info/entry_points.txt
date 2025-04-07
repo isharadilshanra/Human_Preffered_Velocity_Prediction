@@ -1,3 +1,4 @@
 [console_scripts]
-
+motor_controller = docking_controller.motor_controller:main
+pub_sensor_data = docking_controller.pub_sensor_data:main
 

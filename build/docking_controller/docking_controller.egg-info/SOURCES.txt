@@ -2,6 +2,8 @@ package.xml
 setup.cfg
 setup.py
 docking_controller/__init__.py
+docking_controller/motor_controller.py
+docking_controller/pub_sensor_data.py
 docking_controller.egg-info/PKG-INFO
 docking_controller.egg-info/SOURCES.txt
 docking_controller.egg-info/dependency_links.txt
