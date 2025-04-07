@@ -18,7 +18,7 @@ class FloatArrayPublisher(Node):
 
     def timer_callback(self):
         msg = Float32MultiArray()
-        msg.data = [random.random() * 100 for _ in range(6)]  # Generate 6 random floats
+        msg.data = [random.random() * 10 for _ in range(6)]  # Generate 6 random floats
         self.publisher_.publish(msg)
         self.get_logger().info(f'Publishing: {msg.data}')
         #self.i += 1
