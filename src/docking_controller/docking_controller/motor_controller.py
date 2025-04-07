@@ -96,7 +96,7 @@ class FloatArraySubscriber(Node):
     
 
         # hard turn cases
-        if back_middle <= 5 or back_left <= 5 or back_right <= 5:
+        if back_middle <= 0.1 or back_left <= 0.1 or back_right <= 0.1:
             # stop
             linear_velocity = 0.2
             angular_velocity = 0.0
