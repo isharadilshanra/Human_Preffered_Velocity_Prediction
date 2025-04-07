@@ -221,7 +221,6 @@ CMakeFiles/smrr_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/smrr_i
   /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
-  rosidl_generator_c/smrr_interfaces/msg/detail/data_element_string__struct.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
   rosidl_generator_c/smrr_interfaces/msg/detail/pref_velocity__type_support.h \
   rosidl_generator_c/smrr_interfaces/msg/rosidl_generator_c__visibility_control.h \
