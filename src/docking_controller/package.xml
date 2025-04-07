@@ -7,7 +7,14 @@
   <maintainer email="isharadilshanra11@gmail.com">ishara</maintainer>
   <license>TODO: License declaration</license>
 
-  <depend>rclpy</depend>
+  <depend>rclpy</depend> 
+  <depend>geometry_msgs.msg</depend>
+  <depend>turtlesim</depend>
+  <depend>std_msgs.msg</depend>
+  <depend>python3-numpy</depend>
+  <depend>python3-filterpy</depend>
+  <depend>smrr_interfaces.msg</depend>
+
 
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>
