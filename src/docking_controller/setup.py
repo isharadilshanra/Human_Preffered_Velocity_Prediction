@@ -20,6 +20,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+            'pub_sensor_data = docking_controller.pub_sensor_data:main',
+            'motor_controller = docking_controller.motor_controller:main',
         ],
     },
 )
